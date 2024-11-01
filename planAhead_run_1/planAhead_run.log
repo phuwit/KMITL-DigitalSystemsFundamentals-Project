@@ -1,0 +1,63 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/pa.fromHdl.tcl
+# create_project -name KMITL-DigitalSystemsFundamentals-Project -dir "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/planAhead_run_1" -part xc6slx9tqg144-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf" [current_fileset -constrset]
+Adding file '/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {input_decoder.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {main.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top MAIN $srcset
+# add_files [list {main.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {MAIN.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx9tqg144-3
+Using Verific elaboration
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/input_decoder.vhd" into library work
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.vhd" into library work
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx9/tqg144/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'BTN[1]' [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf:3]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'BTN[2]' [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf:4]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'BTN[3]' [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf:5]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'BTN[4]' [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf:6]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'BTN[5]' [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf:7]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'BTN[6]' [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf:8]
+Finished Parsing UCF File [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.ucf]
+Parsing UCF File [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN.ucf]
+Finished Parsing UCF File [/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 36a4d2a5
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P2 [get_ports {LED[3]}]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri Nov  1 13:59:12 2024...
+INFO: [Common 17-83] Releasing license: PlanAhead

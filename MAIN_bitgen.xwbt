@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN.ncd
+OUTFILE=/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project
+LICENSE=WebPack
+USER_INFO=213101706_0_0_838

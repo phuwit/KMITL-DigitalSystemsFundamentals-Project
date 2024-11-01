@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc main.ucf -p xc6slx9-tqg144-3 MAIN.ngc MAIN.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MAIN_map.ncd MAIN.ngd MAIN.pcf 
+par -w -intstyle ise -ol high -mt off MAIN_map.ncd MAIN.ncd MAIN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MAIN.twx MAIN.ncd -o MAIN.twr MAIN.pcf -ucf main.ucf 
+bitgen -intstyle ise -f MAIN.ut MAIN.ncd 

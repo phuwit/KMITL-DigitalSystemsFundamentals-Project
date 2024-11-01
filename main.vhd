@@ -9,7 +9,7 @@ USE IEEE.numeric_std.ALL;
 
 ENTITY MAIN IS
   PORT (
-    PB : IN STD_LOGIC_VECTOR(6 DOWNTO 1);
+    BTN : IN STD_LOGIC_VECTOR(6 DOWNTO 1);
     SW0 : IN STD_LOGIC;
     LED : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 
@@ -20,7 +20,7 @@ ARCHITECTURE Behavioral OF MAIN IS
 
   COMPONENT INPUT_DECODER IS
     PORT (
-      pb : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+      btn : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
       sw0 : IN STD_LOGIC;
       command : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
@@ -29,8 +29,7 @@ ARCHITECTURE Behavioral OF MAIN IS
 BEGIN
   U_INPUT_DECODER : INPUT_DECODER
   PORT MAP(
-    pb => PB(6 DOWNTO 1),
-    sw0 => SW0,
-    command => LED
+    btn => BTN(6 DOWNTO 1),
+    sw0 => SW0,BTN0312455455230.
   );
 END Behavioral;

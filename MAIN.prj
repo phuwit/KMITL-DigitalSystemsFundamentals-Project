@@ -1,0 +1,2 @@
+vhdl work "input_decoder.vhd"
+vhdl work "main.vhd"

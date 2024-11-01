@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Nov 01 14:01:46 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "LED<0>" LOCATE = SITE "P82" LEVEL 1;
+COMP "BTN<1>" LOCATE = SITE "P45" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "P81" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "P80" LEVEL 1;
+COMP "BTN<2>" LOCATE = SITE "P46" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "P79" LEVEL 1;
+COMP "BTN<3>" LOCATE = SITE "P47" LEVEL 1;
+COMP "BTN<4>" LOCATE = SITE "P48" LEVEL 1;
+COMP "BTN<5>" LOCATE = SITE "P51" LEVEL 1;
+COMP "BTN<6>" LOCATE = SITE "P55" LEVEL 1;
+COMP "SW0" LOCATE = SITE "P66" LEVEL 1;
+SCHEMATIC END;
+
