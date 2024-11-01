@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 main.ngc main.ngd  

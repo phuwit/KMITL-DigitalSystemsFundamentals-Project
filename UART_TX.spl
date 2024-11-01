@@ -1,0 +1,9 @@
+[Inputs]
+i_Clk
+i_TX_DV
+=i_TX_Byte[7:0]=
+[Outputs]
+o_TX_Active
+o_TX_Serial
+o_TX_Done
+[BiDir]

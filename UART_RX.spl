@@ -1,0 +1,7 @@
+[Inputs]
+i_Clk
+i_RX_Serial
+[Outputs]
+o_RX_DV
+=o_RX_Byte[7:0]=
+[BiDir]
