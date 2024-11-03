@@ -1,0 +1,14 @@
+# Inputs
+NET "OSC" LOC = P123;
+NET "SW0" LOC = P66;
+
+NET "PB1" LOC = P45;
+NET "PB2" LOC = P46;
+NET "PB3" LOC = P47;
+NET "PB4" LOC = P48;
+NET "PB5" LOC = P51;
+NET "PB6" LOC = P55;
+
+# Output
+
+NET "L0" LOC = P82;
