@@ -1,0 +1,3 @@
+vhdl work "STATE_MANAGER.vhd"
+vhdl work "PRINT_MANAGER.vhd"
+vhdl work "MAIN.vhd"

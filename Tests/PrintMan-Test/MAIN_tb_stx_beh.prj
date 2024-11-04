@@ -1,0 +1,6 @@
+vhdl isim_temp "Print_Manager.vhd"
+vhdl isim_temp "lcd_controller.vhd"
+vhdl isim_temp "EDGE_DETECTOR.vhd"
+vhdl isim_temp "DEBOUNCE.vhd"
+vhdl isim_temp "PrintMan-Test.vhd"
+vhdl isim_temp "PrintMan-Test-TB.vhd"

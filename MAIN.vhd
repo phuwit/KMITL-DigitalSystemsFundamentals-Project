@@ -22,7 +22,7 @@ ARCHITECTURE Behavioral OF MAIN IS
   SIGNAL char_timer, key_timer : INTEGER RANGE 0 TO 30000000;
 BEGIN
   -- การเชื่อมต่อโมดูลย่อย
-  State_Control : ENTITY STATE_MANAGER
+  State_Control : ENTITY work.STATE_MANAGER
     PORT MAP(
       CLK => CLK,
       RESET => RESET,
@@ -37,7 +37,7 @@ BEGIN
       L0 => L0
     );
 
-  Print_Control : ENTITY PRINT_MANAGER
+  Print_Control : ENTITY work.PRINT_MANAGER
     PORT MAP(
       CLK => CLK,
       RESET => RESET,

@@ -1,0 +1,10 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN_isim_beh.exe -prj /home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN_beh.prj work.MAIN 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 24
+Turning on mult-threading, number of parallel sub-compilation jobs: 48 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/STATE_MANAGER.vhd" into library work
+ERROR:HDLCompiler:1728 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/STATE_MANAGER.vhd" Line 82: Type error near state ; current type state_type; expected type std_logic_vector
+ERROR:HDLCompiler:1728 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/STATE_MANAGER.vhd" Line 83: Type error near state ; current type state_type; expected type std_logic_vector
+ERROR:HDLCompiler:854 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/STATE_MANAGER.vhd" Line 18: Unit <behavioral> ignored due to previous errors.
+VHDL file /home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/STATE_MANAGER.vhd ignored due to errors

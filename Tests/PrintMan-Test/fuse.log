@@ -1,0 +1,21 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/phuwit/Programming/KMITL-DigitalSystemsFundamentals/Playground/PrintMan-Test/MAIN_tb_isim_beh.exe -prj /home/phuwit/Programming/KMITL-DigitalSystemsFundamentals/Playground/PrintMan-Test/MAIN_tb_beh.prj work.MAIN_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 24
+Turning on mult-threading, number of parallel sub-compilation jobs: 48 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals/Playground/PrintMan-Test/PrintMan-Test-TB.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:89 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals/Playground/PrintMan-Test/PrintMan-Test-TB.vhd" Line 45: <main> remains a black-box since it has no binding entity.
+Completed static elaboration
+Fuse Memory Usage: 85264 KB
+Fuse CPU Usage: 2200 ms
+WARNING:Simulator:648 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals/Playground/PrintMan-Test/PrintMan-Test-TB.vhd" Line 45. Instance main is unbound
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavior of entity main_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+FATAL_ERROR:Simulator:Fuse.cpp:209:1.133 - Failed to compile one of the generated C files.
+
+   Please recompile with -mt off -v 1 switch to identify which design unit failed.  For technical support on this issue, please visit http://www.xilinx.com/support.

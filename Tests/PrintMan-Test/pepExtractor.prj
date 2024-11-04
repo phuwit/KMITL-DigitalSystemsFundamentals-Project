@@ -1,0 +1,5 @@
+work	"DEBOUNCE.vhd"
+work	"EDGE_DETECTOR.vhd"
+work	"PrintMan-Test.vhd"
+work	"Print_Manager.vhd"
+work	"lcd_controller.vhd"

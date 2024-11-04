@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals/Playground/PrintMan-Test/MAIN_tb_isim_beh.exe" -prj "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals/Playground/PrintMan-Test/MAIN_tb_beh.prj" "work.MAIN_tb" 

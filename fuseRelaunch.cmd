@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN_isim_beh.exe" -prj "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/MAIN_beh.prj" "work.MAIN" 
