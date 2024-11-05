@@ -21,8 +21,167 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="../v1/Perger.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="../v1/Perger.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="../v1/Perger.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="../v1/Perger.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="../v1/Perger.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="../v1/Perger.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="../v1/Perger.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="../v1/Perger.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="../v1/Perger.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="../v1/Perger.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="../v1/Perger.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="../v1/Perger.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="../v1/Perger.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="../v1/Perger.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="../v1/Perger.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="../v1/Perger.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="../v1/Perger.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="../v1/Perger.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="../v1/Perger.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="../v1/Perger.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="../v1/Perger.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="../v1/Perger.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="../v1/Perger.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="../v1/Perger.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="../v1/Perger_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="../v1/Perger_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="../v1/Perger_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="../v1/Perger_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="../v1/Perger_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="../v1/Perger_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="../v1/Perger_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="../v1/Perger_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="../v1/Perger_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="../v1/Perger_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="../v1/Perger_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="../v1/Perger_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="../v1/Perger_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="../v1/Perger_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="../v1/Perger_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="../v1/_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="../v1/_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="../v1/_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="../v1/_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="../v1/_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="../v1/_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="../v1/_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="../v1/usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="../v1/webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="../v1/webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="../v1/xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="../v1/xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1730806716" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1730806716">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1730806716" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3619537167610395398" xil_pn:start_ts="1730806716">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1730806716" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4079729176864827850" xil_pn:start_ts="1730806716">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1730806716" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1730806716">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1730806716" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-2645266748973535224" xil_pn:start_ts="1730806716">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1730806716" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="250970745955965653" xil_pn:start_ts="1730806716">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1730806716" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5235462015463163648" xil_pn:start_ts="1730806716">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1730807548" xil_pn:in_ck="3635227200761880333" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7725346657903471119" xil_pn:start_ts="1730807541">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../v1/Perger.lso"/>
+      <outfile xil_pn:name="../v1/Perger.ngc"/>
+      <outfile xil_pn:name="../v1/Perger.ngr"/>
+      <outfile xil_pn:name="../v1/Perger.prj"/>
+      <outfile xil_pn:name="../v1/Perger.stx"/>
+      <outfile xil_pn:name="../v1/Perger.syr"/>
+      <outfile xil_pn:name="../v1/Perger.xst"/>
+      <outfile xil_pn:name="../v1/Perger_xst.xrpt"/>
+      <outfile xil_pn:name="../v1/_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="../v1/webtalk_pn.xml"/>
+      <outfile xil_pn:name="../v1/xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1730807063" xil_pn:in_ck="5243107632348223096" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8197185665430231235" xil_pn:start_ts="1730807063">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1730807553" xil_pn:in_ck="-7523448517960792573" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5527646025363527615" xil_pn:start_ts="1730807548">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../v1/Perger.bld"/>
+      <outfile xil_pn:name="../v1/Perger.ngd"/>
+      <outfile xil_pn:name="../v1/Perger_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="../v1/_ngo"/>
+      <outfile xil_pn:name="../v1/_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1730807562" xil_pn:in_ck="-7523448517960792572" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="6093601622908603872" xil_pn:start_ts="1730807553">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../v1/Perger.pcf"/>
+      <outfile xil_pn:name="../v1/Perger_map.map"/>
+      <outfile xil_pn:name="../v1/Perger_map.mrp"/>
+      <outfile xil_pn:name="../v1/Perger_map.ncd"/>
+      <outfile xil_pn:name="../v1/Perger_map.ngm"/>
+      <outfile xil_pn:name="../v1/Perger_map.xrpt"/>
+      <outfile xil_pn:name="../v1/Perger_summary.xml"/>
+      <outfile xil_pn:name="../v1/Perger_usage.xml"/>
+      <outfile xil_pn:name="../v1/_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1730807574" xil_pn:in_ck="-5096759100626028771" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1730807562">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../v1/Perger.ncd"/>
+      <outfile xil_pn:name="../v1/Perger.pad"/>
+      <outfile xil_pn:name="../v1/Perger.par"/>
+      <outfile xil_pn:name="../v1/Perger.ptwx"/>
+      <outfile xil_pn:name="../v1/Perger.unroutes"/>
+      <outfile xil_pn:name="../v1/Perger.xpi"/>
+      <outfile xil_pn:name="../v1/Perger_pad.csv"/>
+      <outfile xil_pn:name="../v1/Perger_pad.txt"/>
+      <outfile xil_pn:name="../v1/Perger_par.xrpt"/>
+      <outfile xil_pn:name="../v1/_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1730807582" xil_pn:in_ck="3859961635944712" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1730807574">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../v1/Perger.bgn"/>
+      <outfile xil_pn:name="../v1/Perger.bit"/>
+      <outfile xil_pn:name="../v1/Perger.drc"/>
+      <outfile xil_pn:name="../v1/Perger.ut"/>
+      <outfile xil_pn:name="../v1/_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="../v1/usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="../v1/webtalk.log"/>
+      <outfile xil_pn:name="../v1/webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1730807574" xil_pn:in_ck="-7523448517960792704" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1730807570">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../v1/Perger.twr"/>
+      <outfile xil_pn:name="../v1/Perger.twx"/>
+      <outfile xil_pn:name="../v1/_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
 
 </generated_project>

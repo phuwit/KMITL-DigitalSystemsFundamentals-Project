@@ -14,7 +14,7 @@ architecture Behavioral of Sender is
 begin
     process (current_state, message_buffer)
     begin
-        if current_state = "10" and message_buffer /= (others => '0') then -- ตรวจสอบว่าสถานะปัจจุบันเป็น SENDING
+        if current_state = "10" and message_buffer /= (239 downto 0 => '0') then -- ตรวจสอบว่าสถานะปัจจุบันเป็น SENDING
             data_out <= message_buffer;     -- ส่งข้อมูลจาก message_buffer
             tx_start <= '1';                -- ส่งสัญญาณเริ่มต้นการส่งข้อมูล
         else

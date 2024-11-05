@@ -36,7 +36,7 @@ begin
             end if;
 
             -- ตรวจสอบว่า message_buffer_in เต็มหรือไม่
-            if message_buffer_in(239 downto 8) /= (others => '0') then
+            if message_buffer_in(239 downto 8) /= (232 downto 0 => '0') then
                 alt_buffer <= message_buffer_in; -- กรณีที่เต็มอยู่แล้ว ใช้ค่าเดิม
             else
                 -- เพิ่ม last_char ต่อท้ายในช่องว่างแรกที่เจอ

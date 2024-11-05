@@ -1,0 +1,833 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Reading design: Perger.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Perger.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Perger"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Perger
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/StateControl.vhd" into library work
+Parsing entity <StateControl>.
+Parsing architecture <Behavioral> of entity <statecontrol>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Sender.vhd" into library work
+Parsing entity <Sender>.
+Parsing architecture <Behavioral> of entity <sender>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Printer.vhd" into library work
+Parsing entity <Printer>.
+Parsing architecture <Behavioral> of entity <printer>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/MessageDisplay.vhd" into library work
+Parsing entity <MessageDisplay>.
+Parsing architecture <Behavioral> of entity <messagedisplay>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/LcdController.vhd" into library work
+Parsing entity <LcdController>.
+Parsing architecture <controller> of entity <lcdcontroller>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/EdgeDetector.vhd" into library work
+Parsing entity <EdgeDetector>.
+Parsing architecture <rtl> of entity <edgedetector>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Debonce.vhd" into library work
+Parsing entity <Debounce>.
+Parsing architecture <logic> of entity <debounce>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" into library work
+Parsing entity <Perger>.
+Parsing architecture <Behavioral> of entity <perger>.
+WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 131: Actual for formal port line2_buffer is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Perger> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Debounce> (architecture <logic>) with generics from library <work>.
+
+Elaborating entity <Debounce> (architecture <logic>) with generics from library <work>.
+
+Elaborating entity <EdgeDetector> (architecture <rtl>) from library <work>.
+
+Elaborating entity <StateControl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Printer> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Sender> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <MessageDisplay> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <LcdController> (architecture <controller>) from library <work>.
+WARNING:HDLCompiler:634 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 34: Net <transmit_in_progress> does not have a driver.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[1].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[2].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[3].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[4].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[5].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[6].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 107. All outputs of instance <sender_inst> of block <Sender> are unconnected in block <Perger>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Perger>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd".
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[1].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[2].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[3].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[4].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[5].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[6].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 79: Output port <next_state> of the instance <state_control_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 79: Output port <alert_signal> of the instance <state_control_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 94: Output port <char_index> of the instance <printer_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 107: Output port <data_out> of the instance <sender_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 107: Output port <tx_start> of the instance <sender_inst> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <transmit_in_progress> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit tristate buffer for signal <mn<7>> created at line 139
+    Found 1-bit tristate buffer for signal <mn<6>> created at line 139
+    Found 1-bit tristate buffer for signal <mn<5>> created at line 139
+    Found 1-bit tristate buffer for signal <mn<4>> created at line 139
+    Found 1-bit tristate buffer for signal <mn<3>> created at line 139
+    Found 1-bit tristate buffer for signal <mn<2>> created at line 139
+    Found 1-bit tristate buffer for signal <mn<1>> created at line 139
+    Found 1-bit tristate buffer for signal <mn<0>> created at line 139
+    Summary:
+	inferred   8 Tristate(s).
+Unit <Perger> synthesized.
+
+Synthesizing Unit <Debounce_1>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Debonce.vhd".
+        clk_freq = 20000000
+        stable_time = 20
+    Found 2-bit register for signal <flipflops>.
+    Found 1-bit register for signal <result>.
+    Found 19-bit register for signal <count>.
+    Found 19-bit adder for signal <count[18]_GND_4_o_add_1_OUT> created at line 59.
+    Found 19-bit comparator greater for signal <count[18]_PWR_4_o_LessThan_1_o> created at line 58
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <Debounce_1> synthesized.
+
+Synthesizing Unit <Debounce_2>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Debonce.vhd".
+        clk_freq = 20000000
+        stable_time = 50
+    Found 1-bit register for signal <result>.
+    Found 20-bit register for signal <count>.
+    Found 2-bit register for signal <flipflops>.
+    Found 20-bit adder for signal <count[19]_GND_5_o_add_1_OUT> created at line 59.
+    Found 20-bit comparator greater for signal <count[19]_PWR_7_o_LessThan_1_o> created at line 58
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <Debounce_2> synthesized.
+
+Synthesizing Unit <EdgeDetector>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/EdgeDetector.vhd".
+    Found 1-bit register for signal <r1_input>.
+    Found 1-bit register for signal <r0_input>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <EdgeDetector> synthesized.
+
+Synthesizing Unit <StateControl>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/StateControl.vhd".
+    Found 1-bit register for signal <L0>.
+    Found 1-bit register for signal <alert_signal>.
+    Found 28-bit register for signal <idle_timer>.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 28-bit adder for signal <idle_timer[27]_GND_7_o_add_4_OUT> created at line 59.
+    Found 28-bit comparator greater for signal <n0007> created at line 51
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <StateControl> synthesized.
+
+Synthesizing Unit <Printer>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Printer.vhd".
+    Found 1-bit register for signal <trigger>.
+    Found 5-bit register for signal <char_index_internal>.
+    Found 240-bit register for signal <internal_message_buffer>.
+    Found 25-bit register for signal <key_timer>.
+    Found 8-bit register for signal <last_char>.
+    Found 8-bit adder for signal <last_char[7]_GND_11_o_add_35_OUT> created at line 90.
+    Found 9-bit adder for signal <n0654> created at line 102.
+    Found 25-bit adder for signal <key_timer[24]_GND_11_o_add_324_OUT> created at line 114.
+    Found 5-bit adder for signal <char_index_internal[4]_GND_11_o_add_599_OUT> created at line 122.
+    Found 5-bit subtractor for signal <GND_11_o_GND_11_o_sub_47_OUT<4:0>> created at line 101.
+    Found 8-bit comparator lessequal for signal <n0002> created at line 38
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_3_o> created at line 38
+    Found 8-bit comparator lessequal for signal <n0007> created at line 46
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_7_o> created at line 46
+    Found 8-bit comparator lessequal for signal <n0012> created at line 54
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_11_o> created at line 54
+    Found 8-bit comparator lessequal for signal <n0017> created at line 62
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_15_o> created at line 62
+    Found 8-bit comparator lessequal for signal <n0030> created at line 73
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_27_o> created at line 73
+    Found 8-bit comparator lessequal for signal <n0035> created at line 81
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_31_o> created at line 81
+    Found 8-bit comparator lessequal for signal <n0040> created at line 89
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_35_o> created at line 89
+    Found 25-bit comparator greater for signal <key_timer[24]_PWR_24_o_LessThan_324_o> created at line 113
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 279 D-type flip-flop(s).
+	inferred  15 Comparator(s).
+	inferred 497 Multiplexer(s).
+Unit <Printer> synthesized.
+
+Synthesizing Unit <MessageDisplay>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/MessageDisplay.vhd".
+    Found 1-bit register for signal <display_toggle>.
+    Found 240-bit register for signal <alt_buffer>.
+    Found 32-bit register for signal <half_second_counter>.
+    Found 32-bit adder for signal <half_second_counter[31]_GND_256_o_add_1_OUT> created at line 32.
+    Found 32-bit comparator greater for signal <GND_256_o_half_second_counter[31]_LessThan_1_o> created at line 31
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 273 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <MessageDisplay> synthesized.
+
+Synthesizing Unit <LcdController>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/LcdController.vhd".
+    Found 3-bit register for signal <state>.
+    Found 1-bit register for signal <rs>.
+    Found 1-bit register for signal <rw>.
+    Found 8-bit register for signal <lcd_data>.
+    Found 1-bit register for signal <e>.
+    Found 5-bit register for signal <ptr>.
+    Found 1-bit register for signal <line>.
+    Found 31-bit register for signal <clk_count>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | power_up                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 31-bit adder for signal <clk_count[30]_GND_258_o_add_5_OUT> created at line 85.
+    Found 8-bit adder for signal <ptr[4]_GND_258_o_add_64_OUT> created at line 162.
+    Found 5-bit subtractor for signal <GND_258_o_GND_258_o_sub_100_OUT<4:0>> created at line 217.
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_1_o> created at line 72
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_7_o> created at line 86
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_8_o> created at line 93
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_9_o> created at line 97
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_10_o> created at line 108
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_11_o> created at line 112
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_12_o> created at line 116
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_13_o> created at line 120
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_14_o> created at line 127
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_90_o> created at line 192
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_91_o> created at line 193
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_92_o> created at line 195
+    Found 31-bit comparator lessequal for signal <clk_count[30]_GND_258_o_LessThan_93_o> created at line 197
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  47 D-type flip-flop(s).
+	inferred  13 Comparator(s).
+	inferred  35 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <LcdController> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 12
+ 19-bit adder                                          : 2
+ 20-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 28-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 5-bit addsub                                          : 1
+ 5-bit subtractor                                      : 1
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 1
+# Registers                                            : 38
+ 1-bit register                                        : 22
+ 19-bit register                                       : 2
+ 2-bit register                                        : 3
+ 20-bit register                                       : 1
+ 240-bit register                                      : 2
+ 25-bit register                                       : 1
+ 28-bit register                                       : 1
+ 31-bit register                                       : 1
+ 32-bit register                                       : 1
+ 5-bit register                                        : 2
+ 8-bit register                                        : 2
+# Comparators                                          : 33
+ 19-bit comparator greater                             : 2
+ 20-bit comparator greater                             : 1
+ 25-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+ 31-bit comparator greater                             : 12
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 7
+ 8-bit comparator lessequal                            : 7
+# Multiplexers                                         : 542
+ 1-bit 2-to-1 multiplexer                              : 499
+ 25-bit 2-to-1 multiplexer                             : 3
+ 28-bit 2-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 14
+ 5-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 24
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+# FSMs                                                 : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Debounce_1>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Debounce_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Debounce_2>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Debounce_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <LcdController>.
+The following registers are absorbed into counter <ptr>: 1 register on signal <ptr>.
+Unit <LcdController> synthesized (advanced).
+
+Synthesizing (advanced) Unit <MessageDisplay>.
+The following registers are absorbed into counter <half_second_counter>: 1 register on signal <half_second_counter>.
+Unit <MessageDisplay> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Printer>.
+The following registers are absorbed into counter <char_index_internal>: 1 register on signal <char_index_internal>.
+Unit <Printer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <StateControl>.
+The following registers are absorbed into counter <idle_timer>: 1 register on signal <idle_timer>.
+Unit <StateControl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 25-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 1
+# Counters                                             : 7
+ 19-bit up counter                                     : 2
+ 20-bit up counter                                     : 1
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 5-bit down counter                                    : 1
+ 5-bit updown counter                                  : 1
+# Registers                                            : 580
+ Flip-Flops                                            : 580
+# Comparators                                          : 33
+ 19-bit comparator greater                             : 2
+ 20-bit comparator greater                             : 1
+ 25-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+ 31-bit comparator greater                             : 12
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 7
+ 8-bit comparator lessequal                            : 7
+# Multiplexers                                         : 540
+ 1-bit 2-to-1 multiplexer                              : 499
+ 25-bit 2-to-1 multiplexer                             : 3
+ 31-bit 2-to-1 multiplexer                             : 14
+ 8-bit 2-to-1 multiplexer                              : 24
+# FSMs                                                 : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <alert_signal> (without init value) has a constant value of 0 in block <StateControl>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <state_control_inst/FSM_0> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <lcd_controller_inst/FSM_1> on signal <state[1:3]> with user encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ power_up      | 000
+ initialize    | 001
+ reset         | 010
+ line1         | 011
+ line2         | 100
+ update_cursor | 101
+ send          | 110
+---------------------------
+
+Optimizing unit <Perger> ...
+
+Optimizing unit <Debounce_1> ...
+
+Optimizing unit <Debounce_2> ...
+
+Optimizing unit <StateControl> ...
+
+Optimizing unit <Printer> ...
+
+Optimizing unit <MessageDisplay> ...
+
+Optimizing unit <LcdController> ...
+WARNING:Xst:1293 - FF/Latch <printer_inst/internal_message_buffer_47> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_39> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_31> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_15> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_7> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display_inst/half_second_counter_31> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display_inst/half_second_counter_30> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display_inst/half_second_counter_29> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display_inst/half_second_counter_28> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display_inst/half_second_counter_27> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display_inst/half_second_counter_26> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display_inst/half_second_counter_25> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_30> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_29> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_28> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_27> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_26> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_25> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_24> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_22> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_21> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_20> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <printer_inst/last_char_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_239> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_231> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_223> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_215> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_207> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_199> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_191> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_183> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_175> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_167> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_159> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_55> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_63> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_71> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_79> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_87> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_95> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_103> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_111> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_119> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_127> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_135> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_143> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_151> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_239> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_231> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_223> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_215> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_207> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_199> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_191> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_183> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_175> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_167> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_159> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_15> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_23> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_31> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_39> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_47> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_55> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_63> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_71> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_79> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_87> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_95> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_103> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_111> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_119> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_127> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_135> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_143> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_151> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 23.
+FlipFlop display_inst/display_toggle has been replicated 3 time(s)
+FlipFlop lcd_controller_inst/ptr_0 has been replicated 1 time(s)
+FlipFlop lcd_controller_inst/ptr_1 has been replicated 2 time(s)
+FlipFlop lcd_controller_inst/ptr_2 has been replicated 3 time(s)
+FlipFlop lcd_controller_inst/ptr_3 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 644
+ Flip-Flops                                            : 644
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Perger.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1566
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 123
+#      LUT2                        : 74
+#      LUT3                        : 62
+#      LUT4                        : 62
+#      LUT5                        : 231
+#      LUT6                        : 475
+#      MUXCY                       : 311
+#      MUXF7                       : 60
+#      VCC                         : 1
+#      XORCY                       : 157
+# FlipFlops/Latches                : 644
+#      FD                          : 251
+#      FDCE                        : 246
+#      FDE                         : 34
+#      FDPE                        : 2
+#      FDR                         : 25
+#      FDRE                        : 86
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 7
+#      OBUF                        : 19
+#      OBUFT                       : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             644  out of  11440     5%  
+ Number of Slice LUTs:                 1036  out of   5720    18%  
+    Number used as Logic:              1036  out of   5720    18%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1220
+   Number with an unused Flip Flop:     576  out of   1220    47%  
+   Number with an unused LUT:           184  out of   1220    15%  
+   Number of fully used LUT-FF pairs:   460  out of   1220    37%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                          41
+ Number of bonded IOBs:                  35  out of    102    34%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 644   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.304ns (Maximum Frequency: 136.918MHz)
+   Minimum input arrival time before clock: 1.903ns
+   Maximum output required time after clock: 3.701ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.304ns (frequency: 136.918MHz)
+  Total number of paths / destination ports: 153382 / 1364
+-------------------------------------------------------------------------
+Delay:               7.304ns (Levels of Logic = 20)
+  Source:            lcd_controller_inst/clk_count_7 (FF)
+  Destination:       lcd_controller_inst/clk_count_19 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: lcd_controller_inst/clk_count_7 to lcd_controller_inst/clk_count_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.447   0.883  lcd_controller_inst/clk_count_7 (lcd_controller_inst/clk_count_7)
+     LUT1:I0->O            1   0.205   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<7>_rt (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<7>_rt)
+     MUXCY:S->O            1   0.172   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<7> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<8> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<9> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<10> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<11> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<12> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<13> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<14> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<15> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<16> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<16>)
+     XORCY:CI->O          17   0.180   1.372  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_xor<17> (lcd_controller_inst/clk_count[30]_GND_258_o_add_5_OUT<17>)
+     LUT5:I0->O            0   0.203   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_lutdi1 (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_lutdi1)
+     MUXCY:DI->O           1   0.145   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<3> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<4> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<4>)
+     MUXCY:CI->O           5   0.213   1.059  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<5> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<5>)
+     LUT6:I1->O            2   0.203   0.617  lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT1022 (lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT1022)
+     LUT6:I5->O           11   0.205   0.883  lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT1023 (lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT102)
+     LUT2:I1->O            1   0.205   0.000  lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT101 (lcd_controller_inst/state[2]_X_254_o_wide_mux_107_OUT<13>)
+     FDE:D                     0.102          lcd_controller_inst/clk_count_13
+    ----------------------------------------
+    Total                      7.304ns (2.489ns logic, 4.815ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            sw<0> (PAD)
+  Destination:       g_sw_debounce[0].debounce_inst/flipflops_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<0> to g_sw_debounce[0].debounce_inst/flipflops_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  sw_0_IBUF (sw_0_IBUF)
+     FD:D                      0.102          g_sw_debounce[0].debounce_inst/flipflops_0
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.701ns (Levels of Logic = 1)
+  Source:            lcd_controller_inst/lcd_data_4 (FF)
+  Destination:       lcd_data<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: lcd_controller_inst/lcd_data_4 to lcd_data<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   0.683  lcd_controller_inst/lcd_data_4 (lcd_controller_inst/lcd_data_4)
+     OBUF:I->O                 2.571          lcd_data_4_OBUF (lcd_data<4>)
+    ----------------------------------------
+    Total                      3.701ns (3.018ns logic, 0.683ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.304|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.19 secs
+ 
+--> 
+
+
+Total memory usage is 388268 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   90 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

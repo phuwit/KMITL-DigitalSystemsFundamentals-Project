@@ -49,7 +49,7 @@ begin
 
                     -- ตรวจสอบว่า `message_buffer` ไม่มีข้อความ
                     if idle_timer >= 250000000 then -- 5 วินาที
-                        if message_buffer = (others => '0') then
+                        if message_buffer = (239 downto 0 => '0') then
                             state        <= "00"; -- กลับไปสถานะ RECEIVING
                             alert_signal <= '0'; -- ปิดการแจ้งเตือน
                             idle_timer   <= 0; -- รีเซ็ตตัวนับเวลา
@@ -64,7 +64,7 @@ begin
 
                     -- ตรวจสอบว่า btn(6) ถูกกดและมีข้อความใน `message_buffer`
                     if btn(6) = '1' then
-                        if message_buffer /= (others => '0') then
+                        if message_buffer = (239 downto 0 => '0') then
                             state <= "10"; -- เปลี่ยนไปสถานะ SENDING ถ้ามีข้อความ
                         end if;
                     elsif new_data_in = '1' then
@@ -77,8 +77,8 @@ begin
                         L0    <= '0';   -- ปิดไฟแสดงสถานะ
                     end if;
 
-                    -- when others =>
-                    --     state <= RECEIVING; -- กรณีเกิดข้อผิดพลาด เปลี่ยนกลับไปสถานะเริ่มต้น
+                when others =>
+                    state <= "00"; -- กรณีเกิดข้อผิดพลาด เปลี่ยนกลับไปสถานะเริ่มต้น
             end case;
         end if;
     end process;

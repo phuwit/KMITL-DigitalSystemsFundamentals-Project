@@ -1,0 +1,8 @@
+vhdl work "StateControl.vhd"
+vhdl work "Sender.vhd"
+vhdl work "Printer.vhd"
+vhdl work "MessageDisplay.vhd"
+vhdl work "LcdController.vhd"
+vhdl work "EdgeDetector.vhd"
+vhdl work "Debonce.vhd"
+vhdl work "Perger.vhd"

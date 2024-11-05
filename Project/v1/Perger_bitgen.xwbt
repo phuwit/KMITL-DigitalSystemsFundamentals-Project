@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.ncd
+OUTFILE=/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1
+LICENSE=WebPack
+USER_INFO=213101706_0_0_322

@@ -5,7 +5,7 @@ entity Perger is
     port(
         clk      : in  STD_LOGIC;
         btn      : in  STD_LOGIC_VECTOR(6 downto 1);
-        sw       : in  STD_LOGIC_VECTOR(7 downto 0);
+        sw       : in  STD_LOGIC_VECTOR(6 downto 0);
         led      : out STD_LOGIC_VECTOR(7 downto 0);
         mn       : out STD_LOGIC_VECTOR(7 downto 0);
         lcd_en   : out STD_LOGIC;
@@ -49,7 +49,7 @@ begin
             );
     end generate;
 
-    g_sw_debounce : for i in 0 to 7 generate
+    g_sw_debounce : for i in 0 to 6 generate
         debounce_inst : entity work.Debounce
             generic map(
                 clk_freq    => 20_000_000,
@@ -134,4 +134,7 @@ begin
             e            => lcd_en,
             lcd_data     => lcd_data
         );
+
+    led(7 downto 1) <= (others => '0');
+    mn <= (others => 'Z');
 end Behavioral;
