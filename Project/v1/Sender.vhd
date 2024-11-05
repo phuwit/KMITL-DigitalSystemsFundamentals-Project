@@ -6,8 +6,7 @@ entity Sender is
         current_state  : in  STD_LOGIC_VECTOR(1 downto 0); -- สัญญาณบอกสถานะปัจจุบัน
         message_buffer : in STD_LOGIC_VECTOR(239 downto 0);
         tx_start       : out STD_LOGIC;        -- สัญญาณเริ่มต้นการส่งข้อมูล
-        data_out       : out STD_LOGIC_VECTOR(239 downto 0); -- ข้อมูลที่จะส่งไปยัง uart_tx
-        trigger        : out STD_LOGIC        -- พอร์ตเอาต์พุตสำหรับเก็บสถานะการทริกเกอร์
+        data_out       : out STD_LOGIC_VECTOR(239 downto 0) -- ข้อมูลที่จะส่งไปยัง uart_tx
     );
 end Sender;
 

@@ -3,8 +3,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity StateControl is
     Port (
-        CLK : in  STD_LOGIC; -- สัญญาณนาฬิกา
-        RESET : in  STD_LOGIC; -- สัญญาณรีเซ็ต
+        clk : in  STD_LOGIC; -- สัญญาณนาฬิกา
+        reset : in  STD_LOGIC; -- สัญญาณรีเซ็ต
         btn : in std_logic_vector(6 downto 1);
         new_data_in : in  STD_LOGIC; -- สัญญาณที่บอกว่ามีข้อมูลใหม่เข้ามา *Uart_Receiver
         message_buffer : in STD_LOGIC_VECTOR(239 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
@@ -21,14 +21,14 @@ architecture Behavioral of StateControl is
     signal state : STATE_TYPE := RECEIVING; -- กำหนดสถานะเริ่มต้นเป็น RECEIVING
     signal idle_timer : integer range 0 to 250000000 := 0; -- ตัวนับเวลา 5 วินาที
 begin
-    process (CLK, RESET)
+    process (clk, reset)
     begin
-        if RESET = '1' then
+        if reset = '1' then
             state <= RECEIVING; -- รีเซ็ตกลับไปที่สถานะ RECEIVING
             L0 <= '0'; -- ปิดไฟแสดงสถานะ
             alert_signal <= '0'; -- ปิดสัญญาณแจ้งเตือน
             idle_timer <= 0; -- รีเซ็ตตัวนับเวลา
-        elsif rising_edge(CLK) then
+        elsif rising_edge(clk) then
             case state is
                 when RECEIVING =>
                     L0 <= '0'; -- ปิดไฟแสดงสถานะ

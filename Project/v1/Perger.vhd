@@ -28,6 +28,7 @@ ARCHITECTURE Behavioral OF Perger IS
     -- signal state : STATE_TYPE := RECEIVING;
     SIGNAL current_state, next_state : STD_LOGIC_VECTOR(1 DOWNTO 0);
     SIGNAL message_buffer : STD_LOGIC_VECTOR(239 DOWNTO 0);
+    SIGNAL message_blink : STD_LOGIC_VECTOR(239 DOWNTO 0);
     SIGNAL char_index : INTEGER RANGE 0 TO 29;
     SIGNAL last_char : STD_LOGIC_VECTOR(7 DOWNTO 0);
     SIGNAL tx_start : STD_LOGIC;
@@ -79,8 +80,8 @@ BEGIN
     -- การเชื่อมต่อโมดูล State_Manager
     state_control_inst : ENTITY work.StateControl
         PORT MAP(
-            CLK => CLK,
-            RESET => '0',
+            clk => clk,
+            reset => '0',
             btn => btn_pulse,
             new_data_in => '0', -- สามารถแก้ไขตามความต้องการได้
             message_buffer => message_buffer,
@@ -110,18 +111,17 @@ BEGIN
             current_state => current_state,
             message_buffer => message_buffer,
             tx_start => tx_start,
-            data_out => data_out,
-            trigger => trigger
+            data_out => data_out
         );
 
     -- การเชื่อมต่อโมดูลแสดงผล message_display
     display_inst : ENTITY work.MessageDisplay
         PORT MAP(
-            clk => CLK,
-            reset => RESET,
+            clk => clk,
+            reset => '0',
             message_buffer_in => message_buffer,
             last_char => last_char,
-            message_out => MESSAGE_OUT
+            message_out => message_blink
         );
 
     -- การเชื่อมต่อโมดูล LCD Controller
@@ -129,8 +129,8 @@ BEGIN
         PORT MAP(
             clk => clk,
             reset_n => '1',
-            line1_buffer => message_buffer(239 DOWNTO 112),
-            line2_buffer => message_buffer(111 DOWNTO 0) & x"2020",
+            line1_buffer => message_blink(239 DOWNTO 112),
+            line2_buffer => message_blink(111 DOWNTO 0) & x"2020",
             rw => lcd_rw,
             rs => lcd_rs,
             e => lcd_en,
