@@ -92,15 +92,20 @@ begin
                             last_char <= "00110111"; -- กลับไปที่ '7'
                         end if;
                         key_timer <= 0;
+                    elsif btn(4) = '1' then
+                        -- เว้นวรรค (บรรทัดว่างเปล่า)
+                        last_char <= x"20";
+                        key_timer <= 0;
                     end if;
                 end if;
 
                 -- การกดปุ่ม btn(5) เพื่อลบข้อความตัวล่าสุด
                 if btn(5) = '1' then
-                    if char_index_internal > 0 then
-                        char_index_internal                                                                     <= char_index_internal - 1; -- ลดดัชนีตัวอักษร
-                        internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= "00000000"; -- เคลียร์ข้อมูลที่ตำแหน่งล่าสุด
+                    if char_index_internal < 29 then
+                        char_index_internal <= char_index_internal + 1;
+                        internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= "00000000";          -- เคลียร์ข้อมูลที่ตำแหน่งล่าสุด
                     end if;
+                    last_char <= x"20";
                     key_timer <= 0;     -- รีเซ็ตตัวนับเวลา
                 end if;
 
@@ -117,11 +122,12 @@ begin
 
                 -- การตรวจสอบเวลาสำหรับการเพิ่มตัวอักษรลงใน `internal_message_buffer`
                 if key_timer >= 30000000 and trigger = '0' then -- 3 วินาทีและยังไม่ได้ทริกเกอร์
-                    if char_index_internal < 30 then
+                    if char_index_internal > 0 then
                         internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= last_char;
-                        char_index_internal <= char_index_internal + 1;
-                        key_timer <= 30000000;  -- หยุดการนับเวลา (ค้างไว้ที่ค่าเดิม)
-                        trigger <= '1';         -- ตั้ง trigger เพื่อบอกว่ามีการเพิ่มตัวอักษรแล้ว
+                        char_index_internal <= char_index_internal - 1;
+                        key_timer <= 30000000;      -- หยุดการนับเวลา (ค้างไว้ที่ค่าเดิม)
+                        trigger <= '1';             -- ตั้ง trigger เพื่อบอกว่ามีการเพิ่มตัวอักษรแล้ว
+                        last_char <= "01000001";    -- reset กลับไปที่ 'A'
                     end if;
                 end if;
 
