@@ -16,16 +16,18 @@ entity Printer is
 end Printer;
 
 architecture Behavioral of Printer is
-    signal key_timer               : INTEGER range 0 to 30000000    := 0;                   -- ตัวนับการกดปุ่ม
+    constant key_hold_time : integer := 60_000_000;
+    signal key_timer               : INTEGER range 0 to key_hold_time    := 0;                   -- ตัวนับการกดปุ่ม
     signal internal_message_buffer : STD_LOGIC_VECTOR(239 downto 0) := (others => '0');     -- บัฟเฟอร์ภายในสำหรับเก็บข้อความ
-    signal char_index_internal     : INTEGER range 0 to 29          := 0;                   -- ตัวแปรภายในสำหรับจัดการ char_index
+    signal char_index_internal     : INTEGER range 0 to 29          := 29;                   -- ตัวแปรภายในสำหรับจัดการ char_index
     signal trigger                 : STD_LOGIC                      := '0';                 -- ใช้เก็บสถานะ ('0' หรือ '1') เพื่อบอกว่ามีการเพิ่มตัวอักษรลงใน internal_message_buffer แล้วหรือยัง
+
 begin
     process(clk, btn_reset)
     begin
         if btn_reset = '1' then
             key_timer               <= 0;
-            char_index_internal     <= 0;
+            char_index_internal     <= 29;
             trigger                 <= '0';
             last_char               <= "01000001";          -- ค่าเริ่มต้นเป็น 'A'
             internal_message_buffer <= (others => '0');     -- เคลียร์ค่าใน message_buffer
@@ -101,11 +103,11 @@ begin
 
                 -- การกดปุ่ม btn(5) เพื่อลบข้อความตัวล่าสุด
                 if btn(5) = '1' then
-                    if char_index_internal < 29 then
+                    if char_index_internal > 0 then
                         char_index_internal <= char_index_internal + 1;
                         internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= "00000000";          -- เคลียร์ข้อมูลที่ตำแหน่งล่าสุด
                     end if;
-                    last_char <= x"20";
+                    last_char <= x"00";
                     key_timer <= 0;     -- รีเซ็ตตัวนับเวลา
                 end if;
 
@@ -115,17 +117,17 @@ begin
                     trigger <= '0'; -- รีเซ็ต trigger เมื่อมีการกดปุ่ม
                 else
                     -- นับเวลาเมื่อไม่มีการกดปุ่ม
-                    if key_timer < 30000000 then
+                    if key_timer < key_hold_time then
                         key_timer <= key_timer + 1;
                     end if;
                 end if;
 
                 -- การตรวจสอบเวลาสำหรับการเพิ่มตัวอักษรลงใน `internal_message_buffer`
-                if key_timer >= 30000000 and trigger = '0' then -- 3 วินาทีและยังไม่ได้ทริกเกอร์
+                if key_timer >= key_hold_time and trigger = '0' then -- 3 วินาทีและยังไม่ได้ทริกเกอร์
                     if char_index_internal > 0 then
                         internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= last_char;
                         char_index_internal <= char_index_internal - 1;
-                        key_timer <= 30000000;      -- หยุดการนับเวลา (ค้างไว้ที่ค่าเดิม)
+                        key_timer <= key_hold_time;      -- หยุดการนับเวลา (ค้างไว้ที่ค่าเดิม)
                         trigger <= '1';             -- ตั้ง trigger เพื่อบอกว่ามีการเพิ่มตัวอักษรแล้ว
                         last_char <= "01000001";    -- reset กลับไปที่ 'A'
                     end if;
