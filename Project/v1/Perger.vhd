@@ -117,7 +117,7 @@ begin
         port map(
             clk               => clk,
             reset             => '0',
-            message_buffer_in => message_buffer,
+            message_in => message_buffer,
             last_char         => last_char,
             message_out       => message_blink
         );
