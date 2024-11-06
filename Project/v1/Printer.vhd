@@ -103,7 +103,7 @@ begin
 
                 -- การกดปุ่ม btn(5) เพื่อลบข้อความตัวล่าสุด
                 if btn(5) = '1' then
-                    if char_index_internal > 0 then
+                    if char_index_internal > 0 and char_index_internal <= 29 then
                         internal_message_buffer(((char_index_internal + 1) * 8) + 7 downto ((char_index_internal + 1) * 8)) <= "00000000";
                         char_index_internal <= char_index_internal + 1;
                     end if;
