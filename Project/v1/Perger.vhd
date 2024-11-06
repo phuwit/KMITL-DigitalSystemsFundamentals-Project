@@ -18,14 +18,13 @@ entity Perger is
 end Perger;
 
 architecture Behavioral of Perger is
-    -- type STATE_TYPE is (RECEIVING, PRINTING, SENDING); -- ประเภทองสถานะ
+    constant system_frequency : integer := 20_000_000;
 
     signal btn_debounced : STD_LOGIC_VECTOR(6 downto 1);
     signal sw_debounced  : STD_LOGIC_VECTOR(7 downto 0);
     signal btn_pulse     : STD_LOGIC_VECTOR(6 downto 1);
 
     -- สัญญาณภายในสำหรับการสื่อสารระหว่างโมดูล
-    -- signal state : STATE_TYPE := RECEIVING;
     signal current_state, next_state : STATES;
     signal message_buffer            : STD_LOGIC_VECTOR(239 downto 0);
     signal message_blink             : STD_LOGIC_VECTOR(239 downto 0);
@@ -42,7 +41,7 @@ begin
     g_btn_debounce : for i in 5 to 6 generate
         debounce_inst : entity work.Debounce
             generic map(
-                clk_freq    => 20_000_000,
+                clk_freq    => system_frequency,
                 stable_time => 20
             )
             port map(
@@ -56,7 +55,7 @@ begin
     g_sw_debounce : for i in 0 to 6 generate
         debounce_inst : entity work.Debounce
             generic map(
-                clk_freq    => 20_000_000,
+                clk_freq    => system_frequency,
                 stable_time => 50
             )
             port map(
@@ -132,6 +131,9 @@ begin
 
     -- การเชื่อมต่อโมดูล LCD Controller
     lcd_controller_inst : entity work.LcdController
+        generic map(
+            clk_freq => system_frequency
+        )
         port map(
             clk          => clk,
             reset_n      => '1',

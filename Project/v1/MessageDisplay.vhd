@@ -18,7 +18,6 @@ end MessageDisplay;
 
 architecture Behavioral of MessageDisplay is
     constant message_size              : integer                      := 239;
-    -- constant clk_freq     : INTEGER := 20_000_000;
     constant blink_time                : INTEGER                      := 13_500_000;
     constant blank_message_replacement : std_logic_vector(7 downto 0) := x"ff"; -- solid rectangle
     constant blinking_character        : std_logic_vector(7 downto 0) := x"20"; -- space
