@@ -1,6 +1,6 @@
 vhdl work "Globals.vhd"
 vhdl work "../v1/MessageFormatter.vhd"
-vhdl work "UartTransmitter.vhd"
+vhdl work "Uart.vhd"
 vhdl work "StateControl.vhd"
 vhdl work "Sender.vhd"
 vhdl work "Printer.vhd"

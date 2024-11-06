@@ -34,9 +34,11 @@ architecture Behavioral of Perger is
     signal message_formatted         : STD_LOGIC_VECTOR(255 downto 0);
     signal char_index                : INTEGER range 0 to 29;
     signal last_char                 : STD_LOGIC_VECTOR(7 downto 0);
-    signal tx_start                  : STD_LOGIC;
-    signal transmit_in_progress      : STD_LOGIC;
-
+    signal sender_reset              : std_logic;
+    signal uart_tx_start             : STD_LOGIC;
+    signal send_finished             : STD_LOGIC;
+    signal uart_data_stream_in_ack   : std_logic;
+    signal uart_byte                 : std_logic_vector(7 downto 0);
 begin
     -- Debouncer
     btn_debounced(4 downto 1) <= btn(4 downto 1);
@@ -83,17 +85,18 @@ begin
     -- การเชื่อมต่อโมดูล State_Manager
     state_control_inst : entity work.StateControl
         port map(
-            clk                  => clk,
-            reset                => '0',
-            btn                  => btn_pulse,
-            new_data_in          => '0', -- สามารถแก้ไขตามความต้องการได้
-            message_buffer       => message_buffer,
-            current_state        => current_state,
-            next_state           => next_state,
-            L0                   => led(0),
-            alert_signal         => open, -- ไม่ได้ใช้ใน top-level
-            transmit_in_progress => transmit_in_progress,
-            bluetooth_connected  => bt_state
+            clk                 => clk,
+            reset               => '0',
+            btn                 => btn_pulse,
+            new_data_in         => '0', -- สามารถแก้ไขตามความต้องการได้
+            message_buffer      => message_buffer,
+            current_state       => current_state,
+            next_state          => next_state,
+            L0                  => led(0),
+            alert_signal        => open, -- ไม่ได้ใช้ใน top-level
+            send_finished       => send_finished,
+            bluetooth_connected => bt_state,
+            sender_reset        => sender_reset
         );
 
     -- การเชื่อมต่อโมดูล Print_Manager
@@ -112,24 +115,31 @@ begin
     -- การเชื่อมต่อโมดูล Send_Module
     sender_inst : entity work.Sender
         port map(
-            clk            => clk,
-            current_state  => current_state,
-            message_buffer => message_buffer,
-            tx_start       => tx_start
+            clk                => clk,
+            reset              => '0',
+            current_state      => current_state,
+            message_buffer     => message_buffer,
+            send_finished      => send_finished,
+            data_stream_in_ack => uart_data_stream_in_ack,
+            tx_start           => uart_tx_start,
+            data_out           => uart_byte
         );
 
-    uart_transmitter_inst : entity work.UartTransmitter
+    Uart_inst : entity work.Uart
         generic map(
-            clk_freq  => system_frequency,
-            baud_rate => bluetooth_baud
+            baud            => bluetooth_baud,
+            clock_frequency => system_frequency
         )
         port map(
-            clk      => clk,
-            reset    => '0',
-            tx_start => tx_start,
-            data_in  => message_buffer,
-            tx       => bt_tx,
-            tx_busy  => transmit_in_progress
+            clock               => clk,
+            reset               => '0',
+            data_stream_in      => uart_byte,
+            data_stream_in_stb  => uart_tx_start,
+            data_stream_in_ack  => uart_data_stream_in_ack,
+            data_stream_out     => open,
+            data_stream_out_stb => open,
+            tx                  => bt_tx,
+            rx                  => bt_rx
         );
 
     -- การเชื่อมต่อโมดูลแสดงผล message_display
@@ -161,8 +171,8 @@ begin
         );
 
     led(7)          <= bt_state;
-    led(6)          <= transmit_in_progress;
-    led(5)          <= tx_start;
+    led(6)          <= send_finished;
+    led(5)          <= uart_tx_start;
     led(4 downto 1) <= (others => '0');
     mn              <= std_logic_vector(to_unsigned(char_index, mn'length));
 end Behavioral;
