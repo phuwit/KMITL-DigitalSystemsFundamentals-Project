@@ -120,8 +120,9 @@ begin
             reset              => '0',
             message_in         => message_buffer,
             last_char          => last_char,
-            message_out        => message_blink,
             char_index         => char_index,
+            current_state      => current_state,
+            message_out        => message_blink,
             display_toggle_out => led(7)
         );
 

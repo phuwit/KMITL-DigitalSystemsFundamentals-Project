@@ -1,0 +1,23 @@
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.syr" 
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.syr" 
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.syr" 
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD_Charset.ucf -p xc6slx9-tqg144-2 LCD_Charset.ngc LCD_Charset.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LCD_Charset_map.ncd LCD_Charset.ngd LCD_Charset.pcf 
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD_Charset.ucf -p xc6slx9-tqg144-2 LCD_Charset.ngc LCD_Charset.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LCD_Charset_map.ncd LCD_Charset.ngd LCD_Charset.pcf 
+par -w -intstyle ise -ol high -mt off LCD_Charset_map.ncd LCD_Charset.ncd LCD_Charset.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml LCD_Charset.twx LCD_Charset.ncd -o LCD_Charset.twr LCD_Charset.pcf -ucf LCD_Charset.ucf 
+bitgen -intstyle ise -f LCD_Charset.ut LCD_Charset.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD_Charset.ucf -p xc6slx9-tqg144-2 LCD_Charset.ngc LCD_Charset.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LCD_Charset_map.ncd LCD_Charset.ngd LCD_Charset.pcf 
+par -w -intstyle ise -ol high -mt off LCD_Charset_map.ncd LCD_Charset.ncd LCD_Charset.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml LCD_Charset.twx LCD_Charset.ncd -o LCD_Charset.twr LCD_Charset.pcf -ucf LCD_Charset.ucf 
+bitgen -intstyle ise -f LCD_Charset.ut LCD_Charset.ncd 
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD_Charset.ucf -p xc6slx9-tqg144-2 LCD_Charset.ngc LCD_Charset.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LCD_Charset_map.ncd LCD_Charset.ngd LCD_Charset.pcf 
+par -w -intstyle ise -ol high -mt off LCD_Charset_map.ncd LCD_Charset.ncd LCD_Charset.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml LCD_Charset.twx LCD_Charset.ncd -o LCD_Charset.twr LCD_Charset.pcf -ucf LCD_Charset.ucf 
+bitgen -intstyle ise -f LCD_Charset.ut LCD_Charset.ncd 

@@ -1,0 +1,4 @@
+vhdl work "lcd_controller.vhd"
+vhdl work "EDGE_DETECTOR.vhd"
+vhdl work "DEBOUNCE.vhd"
+vhdl work "LCD_Charset.vhd"

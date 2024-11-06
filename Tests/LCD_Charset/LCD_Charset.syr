@@ -1,0 +1,741 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Reading design: LCD_Charset.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "LCD_Charset.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "LCD_Charset"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : LCD_Charset
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/lcd_controller.vhd" into library work
+Parsing entity <lcd_controller>.
+Parsing architecture <controller> of entity <lcd_controller>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/EDGE_DETECTOR.vhd" into library work
+Parsing entity <EDGE_DETECTOR>.
+Parsing architecture <rtl> of entity <edge_detector>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/DEBOUNCE.vhd" into library work
+Parsing entity <DEBOUNCE>.
+Parsing architecture <logic> of entity <debounce>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" into library work
+Parsing entity <LCD_Charset>.
+Parsing architecture <Behavioral> of entity <lcd_charset>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <LCD_Charset> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" Line 25: Using initial value "01" for current_state since it is never assigned
+
+Elaborating entity <DEBOUNCE> (architecture <logic>) with generics from library <work>.
+
+Elaborating entity <EDGE_DETECTOR> (architecture <rtl>) from library <work>.
+
+Elaborating entity <lcd_controller> (architecture <controller>) from library <work>.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 34. All outputs of instance <g_btn_debounce[5].DEBOUNCE_inst> of block <DEBOUNCE> are unconnected in block <LCD_Charset>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 34. All outputs of instance <g_btn_debounce[6].DEBOUNCE_inst> of block <DEBOUNCE> are unconnected in block <LCD_Charset>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44. All outputs of instance <g_btn_pulse[2].EDGE_DETECTOR_inst> of block <EDGE_DETECTOR> are unconnected in block <LCD_Charset>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44. All outputs of instance <g_btn_pulse[3].EDGE_DETECTOR_inst> of block <EDGE_DETECTOR> are unconnected in block <LCD_Charset>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44. All outputs of instance <g_btn_pulse[4].EDGE_DETECTOR_inst> of block <EDGE_DETECTOR> are unconnected in block <LCD_Charset>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44. All outputs of instance <g_btn_pulse[5].EDGE_DETECTOR_inst> of block <EDGE_DETECTOR> are unconnected in block <LCD_Charset>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44. All outputs of instance <g_btn_pulse[6].EDGE_DETECTOR_inst> of block <EDGE_DETECTOR> are unconnected in block <LCD_Charset>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <LCD_Charset>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd".
+WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44: Output port <o_pulse> of the instance <g_btn_pulse[2].EDGE_DETECTOR_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44: Output port <o_pulse> of the instance <g_btn_pulse[3].EDGE_DETECTOR_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44: Output port <o_pulse> of the instance <g_btn_pulse[4].EDGE_DETECTOR_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44: Output port <o_pulse> of the instance <g_btn_pulse[5].EDGE_DETECTOR_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.vhd" line 44: Output port <o_pulse> of the instance <g_btn_pulse[6].EDGE_DETECTOR_inst> is unconnected or connected to loadless signal.
+    Found 256-bit register for signal <message_buffer>.
+    Found 8-bit register for signal <char_index>.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_2_OUT> created at line 59.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_7_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_9_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_11_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_13_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_15_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_17_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_19_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_21_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_23_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_25_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_27_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_29_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_31_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_33_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_35_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_37_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_39_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_41_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_43_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_45_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_47_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_49_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_51_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_53_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_55_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_57_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_59_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_61_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_63_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_65_OUT> created at line 64.
+    Found 8-bit adder for signal <char_index[7]_GND_4_o_add_67_OUT> created at line 64.
+    Found 8-bit comparator lessequal for signal <char_index[7]_PWR_4_o_LessThan_2_o> created at line 58
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred 264 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <LCD_Charset> synthesized.
+
+Synthesizing Unit <EDGE_DETECTOR>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/EDGE_DETECTOR.vhd".
+    Found 1-bit register for signal <r1_input>.
+    Found 1-bit register for signal <r0_input>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <EDGE_DETECTOR> synthesized.
+
+Synthesizing Unit <lcd_controller>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/lcd_controller.vhd".
+    Found 3-bit register for signal <state>.
+    Found 1-bit register for signal <rs>.
+    Found 1-bit register for signal <rw>.
+    Found 8-bit register for signal <lcd_data>.
+    Found 1-bit register for signal <e>.
+    Found 5-bit register for signal <ptr>.
+    Found 1-bit register for signal <line>.
+    Found 31-bit register for signal <clk_count>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | power_up                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 31-bit adder for signal <clk_count[30]_GND_7_o_add_5_OUT> created at line 85.
+    Found 8-bit adder for signal <ptr[4]_GND_7_o_add_64_OUT> created at line 162.
+    Found 5-bit subtractor for signal <GND_7_o_GND_7_o_sub_100_OUT<4:0>> created at line 217.
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_1_o> created at line 72
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_7_o> created at line 86
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_8_o> created at line 93
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_9_o> created at line 97
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_10_o> created at line 108
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_11_o> created at line 112
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_12_o> created at line 116
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_13_o> created at line 120
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_14_o> created at line 127
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_90_o> created at line 192
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_91_o> created at line 193
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_7_o_LessThan_92_o> created at line 195
+    Found 31-bit comparator lessequal for signal <clk_count[30]_GND_7_o_LessThan_93_o> created at line 197
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  47 D-type flip-flop(s).
+	inferred  13 Comparator(s).
+	inferred  35 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <lcd_controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 35
+ 31-bit adder                                          : 1
+ 5-bit subtractor                                      : 1
+ 8-bit adder                                           : 33
+# Registers                                            : 10
+ 1-bit register                                        : 5
+ 256-bit register                                      : 1
+ 31-bit register                                       : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 14
+ 31-bit comparator greater                             : 12
+ 31-bit comparator lessequal                           : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 35
+ 1-bit 2-to-1 multiplexer                              : 10
+ 31-bit 2-to-1 multiplexer                             : 14
+ 5-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 10
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <LCD_Charset>.
+The following registers are absorbed into accumulator <char_index>: 1 register on signal <char_index>.
+Unit <LCD_Charset> synthesized (advanced).
+
+Synthesizing (advanced) Unit <lcd_controller>.
+The following registers are absorbed into counter <ptr>: 1 register on signal <ptr>.
+Unit <lcd_controller> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 33
+ 31-bit adder                                          : 1
+ 8-bit adder                                           : 32
+# Counters                                             : 1
+ 5-bit down counter                                    : 1
+# Accumulators                                         : 1
+ 8-bit up accumulator                                  : 1
+# Registers                                            : 300
+ Flip-Flops                                            : 300
+# Comparators                                          : 14
+ 31-bit comparator greater                             : 12
+ 31-bit comparator lessequal                           : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 34
+ 1-bit 2-to-1 multiplexer                              : 10
+ 31-bit 2-to-1 multiplexer                             : 14
+ 8-bit 2-to-1 multiplexer                              : 10
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <lcd_controller_inst/FSM_0> on signal <state[1:3]> with user encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ power_up      | 000
+ initialize    | 001
+ reset         | 010
+ line1         | 011
+ line2         | 100
+ update_cursor | 101
+ send          | 110
+---------------------------
+WARNING:Xst:1710 - FF/Latch <message_buffer_227> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_156> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_155> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_154> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_153> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_152> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_148> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_147> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_146> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_145> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_228> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_140> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_139> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_138> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_137> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_136> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_107> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_108> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_236> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_113> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_114> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_115> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_116> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_120> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_121> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_122> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_123> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_124> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_235> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_234> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_233> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_232> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_132> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_188> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_220> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_219> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_195> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_196> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_200> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_201> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_202> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_203> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_204> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_218> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_209> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_210> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_211> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_212> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_216> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_217> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_226> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_162> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_163> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_164> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_168> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_169> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_170> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_171> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_172> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_177> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_178> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_179> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_180> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_184> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_185> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_186> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_187> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_26> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_27> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_28> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_251> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_250> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_34> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_35> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_36> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_40> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_41> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_42> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_43> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_44> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_249> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_49> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_50> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_51> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <char_index_4> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <char_index_3> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <char_index_2> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <char_index_1> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <char_index_0> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_8> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_9> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_10> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_11> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_12> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_252> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_17> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_18> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_19> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_20> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_24> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_25> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_242> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_81> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_82> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_83> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_84> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_88> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_89> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_90> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_91> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_92> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_241> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_98> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_99> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_100> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_104> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_105> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_106> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_52> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_56> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_57> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_58> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_59> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_60> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_248> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_244> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_243> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_67> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_68> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_72> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_73> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_74> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_75> (without init value) has a constant value of 1 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_76> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_225> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_240> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_224> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_0> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_1> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_2> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_3> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_4> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_16> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_32> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_33> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_48> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_64> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_65> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_66> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_80> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_96> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_97> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_112> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_128> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_129> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_130> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_131> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_144> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_160> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_161> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_176> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_192> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_193> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_194> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <message_buffer_208> (without init value) has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <message_buffer_6> in Unit <LCD_Charset> is equivalent to the following 31 FFs/Latches, which will be removed : <message_buffer_14> <message_buffer_22> <message_buffer_30> <message_buffer_38> <message_buffer_46> <message_buffer_54> <message_buffer_62> <message_buffer_70> <message_buffer_78> <message_buffer_86> <message_buffer_94> <message_buffer_102> <message_buffer_110> <message_buffer_118> <message_buffer_126> <message_buffer_134> <message_buffer_142> <message_buffer_150> <message_buffer_158> <message_buffer_166> <message_buffer_174> <message_buffer_182> <message_buffer_190> <message_buffer_198> <message_buffer_206> <message_buffer_214> <message_buffer_222> <message_buffer_230> <message_buffer_238> <message_buffer_246> <message_buffer_254> 
+INFO:Xst:2261 - The FF/Latch <message_buffer_7> in Unit <LCD_Charset> is equivalent to the following 31 FFs/Latches, which will be removed : <message_buffer_15> <message_buffer_23> <message_buffer_31> <message_buffer_39> <message_buffer_47> <message_buffer_55> <message_buffer_63> <message_buffer_71> <message_buffer_79> <message_buffer_87> <message_buffer_95> <message_buffer_103> <message_buffer_111> <message_buffer_119> <message_buffer_127> <message_buffer_135> <message_buffer_143> <message_buffer_151> <message_buffer_159> <message_buffer_167> <message_buffer_175> <message_buffer_183> <message_buffer_191> <message_buffer_199> <message_buffer_207> <message_buffer_215> <message_buffer_223> <message_buffer_231> <message_buffer_239> <message_buffer_247> <message_buffer_255> 
+INFO:Xst:2261 - The FF/Latch <message_buffer_5> in Unit <LCD_Charset> is equivalent to the following 31 FFs/Latches, which will be removed : <message_buffer_13> <message_buffer_21> <message_buffer_29> <message_buffer_37> <message_buffer_45> <message_buffer_53> <message_buffer_61> <message_buffer_69> <message_buffer_77> <message_buffer_85> <message_buffer_93> <message_buffer_101> <message_buffer_109> <message_buffer_117> <message_buffer_125> <message_buffer_133> <message_buffer_141> <message_buffer_149> <message_buffer_157> <message_buffer_165> <message_buffer_173> <message_buffer_181> <message_buffer_189> <message_buffer_197> <message_buffer_205> <message_buffer_213> <message_buffer_221> <message_buffer_229> <message_buffer_237> <message_buffer_245> <message_buffer_253> 
+
+Optimizing unit <LCD_Charset> ...
+
+Optimizing unit <lcd_controller> ...
+WARNING:Xst:1293 - FF/Latch <lcd_controller_inst/clk_count_30> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_29> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_28> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_27> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_26> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_25> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_24> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_23> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_22> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_21> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_20> has a constant value of 0 in block <LCD_Charset>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block LCD_Charset, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : LCD_Charset.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 341
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 19
+#      LUT2                        : 34
+#      LUT3                        : 36
+#      LUT4                        : 21
+#      LUT5                        : 74
+#      LUT6                        : 29
+#      MUXCY                       : 99
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 21
+# FlipFlops/Latches                : 47
+#      FD                          : 13
+#      FDE                         : 31
+#      FDRE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 28
+#      IBUF                        : 1
+#      OBUF                        : 27
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              47  out of  11440     0%  
+ Number of Slice LUTs:                  217  out of   5720     3%  
+    Number used as Logic:               217  out of   5720     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    220
+   Number with an unused Flip Flop:     173  out of    220    78%  
+   Number with an unused LUT:             3  out of    220     1%  
+   Number of fully used LUT-FF pairs:    44  out of    220    20%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          41
+ Number of bonded IOBs:                  29  out of    102    28%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 47    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 8.743ns (Maximum Frequency: 114.374MHz)
+   Minimum input arrival time before clock: 2.083ns
+   Maximum output required time after clock: 4.240ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.743ns (frequency: 114.374MHz)
+  Total number of paths / destination ports: 120343 / 83
+-------------------------------------------------------------------------
+Delay:               8.743ns (Levels of Logic = 17)
+  Source:            lcd_controller_inst/clk_count_7 (FF)
+  Destination:       lcd_controller_inst/clk_count_19 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: lcd_controller_inst/clk_count_7 to lcd_controller_inst/clk_count_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.525   1.039  lcd_controller_inst/clk_count_7 (lcd_controller_inst/clk_count_7)
+     LUT1:I0->O            1   0.254   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<7>_rt (lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<7>_rt)
+     MUXCY:S->O            1   0.215   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<7> (lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<8> (lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<9> (lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<10> (lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<11> (lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<12> (lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<13> (lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_cy<13>)
+     XORCY:CI->O          17   0.206   1.639  lcd_controller_inst/Madd_clk_count[30]_GND_7_o_add_5_OUT_xor<14> (lcd_controller_inst/clk_count[30]_GND_7_o_add_5_OUT<14>)
+     LUT5:I0->O            1   0.254   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_lut<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_cy<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_cy<3> (lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_cy<4> (lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_cy<4>)
+     MUXCY:CI->O           8   0.235   1.374  lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_cy<5> (lcd_controller_inst/Mcompar_clk_count[30]_GND_7_o_LessThan_12_o_cy<5>)
+     LUT6:I1->O            2   0.254   0.726  lcd_controller_inst/Mmux_state[2]_X_7_o_wide_mux_107_OUT1022 (lcd_controller_inst/Mmux_state[2]_X_7_o_wide_mux_107_OUT1022)
+     LUT6:I5->O           11   0.254   1.039  lcd_controller_inst/Mmux_state[2]_X_7_o_wide_mux_107_OUT1023 (lcd_controller_inst/Mmux_state[2]_X_7_o_wide_mux_107_OUT102)
+     LUT2:I1->O            1   0.254   0.000  lcd_controller_inst/Mmux_state[2]_X_7_o_wide_mux_107_OUT101 (lcd_controller_inst/state[2]_X_7_o_wide_mux_107_OUT<13>)
+     FDE:D                     0.074          lcd_controller_inst/clk_count_13
+    ----------------------------------------
+    Total                      8.743ns (2.926ns logic, 5.817ns route)
+                                       (33.5% logic, 66.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            btn<1> (PAD)
+  Destination:       g_btn_pulse[1].EDGE_DETECTOR_inst/r0_input (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn<1> to g_btn_pulse[1].EDGE_DETECTOR_inst/r0_input
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  btn_1_IBUF (btn_1_IBUF)
+     FD:D                      0.074          g_btn_pulse[1].EDGE_DETECTOR_inst/r0_input
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              4.240ns (Levels of Logic = 1)
+  Source:            message_buffer_7 (FF)
+  Destination:       mn<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: message_buffer_7 to mn<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.525   0.803  message_buffer_7 (message_buffer_7)
+     OBUF:I->O                 2.912          mn_7_OBUF (mn<7>)
+    ----------------------------------------
+    Total                      4.240ns (3.437ns logic, 0.803ns route)
+                                       (81.1% logic, 18.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.743|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.50 secs
+ 
+--> 
+
+
+Total memory usage is 375484 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  185 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

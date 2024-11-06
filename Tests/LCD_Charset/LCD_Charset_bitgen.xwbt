@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.ncd
+OUTFILE=/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset/LCD_Charset.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Tests/LCD_Charset
+LICENSE=WebPack
+USER_INFO=213101706_0_0_322

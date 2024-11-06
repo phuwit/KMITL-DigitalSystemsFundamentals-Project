@@ -132,7 +132,7 @@ Parsing architecture <logic> of entity <debounce>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" into library work
 Parsing entity <Perger>.
 Parsing architecture <Behavioral> of entity <perger>.
-WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 134: Actual for formal port line2_buffer is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 135: Actual for formal port line2_buffer is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -153,7 +153,6 @@ Elaborating entity <Printer> (architecture <Behavioral>) from library <work>.
 Elaborating entity <Sender> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <MessageDisplay> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:1127 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/MessageDisplay.vhd" Line 29: Assignment to main_buffer_formatted ignored, since the identifier is never used
 
 Elaborating entity <LcdController> (architecture <controller>) from library <work>.
 WARNING:HDLCompiler:634 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 35: Net <transmit_in_progress> does not have a driver.
@@ -289,16 +288,16 @@ Unit <Printer> synthesized.
 Synthesizing Unit <MessageDisplay>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/MessageDisplay.vhd".
     Found 1-bit register for signal <display_toggle>.
-    Found 240-bit register for signal <alt_buffer>.
+    Found 240-bit register for signal <formatted_message>.
     Found 24-bit register for signal <blink_counter>.
     Found 24-bit adder for signal <blink_counter[23]_GND_256_o_add_1_OUT> created at line 40.
-    Found 9-bit adder for signal <n0294> created at line 50.
+    Found 9-bit adder for signal <n0804> created at line 67.
     Found 24-bit comparator greater for signal <blink_counter[23]_PWR_29_o_LessThan_1_o> created at line 39
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred 265 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred 240 Multiplexer(s).
+	inferred 712 Multiplexer(s).
 Unit <MessageDisplay> synthesized.
 
 Synthesizing Unit <LcdController>.
@@ -383,8 +382,8 @@ Macro Statistics
  31-bit comparator lessequal                           : 1
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 792
- 1-bit 2-to-1 multiplexer                              : 732
+# Multiplexers                                         : 1264
+ 1-bit 2-to-1 multiplexer                              : 1204
  26-bit 2-to-1 multiplexer                             : 6
  28-bit 2-to-1 multiplexer                             : 1
  31-bit 2-to-1 multiplexer                             : 14
@@ -450,8 +449,8 @@ Macro Statistics
  31-bit comparator lessequal                           : 1
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 790
- 1-bit 2-to-1 multiplexer                              : 732
+# Multiplexers                                         : 1262
+ 1-bit 2-to-1 multiplexer                              : 1204
  26-bit 2-to-1 multiplexer                             : 6
  31-bit 2-to-1 multiplexer                             : 14
  5-bit 2-to-1 multiplexer                              : 2
@@ -510,85 +509,55 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_bu
 Optimizing unit <MessageDisplay> ...
 
 Optimizing unit <LcdController> ...
-WARNING:Xst:1710 - FF/Latch <display_inst/alt_buffer_63> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_71> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_79> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_87> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_95> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_103> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_111> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_119> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_127> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_135> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_143> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_151> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_159> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_167> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_175> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_183> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_191> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_20> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_21> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_22> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_24> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_25> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_26> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_27> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_28> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_29> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_30> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_15> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_23> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_31> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_39> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_47> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_55> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_111> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_119> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_127> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_135> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_143> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_151> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_159> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_167> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_175> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_183> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_191> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_199> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_207> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_215> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_223> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_231> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_239> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <printer_inst/last_char_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_199> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_207> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_215> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_223> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_231> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_239> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_15> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_31> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_39> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_47> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_55> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_63> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <printer_inst/internal_message_buffer_79> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_71> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_79> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_87> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_95> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_63> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_55> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_47> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_39> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_31> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_15> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/formatted_message_239> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_30> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_29> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_28> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_27> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_26> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_25> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_24> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_22> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_21> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_20> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <printer_inst/last_char_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_239> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_231> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_223> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_215> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_207> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_199> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_191> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_183> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_175> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_167> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_159> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_151> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_143> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_135> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_127> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_119> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_111> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_103> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_95> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_87> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 26.
-FlipFlop display_inst/display_toggle has been replicated 1 time(s)
-FlipFlop lcd_controller_inst/ptr_0 has been replicated 1 time(s)
-FlipFlop lcd_controller_inst/ptr_2 has been replicated 5 time(s)
-FlipFlop lcd_controller_inst/ptr_3 has been replicated 4 time(s)
+Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 25.
+FlipFlop lcd_controller_inst/ptr_1 has been replicated 1 time(s)
+FlipFlop lcd_controller_inst/ptr_2 has been replicated 1 time(s)
+FlipFlop lcd_controller_inst/ptr_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -596,8 +565,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 637
- Flip-Flops                                            : 637
+# Registers                                            : 658
+ Flip-Flops                                            : 658
 
 =========================================================================
 
@@ -620,23 +589,23 @@ Top Level Output File Name         : Perger.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1713
+# BELS                             : 1617
 #      GND                         : 1
 #      INV                         : 9
 #      LUT1                        : 123
-#      LUT2                        : 73
-#      LUT3                        : 268
-#      LUT4                        : 51
-#      LUT5                        : 218
-#      LUT6                        : 488
+#      LUT2                        : 101
+#      LUT3                        : 62
+#      LUT4                        : 67
+#      LUT5                        : 147
+#      LUT6                        : 667
 #      MUXCY                       : 270
-#      MUXF7                       : 54
+#      MUXF7                       : 12
 #      VCC                         : 1
 #      XORCY                       : 157
-# FlipFlops/Latches                : 637
-#      FD                          : 249
+# FlipFlops/Latches                : 658
+#      FD                          : 277
 #      FDCE                        : 236
-#      FDE                         : 36
+#      FDE                         : 29
 #      FDPE                        : 6
 #      FDR                         : 24
 #      FDRE                        : 86
@@ -653,15 +622,15 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             637  out of  11440     5%  
- Number of Slice LUTs:                 1230  out of   5720    21%  
-    Number used as Logic:              1230  out of   5720    21%  
+ Number of Slice Registers:             658  out of  11440     5%  
+ Number of Slice LUTs:                 1176  out of   5720    20%  
+    Number used as Logic:              1176  out of   5720    20%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1251
-   Number with an unused Flip Flop:     614  out of   1251    49%  
-   Number with an unused LUT:            21  out of   1251     1%  
-   Number of fully used LUT-FF pairs:   616  out of   1251    49%  
+ Number of LUT Flip Flop pairs used:   1192
+   Number with an unused Flip Flop:     534  out of   1192    44%  
+   Number with an unused LUT:            16  out of   1192     1%  
+   Number of fully used LUT-FF pairs:   642  out of   1192    53%  
    Number of unique control sets:        14
 
 IO Utilization: 
@@ -692,7 +661,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 637   |
+clk                                | BUFGP                  | 658   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -703,9 +672,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 8.676ns (Maximum Frequency: 115.260MHz)
+   Minimum period: 8.687ns (Maximum Frequency: 115.118MHz)
    Minimum input arrival time before clock: 2.083ns
-   Maximum output required time after clock: 5.849ns
+   Maximum output required time after clock: 5.834ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -714,10 +683,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 8.676ns (frequency: 115.260MHz)
-  Total number of paths / destination ports: 146425 / 1346
+  Clock period: 8.687ns (frequency: 115.118MHz)
+  Total number of paths / destination ports: 149958 / 1360
 -------------------------------------------------------------------------
-Delay:               8.676ns (Levels of Logic = 20)
+Delay:               8.687ns (Levels of Logic = 19)
   Source:            lcd_controller_inst/clk_count_7 (FF)
   Destination:       lcd_controller_inst/clk_count_19 (FF)
   Source Clock:      clk rising
@@ -738,20 +707,19 @@ Delay:               8.676ns (Levels of Logic = 20)
      MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<13> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<13>)
      MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<14> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<14>)
      MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<15> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<15>)
-     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<16> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<16>)
-     XORCY:CI->O          17   0.206   1.639  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_xor<17> (lcd_controller_inst/clk_count[30]_GND_258_o_add_5_OUT<17>)
-     LUT5:I0->O            0   0.254   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_lutdi1 (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_lutdi1)
-     MUXCY:DI->O           1   0.181   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<3> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<4> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<4>)
-     MUXCY:CI->O           5   0.235   1.271  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<5> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<5>)
+     XORCY:CI->O          17   0.206   1.639  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_xor<16> (lcd_controller_inst/clk_count[30]_GND_258_o_add_5_OUT<16>)
+     LUT5:I0->O            1   0.254   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_lut<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_cy<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_cy<3> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_cy<4> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_cy<4>)
+     MUXCY:CI->O           5   0.235   1.271  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_cy<5> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_14_o_cy<5>)
      LUT6:I1->O            2   0.254   0.726  lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT1022 (lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT1022)
      LUT6:I5->O           11   0.254   1.039  lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT1023 (lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT102)
      LUT2:I1->O            1   0.254   0.000  lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT101 (lcd_controller_inst/state[2]_X_254_o_wide_mux_107_OUT<13>)
      FDE:D                     0.074          lcd_controller_inst/clk_count_13
     ----------------------------------------
-    Total                      8.676ns (2.962ns logic, 5.714ns route)
-                                       (34.1% logic, 65.9% route)
+    Total                      8.687ns (2.973ns logic, 5.714ns route)
+                                       (34.2% logic, 65.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -776,7 +744,7 @@ Offset:              2.083ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 17 / 17
 -------------------------------------------------------------------------
-Offset:              5.849ns (Levels of Logic = 1)
+Offset:              5.834ns (Levels of Logic = 1)
   Source:            display_inst/display_toggle (FF)
   Destination:       led<7> (PAD)
   Source Clock:      clk rising
@@ -785,11 +753,11 @@ Offset:              5.849ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q             197   0.525   2.412  display_inst/display_toggle (display_inst/display_toggle)
+     FD:C->Q             183   0.525   2.397  display_inst/display_toggle (display_inst/display_toggle)
      OBUF:I->O                 2.912          led_7_OBUF (led<7>)
     ----------------------------------------
-    Total                      5.849ns (3.437ns logic, 2.412ns route)
-                                       (58.8% logic, 41.2% route)
+    Total                      5.834ns (3.437ns logic, 2.397ns route)
+                                       (58.9% logic, 41.1% route)
 
 =========================================================================
 
@@ -801,21 +769,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.676|         |         |         |
+clk            |    8.687|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.62 secs
+Total CPU time to Xst completion: 5.66 secs
  
 --> 
 
 
-Total memory usage is 389996 kilobytes
+Total memory usage is 393668 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   91 (   0 filtered)
+Number of warnings :   61 (   0 filtered)
 Number of infos    :   10 (   0 filtered)
 
