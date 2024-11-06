@@ -6,10 +6,10 @@ use work.globals.all;
 entity Printer is
     port(
         clk            : in    STD_LOGIC;
-        current_state  : in    STATES; -- สัญญาณบอกสถานะปัจจุบัน
+        current_state  : in    STATES;  -- สัญญาณบอกสถานะปัจจุบัน
         mode_select    : in    STD_LOGIC; -- สวิตช์เลือกโหมด (0 = โหมดตัวอักษร, 1 = โหมดตัวเลข)
         btn            : in    std_logic_vector(5 downto 1);
-        btn_reset      : in    STD_LOGIC;
+        reset          : in    STD_LOGIC;
         last_char      : inout STD_LOGIC_VECTOR(7 downto 0); -- ตัวอักษรล่าสุดที่เลือก
         message_buffer : out   STD_LOGIC_VECTOR(239 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
         char_index     : out   INTEGER range 0 to 29 -- ดัชนีของตัวอักษรใน buffer (เปลี่ยนเป็นพอร์ต out)
@@ -24,9 +24,9 @@ architecture Behavioral of Printer is
     signal trigger                 : STD_LOGIC                        := '0'; -- ใช้เก็บสถานะ ('0' หรือ '1') เพื่อบอกว่ามีการเพิ่มตัวอักษรลงใน internal_message_buffer แล้วหรือยัง
 
 begin
-    process(clk, btn_reset)
+    process(clk, reset)
     begin
-        if btn_reset = '1' then
+        if reset = '1' then
             key_timer               <= 0;
             char_index_internal     <= 29;
             trigger                 <= '0';
@@ -106,7 +106,7 @@ begin
                 if btn(5) = '1' then
                     if char_index_internal > 0 and char_index_internal <= 29 then
                         internal_message_buffer(((char_index_internal + 1) * 8) + 7 downto ((char_index_internal + 1) * 8)) <= "00000000";
-                        char_index_internal <= char_index_internal + 1;
+                        char_index_internal                                                                                 <= char_index_internal + 1;
                     end if;
 
                     last_char <= x"00";

@@ -162,12 +162,12 @@ Elaborating entity <UartTransmitter> (architecture <Behavioral>) with generics f
 Elaborating entity <MessageFormatter> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <LcdController> (architecture <controller>) with generics from library <work>.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59. All outputs of instance <g_sw_debounce[1].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59. All outputs of instance <g_sw_debounce[2].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59. All outputs of instance <g_sw_debounce[3].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59. All outputs of instance <g_sw_debounce[4].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59. All outputs of instance <g_sw_debounce[5].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59. All outputs of instance <g_sw_debounce[6].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58. All outputs of instance <g_sw_debounce[1].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58. All outputs of instance <g_sw_debounce[2].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58. All outputs of instance <g_sw_debounce[3].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58. All outputs of instance <g_sw_debounce[4].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58. All outputs of instance <g_sw_debounce[5].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58. All outputs of instance <g_sw_debounce[6].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -176,15 +176,14 @@ WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Pr
 Synthesizing Unit <Perger>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd".
 WARNING:Xst:647 - Input <bt_rx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59: Output port <result> of the instance <g_sw_debounce[1].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59: Output port <result> of the instance <g_sw_debounce[2].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59: Output port <result> of the instance <g_sw_debounce[3].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59: Output port <result> of the instance <g_sw_debounce[4].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59: Output port <result> of the instance <g_sw_debounce[5].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59: Output port <result> of the instance <g_sw_debounce[6].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 85: Output port <next_state> of the instance <state_control_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 85: Output port <alert_signal> of the instance <state_control_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 114: Output port <data_out> of the instance <sender_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58: Output port <result> of the instance <g_sw_debounce[1].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58: Output port <result> of the instance <g_sw_debounce[2].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58: Output port <result> of the instance <g_sw_debounce[3].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58: Output port <result> of the instance <g_sw_debounce[4].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58: Output port <result> of the instance <g_sw_debounce[5].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 58: Output port <result> of the instance <g_sw_debounce[6].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 84: Output port <next_state> of the instance <state_control_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 84: Output port <alert_signal> of the instance <state_control_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Perger> synthesized.
@@ -245,7 +244,7 @@ Synthesizing Unit <StateControl>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 28-bit adder for signal <idle_timer[27]_GND_9_o_add_4_OUT> created at line 61.
-    Found 28-bit comparator greater for signal <n0007> created at line 53
+    Found 28-bit comparator greater for signal <n0006> created at line 53
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  29 D-type flip-flop(s).
@@ -288,253 +287,14 @@ Synthesizing Unit <Printer>.
 	inferred   6 Adder/Subtractor(s).
 	inferred 280 D-type flip-flop(s).
 	inferred  17 Comparator(s).
-	inferred 515 Multiplexer(s).
+	inferred 513 Multiplexer(s).
 Unit <Printer> synthesized.
 
 Synthesizing Unit <Sender>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Sender.vhd".
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<238>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<237>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<236>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<235>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<234>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<233>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<232>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<231>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<230>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<229>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<228>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<227>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<226>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<225>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<224>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<223>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<222>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<221>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<220>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<219>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<218>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<217>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<216>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<215>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<214>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<213>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<212>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<211>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<210>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<209>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<208>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<207>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<206>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<205>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<204>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<203>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<202>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<201>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<200>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<199>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<198>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<197>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<196>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<195>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<194>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<193>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<192>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<191>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<190>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<189>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<188>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<187>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<186>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<185>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<184>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<183>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<182>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<181>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<180>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<179>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<178>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<177>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<176>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<175>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<174>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<173>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<172>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<171>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<170>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<169>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<168>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<167>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<166>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<165>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<164>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<163>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<162>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<161>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<160>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<159>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<158>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<157>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<156>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<155>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<154>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<153>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<152>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<151>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<150>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<149>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<148>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<147>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<146>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<145>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<144>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<143>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<142>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<141>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<140>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<139>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<138>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<137>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<136>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<135>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<134>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<133>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<132>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<131>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<130>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<129>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<128>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<127>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<126>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<125>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<124>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<123>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<122>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<121>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<120>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<119>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<118>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<117>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<116>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<115>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<114>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<113>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<112>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<111>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<110>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<109>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<108>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<107>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<106>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<105>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<104>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<103>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<102>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<101>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<100>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<99>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<98>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<97>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<96>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<95>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<94>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<93>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<92>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<91>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<90>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<89>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<88>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<87>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<86>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<85>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<84>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<83>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<82>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<81>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<80>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<79>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<78>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<77>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<76>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<75>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<74>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<73>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<72>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<71>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<70>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<69>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<68>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<67>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<66>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<65>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<64>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<63>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<62>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<61>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<60>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<59>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<58>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<57>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<56>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<55>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<54>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<53>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<52>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <data_out<239>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit register for signal <tx_start>.
     Summary:
-	inferred 240 Latch(s).
+	inferred   1 D-type flip-flop(s).
 Unit <Sender> synthesized.
 
 Synthesizing Unit <UartTransmitter>.
@@ -543,7 +303,7 @@ Synthesizing Unit <UartTransmitter>.
         baud_rate = 115200
     Found 8-bit register for signal <baud_counter>.
     Found 3-bit register for signal <bit_index>.
-    Found 8-bit register for signal <byte_index>.
+    Found 5-bit register for signal <byte_index>.
     Found 240-bit register for signal <tx_reg>.
     Found 3-bit register for signal <state>.
     Found 1-bit register for signal <tx_out>.
@@ -558,19 +318,17 @@ Synthesizing Unit <UartTransmitter>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 11-bit adder for signal <n0054> created at line 69.
-    Found 3-bit adder for signal <bit_index[2]_GND_255_o_add_15_OUT> created at line 78.
-    Found 8-bit adder for signal <byte_index[7]_GND_255_o_add_22_OUT> created at line 85.
-    Found 8-bit adder for signal <baud_counter[7]_GND_255_o_add_24_OUT> created at line 94.
-    Found 1-bit 240-to-1 multiplexer for signal <byte_index[7]_X_252_o_Mux_11_o> created at line 69.
-    Found 8-bit comparator greater for signal <n0009> created at line 66
-    Found 3-bit comparator greater for signal <n0013> created at line 70
-    Found 8-bit comparator greater for signal <n0015> created at line 72
+    Found 8-bit adder for signal <byte_index[4]_GND_16_o_add_10_OUT> created at line 69.
+    Found 3-bit adder for signal <bit_index[2]_GND_16_o_add_15_OUT> created at line 80.
+    Found 5-bit adder for signal <byte_index[4]_GND_16_o_add_22_OUT> created at line 87.
+    Found 8-bit adder for signal <baud_counter[7]_GND_16_o_add_24_OUT> created at line 96.
+    Found 1-bit 240-to-1 multiplexer for signal <byte_index[4]_X_12_o_Mux_11_o> created at line 69.
+    Found 8-bit comparator greater for signal <n0008> created at line 58
     Summary:
 	inferred   4 Adder/Subtractor(s).
-	inferred 260 D-type flip-flop(s).
-	inferred   3 Comparator(s).
-	inferred  10 Multiplexer(s).
+	inferred 257 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   9 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <UartTransmitter> synthesized.
 
@@ -580,9 +338,9 @@ Synthesizing Unit <MessageFormatter>.
     Found 240-bit register for signal <formatted_message>.
     Found 24-bit register for signal <blink_counter>.
     Found 8-bit register for signal <current_state_char>.
-    Found 24-bit adder for signal <blink_counter[23]_GND_258_o_add_1_OUT> created at line 40.
+    Found 24-bit adder for signal <blink_counter[23]_GND_19_o_add_1_OUT> created at line 40.
     Found 9-bit adder for signal <n1018> created at line 70.
-    Found 4x8-bit Read Only RAM for signal <current_state[1]_X_253_o_wide_mux_1122_OUT>
+    Found 4x8-bit Read Only RAM for signal <current_state[1]_X_13_o_wide_mux_1122_OUT>
     Found 24-bit comparator greater for signal <blink_counter[23]_PWR_29_o_LessThan_1_o> created at line 39
     Summary:
 	inferred   1 RAM(s).
@@ -614,22 +372,22 @@ Synthesizing Unit <LcdController>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 31-bit adder for signal <clk_count[30]_GND_261_o_add_5_OUT> created at line 88.
-    Found 8-bit adder for signal <ptr[4]_GND_261_o_add_64_OUT> created at line 165.
-    Found 5-bit subtractor for signal <GND_261_o_GND_261_o_sub_100_OUT<4:0>> created at line 220.
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_1_o> created at line 75
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_7_o> created at line 89
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_8_o> created at line 96
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_9_o> created at line 100
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_10_o> created at line 111
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_11_o> created at line 115
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_12_o> created at line 119
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_13_o> created at line 123
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_14_o> created at line 130
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_90_o> created at line 195
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_91_o> created at line 196
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_261_o_LessThan_92_o> created at line 198
-    Found 31-bit comparator lessequal for signal <clk_count[30]_GND_261_o_LessThan_93_o> created at line 200
+    Found 31-bit adder for signal <clk_count[30]_GND_22_o_add_5_OUT> created at line 88.
+    Found 8-bit adder for signal <ptr[4]_GND_22_o_add_64_OUT> created at line 165.
+    Found 5-bit subtractor for signal <GND_22_o_GND_22_o_sub_100_OUT<4:0>> created at line 220.
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_1_o> created at line 75
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_7_o> created at line 89
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_8_o> created at line 96
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_9_o> created at line 100
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_10_o> created at line 111
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_11_o> created at line 115
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_12_o> created at line 119
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_13_o> created at line 123
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_14_o> created at line 130
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_90_o> created at line 195
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_91_o> created at line 196
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_92_o> created at line 198
+    Found 31-bit comparator lessequal for signal <clk_count[30]_GND_22_o_LessThan_93_o> created at line 200
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred  47 D-type flip-flop(s).
@@ -645,7 +403,6 @@ Macro Statistics
 # RAMs                                                 : 1
  4x8-bit single-port Read Only RAM                     : 1
 # Adders/Subtractors                                   : 19
- 11-bit adder                                          : 1
  19-bit adder                                          : 2
  20-bit adder                                          : 1
  24-bit adder                                          : 1
@@ -653,12 +410,13 @@ Macro Statistics
  28-bit adder                                          : 1
  3-bit adder                                           : 1
  31-bit adder                                          : 1
+ 5-bit adder                                           : 1
  5-bit subtractor                                      : 2
  6-bit adder                                           : 1
  8-bit adder                                           : 4
  9-bit adder                                           : 3
-# Registers                                            : 43
- 1-bit register                                        : 22
+# Registers                                            : 44
+ 1-bit register                                        : 23
  19-bit register                                       : 2
  2-bit register                                        : 3
  20-bit register                                       : 1
@@ -668,32 +426,29 @@ Macro Statistics
  28-bit register                                       : 1
  3-bit register                                        : 1
  31-bit register                                       : 1
- 5-bit register                                        : 2
- 8-bit register                                        : 5
-# Latches                                              : 240
- 1-bit latch                                           : 240
-# Comparators                                          : 38
+ 5-bit register                                        : 3
+ 8-bit register                                        : 4
+# Comparators                                          : 36
  19-bit comparator greater                             : 2
  20-bit comparator greater                             : 1
  24-bit comparator greater                             : 1
  26-bit comparator greater                             : 1
  28-bit comparator greater                             : 1
- 3-bit comparator greater                              : 1
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
  5-bit comparator greater                              : 1
  5-bit comparator lessequal                            : 1
- 8-bit comparator greater                              : 9
+ 8-bit comparator greater                              : 8
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 1485
- 1-bit 2-to-1 multiplexer                              : 1416
+# Multiplexers                                         : 1482
+ 1-bit 2-to-1 multiplexer                              : 1415
  1-bit 240-to-1 multiplexer                            : 1
  26-bit 2-to-1 multiplexer                             : 6
  28-bit 2-to-1 multiplexer                             : 2
  3-bit 2-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 14
- 5-bit 2-to-1 multiplexer                              : 3
- 8-bit 2-to-1 multiplexer                              : 41
+ 5-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 38
 # FSMs                                                 : 3
 # Xors                                                 : 3
  1-bit xor2                                            : 3
@@ -719,7 +474,7 @@ Unit <LcdController> synthesized (advanced).
 
 Synthesizing (advanced) Unit <MessageFormatter>.
 The following registers are absorbed into counter <blink_counter>: 1 register on signal <blink_counter>.
-INFO:Xst:3231 - The small RAM <Mram_current_state[1]_X_253_o_wide_mux_1122_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_current_state[1]_X_13_o_wide_mux_1122_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -756,31 +511,30 @@ Macro Statistics
  20-bit up counter                                     : 1
  24-bit up counter                                     : 1
  5-bit down counter                                    : 1
- 8-bit up counter                                      : 1
-# Registers                                            : 873
- Flip-Flops                                            : 873
-# Comparators                                          : 38
+ 5-bit up counter                                      : 1
+# Registers                                            : 874
+ Flip-Flops                                            : 874
+# Comparators                                          : 36
  19-bit comparator greater                             : 2
  20-bit comparator greater                             : 1
  24-bit comparator greater                             : 1
  26-bit comparator greater                             : 1
  28-bit comparator greater                             : 1
- 3-bit comparator greater                              : 1
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
  5-bit comparator greater                              : 1
  5-bit comparator lessequal                            : 1
- 8-bit comparator greater                              : 9
+ 8-bit comparator greater                              : 8
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 1483
- 1-bit 2-to-1 multiplexer                              : 1416
+# Multiplexers                                         : 1480
+ 1-bit 2-to-1 multiplexer                              : 1415
  1-bit 240-to-1 multiplexer                            : 1
  26-bit 2-to-1 multiplexer                             : 6
  28-bit 2-to-1 multiplexer                             : 2
  3-bit 2-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 14
  5-bit 2-to-1 multiplexer                              : 2
- 8-bit 2-to-1 multiplexer                              : 40
+ 8-bit 2-to-1 multiplexer                              : 38
 # FSMs                                                 : 3
 # Xors                                                 : 3
  1-bit xor2                                            : 3
@@ -848,13 +602,13 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_bu
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_6> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_7> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
 
+Optimizing unit <Sender> ...
+
 Optimizing unit <UartTransmitter> ...
 
 Optimizing unit <MessageFormatter> ...
 
 Optimizing unit <LcdController> ...
-
-Optimizing unit <Sender> ...
 WARNING:Xst:1710 - FF/Latch <uart_transmitter_inst/tx_reg_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_6> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_5> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
@@ -863,247 +617,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_in
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_2> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_1> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_0> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <sender_inst/data_out_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_239> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_20> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_21> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_22> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_23> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_24> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_25> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_26> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_27> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_28> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_30> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_31> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_29> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_32> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_33> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_34> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_35> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_36> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_37> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_38> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_39> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_40> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_41> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_42> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_43> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_45> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_46> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_44> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_47> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_48> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_49> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_50> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_51> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_52> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_53> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_54> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_55> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_56> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_57> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_58> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_60> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_61> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_59> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_62> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_63> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_64> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_65> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_66> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_67> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_68> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_69> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_70> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_71> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_72> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_73> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_75> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_76> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_74> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_77> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_78> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_79> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_80> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_81> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_82> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_83> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_84> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_85> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_86> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_87> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_88> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_90> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_91> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_89> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_92> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_93> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_94> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_95> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_96> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_97> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_98> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_99> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_100> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_101> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_102> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_103> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_105> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_106> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_104> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_107> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_108> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_109> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_110> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_111> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_112> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_113> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_114> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_115> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_116> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_117> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_118> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_120> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_121> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_119> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_122> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_123> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_124> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_125> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_126> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_127> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_128> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_129> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_130> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_131> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_132> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_133> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_135> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_136> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_134> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_137> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_138> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_139> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_140> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_141> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_142> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_143> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_144> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_145> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_146> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_147> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_148> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_150> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_151> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_149> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_152> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_153> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_154> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_155> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_156> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_157> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_158> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_159> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_160> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_161> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_162> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_163> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_165> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_166> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_164> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_167> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_168> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_169> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_170> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_171> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_172> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_173> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_174> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_175> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_176> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_177> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_178> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_180> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_181> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_179> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_182> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_183> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_184> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_185> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_186> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_187> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_188> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_189> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_190> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_191> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_192> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_193> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_195> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_196> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_194> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_197> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_198> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_199> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_200> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_201> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_202> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_203> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_204> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_205> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_206> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_207> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_208> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_210> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_211> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_209> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_212> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_213> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_214> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_215> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_216> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_217> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_218> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_219> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_220> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_221> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_222> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_223> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_225> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_226> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_224> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_227> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_228> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_229> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_230> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_231> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_232> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_233> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_234> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_235> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_236> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_237> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <sender_inst/data_out_238> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:1293 - FF/Latch <printer_inst/internal_message_buffer_71> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <printer_inst/internal_message_buffer_79> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_71> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_63> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_55> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_47> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
@@ -1111,9 +626,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/intern
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_31> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_15> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/byte_index_7> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/byte_index_6> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/byte_index_5> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_30> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_29> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_28> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
@@ -1146,7 +658,7 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/intern
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_103> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_95> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_87> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_79> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_239> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_15> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_23> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_31> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
@@ -1155,8 +667,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_in
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_55> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_63> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_71> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_79> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_239> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_231> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_223> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_215> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
@@ -1176,10 +686,14 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_in
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_103> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_95> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_87> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_transmitter_inst/tx_reg_79> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 30.
+FlipFlop lcd_controller_inst/ptr_1 has been replicated 1 time(s)
+FlipFlop lcd_controller_inst/ptr_2 has been replicated 1 time(s)
+FlipFlop lcd_controller_inst/ptr_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1187,8 +701,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 881
- Flip-Flops                                            : 881
+# Registers                                            : 885
+ Flip-Flops                                            : 885
 
 =========================================================================
 
@@ -1211,27 +725,25 @@ Top Level Output File Name         : Perger.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2059
+# BELS                             : 1868
 #      GND                         : 1
-#      INV                         : 11
+#      INV                         : 10
 #      LUT1                        : 150
-#      LUT2                        : 111
-#      LUT3                        : 274
-#      LUT4                        : 278
-#      LUT5                        : 151
-#      LUT6                        : 585
-#      MUXCY                       : 274
-#      MUXF7                       : 45
+#      LUT2                        : 107
+#      LUT3                        : 66
+#      LUT4                        : 273
+#      LUT5                        : 159
+#      LUT6                        : 576
+#      MUXCY                       : 305
+#      MUXF7                       : 47
 #      MUXF8                       : 16
 #      VCC                         : 1
-#      XORCY                       : 162
-# FlipFlops/Latches                : 881
-#      FD                          : 284
-#      FDCE                        : 236
-#      FDE                         : 273
-#      FDPE                        : 6
+#      XORCY                       : 157
+# FlipFlops/Latches                : 885
+#      FD                          : 286
+#      FDE                         : 510
 #      FDR                         : 24
-#      FDRE                        : 58
+#      FDRE                        : 65
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 36
@@ -1245,16 +757,16 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             881  out of  11440     7%  
- Number of Slice LUTs:                 1560  out of   5720    27%  
-    Number used as Logic:              1560  out of   5720    27%  
+ Number of Slice Registers:             885  out of  11440     7%  
+ Number of Slice LUTs:                 1341  out of   5720    23%  
+    Number used as Logic:              1341  out of   5720    23%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1574
-   Number with an unused Flip Flop:     693  out of   1574    44%  
-   Number with an unused LUT:            14  out of   1574     0%  
-   Number of fully used LUT-FF pairs:   867  out of   1574    55%  
-   Number of unique control sets:        19
+ Number of LUT Flip Flop pairs used:   1498
+   Number with an unused Flip Flop:     613  out of   1498    40%  
+   Number with an unused LUT:           157  out of   1498    10%  
+   Number of fully used LUT-FF pairs:   728  out of   1498    48%  
+   Number of unique control sets:        16
 
 IO Utilization: 
  Number of IOs:                          44
@@ -1284,7 +796,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 881   |
+clk                                | BUFGP                  | 885   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1295,9 +807,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 9.213ns (Maximum Frequency: 108.542MHz)
-   Minimum input arrival time before clock: 3.843ns
-   Maximum output required time after clock: 5.443ns
+   Minimum period: 8.687ns (Maximum Frequency: 115.118MHz)
+   Minimum input arrival time before clock: 2.698ns
+   Maximum output required time after clock: 5.763ns
    Maximum combinational path delay: 5.005ns
 
 Timing Details:
@@ -1306,36 +818,49 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 9.213ns (frequency: 108.542MHz)
-  Total number of paths / destination ports: 187489 / 1771
+  Clock period: 8.687ns (frequency: 115.118MHz)
+  Total number of paths / destination ports: 144076 / 1542
 -------------------------------------------------------------------------
-Delay:               9.213ns (Levels of Logic = 6)
-  Source:            printer_inst/internal_message_buffer_109 (FF)
-  Destination:       uart_transmitter_inst/bit_index_2 (FF)
+Delay:               8.687ns (Levels of Logic = 19)
+  Source:            lcd_controller_inst/clk_count_7 (FF)
+  Destination:       lcd_controller_inst/clk_count_19 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: printer_inst/internal_message_buffer_109 to uart_transmitter_inst/bit_index_2
+  Data Path: lcd_controller_inst/clk_count_7 to lcd_controller_inst/clk_count_19
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             6   0.525   1.331  printer_inst/internal_message_buffer_109 (printer_inst/internal_message_buffer_109)
-     LUT6:I0->O            1   0.254   0.958  sender_inst/tx_start33 (sender_inst/tx_start32)
-     LUT4:I0->O            1   0.254   0.682  sender_inst/tx_start37 (sender_inst/tx_start36)
-     LUT5:I4->O            2   0.254   0.954  sender_inst/tx_start42 (sender_inst/tx_start41)
-     LUT6:I3->O          100   0.235   2.209  sender_inst/tx_start43_1 (sender_inst/tx_start43)
-     LUT4:I3->O            3   0.254   0.994  uart_transmitter_inst/_n0116_inv1_rstpot (uart_transmitter_inst/_n0116_inv1_rstpot)
-     LUT3:I0->O            1   0.235   0.000  uart_transmitter_inst/bit_index_0_dpot (uart_transmitter_inst/bit_index_0_dpot)
-     FDE:D                     0.074          uart_transmitter_inst/bit_index_0
+     FDE:C->Q             11   0.525   1.039  lcd_controller_inst/clk_count_7 (lcd_controller_inst/clk_count_7)
+     LUT1:I0->O            1   0.254   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<7>_rt (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<7>_rt)
+     MUXCY:S->O            1   0.215   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<7> (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<8> (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<9> (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<10> (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<11> (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<12> (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<13> (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<14> (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<15> (lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<15>)
+     XORCY:CI->O          17   0.206   1.639  lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_xor<16> (lcd_controller_inst/clk_count[30]_GND_22_o_add_5_OUT<16>)
+     LUT5:I0->O            1   0.254   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_lut<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<3> (lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<4> (lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<4>)
+     MUXCY:CI->O           5   0.235   1.271  lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<5> (lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<5>)
+     LUT6:I1->O            2   0.254   0.726  lcd_controller_inst/Mmux_state[2]_X_14_o_wide_mux_107_OUT1022 (lcd_controller_inst/Mmux_state[2]_X_14_o_wide_mux_107_OUT1022)
+     LUT6:I5->O           11   0.254   1.039  lcd_controller_inst/Mmux_state[2]_X_14_o_wide_mux_107_OUT1023 (lcd_controller_inst/Mmux_state[2]_X_14_o_wide_mux_107_OUT102)
+     LUT2:I1->O            1   0.254   0.000  lcd_controller_inst/Mmux_state[2]_X_14_o_wide_mux_107_OUT101 (lcd_controller_inst/state[2]_X_14_o_wide_mux_107_OUT<13>)
+     FDE:D                     0.074          lcd_controller_inst/clk_count_13
     ----------------------------------------
-    Total                      9.213ns (2.085ns logic, 7.128ns route)
-                                       (22.6% logic, 77.4% route)
+    Total                      8.687ns (2.973ns logic, 5.714ns route)
+                                       (34.2% logic, 65.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Offset:              3.843ns (Levels of Logic = 3)
+Offset:              2.698ns (Levels of Logic = 2)
   Source:            bt_state (PAD)
   Destination:       state_control_inst/state_FSM_FFd2 (FF)
   Destination Clock: clk rising
@@ -1344,32 +869,32 @@ Offset:              3.843ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.328   0.994  bt_state_IBUF (led_7_OBUF)
-     LUT3:I0->O            1   0.235   0.958  state_control_inst/state_FSM_FFd2-In2 (state_control_inst/state_FSM_FFd2-In2)
-     LUT6:I2->O            1   0.254   0.000  state_control_inst/state_FSM_FFd2-In3 (state_control_inst/state_FSM_FFd2-In)
-     FD:D                      0.074          state_control_inst/state_FSM_FFd2
+     IBUF:I->O             3   1.328   1.042  bt_state_IBUF (led_7_OBUF)
+     LUT6:I2->O            1   0.254   0.000  state_control_inst/state_FSM_FFd1-In1 (state_control_inst/state_FSM_FFd1-In)
+     FD:D                      0.074          state_control_inst/state_FSM_FFd1
     ----------------------------------------
-    Total                      3.843ns (1.891ns logic, 1.952ns route)
-                                       (49.2% logic, 50.8% route)
+    Total                      2.698ns (1.656ns logic, 1.042ns route)
+                                       (61.4% logic, 38.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 17 / 17
+  Total number of paths / destination ports: 21 / 19
 -------------------------------------------------------------------------
-Offset:              5.443ns (Levels of Logic = 1)
-  Source:            printer_inst/char_index_internal_0 (FF)
-  Destination:       mn<0> (PAD)
+Offset:              5.763ns (Levels of Logic = 2)
+  Source:            uart_transmitter_inst/state_FSM_FFd1 (FF)
+  Destination:       led<6> (PAD)
   Source Clock:      clk rising
 
-  Data Path: printer_inst/char_index_internal_0 to mn<0>
+  Data Path: uart_transmitter_inst/state_FSM_FFd1 to led<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q            74   0.525   2.006  printer_inst/char_index_internal_0 (printer_inst/char_index_internal_0)
-     OBUF:I->O                 2.912          mn_0_OBUF (mn<0>)
+     FD:C->Q              13   0.525   1.326  uart_transmitter_inst/state_FSM_FFd1 (uart_transmitter_inst/state_FSM_FFd1)
+     LUT3:I0->O            3   0.235   0.765  uart_transmitter_inst/tx_busy1 (led_6_OBUF)
+     OBUF:I->O                 2.912          led_6_OBUF (led<6>)
     ----------------------------------------
-    Total                      5.443ns (3.437ns logic, 2.006ns route)
-                                       (63.1% logic, 36.9% route)
+    Total                      5.763ns (3.672ns logic, 2.091ns route)
+                                       (63.7% logic, 36.3% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -1399,21 +924,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    9.213|         |         |         |
+clk            |    8.687|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.94 secs
+Total CPU time to Xst completion: 7.15 secs
  
 --> 
 
 
-Total memory usage is 397944 kilobytes
+Total memory usage is 396320 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  582 (   0 filtered)
-Number of infos    :   10 (   0 filtered)
+Number of warnings :   99 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
 

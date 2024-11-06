@@ -35,8 +35,7 @@ architecture Behavioral of Perger is
     signal char_index                : INTEGER range 0 to 29;
     signal last_char                 : STD_LOGIC_VECTOR(7 downto 0);
     signal tx_start                  : STD_LOGIC;
-    signal data_out                  : STD_LOGIC_VECTOR(239 downto 0);
-    signal transmit_in_progress      : STD_LOGIC := '0';
+    signal transmit_in_progress      : STD_LOGIC;
 
 begin
     -- Debouncer
@@ -104,7 +103,7 @@ begin
             current_state  => current_state,
             mode_select    => sw_debounced(0),
             btn            => btn_pulse(5 downto 1),
-            btn_reset      => btn_pulse(6),
+            reset          => '0',
             last_char      => last_char,
             message_buffer => message_buffer,
             char_index     => char_index
@@ -113,10 +112,10 @@ begin
     -- การเชื่อมต่อโมดูล Send_Module
     sender_inst : entity work.Sender
         port map(
+            clk            => clk,
             current_state  => current_state,
             message_buffer => message_buffer,
-            tx_start       => tx_start,
-            data_out       => data_out
+            tx_start       => tx_start
         );
 
     uart_transmitter_inst : entity work.UartTransmitter
@@ -162,6 +161,8 @@ begin
         );
 
     led(7)          <= bt_state;
-    led(6 downto 1) <= (others => '0');
+    led(6)          <= transmit_in_progress;
+    led(5)          <= tx_start;
+    led(4 downto 1) <= (others => '0');
     mn              <= std_logic_vector(to_unsigned(char_index, mn'length));
 end Behavioral;

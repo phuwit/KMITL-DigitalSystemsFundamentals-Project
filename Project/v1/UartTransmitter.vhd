@@ -24,7 +24,7 @@ architecture Behavioral of UartTransmitter is
     signal state        : state_type                             := IDLE; -- สถานะเริ่มต้น
     signal baud_counter : integer range 0 to BAUD_TICK_COUNT - 1 := 0;
     signal bit_index    : integer range 0 to 7                   := 0;
-    signal byte_index   : integer range 0 to 239                 := 0;
+    signal byte_index   : integer range 0 to 29                  := 0;
     signal tx_reg       : STD_LOGIC_VECTOR(239 downto 0);
     signal tx_out       : STD_LOGIC                              := '1'; -- สถานะเริ่มต้น (idle)
 
@@ -63,19 +63,21 @@ begin
                     end if;
 
                 when DATA =>
-                    if baud_counter >= BAUD_TICK_COUNT - 1 then
+                    if baud_counter = BAUD_TICK_COUNT - 1 then
                         -- ส่งบิตข้อมูลปัจจุบัน
                         baud_counter <= 0;
-                        tx_out       <= tx_reg((byte_index * 8) + bit_index);
-                        if bit_index >= 7 then
-                            bit_index <= 0;
-                            if byte_index >= 29 then -- ส่งครบ 240 บิต (30 bytes)
-                                state <= STOP;
+                        tx_out <= tx_reg((byte_index * 8) + bit_index);
+
+                        if bit_index = 7 then
+                            -- ตรวจสอบว่าบิตที่ 7 ถูกส่งแล้ว
+                            if byte_index = 29 then -- ตรวจสอบว่าเป็นไบต์สุดท้ายแล้วหรือไม่
+                                state <= STOP;      -- เปลี่ยนไปสถานะ STOP เมื่อส่งครบ 30 ไบต์
                             else
-                                state <= LOAD_NEXT; -- ส่ง byte ถัดไป
+                                state <= LOAD_NEXT; -- เปลี่ยนไปสถานะ LOAD_NEXT เพื่อส่งไบต์ถัดไป
                             end if;
+                            bit_index <= 0;         -- รีเซ็ต bit_index หลังจากส่งครบ 8 บิต
                         else
-                            bit_index <= bit_index + 1;
+                            bit_index <= bit_index + 1; -- เพิ่ม bit_index เพื่อส่งบิตถัดไป
                         end if;
                     else
                         baud_counter <= baud_counter + 1;
