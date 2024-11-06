@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Lawnmower::  Wed Nov 06 19:47:58 2024
+Lawnmower::  Wed Nov 06 19:56:27 2024
 
 par -w -intstyle ise -ol high -mt off Perger_map.ncd Perger.ncd Perger.pcf 
 
@@ -167,7 +167,7 @@ All signals are completely routed.
 WARNING:Par:283 - There are 7 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 Total REAL time to PAR completion: 3 secs 
-Total CPU time to PAR completion: 3 secs 
+Total CPU time to PAR completion: 4 secs 
 
 Peak Memory Usage:  622 MB
 

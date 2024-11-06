@@ -14,8 +14,7 @@ entity StateControl is
         current_state       : out STATES; -- สถานะปัจจุบันของระบบ
         next_state          : out STATES; -- สถานะถัดไปของระบบ
         L0                  : out STD_LOGIC; -- ไฟแสดงสถานะการทำงานของระบบ
-        alert_signal        : out STD_LOGIC; -- สัญญาณแจ้งเตือนผู้ใช้งาน
-        sender_reset        : out std_logic
+        alert_signal        : out STD_LOGIC -- สัญญาณแจ้งเตือนผู้ใช้งาน
     );
 end StateControl;
 
@@ -30,7 +29,6 @@ begin
             state        <= RECEIVING;  -- รีเซ็ตกลับไปที่สถานะ RECEIVING
             L0           <= '0';        -- ปิดไฟแสดงสถานะ
             alert_signal <= '0';        -- ปิดสัญญาณแจ้งเตือน
-            sender_reset <= '0';
             idle_timer   <= 0;          -- รีเซ็ตตัวนับเวลา
         elsif rising_edge(clk) then
             case state is
@@ -47,9 +45,9 @@ begin
                         L0    <= '1';   -- เปิดไฟแสดงสถานะเพื่อแสดงว่าระบบกำลังทำงาน
                     end if;
 
-                when PRINTING =>             -- สถานะ PRINTING
-                    alert_signal <= '0';    -- ปิดสัญญาณแจ้งเตือนเมื่อพิมพ์ข้อความ
-                    idle_timer   <= 0;      -- รีเซ็ตตัวนับเวลา
+                when PRINTING =>        -- สถานะ PRINTING
+                    alert_signal <= '0'; -- ปิดสัญญาณแจ้งเตือนเมื่อพิมพ์ข้อความ
+                    idle_timer   <= 0;  -- รีเซ็ตตัวนับเวลา
 
                     -- ตรวจสอบว่า `message_buffer` ไม่มีข้อความ
                     if idle_timer >= 250000000 then -- 5 วินาที
@@ -69,8 +67,7 @@ begin
                     -- ตรวจสอบว่า btn(6) ถูกกดและมีข้อความใน `message_buffer`
                     if btn(6) = '1' then
                         if message_buffer /= (239 downto 0 => '0') and bluetooth_connected = '1' then
-                            state        <= SENDING; -- เปลี่ยนไปสถานะ SENDING ถ้ามีข้อความ
-                            sender_reset <= '1';
+                            state <= SENDING; -- เปลี่ยนไปสถานะ SENDING ถ้ามีข้อความ
                         end if;
                     elsif new_data_in = '1' then
                         alert_signal <= '1'; -- แจ้งเตือนผู้ใช้งาน
@@ -78,9 +75,8 @@ begin
 
                 when SENDING =>         -- สถานะ SENDING
                     if send_finished = '1' then
-                        sender_reset <= '0';
-                        state        <= RECEIVING; -- เปลี่ยนกลับไปสถานะ RECEIVING หลังจากส่งข้อความเสร็จสิ้น
-                        L0           <= '0'; -- ปิดไฟแสดงสถานะ
+                        state <= RECEIVING; -- เปลี่ยนกลับไปสถานะ RECEIVING หลังจากส่งข้อความเสร็จสิ้น
+                        L0    <= '0';   -- ปิดไฟแสดงสถานะ
                     end if;
             end case;
         end if;

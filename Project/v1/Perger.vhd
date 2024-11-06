@@ -31,14 +31,17 @@ architecture Behavioral of Perger is
     -- สัญญาณภายในสำหรับการสื่อสารระหว่างโมดูล
     signal current_state, next_state : STATES;
     signal message_buffer            : STD_LOGIC_VECTOR(239 downto 0);
+    signal recieve_buffer            : STD_LOGIC_VECTOR(239 downto 0);
+    signal recieve_complete          : std_logic;
     signal message_formatted         : STD_LOGIC_VECTOR(255 downto 0);
     signal char_index                : INTEGER range 0 to 29;
     signal last_char                 : STD_LOGIC_VECTOR(7 downto 0);
-    signal sender_reset              : std_logic;
-    signal uart_tx_start             : STD_LOGIC;
+    signal uart_send_start           : STD_LOGIC;
+    signal uart_recieve_start        : STD_LOGIC;
     signal send_finished             : STD_LOGIC;
-    signal uart_data_stream_in_ack   : std_logic;
-    signal uart_byte                 : std_logic_vector(7 downto 0);
+    signal uart_send_ack             : std_logic;
+    signal uart_send_data            : std_logic_vector(7 downto 0);
+    signal uart_recieve_data         : std_logic_vector(7 downto 0);
 begin
     -- Debouncer
     btn_debounced(4 downto 1) <= btn(4 downto 1);
@@ -95,8 +98,7 @@ begin
             L0                  => led(0),
             alert_signal        => open, -- ไม่ได้ใช้ใน top-level
             send_finished       => send_finished,
-            bluetooth_connected => bt_state,
-            sender_reset        => sender_reset
+            bluetooth_connected => bt_state
         );
 
     -- การเชื่อมต่อโมดูล Print_Manager
@@ -120,12 +122,21 @@ begin
             current_state      => current_state,
             message_buffer     => message_buffer,
             send_finished      => send_finished,
-            data_stream_in_ack => uart_data_stream_in_ack,
-            tx_start           => uart_tx_start,
-            data_out           => uart_byte
+            data_stream_in_ack => uart_send_ack,
+            tx_start           => uart_recieve_start,
+            data_out           => uart_send_data
         );
 
-    Uart_inst : entity work.Uart
+    receiver_inst : entity work.Receiver
+        port map(
+            clk               => clk,
+            data_in           => uart_recieve_data,
+            new_data_stb      => uart_recieve_start,
+            data_out          => recieve_buffer,
+            data_complete_stb => recieve_complete
+        );
+
+    uart_inst : entity work.Uart
         generic map(
             baud            => bluetooth_baud,
             clock_frequency => system_frequency
@@ -133,11 +144,11 @@ begin
         port map(
             clock               => clk,
             reset               => '0',
-            data_stream_in      => uart_byte,
-            data_stream_in_stb  => uart_tx_start,
-            data_stream_in_ack  => uart_data_stream_in_ack,
-            data_stream_out     => open,
-            data_stream_out_stb => open,
+            data_stream_in      => uart_send_data,
+            data_stream_in_stb  => uart_recieve_start,
+            data_stream_in_ack  => uart_send_ack,
+            data_stream_out     => uart_recieve_data,
+            data_stream_out_stb => uart_recieve_start,
             tx                  => bt_tx,
             rx                  => bt_rx
         );
@@ -172,7 +183,7 @@ begin
 
     led(7)          <= bt_state;
     led(6)          <= send_finished;
-    led(5)          <= uart_tx_start;
+    led(5)          <= uart_recieve_start;
     led(4 downto 1) <= (others => '0');
     mn              <= std_logic_vector(to_unsigned(char_index, mn'length));
 end Behavioral;
