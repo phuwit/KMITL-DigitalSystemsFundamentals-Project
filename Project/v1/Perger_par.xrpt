@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Wed Nov  6 14:07:58 2024">
+  <application stringID="par" timeStamp="Wed Nov  6 14:37:31 2024">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -49,7 +49,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="13th Gen Intel(R) Core(TM) i7-13700HX"/>
-          <item stringID="speed" value="4223.189 MHz"/>
+          <item stringID="speed" value="3529.122 MHz"/>
         </row>
       </table>
     </section>
@@ -63,7 +63,7 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="3 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="4 secs "/>
         <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="4 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
@@ -1291,7 +1291,7 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Wed Nov  6 14:07:58 2024">
+  <application stringID="Par" timeStamp="Wed Nov  6 14:37:31 2024">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -1335,7 +1335,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="13th Gen Intel(R) Core(TM) i7-13700HX"/>
-          <item stringID="speed" value="1991.111 MHz"/>
+          <item stringID="speed" value="800.145 MHz"/>
         </row>
       </table>
     </section>
@@ -1347,10 +1347,10 @@
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="0"/>
         </item>
-        <item AVAILABLE="5720" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="1019">
+        <item AVAILABLE="5720" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="1058">
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="118"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="660"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="236"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="696"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="239"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ANDO6" value="0"/>
@@ -1370,15 +1370,15 @@
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="5"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
         </item>
-        <item AVAILABLE="1430" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="356">
+        <item AVAILABLE="1430" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="413">
           <item AVAILABLE="355" dataType="int" stringID="PAR_NUM_SLICEL" value="132"/>
           <item AVAILABLE="360" dataType="int" stringID="PAR_NUM_SLICEM" value="0"/>
-          <item AVAILABLE="715" dataType="int" stringID="PAR_NUM_SLICEX" value="224"/>
+          <item AVAILABLE="715" dataType="int" stringID="PAR_NUM_SLICEX" value="281"/>
         </item>
-        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="1072">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="450"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="53"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="569"/>
+        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="1074">
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="550"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="16"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="508"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">

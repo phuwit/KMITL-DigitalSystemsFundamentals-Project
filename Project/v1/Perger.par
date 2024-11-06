@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Lawnmower::  Wed Nov 06 14:07:57 2024
+Lawnmower::  Wed Nov 06 14:37:29 2024
 
 par -w -intstyle ise -ol high -mt off Perger_map.ncd Perger.ncd Perger.pcf 
 
@@ -31,11 +31,11 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,019 out of   5,720   17%
-    Number used as logic:                    1,014 out of   5,720   17%
-      Number using O6 output only:             660
+  Number of Slice LUTs:                      1,058 out of   5,720   18%
+    Number used as logic:                    1,053 out of   5,720   18%
+      Number using O6 output only:             696
       Number using O5 output only:             118
-      Number using O5 and O6:                  236
+      Number using O5 and O6:                  239
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
     Number used exclusively as route-thrus:      5
@@ -44,12 +44,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   356 out of   1,430   24%
+  Number of occupied Slices:                   413 out of   1,430   28%
   Number of MUXCYs used:                       312 out of   2,860   10%
-  Number of LUT Flip Flop pairs used:        1,072
-    Number with an unused Flip Flop:           450 out of   1,072   41%
-    Number with an unused LUT:                  53 out of   1,072    4%
-    Number of fully used LUT-FF pairs:         569 out of   1,072   53%
+  Number of LUT Flip Flop pairs used:        1,074
+    Number with an unused Flip Flop:           550 out of   1,074   51%
+    Number with an unused LUT:                  16 out of   1,074    1%
+    Number of fully used LUT-FF pairs:         508 out of   1,074   47%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -104,28 +104,28 @@ WARNING:Par:288 - The signal sw<6>_IBUF has no load.  PAR will not attempt to ro
 Starting Router
 
 
-Phase  1  : 5822 unrouted;      REAL time: 1 secs 
+Phase  1  : 5981 unrouted;      REAL time: 1 secs 
 
-Phase  2  : 5185 unrouted;      REAL time: 1 secs 
+Phase  2  : 5334 unrouted;      REAL time: 2 secs 
 
-Phase  3  : 2606 unrouted;      REAL time: 2 secs 
+Phase  3  : 2728 unrouted;      REAL time: 3 secs 
 
-Phase  4  : 2606 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Phase  4  : 2727 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
 Updating file: Perger.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
-Total REAL time to Router completion: 3 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Total REAL time to Router completion: 4 secs 
 Total CPU time to Router completion: 4 secs 
 
 Partition Implementation Status
@@ -146,8 +146,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     8.887ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.416ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     8.803ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.417ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 

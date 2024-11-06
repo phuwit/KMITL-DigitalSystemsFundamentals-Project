@@ -104,18 +104,13 @@ begin
                 -- การกดปุ่ม btn(5) เพื่อลบข้อความตัวล่าสุด
                 if btn(5) = '1' then
                     if char_index_internal > 0 then
-                        -- เพิ่มค่า char_index_internal ก่อนในรอบนี้
+                        internal_message_buffer(((char_index_internal + 1) * 8) + 7 downto ((char_index_internal + 1) * 8)) <= "00000000";
                         char_index_internal <= char_index_internal + 1;
                     end if;
-                
-                    -- เคลียร์ข้อมูลที่ตำแหน่งล่าสุดในรอบถัดไปเมื่อค่าใหม่ถูกอัปเดต
-                    if char_index_internal > 0 then
-                        internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= "00000000";
-                    end if;
-                
+
                     last_char <= x"00";
                     key_timer <= 0;     -- รีเซ็ตตัวนับเวลา
-                end if;                
+                end if;
 
                 -- ตรวจสอบการกดปุ่มเพื่อเริ่มนับเวลา
                 if btn(1) = '1' or btn(2) = '1' or btn(3) = '1' or btn(4) = '1' or btn(5) = '1' then
