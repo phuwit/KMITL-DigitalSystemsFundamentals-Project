@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
+use work.globals.all;
 
 entity MessageDisplay is
     port(
@@ -9,8 +10,7 @@ entity MessageDisplay is
         message_in         : in  STD_LOGIC_VECTOR(239 downto 0); -- ข้อความที่รับเข้า
         last_char          : in  STD_LOGIC_VECTOR(7 downto 0); -- ตัวอักษรล่าสุดที่เลือก
         char_index         : in  INTEGER range 0 to 29;
-        current_state : in STD_LOGIC_VECTOR(1 downto 0);
-
+        current_state      : in  STATES;
         message_out        : out STD_LOGIC_VECTOR(239 downto 0); -- ข้อความที่ส่งออก
         display_toggle_out : out STD_LOGIC
     );
@@ -56,7 +56,7 @@ begin
             end loop;
 
             -- format blinking character
-            if current_state = "01" and message_in(7 downto 0) = x"00" then
+            if current_state = PRINTING and message_in(7 downto 0) = x"00" then
                 if display_toggle = '1' then
                     if last_char = x"00" then
                         formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= x"20";

@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use ieee.numeric_std.all;
+use work.globals.all;
 
 entity Perger is
     port(
@@ -25,7 +26,7 @@ architecture Behavioral of Perger is
 
     -- สัญญาณภายในสำหรับการสื่อสารระหว่างโมดูล
     -- signal state : STATE_TYPE := RECEIVING;
-    signal current_state, next_state : STD_LOGIC_VECTOR(1 downto 0);
+    signal current_state, next_state : STATES;
     signal message_buffer            : STD_LOGIC_VECTOR(239 downto 0);
     signal message_blink             : STD_LOGIC_VECTOR(239 downto 0);
     signal char_index                : INTEGER range 0 to 29;
@@ -33,6 +34,8 @@ architecture Behavioral of Perger is
     signal tx_start                  : STD_LOGIC;
     signal data_out                  : STD_LOGIC_VECTOR(239 downto 0);
     signal transmit_in_progress      : STD_LOGIC;
+    signal bluetooth_connected       : std_logic;
+
 begin
     -- Debouncer
     btn_debounced(4 downto 1) <= btn(4 downto 1);
@@ -88,7 +91,8 @@ begin
             next_state           => next_state,
             L0                   => led(0),
             alert_signal         => open, -- ไม่ได้ใช้ใน top-level
-            transmit_in_progress => transmit_in_progress
+            transmit_in_progress => transmit_in_progress,
+            bluetooth_connected  => bluetooth_connected
         );
 
     -- การเชื่อมต่อโมดูล Print_Manager

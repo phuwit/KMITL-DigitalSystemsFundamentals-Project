@@ -1,11 +1,12 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use ieee.numeric_std.all;
+use work.globals.all;
 
 entity Printer is
     port(
         clk            : in    STD_LOGIC;
-        current_state  : in    STD_LOGIC_VECTOR(1 downto 0); -- สัญญาณบอกสถานะปัจจุบัน
+        current_state  : in    STATES; -- สัญญาณบอกสถานะปัจจุบัน
         mode_select    : in    STD_LOGIC; -- สวิตช์เลือกโหมด (0 = โหมดตัวอักษร, 1 = โหมดตัวเลข)
         btn            : in    std_logic_vector(5 downto 1);
         btn_reset      : in    STD_LOGIC;
@@ -32,7 +33,7 @@ begin
             last_char               <= "01000001"; -- ค่าเริ่มต้นเป็น 'A'
             internal_message_buffer <= (others => '0'); -- เคลียร์ค่าใน message_buffer
         elsif rising_edge(clk) then
-            if current_state = "01" then -- ตรวจสอบว่าสถานะเป็น PRINTING (รหัส "01")
+            if current_state = PRINTING then -- ตรวจสอบว่าสถานะเป็น PRINTING (รหัส "01")
                 if mode_select = '0' then
                     -- โหมดตัวอักษร
                     if btn(1) = '1' then
