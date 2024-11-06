@@ -45,7 +45,7 @@ begin
                         L0    <= '1';   -- เปิดไฟแสดงสถานะเพื่อแสดงว่าระบบกำลังทำงาน
                     end if;
 
-                when PRINTING =>                -- สถานะ PRINTING
+                when PRINTING =>             -- สถานะ PRINTING
                     alert_signal <= '0';    -- ปิดสัญญาณแจ้งเตือนเมื่อพิมพ์ข้อความ
                     idle_timer   <= 0;      -- รีเซ็ตตัวนับเวลา
 
