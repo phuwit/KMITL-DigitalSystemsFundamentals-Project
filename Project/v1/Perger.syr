@@ -49,7 +49,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "Perger"
 Output Format                      : NGC
-Target Device                      : xc6slx9-3-tqg144
+Target Device                      : xc6slx9-2-tqg144
 
 ---- Source Options
 Top Module Name                    : Perger
@@ -132,7 +132,7 @@ Parsing architecture <logic> of entity <debounce>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" into library work
 Parsing entity <Perger>.
 Parsing architecture <Behavioral> of entity <perger>.
-WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 131: Actual for formal port line2_buffer is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 134: Actual for formal port line2_buffer is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -153,16 +153,17 @@ Elaborating entity <Printer> (architecture <Behavioral>) from library <work>.
 Elaborating entity <Sender> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <MessageDisplay> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1127 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/MessageDisplay.vhd" Line 29: Assignment to main_buffer_formatted ignored, since the identifier is never used
 
 Elaborating entity <LcdController> (architecture <controller>) from library <work>.
-WARNING:HDLCompiler:634 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 34: Net <transmit_in_progress> does not have a driver.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[1].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[2].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[3].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[4].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[5].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53. All outputs of instance <g_sw_debounce[6].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 107. All outputs of instance <sender_inst> of block <Sender> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:HDLCompiler:634 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 35: Net <transmit_in_progress> does not have a driver.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54. All outputs of instance <g_sw_debounce[1].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54. All outputs of instance <g_sw_debounce[2].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54. All outputs of instance <g_sw_debounce[3].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54. All outputs of instance <g_sw_debounce[4].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54. All outputs of instance <g_sw_debounce[5].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54. All outputs of instance <g_sw_debounce[6].debounce_inst> of block <Debounce> are unconnected in block <Perger>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 108. All outputs of instance <sender_inst> of block <Sender> are unconnected in block <Perger>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -170,28 +171,19 @@ WARNING:Xst:2972 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Pr
 
 Synthesizing Unit <Perger>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd".
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[1].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[2].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[3].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[4].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[5].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 53: Output port <result> of the instance <g_sw_debounce[6].debounce_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 79: Output port <next_state> of the instance <state_control_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 79: Output port <alert_signal> of the instance <state_control_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 94: Output port <char_index> of the instance <printer_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 107: Output port <data_out> of the instance <sender_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 107: Output port <tx_start> of the instance <sender_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54: Output port <result> of the instance <g_sw_debounce[1].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54: Output port <result> of the instance <g_sw_debounce[2].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54: Output port <result> of the instance <g_sw_debounce[3].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54: Output port <result> of the instance <g_sw_debounce[4].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54: Output port <result> of the instance <g_sw_debounce[5].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 54: Output port <result> of the instance <g_sw_debounce[6].debounce_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 80: Output port <next_state> of the instance <state_control_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 80: Output port <alert_signal> of the instance <state_control_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 108: Output port <data_out> of the instance <sender_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 108: Output port <tx_start> of the instance <sender_inst> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <transmit_in_progress> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 1-bit tristate buffer for signal <mn<7>> created at line 139
-    Found 1-bit tristate buffer for signal <mn<6>> created at line 139
-    Found 1-bit tristate buffer for signal <mn<5>> created at line 139
-    Found 1-bit tristate buffer for signal <mn<4>> created at line 139
-    Found 1-bit tristate buffer for signal <mn<3>> created at line 139
-    Found 1-bit tristate buffer for signal <mn<2>> created at line 139
-    Found 1-bit tristate buffer for signal <mn<1>> created at line 139
-    Found 1-bit tristate buffer for signal <mn<0>> created at line 139
     Summary:
-	inferred   8 Tristate(s).
+	no macro.
 Unit <Perger> synthesized.
 
 Synthesizing Unit <Debounce_1>.
@@ -201,8 +193,8 @@ Synthesizing Unit <Debounce_1>.
     Found 2-bit register for signal <flipflops>.
     Found 1-bit register for signal <result>.
     Found 19-bit register for signal <count>.
-    Found 19-bit adder for signal <count[18]_GND_4_o_add_1_OUT> created at line 59.
-    Found 19-bit comparator greater for signal <count[18]_PWR_4_o_LessThan_1_o> created at line 58
+    Found 19-bit adder for signal <count[18]_GND_5_o_add_1_OUT> created at line 59.
+    Found 19-bit comparator greater for signal <count[18]_PWR_5_o_LessThan_1_o> created at line 58
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  22 D-type flip-flop(s).
@@ -216,8 +208,8 @@ Synthesizing Unit <Debounce_2>.
     Found 1-bit register for signal <result>.
     Found 20-bit register for signal <count>.
     Found 2-bit register for signal <flipflops>.
-    Found 20-bit adder for signal <count[19]_GND_5_o_add_1_OUT> created at line 59.
-    Found 20-bit comparator greater for signal <count[19]_PWR_7_o_LessThan_1_o> created at line 58
+    Found 20-bit adder for signal <count[19]_GND_6_o_add_1_OUT> created at line 59.
+    Found 20-bit comparator greater for signal <count[19]_PWR_8_o_LessThan_1_o> created at line 58
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  23 D-type flip-flop(s).
@@ -249,7 +241,7 @@ Synthesizing Unit <StateControl>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 28-bit adder for signal <idle_timer[27]_GND_7_o_add_4_OUT> created at line 59.
+    Found 28-bit adder for signal <idle_timer[27]_GND_8_o_add_4_OUT> created at line 59.
     Found 28-bit comparator greater for signal <n0007> created at line 51
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -262,274 +254,49 @@ Unit <StateControl> synthesized.
 Synthesizing Unit <Printer>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Printer.vhd".
     Found 1-bit register for signal <trigger>.
-    Found 5-bit register for signal <char_index_internal>.
-    Found 240-bit register for signal <internal_message_buffer>.
-    Found 25-bit register for signal <key_timer>.
     Found 8-bit register for signal <last_char>.
-    Found 8-bit adder for signal <last_char[7]_GND_11_o_add_35_OUT> created at line 90.
-    Found 5-bit adder for signal <char_index_internal[4]_GND_11_o_add_48_OUT> created at line 105.
-    Found 9-bit adder for signal <n0663> created at line 106.
-    Found 25-bit adder for signal <key_timer[24]_GND_11_o_add_327_OUT> created at line 119.
-    Found 5-bit subtractor for signal <GND_11_o_GND_11_o_sub_604_OUT<4:0>> created at line 127.
-    Found 8-bit comparator lessequal for signal <n0002> created at line 38
-    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_3_o> created at line 38
-    Found 8-bit comparator lessequal for signal <n0007> created at line 46
-    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_7_o> created at line 46
-    Found 8-bit comparator lessequal for signal <n0012> created at line 54
-    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_11_o> created at line 54
-    Found 8-bit comparator lessequal for signal <n0017> created at line 62
-    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_15_o> created at line 62
-    Found 8-bit comparator lessequal for signal <n0026> created at line 73
-    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_27_o> created at line 73
-    Found 8-bit comparator lessequal for signal <n0031> created at line 81
-    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_31_o> created at line 81
-    Found 8-bit comparator lessequal for signal <n0036> created at line 89
-    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_35_o> created at line 89
-    Found 5-bit comparator greater for signal <char_index_internal[4]_PWR_24_o_LessThan_48_o> created at line 104
-    Found 25-bit comparator greater for signal <key_timer[24]_PWR_24_o_LessThan_327_o> created at line 118
+    Found 240-bit register for signal <internal_message_buffer>.
+    Found 26-bit register for signal <key_timer>.
+    Found 5-bit register for signal <char_index_internal>.
+    Found 8-bit adder for signal <last_char[7]_GND_11_o_add_35_OUT> created at line 92.
+    Found 26-bit adder for signal <key_timer[25]_GND_11_o_add_50_OUT> created at line 121.
+    Found 9-bit adder for signal <n0412> created at line 128.
+    Found 5-bit subtractor for signal <GND_11_o_GND_11_o_sub_327_OUT<4:0>> created at line 129.
+    Found 8-bit comparator lessequal for signal <n0002> created at line 40
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_3_o> created at line 40
+    Found 8-bit comparator lessequal for signal <n0007> created at line 48
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_7_o> created at line 48
+    Found 8-bit comparator lessequal for signal <n0012> created at line 56
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_11_o> created at line 56
+    Found 8-bit comparator lessequal for signal <n0017> created at line 64
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_15_o> created at line 64
+    Found 8-bit comparator lessequal for signal <n0026> created at line 75
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_27_o> created at line 75
+    Found 8-bit comparator lessequal for signal <n0031> created at line 83
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_31_o> created at line 83
+    Found 8-bit comparator lessequal for signal <n0036> created at line 91
+    Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_35_o> created at line 91
+    Found 26-bit comparator greater for signal <key_timer[25]_PWR_24_o_LessThan_50_o> created at line 120
     Summary:
 	inferred   4 Adder/Subtractor(s).
-	inferred 279 D-type flip-flop(s).
-	inferred  16 Comparator(s).
-	inferred 514 Multiplexer(s).
+	inferred 280 D-type flip-flop(s).
+	inferred  15 Comparator(s).
+	inferred 273 Multiplexer(s).
 Unit <Printer> synthesized.
 
 Synthesizing Unit <MessageDisplay>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/MessageDisplay.vhd".
-    Found 1-bit register for signal <main_buffer_formatted<231>>.
-    Found 1-bit register for signal <main_buffer_formatted<230>>.
-    Found 1-bit register for signal <main_buffer_formatted<229>>.
-    Found 1-bit register for signal <main_buffer_formatted<228>>.
-    Found 1-bit register for signal <main_buffer_formatted<227>>.
-    Found 1-bit register for signal <main_buffer_formatted<226>>.
-    Found 1-bit register for signal <main_buffer_formatted<225>>.
-    Found 1-bit register for signal <main_buffer_formatted<224>>.
-    Found 1-bit register for signal <main_buffer_formatted<223>>.
-    Found 1-bit register for signal <main_buffer_formatted<222>>.
-    Found 1-bit register for signal <main_buffer_formatted<221>>.
-    Found 1-bit register for signal <main_buffer_formatted<220>>.
-    Found 1-bit register for signal <main_buffer_formatted<219>>.
-    Found 1-bit register for signal <main_buffer_formatted<218>>.
-    Found 1-bit register for signal <main_buffer_formatted<217>>.
-    Found 1-bit register for signal <main_buffer_formatted<216>>.
-    Found 1-bit register for signal <main_buffer_formatted<215>>.
-    Found 1-bit register for signal <main_buffer_formatted<214>>.
-    Found 1-bit register for signal <main_buffer_formatted<213>>.
-    Found 1-bit register for signal <main_buffer_formatted<212>>.
-    Found 1-bit register for signal <main_buffer_formatted<211>>.
-    Found 1-bit register for signal <main_buffer_formatted<210>>.
-    Found 1-bit register for signal <main_buffer_formatted<209>>.
-    Found 1-bit register for signal <main_buffer_formatted<208>>.
-    Found 1-bit register for signal <main_buffer_formatted<207>>.
-    Found 1-bit register for signal <main_buffer_formatted<206>>.
-    Found 1-bit register for signal <main_buffer_formatted<205>>.
-    Found 1-bit register for signal <main_buffer_formatted<204>>.
-    Found 1-bit register for signal <main_buffer_formatted<203>>.
-    Found 1-bit register for signal <main_buffer_formatted<202>>.
-    Found 1-bit register for signal <main_buffer_formatted<201>>.
-    Found 1-bit register for signal <main_buffer_formatted<200>>.
-    Found 1-bit register for signal <main_buffer_formatted<199>>.
-    Found 1-bit register for signal <main_buffer_formatted<198>>.
-    Found 1-bit register for signal <main_buffer_formatted<197>>.
-    Found 1-bit register for signal <main_buffer_formatted<196>>.
-    Found 1-bit register for signal <main_buffer_formatted<195>>.
-    Found 1-bit register for signal <main_buffer_formatted<194>>.
-    Found 1-bit register for signal <main_buffer_formatted<193>>.
-    Found 1-bit register for signal <main_buffer_formatted<192>>.
-    Found 1-bit register for signal <main_buffer_formatted<191>>.
-    Found 1-bit register for signal <main_buffer_formatted<190>>.
-    Found 1-bit register for signal <main_buffer_formatted<189>>.
-    Found 1-bit register for signal <main_buffer_formatted<188>>.
-    Found 1-bit register for signal <main_buffer_formatted<187>>.
-    Found 1-bit register for signal <main_buffer_formatted<186>>.
-    Found 1-bit register for signal <main_buffer_formatted<185>>.
-    Found 1-bit register for signal <main_buffer_formatted<184>>.
-    Found 1-bit register for signal <main_buffer_formatted<183>>.
-    Found 1-bit register for signal <main_buffer_formatted<182>>.
-    Found 1-bit register for signal <main_buffer_formatted<181>>.
-    Found 1-bit register for signal <main_buffer_formatted<180>>.
-    Found 1-bit register for signal <main_buffer_formatted<179>>.
-    Found 1-bit register for signal <main_buffer_formatted<178>>.
-    Found 1-bit register for signal <main_buffer_formatted<177>>.
-    Found 1-bit register for signal <main_buffer_formatted<176>>.
-    Found 1-bit register for signal <main_buffer_formatted<175>>.
-    Found 1-bit register for signal <main_buffer_formatted<174>>.
-    Found 1-bit register for signal <main_buffer_formatted<173>>.
-    Found 1-bit register for signal <main_buffer_formatted<172>>.
-    Found 1-bit register for signal <main_buffer_formatted<171>>.
-    Found 1-bit register for signal <main_buffer_formatted<170>>.
-    Found 1-bit register for signal <main_buffer_formatted<169>>.
-    Found 1-bit register for signal <main_buffer_formatted<168>>.
-    Found 1-bit register for signal <main_buffer_formatted<167>>.
-    Found 1-bit register for signal <main_buffer_formatted<166>>.
-    Found 1-bit register for signal <main_buffer_formatted<165>>.
-    Found 1-bit register for signal <main_buffer_formatted<164>>.
-    Found 1-bit register for signal <main_buffer_formatted<163>>.
-    Found 1-bit register for signal <main_buffer_formatted<162>>.
-    Found 1-bit register for signal <main_buffer_formatted<161>>.
-    Found 1-bit register for signal <main_buffer_formatted<160>>.
-    Found 1-bit register for signal <main_buffer_formatted<159>>.
-    Found 1-bit register for signal <main_buffer_formatted<158>>.
-    Found 1-bit register for signal <main_buffer_formatted<157>>.
-    Found 1-bit register for signal <main_buffer_formatted<156>>.
-    Found 1-bit register for signal <main_buffer_formatted<155>>.
-    Found 1-bit register for signal <main_buffer_formatted<154>>.
-    Found 1-bit register for signal <main_buffer_formatted<153>>.
-    Found 1-bit register for signal <main_buffer_formatted<152>>.
-    Found 1-bit register for signal <main_buffer_formatted<151>>.
-    Found 1-bit register for signal <main_buffer_formatted<150>>.
-    Found 1-bit register for signal <main_buffer_formatted<149>>.
-    Found 1-bit register for signal <main_buffer_formatted<148>>.
-    Found 1-bit register for signal <main_buffer_formatted<147>>.
-    Found 1-bit register for signal <main_buffer_formatted<146>>.
-    Found 1-bit register for signal <main_buffer_formatted<145>>.
-    Found 1-bit register for signal <main_buffer_formatted<144>>.
-    Found 1-bit register for signal <main_buffer_formatted<143>>.
-    Found 1-bit register for signal <main_buffer_formatted<142>>.
-    Found 1-bit register for signal <main_buffer_formatted<141>>.
-    Found 1-bit register for signal <main_buffer_formatted<140>>.
-    Found 1-bit register for signal <main_buffer_formatted<139>>.
-    Found 1-bit register for signal <main_buffer_formatted<138>>.
-    Found 1-bit register for signal <main_buffer_formatted<137>>.
-    Found 1-bit register for signal <main_buffer_formatted<136>>.
-    Found 1-bit register for signal <main_buffer_formatted<135>>.
-    Found 1-bit register for signal <main_buffer_formatted<134>>.
-    Found 1-bit register for signal <main_buffer_formatted<133>>.
-    Found 1-bit register for signal <main_buffer_formatted<132>>.
-    Found 1-bit register for signal <main_buffer_formatted<131>>.
-    Found 1-bit register for signal <main_buffer_formatted<130>>.
-    Found 1-bit register for signal <main_buffer_formatted<129>>.
-    Found 1-bit register for signal <main_buffer_formatted<128>>.
-    Found 1-bit register for signal <main_buffer_formatted<127>>.
-    Found 1-bit register for signal <main_buffer_formatted<126>>.
-    Found 1-bit register for signal <main_buffer_formatted<125>>.
-    Found 1-bit register for signal <main_buffer_formatted<124>>.
-    Found 1-bit register for signal <main_buffer_formatted<123>>.
-    Found 1-bit register for signal <main_buffer_formatted<122>>.
-    Found 1-bit register for signal <main_buffer_formatted<121>>.
-    Found 1-bit register for signal <main_buffer_formatted<120>>.
-    Found 1-bit register for signal <main_buffer_formatted<119>>.
-    Found 1-bit register for signal <main_buffer_formatted<118>>.
-    Found 1-bit register for signal <main_buffer_formatted<117>>.
-    Found 1-bit register for signal <main_buffer_formatted<116>>.
-    Found 1-bit register for signal <main_buffer_formatted<115>>.
-    Found 1-bit register for signal <main_buffer_formatted<114>>.
-    Found 1-bit register for signal <main_buffer_formatted<113>>.
-    Found 1-bit register for signal <main_buffer_formatted<112>>.
-    Found 1-bit register for signal <main_buffer_formatted<111>>.
-    Found 1-bit register for signal <main_buffer_formatted<110>>.
-    Found 1-bit register for signal <main_buffer_formatted<109>>.
-    Found 1-bit register for signal <main_buffer_formatted<108>>.
-    Found 1-bit register for signal <main_buffer_formatted<107>>.
-    Found 1-bit register for signal <main_buffer_formatted<106>>.
-    Found 1-bit register for signal <main_buffer_formatted<105>>.
-    Found 1-bit register for signal <main_buffer_formatted<104>>.
-    Found 1-bit register for signal <main_buffer_formatted<103>>.
-    Found 1-bit register for signal <main_buffer_formatted<102>>.
-    Found 1-bit register for signal <main_buffer_formatted<101>>.
-    Found 1-bit register for signal <main_buffer_formatted<100>>.
-    Found 1-bit register for signal <main_buffer_formatted<99>>.
-    Found 1-bit register for signal <main_buffer_formatted<98>>.
-    Found 1-bit register for signal <main_buffer_formatted<97>>.
-    Found 1-bit register for signal <main_buffer_formatted<96>>.
-    Found 1-bit register for signal <main_buffer_formatted<95>>.
-    Found 1-bit register for signal <main_buffer_formatted<94>>.
-    Found 1-bit register for signal <main_buffer_formatted<93>>.
-    Found 1-bit register for signal <main_buffer_formatted<92>>.
-    Found 1-bit register for signal <main_buffer_formatted<91>>.
-    Found 1-bit register for signal <main_buffer_formatted<90>>.
-    Found 1-bit register for signal <main_buffer_formatted<89>>.
-    Found 1-bit register for signal <main_buffer_formatted<88>>.
-    Found 1-bit register for signal <main_buffer_formatted<87>>.
-    Found 1-bit register for signal <main_buffer_formatted<86>>.
-    Found 1-bit register for signal <main_buffer_formatted<85>>.
-    Found 1-bit register for signal <main_buffer_formatted<84>>.
-    Found 1-bit register for signal <main_buffer_formatted<83>>.
-    Found 1-bit register for signal <main_buffer_formatted<82>>.
-    Found 1-bit register for signal <main_buffer_formatted<81>>.
-    Found 1-bit register for signal <main_buffer_formatted<80>>.
-    Found 1-bit register for signal <main_buffer_formatted<79>>.
-    Found 1-bit register for signal <main_buffer_formatted<78>>.
-    Found 1-bit register for signal <main_buffer_formatted<77>>.
-    Found 1-bit register for signal <main_buffer_formatted<76>>.
-    Found 1-bit register for signal <main_buffer_formatted<75>>.
-    Found 1-bit register for signal <main_buffer_formatted<74>>.
-    Found 1-bit register for signal <main_buffer_formatted<73>>.
-    Found 1-bit register for signal <main_buffer_formatted<72>>.
-    Found 1-bit register for signal <main_buffer_formatted<71>>.
-    Found 1-bit register for signal <main_buffer_formatted<70>>.
-    Found 1-bit register for signal <main_buffer_formatted<69>>.
-    Found 1-bit register for signal <main_buffer_formatted<68>>.
-    Found 1-bit register for signal <main_buffer_formatted<67>>.
-    Found 1-bit register for signal <main_buffer_formatted<66>>.
-    Found 1-bit register for signal <main_buffer_formatted<65>>.
-    Found 1-bit register for signal <main_buffer_formatted<64>>.
-    Found 1-bit register for signal <main_buffer_formatted<63>>.
-    Found 1-bit register for signal <main_buffer_formatted<62>>.
-    Found 1-bit register for signal <main_buffer_formatted<61>>.
-    Found 1-bit register for signal <main_buffer_formatted<60>>.
-    Found 1-bit register for signal <main_buffer_formatted<59>>.
-    Found 1-bit register for signal <main_buffer_formatted<58>>.
-    Found 1-bit register for signal <main_buffer_formatted<57>>.
-    Found 1-bit register for signal <main_buffer_formatted<56>>.
-    Found 1-bit register for signal <main_buffer_formatted<55>>.
-    Found 1-bit register for signal <main_buffer_formatted<54>>.
-    Found 1-bit register for signal <main_buffer_formatted<53>>.
-    Found 1-bit register for signal <main_buffer_formatted<52>>.
-    Found 1-bit register for signal <main_buffer_formatted<51>>.
-    Found 1-bit register for signal <main_buffer_formatted<50>>.
-    Found 1-bit register for signal <main_buffer_formatted<49>>.
-    Found 1-bit register for signal <main_buffer_formatted<48>>.
-    Found 1-bit register for signal <main_buffer_formatted<47>>.
-    Found 1-bit register for signal <main_buffer_formatted<46>>.
-    Found 1-bit register for signal <main_buffer_formatted<45>>.
-    Found 1-bit register for signal <main_buffer_formatted<44>>.
-    Found 1-bit register for signal <main_buffer_formatted<43>>.
-    Found 1-bit register for signal <main_buffer_formatted<42>>.
-    Found 1-bit register for signal <main_buffer_formatted<41>>.
-    Found 1-bit register for signal <main_buffer_formatted<40>>.
-    Found 1-bit register for signal <main_buffer_formatted<39>>.
-    Found 1-bit register for signal <main_buffer_formatted<38>>.
-    Found 1-bit register for signal <main_buffer_formatted<37>>.
-    Found 1-bit register for signal <main_buffer_formatted<36>>.
-    Found 1-bit register for signal <main_buffer_formatted<35>>.
-    Found 1-bit register for signal <main_buffer_formatted<34>>.
-    Found 1-bit register for signal <main_buffer_formatted<33>>.
-    Found 1-bit register for signal <main_buffer_formatted<32>>.
-    Found 1-bit register for signal <main_buffer_formatted<31>>.
-    Found 1-bit register for signal <main_buffer_formatted<30>>.
-    Found 1-bit register for signal <main_buffer_formatted<29>>.
-    Found 1-bit register for signal <main_buffer_formatted<28>>.
-    Found 1-bit register for signal <main_buffer_formatted<27>>.
-    Found 1-bit register for signal <main_buffer_formatted<26>>.
-    Found 1-bit register for signal <main_buffer_formatted<25>>.
-    Found 1-bit register for signal <main_buffer_formatted<24>>.
-    Found 1-bit register for signal <main_buffer_formatted<23>>.
-    Found 1-bit register for signal <main_buffer_formatted<22>>.
-    Found 1-bit register for signal <main_buffer_formatted<21>>.
-    Found 1-bit register for signal <main_buffer_formatted<20>>.
-    Found 1-bit register for signal <main_buffer_formatted<19>>.
-    Found 1-bit register for signal <main_buffer_formatted<18>>.
-    Found 1-bit register for signal <main_buffer_formatted<17>>.
-    Found 1-bit register for signal <main_buffer_formatted<16>>.
-    Found 1-bit register for signal <main_buffer_formatted<15>>.
-    Found 1-bit register for signal <main_buffer_formatted<14>>.
-    Found 1-bit register for signal <main_buffer_formatted<13>>.
-    Found 1-bit register for signal <main_buffer_formatted<12>>.
-    Found 1-bit register for signal <main_buffer_formatted<11>>.
-    Found 1-bit register for signal <main_buffer_formatted<10>>.
-    Found 1-bit register for signal <main_buffer_formatted<9>>.
-    Found 1-bit register for signal <main_buffer_formatted<8>>.
-    Found 1-bit register for signal <main_buffer_formatted<7>>.
-    Found 1-bit register for signal <main_buffer_formatted<6>>.
-    Found 1-bit register for signal <main_buffer_formatted<5>>.
-    Found 1-bit register for signal <main_buffer_formatted<4>>.
-    Found 1-bit register for signal <main_buffer_formatted<3>>.
-    Found 1-bit register for signal <main_buffer_formatted<2>>.
-    Found 1-bit register for signal <main_buffer_formatted<1>>.
-    Found 1-bit register for signal <main_buffer_formatted<0>>.
+    Found 1-bit register for signal <display_toggle>.
+    Found 240-bit register for signal <alt_buffer>.
+    Found 24-bit register for signal <blink_counter>.
+    Found 24-bit adder for signal <blink_counter[23]_GND_256_o_add_1_OUT> created at line 40.
+    Found 9-bit adder for signal <n0294> created at line 50.
+    Found 24-bit comparator greater for signal <blink_counter[23]_PWR_29_o_LessThan_1_o> created at line 39
     Summary:
-	inferred 232 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 265 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 240 Multiplexer(s).
 Unit <MessageDisplay> synthesized.
 
 Synthesizing Unit <LcdController>.
@@ -553,22 +320,22 @@ Synthesizing Unit <LcdController>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 31-bit adder for signal <clk_count[30]_GND_275_o_add_5_OUT> created at line 85.
-    Found 8-bit adder for signal <ptr[4]_GND_275_o_add_64_OUT> created at line 162.
-    Found 5-bit subtractor for signal <GND_275_o_GND_275_o_sub_100_OUT<4:0>> created at line 217.
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_1_o> created at line 72
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_7_o> created at line 86
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_8_o> created at line 93
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_9_o> created at line 97
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_10_o> created at line 108
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_11_o> created at line 112
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_12_o> created at line 116
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_13_o> created at line 120
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_14_o> created at line 127
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_90_o> created at line 192
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_91_o> created at line 193
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_275_o_LessThan_92_o> created at line 195
-    Found 31-bit comparator lessequal for signal <clk_count[30]_GND_275_o_LessThan_93_o> created at line 197
+    Found 31-bit adder for signal <clk_count[30]_GND_258_o_add_5_OUT> created at line 85.
+    Found 8-bit adder for signal <ptr[4]_GND_258_o_add_64_OUT> created at line 162.
+    Found 5-bit subtractor for signal <GND_258_o_GND_258_o_sub_100_OUT<4:0>> created at line 217.
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_1_o> created at line 72
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_7_o> created at line 86
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_8_o> created at line 93
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_9_o> created at line 97
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_10_o> created at line 108
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_11_o> created at line 112
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_12_o> created at line 116
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_13_o> created at line 120
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_14_o> created at line 127
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_90_o> created at line 192
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_91_o> created at line 193
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_258_o_LessThan_92_o> created at line 195
+    Found 31-bit comparator lessequal for signal <clk_count[30]_GND_258_o_LessThan_93_o> created at line 197
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred  47 D-type flip-flop(s).
@@ -581,23 +348,24 @@ Unit <LcdController> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 11
+# Adders/Subtractors                                   : 13
  19-bit adder                                          : 2
  20-bit adder                                          : 1
- 25-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 26-bit adder                                          : 1
  28-bit adder                                          : 1
  31-bit adder                                          : 1
- 5-bit addsub                                          : 1
- 5-bit subtractor                                      : 1
+ 5-bit subtractor                                      : 2
  8-bit adder                                           : 2
- 9-bit adder                                           : 1
-# Registers                                            : 267
- 1-bit register                                        : 253
+ 9-bit adder                                           : 2
+# Registers                                            : 38
+ 1-bit register                                        : 22
  19-bit register                                       : 2
  2-bit register                                        : 3
  20-bit register                                       : 1
- 240-bit register                                      : 1
- 25-bit register                                       : 1
+ 24-bit register                                       : 1
+ 240-bit register                                      : 2
+ 26-bit register                                       : 1
  28-bit register                                       : 1
  31-bit register                                       : 1
  5-bit register                                        : 2
@@ -605,28 +373,25 @@ Macro Statistics
 # Comparators                                          : 33
  19-bit comparator greater                             : 2
  20-bit comparator greater                             : 1
- 25-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
+ 26-bit comparator greater                             : 1
  28-bit comparator greater                             : 1
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
- 5-bit comparator greater                              : 1
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 551
- 1-bit 2-to-1 multiplexer                              : 493
- 25-bit 2-to-1 multiplexer                             : 6
+# Multiplexers                                         : 550
+ 1-bit 2-to-1 multiplexer                              : 492
+ 26-bit 2-to-1 multiplexer                             : 6
  28-bit 2-to-1 multiplexer                             : 1
  31-bit 2-to-1 multiplexer                             : 14
  5-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 36
-# Tristates                                            : 8
- 1-bit tristate buffer                                 : 8
 # FSMs                                                 : 2
 # Xors                                                 : 3
  1-bit xor2                                            : 3
 
 =========================================================================
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
@@ -645,9 +410,9 @@ Synthesizing (advanced) Unit <LcdController>.
 The following registers are absorbed into counter <ptr>: 1 register on signal <ptr>.
 Unit <LcdController> synthesized (advanced).
 
-Synthesizing (advanced) Unit <Printer>.
-The following registers are absorbed into counter <char_index_internal>: 1 register on signal <char_index_internal>.
-Unit <Printer> synthesized (advanced).
+Synthesizing (advanced) Unit <MessageDisplay>.
+The following registers are absorbed into counter <blink_counter>: 1 register on signal <blink_counter>.
+Unit <MessageDisplay> synthesized (advanced).
 
 Synthesizing (advanced) Unit <StateControl>.
 The following registers are absorbed into counter <idle_timer>: 1 register on signal <idle_timer>.
@@ -657,32 +422,33 @@ Unit <StateControl> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 5
- 25-bit adder                                          : 1
+# Adders/Subtractors                                   : 7
+ 26-bit adder                                          : 1
  31-bit adder                                          : 1
+ 5-bit subtractor                                      : 1
  8-bit adder                                           : 2
- 9-bit adder                                           : 1
+ 9-bit adder                                           : 2
 # Counters                                             : 6
  19-bit up counter                                     : 2
  20-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
  28-bit up counter                                     : 1
  5-bit down counter                                    : 1
- 5-bit updown counter                                  : 1
-# Registers                                            : 571
- Flip-Flops                                            : 571
+# Registers                                            : 586
+ Flip-Flops                                            : 586
 # Comparators                                          : 33
  19-bit comparator greater                             : 2
  20-bit comparator greater                             : 1
- 25-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
+ 26-bit comparator greater                             : 1
  28-bit comparator greater                             : 1
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
- 5-bit comparator greater                              : 1
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 549
- 1-bit 2-to-1 multiplexer                              : 493
- 25-bit 2-to-1 multiplexer                             : 6
+# Multiplexers                                         : 548
+ 1-bit 2-to-1 multiplexer                              : 492
+ 26-bit 2-to-1 multiplexer                             : 6
  31-bit 2-to-1 multiplexer                             : 14
  8-bit 2-to-1 multiplexer                              : 36
 # FSMs                                                 : 2
@@ -727,109 +493,97 @@ Optimizing unit <Debounce_2> ...
 Optimizing unit <StateControl> ...
 
 Optimizing unit <Printer> ...
-WARNING:Xst:1293 - FF/Latch <internal_message_buffer_0> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_1> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_2> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_3> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_4> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_5> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_6> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_7> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <internal_message_buffer_0> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_1> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_2> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_3> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_4> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_5> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_6> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_7> has a constant value of 0 in block <Printer>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <MessageDisplay> ...
 
 Optimizing unit <LcdController> ...
-WARNING:Xst:1710 - FF/Latch <display_inst/main_buffer_formatted_1> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_2> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_0> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_3> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_4> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_6> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <printer_inst/internal_message_buffer_79> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_71> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_63> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_55> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_47> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_39> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_31> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_15> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_5> (without init value) has a constant value of 1 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_30> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_29> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_28> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_27> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_26> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_25> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_24> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_22> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_21> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <display_inst/alt_buffer_79> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_87> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_95> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_103> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_111> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_119> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_127> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_135> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_143> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_151> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_159> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_167> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_175> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_183> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_191> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_199> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_207> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_215> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_223> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_20> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <printer_inst/last_char_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_239> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_231> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_223> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_215> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_207> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_199> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_191> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_183> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_175> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_167> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_159> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_151> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_143> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_135> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_127> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_119> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_111> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_103> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_95> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_21> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_22> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_24> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_25> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_26> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_27> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_28> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_29> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_controller_inst/clk_count_30> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_15> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_23> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_31> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_39> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_47> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_55> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_63> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_71> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_87> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_15> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_231> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_223> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_215> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_207> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_199> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_191> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_183> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_175> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_23> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_31> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_39> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_47> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_55> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_63> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_71> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_79> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_87> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_95> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_103> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_111> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_119> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_127> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_135> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_143> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_151> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_159> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/main_buffer_formatted_167> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_95> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_103> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_111> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_119> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_127> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_135> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_143> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_151> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_159> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_167> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_175> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_183> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_191> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_199> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_207> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_215> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_223> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_231> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_239> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_231> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_inst/alt_buffer_239> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <printer_inst/last_char_7> (without init value) has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_0> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_1> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_2> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_3> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_4> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_5> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_6> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_7> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_15> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_23> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_31> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_39> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_47> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_55> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_63> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_71> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <printer_inst/internal_message_buffer_79> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 20.
-FlipFlop printer_inst/last_char_3 has been replicated 1 time(s)
-FlipFlop printer_inst/last_char_4 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 22.
+FlipFlop display_inst/display_toggle has been replicated 1 time(s)
+FlipFlop lcd_controller_inst/ptr_0 has been replicated 1 time(s)
+FlipFlop lcd_controller_inst/ptr_2 has been replicated 5 time(s)
+FlipFlop lcd_controller_inst/ptr_3 has been replicated 4 time(s)
 
 Final Macro Processing ...
 
@@ -837,8 +591,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 588
- Flip-Flops                                            : 588
+# Registers                                            : 637
+ Flip-Flops                                            : 637
 
 =========================================================================
 
@@ -861,51 +615,49 @@ Top Level Output File Name         : Perger.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1260
+# BELS                             : 1672
 #      GND                         : 1
-#      INV                         : 7
-#      LUT1                        : 99
-#      LUT2                        : 102
-#      LUT3                        : 41
-#      LUT4                        : 67
-#      LUT5                        : 122
-#      LUT6                        : 433
-#      MUXCY                       : 244
-#      MUXF7                       : 11
+#      INV                         : 8
+#      LUT1                        : 123
+#      LUT2                        : 75
+#      LUT3                        : 267
+#      LUT4                        : 46
+#      LUT5                        : 204
+#      LUT6                        : 465
+#      MUXCY                       : 270
+#      MUXF7                       : 55
 #      VCC                         : 1
-#      XORCY                       : 132
-# FlipFlops/Latches                : 588
-#      FD                          : 37
-#      FDCE                        : 241
-#      FDE                         : 26
-#      FDPE                        : 2
-#      FDR                         : 168
+#      XORCY                       : 157
+# FlipFlops/Latches                : 637
+#      FD                          : 249
+#      FDCE                        : 236
+#      FDE                         : 36
+#      FDPE                        : 6
+#      FDR                         : 24
 #      FDRE                        : 86
-#      FDS                         : 28
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 34
 #      IBUF                        : 7
-#      OBUF                        : 19
-#      OBUFT                       : 8
+#      OBUF                        : 27
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 6slx9tqg144-3 
+Selected Device : 6slx9tqg144-2 
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             588  out of  11440     5%  
- Number of Slice LUTs:                  871  out of   5720    15%  
-    Number used as Logic:               871  out of   5720    15%  
+ Number of Slice Registers:             637  out of  11440     5%  
+ Number of Slice LUTs:                 1188  out of   5720    20%  
+    Number used as Logic:              1188  out of   5720    20%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1078
-   Number with an unused Flip Flop:     490  out of   1078    45%  
-   Number with an unused LUT:           207  out of   1078    19%  
-   Number of fully used LUT-FF pairs:   381  out of   1078    35%  
-   Number of unique control sets:        41
+ Number of LUT Flip Flop pairs used:   1209
+   Number with an unused Flip Flop:     572  out of   1209    47%  
+   Number with an unused LUT:            21  out of   1209     1%  
+   Number of fully used LUT-FF pairs:   616  out of   1209    50%  
+   Number of unique control sets:        13
 
 IO Utilization: 
  Number of IOs:                          41
@@ -935,7 +687,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 588   |
+clk                                | BUFGP                  | 637   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -944,11 +696,11 @@ No asynchronous control signals found in this design
 
 Timing Summary:
 ---------------
-Speed Grade: -3
+Speed Grade: -2
 
-   Minimum period: 7.332ns (Maximum Frequency: 136.383MHz)
-   Minimum input arrival time before clock: 1.903ns
-   Maximum output required time after clock: 3.791ns
+   Minimum period: 8.676ns (Maximum Frequency: 115.260MHz)
+   Minimum input arrival time before clock: 2.083ns
+   Maximum output required time after clock: 5.844ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -957,10 +709,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 7.332ns (frequency: 136.383MHz)
-  Total number of paths / destination ports: 149463 / 1461
+  Clock period: 8.676ns (frequency: 115.260MHz)
+  Total number of paths / destination ports: 143789 / 1346
 -------------------------------------------------------------------------
-Delay:               7.332ns (Levels of Logic = 17)
+Delay:               8.676ns (Levels of Logic = 20)
   Source:            lcd_controller_inst/clk_count_7 (FF)
   Destination:       lcd_controller_inst/clk_count_19 (FF)
   Source Clock:      clk rising
@@ -970,34 +722,37 @@ Delay:               7.332ns (Levels of Logic = 17)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             11   0.447   0.883  lcd_controller_inst/clk_count_7 (lcd_controller_inst/clk_count_7)
-     LUT1:I0->O            1   0.205   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<7>_rt (lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<7>_rt)
-     MUXCY:S->O            1   0.172   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<7> (lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<8> (lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<9> (lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<10> (lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<11> (lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<12> (lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<13> (lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_cy<13>)
-     XORCY:CI->O          17   0.180   1.372  lcd_controller_inst/Madd_clk_count[30]_GND_275_o_add_5_OUT_xor<14> (lcd_controller_inst/clk_count[30]_GND_275_o_add_5_OUT<14>)
-     LUT5:I0->O            1   0.203   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_lut<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_lut<2>)
-     MUXCY:S->O            1   0.172   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_cy<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_cy<3> (lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_cy<4> (lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_cy<4>)
-     MUXCY:CI->O           7   0.213   1.118  lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_cy<5> (lcd_controller_inst/Mcompar_clk_count[30]_GND_275_o_LessThan_12_o_cy<5>)
-     LUT6:I1->O            2   0.203   0.617  lcd_controller_inst/Mmux_state[2]_X_271_o_wide_mux_107_OUT1022 (lcd_controller_inst/Mmux_state[2]_X_271_o_wide_mux_107_OUT1022)
-     LUT6:I5->O           11   0.205   0.883  lcd_controller_inst/Mmux_state[2]_X_271_o_wide_mux_107_OUT1023 (lcd_controller_inst/Mmux_state[2]_X_271_o_wide_mux_107_OUT102)
-     LUT2:I1->O            1   0.205   0.000  lcd_controller_inst/Mmux_state[2]_X_271_o_wide_mux_107_OUT101 (lcd_controller_inst/state[2]_X_271_o_wide_mux_107_OUT<13>)
-     FDE:D                     0.102          lcd_controller_inst/clk_count_13
+     FDE:C->Q             11   0.525   1.039  lcd_controller_inst/clk_count_7 (lcd_controller_inst/clk_count_7)
+     LUT1:I0->O            1   0.254   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<7>_rt (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<7>_rt)
+     MUXCY:S->O            1   0.215   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<7> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<8> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<9> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<10> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<11> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<12> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<13> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<14> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<15> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<16> (lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_cy<16>)
+     XORCY:CI->O          17   0.206   1.639  lcd_controller_inst/Madd_clk_count[30]_GND_258_o_add_5_OUT_xor<17> (lcd_controller_inst/clk_count[30]_GND_258_o_add_5_OUT<17>)
+     LUT5:I0->O            0   0.254   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_lutdi1 (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<2> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<3> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<4> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<4>)
+     MUXCY:CI->O           5   0.235   1.271  lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<5> (lcd_controller_inst/Mcompar_clk_count[30]_GND_258_o_LessThan_9_o_cy<5>)
+     LUT6:I1->O            2   0.254   0.726  lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT1022 (lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT1022)
+     LUT6:I5->O           11   0.254   1.039  lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT1023 (lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT102)
+     LUT2:I1->O            1   0.254   0.000  lcd_controller_inst/Mmux_state[2]_X_254_o_wide_mux_107_OUT101 (lcd_controller_inst/state[2]_X_254_o_wide_mux_107_OUT<13>)
+     FDE:D                     0.074          lcd_controller_inst/clk_count_13
     ----------------------------------------
-    Total                      7.332ns (2.459ns logic, 4.873ns route)
-                                       (33.5% logic, 66.5% route)
+    Total                      8.676ns (2.962ns logic, 5.714ns route)
+                                       (34.1% logic, 65.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 7 / 7
 -------------------------------------------------------------------------
-Offset:              1.903ns (Levels of Logic = 1)
+Offset:              2.083ns (Levels of Logic = 1)
   Source:            sw<0> (PAD)
   Destination:       g_sw_debounce[0].debounce_inst/flipflops_0 (FF)
   Destination Clock: clk rising
@@ -1006,30 +761,30 @@ Offset:              1.903ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  sw_0_IBUF (sw_0_IBUF)
-     FD:D                      0.102          g_sw_debounce[0].debounce_inst/flipflops_0
+     IBUF:I->O             1   1.328   0.681  sw_0_IBUF (sw_0_IBUF)
+     FD:D                      0.074          g_sw_debounce[0].debounce_inst/flipflops_0
     ----------------------------------------
-    Total                      1.903ns (1.324ns logic, 0.579ns route)
-                                       (69.6% logic, 30.4% route)
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 11 / 11
+  Total number of paths / destination ports: 17 / 17
 -------------------------------------------------------------------------
-Offset:              3.791ns (Levels of Logic = 1)
-  Source:            lcd_controller_inst/lcd_data_4 (FF)
-  Destination:       lcd_data<4> (PAD)
+Offset:              5.844ns (Levels of Logic = 1)
+  Source:            display_inst/display_toggle (FF)
+  Destination:       led<7> (PAD)
   Source Clock:      clk rising
 
-  Data Path: lcd_controller_inst/lcd_data_4 to lcd_data<4>
+  Data Path: display_inst/display_toggle to led<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               7   0.447   0.773  lcd_controller_inst/lcd_data_4 (lcd_controller_inst/lcd_data_4)
-     OBUF:I->O                 2.571          lcd_data_4_OBUF (lcd_data<4>)
+     FD:C->Q             192   0.525   2.407  display_inst/display_toggle (display_inst/display_toggle)
+     OBUF:I->O                 2.912          led_7_OBUF (led<7>)
     ----------------------------------------
-    Total                      3.791ns (3.018ns logic, 0.773ns route)
-                                       (79.6% logic, 20.4% route)
+    Total                      5.844ns (3.437ns logic, 2.407ns route)
+                                       (58.8% logic, 41.2% route)
 
 =========================================================================
 
@@ -1041,21 +796,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.332|         |         |         |
+clk            |    8.676|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.94 secs
+Total CPU time to Xst completion: 4.59 secs
  
 --> 
 
 
-Total memory usage is 393672 kilobytes
+Total memory usage is 386480 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  104 (   0 filtered)
-Number of infos    :   12 (   0 filtered)
+Number of warnings :   91 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 

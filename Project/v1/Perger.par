@@ -1,14 +1,14 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Lawnmower::  Tue Nov 05 19:38:18 2024
+Lawnmower::  Wed Nov 06 14:07:57 2024
 
 par -w -intstyle ise -ol high -mt off Perger_map.ncd Perger.ncd Perger.pcf 
 
 
 Constraints file: Perger.pcf.
 Loading device for application Rf_Device from file '6slx9.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
-   "Perger" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -3
+   "Perger" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
@@ -26,30 +26,30 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   588 out of  11,440    5%
-    Number used as Flip Flops:                 588
+  Number of Slice Registers:                   637 out of  11,440    5%
+    Number used as Flip Flops:                 637
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        806 out of   5,720   14%
-    Number used as logic:                      798 out of   5,720   13%
-      Number using O6 output only:             570
-      Number using O5 output only:              95
-      Number using O5 and O6:                  133
+  Number of Slice LUTs:                      1,019 out of   5,720   17%
+    Number used as logic:                    1,014 out of   5,720   17%
+      Number using O6 output only:             660
+      Number using O5 output only:             118
+      Number using O5 and O6:                  236
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
-    Number used exclusively as route-thrus:      8
-      Number with same-slice register load:      4
-      Number with same-slice carry load:         4
+    Number used exclusively as route-thrus:      5
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         5
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   271 out of   1,430   18%
-  Number of MUXCYs used:                       288 out of   2,860   10%
-  Number of LUT Flip Flop pairs used:          903
-    Number with an unused Flip Flop:           336 out of     903   37%
-    Number with an unused LUT:                  97 out of     903   10%
-    Number of fully used LUT-FF pairs:         470 out of     903   52%
+  Number of occupied Slices:                   356 out of   1,430   24%
+  Number of MUXCYs used:                       312 out of   2,860   10%
+  Number of LUT Flip Flop pairs used:        1,072
+    Number with an unused Flip Flop:           450 out of   1,072   41%
+    Number with an unused LUT:                  53 out of   1,072    4%
+    Number of fully used LUT-FF pairs:         569 out of   1,072   53%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -60,8 +60,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        33 out of     102   32%
-    Number of LOCed IOBs:                       33 out of      33  100%
+  Number of bonded IOBs:                        41 out of     102   40%
+    Number of LOCed IOBs:                       41 out of      41  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -104,13 +104,13 @@ WARNING:Par:288 - The signal sw<6>_IBUF has no load.  PAR will not attempt to ro
 Starting Router
 
 
-Phase  1  : 4523 unrouted;      REAL time: 1 secs 
+Phase  1  : 5822 unrouted;      REAL time: 1 secs 
 
-Phase  2  : 4085 unrouted;      REAL time: 1 secs 
+Phase  2  : 5185 unrouted;      REAL time: 1 secs 
 
-Phase  3  : 2050 unrouted;      REAL time: 2 secs 
+Phase  3  : 2606 unrouted;      REAL time: 2 secs 
 
-Phase  4  : 2050 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Phase  4  : 2606 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
 
 Updating file: Perger.ncd with current fully routed design.
 
@@ -126,7 +126,7 @@ Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 3
 
 Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 Total REAL time to Router completion: 3 secs 
-Total CPU time to Router completion: 3 secs 
+Total CPU time to Router completion: 4 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -146,8 +146,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     8.049ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.412ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     8.887ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.416ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -165,10 +165,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 6 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 3 secs 
-Total CPU time to PAR completion: 3 secs 
+Total REAL time to PAR completion: 4 secs 
+Total CPU time to PAR completion: 4 secs 
 
-Peak Memory Usage:  616 MB
+Peak Memory Usage:  619 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

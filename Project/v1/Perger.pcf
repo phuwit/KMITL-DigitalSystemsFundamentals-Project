@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 05 19:38:16 2024
+// Written by: Map P.20131013 on Wed Nov 06 14:07:54 2024
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -12,6 +12,14 @@ COMP "lcd_data<4>" LOCATE = SITE "P1" LEVEL 1;
 COMP "lcd_data<5>" LOCATE = SITE "P5" LEVEL 1;
 COMP "lcd_data<6>" LOCATE = SITE "P7" LEVEL 1;
 COMP "lcd_data<7>" LOCATE = SITE "P9" LEVEL 1;
+COMP "mn<0>" LOCATE = SITE "P95" LEVEL 1;
+COMP "mn<1>" LOCATE = SITE "P94" LEVEL 1;
+COMP "mn<2>" LOCATE = SITE "P93" LEVEL 1;
+COMP "mn<3>" LOCATE = SITE "P92" LEVEL 1;
+COMP "mn<4>" LOCATE = SITE "P88" LEVEL 1;
+COMP "mn<5>" LOCATE = SITE "P87" LEVEL 1;
+COMP "mn<6>" LOCATE = SITE "P85" LEVEL 1;
+COMP "mn<7>" LOCATE = SITE "P84" LEVEL 1;
 COMP "sw<0>" LOCATE = SITE "P66" LEVEL 1;
 COMP "sw<1>" LOCATE = SITE "P62" LEVEL 1;
 COMP "sw<2>" LOCATE = SITE "P61" LEVEL 1;

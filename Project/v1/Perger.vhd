@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
+use ieee.numeric_std.all;
 
 entity Perger is
     port(
@@ -115,11 +116,13 @@ begin
     -- การเชื่อมต่อโมดูลแสดงผล message_display
     display_inst : entity work.MessageDisplay
         port map(
-            clk               => clk,
-            reset             => '0',
-            message_in => message_buffer,
-            last_char         => last_char,
-            message_out       => message_blink
+            clk                => clk,
+            reset              => '0',
+            message_in         => message_buffer,
+            last_char          => last_char,
+            message_out        => message_blink,
+            char_index         => char_index,
+            display_toggle_out => led(7)
         );
 
     -- การเชื่อมต่อโมดูล LCD Controller
@@ -135,6 +138,6 @@ begin
             lcd_data     => lcd_data
         );
 
-    led(7 downto 1) <= (others => '0');
-    mn <= (others => 'Z');
+    led(6 downto 1) <= (others => '0');
+    mn              <= std_logic_vector(to_unsigned(char_index, mn'length));
 end Behavioral;

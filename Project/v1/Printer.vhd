@@ -5,22 +5,22 @@ use ieee.numeric_std.all;
 entity Printer is
     port(
         clk            : in    STD_LOGIC;
-        current_state  : in    STD_LOGIC_VECTOR(1 downto 0);    -- สัญญาณบอกสถานะปัจจุบัน
-        mode_select    : in    STD_LOGIC;                       -- สวิตช์เลือกโหมด (0 = โหมดตัวอักษร, 1 = โหมดตัวเลข)
+        current_state  : in    STD_LOGIC_VECTOR(1 downto 0); -- สัญญาณบอกสถานะปัจจุบัน
+        mode_select    : in    STD_LOGIC; -- สวิตช์เลือกโหมด (0 = โหมดตัวอักษร, 1 = โหมดตัวเลข)
         btn            : in    std_logic_vector(5 downto 1);
         btn_reset      : in    STD_LOGIC;
-        last_char      : inout STD_LOGIC_VECTOR(7 downto 0);    -- ตัวอักษรล่าสุดที่เลือก
-        message_buffer : out   STD_LOGIC_VECTOR(239 downto 0);  -- บัฟเฟอร์สำหรับเก็บข้อความ
-        char_index     : out   INTEGER range 0 to 29            -- ดัชนีของตัวอักษรใน buffer (เปลี่ยนเป็นพอร์ต out)
+        last_char      : inout STD_LOGIC_VECTOR(7 downto 0); -- ตัวอักษรล่าสุดที่เลือก
+        message_buffer : out   STD_LOGIC_VECTOR(239 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
+        char_index     : out   INTEGER range 0 to 29 -- ดัชนีของตัวอักษรใน buffer (เปลี่ยนเป็นพอร์ต out)
     );
 end Printer;
 
 architecture Behavioral of Printer is
-    constant key_hold_time : integer := 60_000_000;
-    signal key_timer               : INTEGER range 0 to key_hold_time    := 0;                   -- ตัวนับการกดปุ่ม
-    signal internal_message_buffer : STD_LOGIC_VECTOR(239 downto 0) := (others => '0');     -- บัฟเฟอร์ภายในสำหรับเก็บข้อความ
-    signal char_index_internal     : INTEGER range 0 to 29          := 29;                   -- ตัวแปรภายในสำหรับจัดการ char_index
-    signal trigger                 : STD_LOGIC                      := '0';                 -- ใช้เก็บสถานะ ('0' หรือ '1') เพื่อบอกว่ามีการเพิ่มตัวอักษรลงใน internal_message_buffer แล้วหรือยัง
+    constant key_hold_time         : integer                          := 60_000_000;
+    signal key_timer               : INTEGER range 0 to key_hold_time := 0; -- ตัวนับการกดปุ่ม
+    signal internal_message_buffer : STD_LOGIC_VECTOR(239 downto 0)   := (others => '0'); -- บัฟเฟอร์ภายในสำหรับเก็บข้อความ
+    signal char_index_internal     : INTEGER range 0 to 29            := 29; -- ตัวแปรภายในสำหรับจัดการ char_index
+    signal trigger                 : STD_LOGIC                        := '0'; -- ใช้เก็บสถานะ ('0' หรือ '1') เพื่อบอกว่ามีการเพิ่มตัวอักษรลงใน internal_message_buffer แล้วหรือยัง
 
 begin
     process(clk, btn_reset)
@@ -29,8 +29,8 @@ begin
             key_timer               <= 0;
             char_index_internal     <= 29;
             trigger                 <= '0';
-            last_char               <= "01000001";          -- ค่าเริ่มต้นเป็น 'A'
-            internal_message_buffer <= (others => '0');     -- เคลียร์ค่าใน message_buffer
+            last_char               <= "01000001"; -- ค่าเริ่มต้นเป็น 'A'
+            internal_message_buffer <= (others => '0'); -- เคลียร์ค่าใน message_buffer
         elsif rising_edge(clk) then
             if current_state = "01" then -- ตรวจสอบว่าสถานะเป็น PRINTING (รหัส "01")
                 if mode_select = '0' then
@@ -103,9 +103,9 @@ begin
 
                 -- การกดปุ่ม btn(5) เพื่อลบข้อความตัวล่าสุด
                 if btn(5) = '1' then
-                    if char_index_internal > 0 then
-                        char_index_internal <= char_index_internal + 1;
-                        internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= "00000000";          -- เคลียร์ข้อมูลที่ตำแหน่งล่าสุด
+                    if char_index_internal > 29 then
+                        char_index_internal                                                                     <= char_index_internal + 1;
+                        internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= "00000000"; -- เคลียร์ข้อมูลที่ตำแหน่งล่าสุด
                     end if;
                     last_char <= x"00";
                     key_timer <= 0;     -- รีเซ็ตตัวนับเวลา
@@ -113,8 +113,8 @@ begin
 
                 -- ตรวจสอบการกดปุ่มเพื่อเริ่มนับเวลา
                 if btn(1) = '1' or btn(2) = '1' or btn(3) = '1' or btn(4) = '1' or btn(5) = '1' then
-                    key_timer <= 0; -- รีเซ็ตตัวนับเวลาเพื่อเริ่มนับใหม่เมื่อมีการกดปุ่ม
-                    trigger <= '0'; -- รีเซ็ต trigger เมื่อมีการกดปุ่ม
+                    key_timer <= 0;     -- รีเซ็ตตัวนับเวลาเพื่อเริ่มนับใหม่เมื่อมีการกดปุ่ม
+                    trigger   <= '0';   -- รีเซ็ต trigger เมื่อมีการกดปุ่ม
                 else
                     -- นับเวลาเมื่อไม่มีการกดปุ่ม
                     if key_timer < key_hold_time then
@@ -126,10 +126,10 @@ begin
                 if key_timer >= key_hold_time and trigger = '0' then -- 3 วินาทีและยังไม่ได้ทริกเกอร์
                     if char_index_internal > 0 then
                         internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= last_char;
-                        char_index_internal <= char_index_internal - 1;
-                        key_timer <= key_hold_time;      -- หยุดการนับเวลา (ค้างไว้ที่ค่าเดิม)
-                        trigger <= '1';             -- ตั้ง trigger เพื่อบอกว่ามีการเพิ่มตัวอักษรแล้ว
-                        last_char <= "01000001";    -- reset กลับไปที่ 'A'
+                        char_index_internal                                                                     <= char_index_internal - 1;
+                        key_timer                                                                               <= key_hold_time; -- หยุดการนับเวลา (ค้างไว้ที่ค่าเดิม)
+                        trigger                                                                                 <= '1'; -- ตั้ง trigger เพื่อบอกว่ามีการเพิ่มตัวอักษรแล้ว
+                        last_char                                                                               <= "00000000"; -- reset กลับไปที่ 'A'
                     end if;
                 end if;
 
