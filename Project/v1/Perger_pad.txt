@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Nov  6 15:45:17 2024
+Wed Nov  6 16:54:25 2024
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -145,14 +145,14 @@ Pinout by Pin Number:
 |P123      |clk        |IOB      |IO_L37N_GCLK12_0          |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |P124      |lcd_rs     |IOB      |IO_L37P_GCLK13_0          |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P125      |           |         |VCCO_0                    |         |           |0             |          |         |           |         |2.50   |          |           |                |
-|P126      |           |IOBS     |IO_L36N_GCLK14_0          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P126      |bt_rx      |IOB      |IO_L36N_GCLK14_0          |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |P127      |lcd_rw     |IOB      |IO_L36P_GCLK15_0          |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P128      |           |         |VCCINT                    |         |           |              |          |         |           |         |1.2    |          |           |                |
 |P129      |           |         |VCCAUX                    |         |           |              |          |         |           |         |2.5    |          |           |                |
 |P130      |           |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
-|P131      |           |IOBS     |IO_L35N_GCLK16_0          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P131      |bt_tx      |IOB      |IO_L35N_GCLK16_0          |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P132      |lcd_en     |IOB      |IO_L35P_GCLK17_0          |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
-|P133      |           |IOBS     |IO_L34N_GCLK18_0          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P133      |bt_state   |IOB      |IO_L34N_GCLK18_0          |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |P134      |lcd_data<0>|IOB      |IO_L34P_GCLK19_0          |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P135      |           |         |VCCO_0                    |         |           |0             |          |         |           |         |2.50   |          |           |                |
 |P136      |           |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |

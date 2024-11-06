@@ -10,7 +10,7 @@ entity StateControl is
         new_data_in          : in  STD_LOGIC;                       -- สัญญาณที่บอกว่ามีข้อมูลใหม่เข้ามา *Uart_Receiver
         bluetooth_connected  : in  STD_LOGIC;                       -- สัญญาณที่บอกว่าวงจรได้เชื่อมต่อกับบลูทูธแล้ว 1=เชื่อม 0=ไม่เชื่อม
         message_buffer       : in  STD_LOGIC_VECTOR(239 downto 0);  -- บัฟเฟอร์สำหรับเก็บข้อความ
-        transmit_in_progress : in  STD_LOGIC;                       -- สถานะการส่งข้อมูล (กำลังส่งหรือไม่) *UART_Transmitter
+        transmit_in_progress : inout  STD_LOGIC;                       -- สถานะการส่งข้อมูล (กำลังส่งหรือไม่) *UART_Transmitter
         current_state        : out STATES;    -- สถานะปัจจุบันของระบบ
         next_state           : out STATES;    -- สถานะถัดไปของระบบ
         L0                   : out STD_LOGIC;                       -- ไฟแสดงสถานะการทำงานของระบบ
@@ -78,9 +78,6 @@ begin
                         state <= RECEIVING;  -- เปลี่ยนกลับไปสถานะ RECEIVING หลังจากส่งข้อความเสร็จสิ้น
                         L0    <= '0';   -- ปิดไฟแสดงสถานะ
                     end if;
-
-                when others =>
-                    state <= RECEIVING; -- กรณีเกิดข้อผิดพลาด เปลี่ยนกลับไปสถานะเริ่มต้น
             end case;
         end if;
     end process;

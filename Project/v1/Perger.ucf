@@ -52,9 +52,9 @@ NET "lcd_data[7]" LOC = P9;
 # NET "lcd_bla" LOC = P11;
 # NET "lcd_blk" LOC = P14;
 
-# NET "bt_rx" LOC = P126;
-# NET "bt_tx" LOC = P131;
-# NET "bt_state" LOC = P133;
+NET "bt_rx" LOC = P126;
+NET "bt_tx" LOC = P131;
+NET "bt_state" LOC = P133;
 
 NET "led[7]" LOC = P67;
 NET "led[6]" LOC = P74;
