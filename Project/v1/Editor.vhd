@@ -1,27 +1,27 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.globals.all;
 
 entity Editor is
     port(
-        clk            : in    STD_LOGIC;
-        reset          : in    STD_LOGIC;
-        current_state  : in    STATES;  -- สัญญาณบอกสถานะปัจจุบัน
-        mode_select    : in    STD_LOGIC; -- สวิตช์เลือกโหมด (0 = โหมดตัวอักษร, 1 = โหมดตัวเลข)
+        clk            : in    std_logic;
+        reset          : in    std_logic;
+        current_state  : in    states;  -- สัญญาณบอกสถานะปัจจุบัน
+        mode_select    : in    std_logic; -- สวิตช์เลือกโหมด (0 = โหมดตัวอักษร, 1 = โหมดตัวเลข)
         btn            : in    std_logic_vector(5 downto 1);
-        last_char      : inout STD_LOGIC_VECTOR(7 downto 0); -- ตัวอักษรล่าสุดที่เลือก
-        message_buffer : out   STD_LOGIC_VECTOR(239 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
-        char_index     : out   INTEGER range 0 to 29 -- ดัชนีของตัวอักษรใน buffer (เปลี่ยนเป็นพอร์ต out)
+        last_char      : inout std_logic_vector(7 downto 0); -- ตัวอักษรล่าสุดที่เลือก
+        message_buffer : out   std_logic_vector(239 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
+        char_index     : out   integer range 0 to 29 -- ดัชนีของตัวอักษรใน buffer (เปลี่ยนเป็นพอร์ต out)
     );
 end Editor;
 
 architecture Behavioral of Editor is
     constant key_hold_time         : integer                          := 60_000_000;
-    signal key_timer               : INTEGER range 0 to key_hold_time := 0; -- ตัวนับการกดปุ่ม
-    signal internal_message_buffer : STD_LOGIC_VECTOR(239 downto 0)   := (others => '0'); -- บัฟเฟอร์ภายในสำหรับเก็บข้อความ
-    signal char_index_internal     : INTEGER range 0 to 29            := 29; -- ตัวแปรภายในสำหรับจัดการ char_index
-    signal added_to_buffer         : STD_LOGIC                        := '1'; -- ใช้เก็บสถานะ ('0' หรือ '1') เพื่อบอกว่ามีการเพิ่มตัวอักษรลงใน internal_message_buffer แล้วหรือยัง
+    signal key_timer               : integer range 0 to key_hold_time := 0; -- ตัวนับการกดปุ่ม
+    signal internal_message_buffer : std_logic_vector(239 downto 0)   := (others => '0'); -- บัฟเฟอร์ภายในสำหรับเก็บข้อความ
+    signal char_index_internal     : integer range 0 to 29            := 29; -- ตัวแปรภายในสำหรับจัดการ char_index
+    signal added_to_buffer         : std_logic                        := '1'; -- ใช้เก็บสถานะ ('0' หรือ '1') เพื่อบอกว่ามีการเพิ่มตัวอักษรลงใน internal_message_buffer แล้วหรือยัง
 
 begin
     process(clk, reset)
@@ -39,7 +39,7 @@ begin
                     if btn(1) = '1' then
                         -- ตัวอักษร 'A' ถึง 'G'
                         if last_char >= "01000001" and last_char < "01000111" then
-                            last_char <= STD_LOGIC_VECTOR(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
+                            last_char <= std_logic_vector(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
                         else
                             last_char <= "01000001"; -- กลับไปที่ 'A'
                         end if;
@@ -47,7 +47,7 @@ begin
                     elsif btn(2) = '1' then
                         -- ตัวอักษร 'H' ถึง 'N'
                         if last_char >= "01001000" and last_char < "01001110" then
-                            last_char <= STD_LOGIC_VECTOR(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
+                            last_char <= std_logic_vector(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
                         else
                             last_char <= "01001000"; -- กลับไปที่ 'H'
                         end if;
@@ -55,7 +55,7 @@ begin
                     elsif btn(3) = '1' then
                         -- ตัวอักษร 'O' ถึง 'U'
                         if last_char >= "01001111" and last_char < "01010101" then
-                            last_char <= STD_LOGIC_VECTOR(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
+                            last_char <= std_logic_vector(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
                         else
                             last_char <= "01001111"; -- กลับไปที่ 'O'
                         end if;
@@ -63,7 +63,7 @@ begin
                     elsif btn(4) = '1' then
                         -- ตัวอักษร 'V' ถึง 'Z'
                         if last_char >= "01010110" and last_char < "01011010" then
-                            last_char <= STD_LOGIC_VECTOR(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
+                            last_char <= std_logic_vector(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
                         else
                             last_char <= "01010110"; -- กลับไปที่ 'V'
                         end if;
@@ -74,7 +74,7 @@ begin
                     if btn(1) = '1' then
                         -- ตัวเลข '0' ถึง '3'
                         if last_char >= "00110000" and last_char < "00110011" then -- '0' ถึง '3'
-                            last_char <= STD_LOGIC_VECTOR(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
+                            last_char <= std_logic_vector(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
                         else
                             last_char <= "00110000"; -- กลับไปที่ '0'
                         end if;
@@ -82,7 +82,7 @@ begin
                     elsif btn(2) = '1' then
                         -- ตัวเลข '4' ถึง '6'
                         if last_char >= "00110100" and last_char < "00110110" then -- '4' ถึง '6'
-                            last_char <= STD_LOGIC_VECTOR(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
+                            last_char <= std_logic_vector(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
                         else
                             last_char <= "00110100"; -- กลับไปที่ '4'
                         end if;
@@ -90,7 +90,7 @@ begin
                     elsif btn(3) = '1' then
                         -- ตัวเลข '7' ถึง '9'
                         if last_char >= "00110111" and last_char < "00111001" then -- '7' ถึง '9'
-                            last_char <= STD_LOGIC_VECTOR(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
+                            last_char <= std_logic_vector(to_unsigned(to_integer(unsigned(last_char)) + 1, 8));
                         else
                             last_char <= "00110111"; -- กลับไปที่ '7'
                         end if;

@@ -1,22 +1,22 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.globals.all;
 
 entity Perger is
     port(
-        clk      : in  STD_LOGIC;
-        btn      : in  STD_LOGIC_VECTOR(6 downto 1);
-        sw       : in  STD_LOGIC_VECTOR(6 downto 0);
-        dipsw    : in  STD_LOGIC_VECTOR(8 downto 1);
+        clk      : in  std_logic;
+        btn      : in  std_logic_vector(6 downto 1);
+        sw       : in  std_logic_vector(6 downto 0);
+        dipsw    : in  std_logic_vector(8 downto 1);
         bt_rx    : in  std_logic;       -- fpga's rx <-> bluetooth's tx
         bt_state : in  std_logic;
-        led      : out STD_LOGIC_VECTOR(7 downto 0);
-        mn       : out STD_LOGIC_VECTOR(7 downto 0);
-        lcd_en   : out STD_LOGIC;
-        lcd_rs   : out STD_LOGIC;
-        lcd_rw   : out STD_LOGIC;
-        lcd_data : out STD_LOGIC_VECTOR(7 downto 0);
+        led      : out std_logic_vector(7 downto 0);
+        mn       : out std_logic_vector(7 downto 0);
+        lcd_en   : out std_logic;
+        lcd_rs   : out std_logic;
+        lcd_rw   : out std_logic;
+        lcd_data : out std_logic_vector(7 downto 0);
         bt_tx    : out std_logic        -- fpga's tx <-> bluetooth's rx
     );
 end Perger;
@@ -32,13 +32,13 @@ architecture Behavioral of Perger is
     signal sw_debounced    : std_logic_vector(sw'length - 1 downto 0);
     signal dipsw_debounced : std_logic_vector(dipsw'length downto 1);
 
-    signal current_state    : STATES;
-    signal edit_buffer      : STD_LOGIC_VECTOR(message_size - 1 downto 0);
-    signal recieve_buffer   : STD_LOGIC_VECTOR(message_size - 1 downto 0);
+    signal current_state    : states;
+    signal edit_buffer      : std_logic_vector(message_size - 1 downto 0);
+    signal recieve_buffer   : std_logic_vector(message_size - 1 downto 0);
     signal recieve_complete : std_logic;
-    signal char_index       : INTEGER range 0 to 29;
-    signal last_char        : STD_LOGIC_VECTOR(7 downto 0);
-    signal send_finished    : STD_LOGIC;
+    signal char_index       : integer range 0 to 29;
+    signal last_char        : std_logic_vector(7 downto 0);
+    signal send_finished    : std_logic;
 
 begin
     input_cleaner_inst : entity work.InputCleaner

@@ -1,27 +1,27 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_1164.all;
 use work.globals.all;
 
 entity Displayer is
     generic(
-        clk_freq     : INTEGER := 20_000_000;
+        clk_freq     : integer := 20_000_000;
         message_size : integer := 240;
         display_size : integer := 256);
     port(
-        clk           : in  STD_LOGIC;
+        clk           : in  std_logic;
         reset         : in  std_logic;
-        current_state : in  STATES;
+        current_state : in  states;
         edit_buffer   : in  std_logic_vector(message_size - 1 downto 0);
         last_char     : in  std_logic_vector(7 downto 0);
-        char_index    : in  INTEGER range 0 to 29;
-        lcd_en        : out STD_LOGIC;
-        lcd_rs        : out STD_LOGIC;
-        lcd_rw        : out STD_LOGIC;
-        lcd_data      : out STD_LOGIC_VECTOR(7 downto 0));
+        char_index    : in  integer range 0 to 29;
+        lcd_en        : out std_logic;
+        lcd_rs        : out std_logic;
+        lcd_rw        : out std_logic;
+        lcd_data      : out std_logic_vector(7 downto 0));
 end Displayer;
 
 architecture Behavioral of Displayer is
-    signal message_formatted : STD_LOGIC_VECTOR(display_size - 1 downto 0);
+    signal message_formatted : std_logic_vector(display_size - 1 downto 0);
 begin
     display_inst : entity work.MessageFormatter
         generic map(

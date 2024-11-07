@@ -8,24 +8,24 @@ entity MessageFormatter is
         message_size : integer := 240;
         display_size : integer := 256);
     port(
-        clk           : in  STD_LOGIC;  -- สัญญาณนาฬิกา
-        reset         : in  STD_LOGIC;  -- สัญญาณรีเซ็ต
-        message_in    : in  STD_LOGIC_VECTOR(message_size - 1 downto 0); -- ข้อความที่รับเข้า
-        last_char     : in  STD_LOGIC_VECTOR(7 downto 0); -- ตัวอักษรล่าสุดที่เลือก
-        char_index    : in  INTEGER range 0 to 29;
-        current_state : in  STATES;
-        message_out   : out STD_LOGIC_VECTOR(display_size - 1 downto 0) -- ข้อความที่ส่งออก
+        clk           : in  std_logic;  -- สัญญาณนาฬิกา
+        reset         : in  std_logic;  -- สัญญาณรีเซ็ต
+        message_in    : in  std_logic_vector(message_size - 1 downto 0); -- ข้อความที่รับเข้า
+        last_char     : in  std_logic_vector(7 downto 0); -- ตัวอักษรล่าสุดที่เลือก
+        char_index    : in  integer range 0 to 29;
+        current_state : in  states;
+        message_out   : out std_logic_vector(display_size - 1 downto 0) -- ข้อความที่ส่งออก
     );
 end MessageFormatter;
 
 architecture Behavioral of MessageFormatter is
-    constant blink_time                : INTEGER                      := 13_500_000;
+    constant blink_time                : integer                      := 13_500_000;
     constant blank_message_replacement : std_logic_vector(7 downto 0) := x"ff"; -- solid rectangle
     constant blinking_character        : std_logic_vector(7 downto 0) := x"20"; -- space
 
-    signal formatted_message  : STD_LOGIC_VECTOR(message_size -1 downto 0);
-    signal display_toggle     : STD_LOGIC                     := '0'; -- สัญญาณสำหรับสลับการแสดงผล
-    signal blink_counter      : INTEGER range 0 to blink_time := 0; -- ตัวนับครึ่งวินาที
+    signal formatted_message  : std_logic_vector(message_size -1 downto 0);
+    signal display_toggle     : std_logic                     := '0'; -- สัญญาณสำหรับสลับการแสดงผล
+    signal blink_counter      : integer range 0 to blink_time := 0; -- ตัวนับครึ่งวินาที
     signal current_state_char : std_logic_vector(7 downto 0);
 begin
 

@@ -1,22 +1,22 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_1164.all;
 use work.Globals.all;
 
 entity Controller is
     generic(
-        clk_freq     : INTEGER := 20_000_000;
+        clk_freq     : integer := 20_000_000;
         message_size : integer := 240);
     port(
-        clk                 : in  STD_LOGIC; -- สัญญาณนาฬิกา
-        reset               : in  STD_LOGIC; -- สัญญาณรีเซ็ต
+        clk                 : in  std_logic; -- สัญญาณนาฬิกา
+        reset               : in  std_logic; -- สัญญาณรีเซ็ต
         btn                 : in  std_logic_vector(6 downto 1);
-        new_data_in         : in  STD_LOGIC; -- สัญญาณที่บอกว่ามีข้อมูลใหม่เข้ามา *Uart_Receiver
-        bluetooth_connected : in  STD_LOGIC; -- สัญญาณที่บอกว่าวงจรได้เชื่อมต่อกับบลูทูธแล้ว 1=เชื่อม 0=ไม่เชื่อม
-        message_buffer      : in  STD_LOGIC_VECTOR(message_size - 1 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
-        send_finished       : in  STD_LOGIC; -- สถานะการส่งข้อมูล (กำลังส่งหรือไม่) *UART_Transmitter
-        current_state       : out STATES; -- สถานะปัจจุบันของระบบ
-        L0                  : out STD_LOGIC; -- ไฟแสดงสถานะการทำงานของระบบ
-        alert_signal        : out STD_LOGIC -- สัญญาณแจ้งเตือนผู้ใช้งาน
+        new_data_in         : in  std_logic; -- สัญญาณที่บอกว่ามีข้อมูลใหม่เข้ามา *Uart_Receiver
+        bluetooth_connected : in  std_logic; -- สัญญาณที่บอกว่าวงจรได้เชื่อมต่อกับบลูทูธแล้ว 1=เชื่อม 0=ไม่เชื่อม
+        message_buffer      : in  std_logic_vector(message_size - 1 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
+        send_finished       : in  std_logic; -- สถานะการส่งข้อมูล (กำลังส่งหรือไม่) *UART_Transmitter
+        current_state       : out states; -- สถานะปัจจุบันของระบบ
+        L0                  : out std_logic; -- ไฟแสดงสถานะการทำงานของระบบ
+        alert_signal        : out std_logic -- สัญญาณแจ้งเตือนผู้ใช้งาน
     );
 end Controller;
 
@@ -25,7 +25,7 @@ architecture Behavioral of Controller is
     constant idle_countto : integer := idle_sec * clk_freq;
 
     -- มีสถานะ 3 แบบได้แก่ RECEIVING, PRINTING, SENDING มีค่าเป็น 00 01 10
-    signal state      : STATES                          := RECEIVING;
+    signal state      : states                          := RECEIVING;
     signal idle_timer : integer range 0 to idle_countto := 0;
 begin
     process(clk, reset)

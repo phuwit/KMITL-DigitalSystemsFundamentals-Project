@@ -1,19 +1,19 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_1164.all;
 use work.globals.all;
 
 entity Sender is
     generic(
         message_size : integer := 240);
     port(
-        clk                : in  STD_LOGIC; -- สัญญาณนาฬิกา
-        reset              : in  STD_LOGIC; -- เมื่อมีการกดปุ่มส่งใหม่ ต้องรีเซ็ตด้วย
-        current_state      : in  STATES;
-        edit_buffer        : in  STD_LOGIC_VECTOR(message_size - 1 downto 0);
-        data_stream_in_ack : in  STD_LOGIC; -- คือ 1 เมื่อยืนยันว่าโมดูลได้เริ่มส่งข้อมูลแล้ว
-        tx_start           : out STD_LOGIC; -- ต่อกับ data_stream_in_stb
+        clk                : in  std_logic; -- สัญญาณนาฬิกา
+        reset              : in  std_logic; -- เมื่อมีการกดปุ่มส่งใหม่ ต้องรีเซ็ตด้วย
+        current_state      : in  states;
+        edit_buffer        : in  std_logic_vector(message_size - 1 downto 0);
+        data_stream_in_ack : in  std_logic; -- คือ 1 เมื่อยืนยันว่าโมดูลได้เริ่มส่งข้อมูลแล้ว
+        tx_start           : out std_logic; -- ต่อกับ data_stream_in_stb
         send_finished      : out std_logic;
-        data_out           : out STD_LOGIC_VECTOR(7 downto 0) -- ต่อกับ data_stream_in
+        data_out           : out std_logic_vector(7 downto 0) -- ต่อกับ data_stream_in
     );
 end Sender;
 

@@ -1,17 +1,17 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_1164.all;
 use work.Globals.all;
 
 entity Communicator is
     generic(
-        clk_freq     : INTEGER := 20_000_000;
-        baud         : INTEGER := 115_200;
+        clk_freq     : integer := 20_000_000;
+        baud         : integer := 115_200;
         message_size : integer := 240);
     port(
-        clk              : in  STD_LOGIC;
+        clk              : in  std_logic;
         reset            : in  std_logic;
         bt_rx            : in  std_logic;
-        current_state    : in  STATES;
+        current_state    : in  states;
         edit_buffer      : in  std_logic_vector(message_size - 1 downto 0);
         recieve_buffer   : out std_logic_vector(message_size - 1 downto 0);
         bt_tx            : out std_logic;
@@ -20,8 +20,8 @@ entity Communicator is
 end Communicator;
 
 architecture Behavioral of Communicator is
-    signal uart_send_start    : STD_LOGIC;
-    signal uart_recieve_start : STD_LOGIC;
+    signal uart_send_start    : std_logic;
+    signal uart_recieve_start : std_logic;
     signal uart_send_ack      : std_logic;
     signal uart_send_data     : std_logic_vector(7 downto 0);
     signal uart_recieve_data  : std_logic_vector(7 downto 0);

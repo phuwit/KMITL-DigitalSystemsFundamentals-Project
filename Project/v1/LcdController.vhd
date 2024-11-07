@@ -44,27 +44,27 @@ use ieee.std_logic_1164.all;
 
 entity LcdController is
     generic(
-        clk_freq : INTEGER := 20_000_000 --system clock frequency in Hz
+        clk_freq : integer := 20_000_000 --system clock frequency in Hz
     );
     port(
-        clk          : in  STD_LOGIC;   --system clock
-        reset_n      : in  STD_LOGIC;   --active low reinitializes lcd
-        line1_buffer : in  STD_LOGIC_VECTOR(127 downto 0); -- Data for the top line of the LCD
-        line2_buffer : in  STD_LOGIC_VECTOR(127 downto 0); -- Data for the bottom line of the LCD
+        clk          : in  std_logic;   --system clock
+        reset_n      : in  std_logic;   --active low reinitializes lcd
+        line1_buffer : in  std_logic_vector(127 downto 0); -- Data for the top line of the LCD
+        line2_buffer : in  std_logic_vector(127 downto 0); -- Data for the bottom line of the LCD
 
-        rw, rs, e    : out STD_LOGIC;   --read/write, setup/data, and enable for lcd
-        lcd_data     : out STD_LOGIC_VECTOR(7 downto 0)); --data signals for lcd
+        rw, rs, e    : out std_logic;   --read/write, setup/data, and enable for lcd
+        lcd_data     : out std_logic_vector(7 downto 0)); --data signals for lcd
 end LcdController;
 
 architecture controller of LcdController is
     type CONTROL is (power_up, initialize, reset, line1, line2, update_cursor, send);
-    constant freq : INTEGER               := clk_freq / 1_000_000; --system clock frequency in MHz
+    constant freq : integer               := clk_freq / 1_000_000; --system clock frequency in MHz
     signal state  : CONTROL;
     signal ptr    : NATURAL range 0 to 16 := 15; -- To keep track of what character we are up to
-    signal line   : STD_LOGIC             := '1';
+    signal line   : std_logic             := '1';
 begin
     process(clk)
-        variable clk_count : INTEGER range 0 to 2147483647 := 0; --event counter for timing
+        variable clk_count : integer range 0 to 2147483647 := 0; --event counter for timing
     begin
         if (clk'EVENT and clk = '1') then
 

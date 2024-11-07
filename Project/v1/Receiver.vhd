@@ -1,22 +1,22 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_1164.all;
 use IEEE.NUMERIC_STD.all;
 
 entity Receiver is
     generic(
         message_size : integer := 240);
     port(
-        clk               : in  STD_LOGIC;
-        data_in           : in  STD_LOGIC_VECTOR(7 downto 0); -- ข้อมูลตัวอักษรที่รับมา
-        new_data_stb      : in  STD_LOGIC; -- สัญญาณว่ามีตัวอักษรใหม่มา
-        data_out          : out STD_LOGIC_VECTOR(message_size - 1 downto 0); -- ผลรวมของอักษร 30 ตัว
-        data_complete_stb : out STD_LOGIC -- สัญญาณว่ารวมของอักษร 30 ตัวเสร็จแล้ว
+        clk               : in  std_logic;
+        data_in           : in  std_logic_vector(7 downto 0); -- ข้อมูลตัวอักษรที่รับมา
+        new_data_stb      : in  std_logic; -- สัญญาณว่ามีตัวอักษรใหม่มา
+        data_out          : out std_logic_vector(message_size - 1 downto 0); -- ผลรวมของอักษร 30 ตัว
+        data_complete_stb : out std_logic -- สัญญาณว่ารวมของอักษร 30 ตัวเสร็จแล้ว
         -- สัญญาณ data_complete_stb จะเป็น '1' ชั่วขณะเมื่อมีการรับข้อมูลครบ 30 ตัว
     );
 end Receiver;
 
 architecture Behavioral of Receiver is
-    signal internal_buffer : STD_LOGIC_VECTOR(message_size - 1 downto 0) := (others => '0');
+    signal internal_buffer : std_logic_vector(message_size - 1 downto 0) := (others => '0');
     signal char_count      : integer range 0 to 29                       := 29;
 begin
     process(clk)

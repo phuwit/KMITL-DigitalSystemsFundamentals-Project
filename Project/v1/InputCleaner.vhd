@@ -1,18 +1,18 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.std_logic_1164.all;
 
 entity InputCleaner is
     generic(
-        clk_freq           : INTEGER := 20_000_000;
-        btn_stable_time    : INTEGER := 20;
-        sw_stable_time     : INTEGER := 50;
+        clk_freq           : integer := 20_000_000;
+        btn_stable_time    : integer := 20;
+        sw_stable_time     : integer := 50;
         btn_count          : integer := 6;
         btn_debounce_start : integer := 4; -- index start at 0
         sw_count           : integer := 7;
         dipsw_count        : integer := 8
     );
     port(
-        clk     : in  STD_LOGIC;
+        clk     : in  std_logic;
         btn_i   : in  std_logic_vector(btn_count - 1 downto 0);
         sw_i    : in  std_logic_vector(sw_count - 1 downto 0);
         dipsw_i : in  std_logic_vector(dipsw_count - 1 downto 0);
@@ -22,10 +22,10 @@ entity InputCleaner is
 end InputCleaner;
 
 architecture Behavioral of InputCleaner is
-    signal btn_debounced : STD_LOGIC_VECTOR(btn_count - 1 downto 0);
-    signal sw_debounced  : STD_LOGIC_VECTOR(sw_count - 1 downto 0);
-    signal dipsw_debounced  : STD_LOGIC_VECTOR(dipsw_count - 1 downto 0);
-    signal btn_pulse     : STD_LOGIC_VECTOR(btn_count - 1 downto 0);
+    signal btn_debounced : std_logic_vector(btn_count - 1 downto 0);
+    signal sw_debounced  : std_logic_vector(sw_count - 1 downto 0);
+    signal dipsw_debounced  : std_logic_vector(dipsw_count - 1 downto 0);
+    signal btn_pulse     : std_logic_vector(btn_count - 1 downto 0);
 begin
     btn_debounced(btn_debounce_start - 1 downto 0) <= btn_i(btn_debounce_start - 1 downto 0);
     g_btn_debounce : for i in btn_debounce_start to btn_count - 1 generate
