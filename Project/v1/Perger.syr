@@ -285,10 +285,10 @@ Synthesizing Unit <Editor>.
     Found 26-bit register for signal <key_timer>.
     Found 5-bit register for signal <char_index_internal>.
     Found 8-bit adder for signal <last_char[7]_GND_13_o_add_35_OUT> created at line 93.
-    Found 6-bit adder for signal <n0740[5:0]> created at line 108.
+    Found 6-bit adder for signal <n0739[5:0]> created at line 108.
     Found 9-bit adder for signal <BUS_0008_GND_13_o_add_50_OUT> created at line 108.
     Found 26-bit adder for signal <key_timer[25]_GND_13_o_add_337_OUT> created at line 124.
-    Found 9-bit adder for signal <n0699> created at line 131.
+    Found 9-bit adder for signal <n0698> created at line 131.
     Found 5-bit subtractor for signal <GND_13_o_GND_13_o_sub_614_OUT<4:0>> created at line 132.
     Found 8-bit comparator lessequal for signal <n0002> created at line 41
     Found 8-bit comparator greater for signal <last_char[7]_GND_13_o_LessThan_3_o> created at line 41
@@ -304,7 +304,7 @@ Synthesizing Unit <Editor>.
     Found 8-bit comparator greater for signal <last_char[7]_GND_13_o_LessThan_31_o> created at line 84
     Found 8-bit comparator lessequal for signal <n0036> created at line 92
     Found 8-bit comparator greater for signal <last_char[7]_GND_13_o_LessThan_35_o> created at line 92
-    Found 5-bit comparator lessequal for signal <n0052> created at line 107
+    Found 5-bit comparator greater for signal <char_index_internal[4]_PWR_26_o_LessThan_49_o> created at line 107
     Found 26-bit comparator greater for signal <key_timer[25]_PWR_26_o_LessThan_337_o> created at line 123
     Found 5-bit comparator greater for signal <GND_13_o_char_index_internal[4]_LessThan_342_o> created at line 130
     Summary:
@@ -538,8 +538,8 @@ Macro Statistics
  3-bit comparator greater                              : 2
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
- 5-bit comparator greater                              : 1
- 5-bit comparator lessequal                            : 2
+ 5-bit comparator greater                              : 2
+ 5-bit comparator lessequal                            : 1
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
 # Multiplexers                                         : 1748
@@ -660,8 +660,8 @@ Macro Statistics
  3-bit comparator greater                              : 2
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
- 5-bit comparator greater                              : 1
- 5-bit comparator lessequal                            : 2
+ 5-bit comparator greater                              : 2
+ 5-bit comparator lessequal                            : 1
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
 # Multiplexers                                         : 1742
@@ -1008,15 +1008,15 @@ Top Level Output File Name         : Perger.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1787
+# BELS                             : 1790
 #      GND                         : 1
 #      INV                         : 9
 #      LUT1                        : 102
 #      LUT2                        : 109
 #      LUT3                        : 128
-#      LUT4                        : 277
-#      LUT5                        : 158
-#      LUT6                        : 544
+#      LUT4                        : 279
+#      LUT5                        : 161
+#      LUT6                        : 542
 #      MUXCY                       : 278
 #      MUXF7                       : 15
 #      VCC                         : 1
@@ -1040,14 +1040,14 @@ Selected Device : 6slx9tqg144-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:             698  out of  11440     6%  
- Number of Slice LUTs:                 1327  out of   5720    23%  
-    Number used as Logic:              1327  out of   5720    23%  
+ Number of Slice LUTs:                 1330  out of   5720    23%  
+    Number used as Logic:              1330  out of   5720    23%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1346
-   Number with an unused Flip Flop:     648  out of   1346    48%  
-   Number with an unused LUT:            19  out of   1346     1%  
-   Number of fully used LUT-FF pairs:   679  out of   1346    50%  
+ Number of LUT Flip Flop pairs used:   1349
+   Number with an unused Flip Flop:     651  out of   1349    48%  
+   Number with an unused LUT:            19  out of   1349     1%  
+   Number of fully used LUT-FF pairs:   679  out of   1349    50%  
    Number of unique control sets:        18
 
 IO Utilization: 
@@ -1091,7 +1091,7 @@ Speed Grade: -2
 
    Minimum period: 8.687ns (Maximum Frequency: 115.118MHz)
    Minimum input arrival time before clock: 2.837ns
-   Maximum output required time after clock: 5.428ns
+   Maximum output required time after clock: 5.443ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1101,7 +1101,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.687ns (frequency: 115.118MHz)
-  Total number of paths / destination ports: 144124 / 1115
+  Total number of paths / destination ports: 145056 / 1115
 -------------------------------------------------------------------------
 Delay:               8.687ns (Levels of Logic = 19)
   Source:            displayer_inst/lcd_controller_inst/clk_count_7 (FF)
@@ -1162,7 +1162,7 @@ Offset:              2.837ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 17 / 17
 -------------------------------------------------------------------------
-Offset:              5.428ns (Levels of Logic = 1)
+Offset:              5.443ns (Levels of Logic = 1)
   Source:            editor_inst/char_index_internal_0 (FF)
   Destination:       mn<0> (PAD)
   Source Clock:      clk rising
@@ -1171,11 +1171,11 @@ Offset:              5.428ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             72   0.525   1.991  editor_inst/char_index_internal_0 (editor_inst/char_index_internal_0)
+     FDE:C->Q             74   0.525   2.006  editor_inst/char_index_internal_0 (editor_inst/char_index_internal_0)
      OBUF:I->O                 2.912          mn_0_OBUF (mn<0>)
     ----------------------------------------
-    Total                      5.428ns (3.437ns logic, 1.991ns route)
-                                       (63.3% logic, 36.7% route)
+    Total                      5.443ns (3.437ns logic, 2.006ns route)
+                                       (63.1% logic, 36.9% route)
 
 =========================================================================
 
@@ -1193,13 +1193,13 @@ clk            |    8.687|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.17 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.29 secs
  
 --> 
 
 
-Total memory usage is 398832 kilobytes
+Total memory usage is 399040 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  232 (   0 filtered)
