@@ -3,7 +3,8 @@ Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2 -n
-3 -fastpaths -xml Perger.twx Perger.ncd -o Perger.twr Perger.pcf
+3 -fastpaths -xml Perger.twx Perger.ncd -o Perger.twr Perger.pcf -ucf
+Perger.ucf
 
 Design file:              Perger.ncd
 Physical constraint file: Perger.pcf
@@ -36,14 +37,14 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-bt_state    |    4.210(R)|      SLOW  |   -1.880(R)|      FAST  |clk_BUFGP         |   0.000|
-btn<1>      |    2.608(R)|      SLOW  |   -0.890(R)|      FAST  |clk_BUFGP         |   0.000|
-btn<2>      |    3.154(R)|      SLOW  |   -1.295(R)|      FAST  |clk_BUFGP         |   0.000|
-btn<3>      |    2.711(R)|      SLOW  |   -1.016(R)|      FAST  |clk_BUFGP         |   0.000|
-btn<4>      |    2.517(R)|      SLOW  |   -0.963(R)|      FAST  |clk_BUFGP         |   0.000|
-btn<5>      |    1.466(R)|      SLOW  |   -0.189(R)|      SLOW  |clk_BUFGP         |   0.000|
-btn<6>      |    1.381(R)|      SLOW  |   -0.108(R)|      SLOW  |clk_BUFGP         |   0.000|
-sw<0>       |    1.971(R)|      SLOW  |   -0.590(R)|      FAST  |clk_BUFGP         |   0.000|
+bt_state    |    3.236(R)|      SLOW  |   -1.098(R)|      FAST  |clk_BUFGP         |   0.000|
+btn<1>      |    1.830(R)|      SLOW  |   -0.449(R)|      FAST  |clk_BUFGP         |   0.000|
+btn<2>      |    2.477(R)|      SLOW  |   -0.947(R)|      FAST  |clk_BUFGP         |   0.000|
+btn<3>      |    1.918(R)|      SLOW  |   -0.528(R)|      FAST  |clk_BUFGP         |   0.000|
+btn<4>      |    2.027(R)|      SLOW  |   -0.588(R)|      SLOW  |clk_BUFGP         |   0.000|
+btn<5>      |    0.828(R)|      SLOW  |    0.554(R)|      SLOW  |clk_BUFGP         |   0.000|
+btn<6>      |    0.809(R)|      SLOW  |    0.435(R)|      SLOW  |clk_BUFGP         |   0.000|
+sw<0>       |    1.727(R)|      SLOW  |   -0.441(R)|      SLOW  |clk_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -51,25 +52,23 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-bt_tx       |        11.026(R)|      SLOW  |         4.843(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<0> |         9.933(R)|      SLOW  |         4.227(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<1> |         9.296(R)|      SLOW  |         3.867(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<2> |         9.224(R)|      SLOW  |         3.779(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<3> |         9.237(R)|      SLOW  |         3.798(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<4> |         9.270(R)|      SLOW  |         3.750(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<5> |         9.056(R)|      SLOW  |         3.711(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<6> |         8.872(R)|      SLOW  |         3.603(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<7> |         8.938(R)|      SLOW  |         3.610(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_en      |         9.198(R)|      SLOW  |         3.784(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_rs      |         9.716(R)|      SLOW  |         4.179(R)|      FAST  |clk_BUFGP         |   0.000|
-led<0>      |         9.350(R)|      SLOW  |         3.813(R)|      FAST  |clk_BUFGP         |   0.000|
-led<5>      |        10.616(R)|      SLOW  |         4.470(R)|      FAST  |clk_BUFGP         |   0.000|
-led<6>      |        10.512(R)|      SLOW  |         4.416(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<0>       |         9.222(R)|      SLOW  |         3.767(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<1>       |         8.987(R)|      SLOW  |         3.597(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<2>       |         9.193(R)|      SLOW  |         3.743(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<3>       |         9.049(R)|      SLOW  |         3.673(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<4>       |         9.531(R)|      SLOW  |         3.981(R)|      FAST  |clk_BUFGP         |   0.000|
+bt_tx       |         9.683(R)|      SLOW  |         4.198(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<0> |         9.647(R)|      SLOW  |         4.086(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<1> |        10.106(R)|      SLOW  |         4.377(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<2> |         9.743(R)|      SLOW  |         4.172(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<3> |         9.847(R)|      SLOW  |         4.264(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<4> |         9.769(R)|      SLOW  |         4.156(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<5> |         9.278(R)|      SLOW  |         3.882(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<6> |         9.771(R)|      SLOW  |         4.166(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<7> |         9.989(R)|      SLOW  |         4.266(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_en      |         8.964(R)|      SLOW  |         3.712(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_rs      |         9.141(R)|      SLOW  |         3.772(R)|      FAST  |clk_BUFGP         |   0.000|
+led<0>      |        10.227(R)|      SLOW  |         4.396(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<0>       |         9.806(R)|      SLOW  |         4.188(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<1>       |        10.095(R)|      SLOW  |         4.347(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<2>       |         9.885(R)|      SLOW  |         4.268(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<3>       |         9.699(R)|      SLOW  |         4.156(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<4>       |        10.869(R)|      SLOW  |         4.817(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -77,18 +76,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.535|         |         |         |
+clk            |    8.073|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-bt_state       |led<7>         |   11.978|
----------------+---------------+---------+
 
-
-Analysis completed Wed Nov  6 19:56:35 2024 
+Analysis completed Thu Nov  7 14:42:14 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:

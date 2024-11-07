@@ -2,8 +2,8 @@ Release 14.7 ngdbuild P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
-ise -dd _ngo -nt timestamp -uc Perger.ucf -p xc6slx9-tqg144-2 Perger.ngc
-Perger.ngd
+ise -dd _ngo -nt timestamp -uc Perger.ucf -uc Perger.ucf -p xc6slx9-tqg144-2
+Perger.ngc Perger.ngd
 
 Reading NGO file
 "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Pe
@@ -11,6 +11,7 @@ rger.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file "Perger.ucf" ...
 Annotating constraints to design from ucf file "Perger.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
@@ -29,7 +30,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 394432 kilobytes
+Total memory usage is 394728 kilobytes
 
 Writing NGD file "Perger.ngd" ...
 Total REAL time to NGDBUILD completion:  1 sec

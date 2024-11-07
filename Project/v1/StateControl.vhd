@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use work.Globals.all;
 
-entity StateControl is
+entity Controller is
     port(
         clk                 : in  STD_LOGIC; -- สัญญาณนาฬิกา
         reset               : in  STD_LOGIC; -- สัญญาณรีเซ็ต
@@ -12,13 +12,12 @@ entity StateControl is
         message_buffer      : in  STD_LOGIC_VECTOR(239 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
         send_finished       : in  STD_LOGIC; -- สถานะการส่งข้อมูล (กำลังส่งหรือไม่) *UART_Transmitter
         current_state       : out STATES; -- สถานะปัจจุบันของระบบ
-        next_state          : out STATES; -- สถานะถัดไปของระบบ
         L0                  : out STD_LOGIC; -- ไฟแสดงสถานะการทำงานของระบบ
         alert_signal        : out STD_LOGIC -- สัญญาณแจ้งเตือนผู้ใช้งาน
     );
-end StateControl;
+end Controller;
 
-architecture Behavioral of StateControl is
+architecture Behavioral of Controller is
     -- มีสถานะ 3 แบบได้แก่ RECEIVING, PRINTING, SENDING มีค่าเป็น 00 01 10
     signal state      : STATES                       := RECEIVING;
     signal idle_timer : integer range 0 to 250000000 := 0; -- ตัวนับเวลา 5 วินาที
@@ -83,5 +82,4 @@ begin
     end process;
 
     current_state <= state;             -- กำหนดสถานะปัจจุบัน
-    next_state    <= state;             -- กำหนดสถานะถัดไป
 end Behavioral;

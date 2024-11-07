@@ -21,88 +21,56 @@ entity Perger is
 end Perger;
 
 architecture Behavioral of Perger is
-    constant system_frequency : integer := 20_000_000;
-    constant bluetooth_baud   : integer := 115_200;
-
-    signal btn_debounced : STD_LOGIC_VECTOR(6 downto 1);
-    signal sw_debounced  : STD_LOGIC_VECTOR(7 downto 0);
-    signal btn_pulse     : STD_LOGIC_VECTOR(6 downto 1);
+    constant clk_freq       : integer := 20_000_000;
+    constant bluetooth_baud : integer := 115_200;
+    constant message_size   : integer := 240;
+    constant display_size   : integer := 256;
 
     -- สัญญาณภายในสำหรับการสื่อสารระหว่างโมดูล
-    signal current_state, next_state : STATES;
-    signal message_buffer            : STD_LOGIC_VECTOR(239 downto 0);
-    signal recieve_buffer            : STD_LOGIC_VECTOR(239 downto 0);
-    signal recieve_complete          : std_logic;
-    signal message_formatted         : STD_LOGIC_VECTOR(255 downto 0);
-    signal char_index                : INTEGER range 0 to 29;
-    signal last_char                 : STD_LOGIC_VECTOR(7 downto 0);
-    signal uart_send_start           : STD_LOGIC;
-    signal uart_recieve_start        : STD_LOGIC;
-    signal send_finished             : STD_LOGIC;
-    signal uart_send_ack             : std_logic;
-    signal uart_send_data            : std_logic_vector(7 downto 0);
-    signal uart_recieve_data         : std_logic_vector(7 downto 0);
+    signal btn_pulse    : std_logic_vector(btn'length downto 1);
+    signal sw_debounced : std_logic_vector(sw'length - 1 downto 0);
+
+    signal current_state    : STATES;
+    signal edit_buffer      : STD_LOGIC_VECTOR(message_size - 1 downto 0);
+    signal recieve_buffer   : STD_LOGIC_VECTOR(message_size - 1 downto 0);
+    signal recieve_complete : std_logic;
+    signal char_index       : INTEGER range 0 to 29;
+    signal last_char        : STD_LOGIC_VECTOR(7 downto 0);
+    signal send_finished    : STD_LOGIC;
+
 begin
-    -- Debouncer
-    btn_debounced(4 downto 1) <= btn(4 downto 1);
-    g_btn_debounce : for i in 5 to 6 generate
-        debounce_inst : entity work.Debounce
-            generic map(
-                clk_freq    => system_frequency,
-                stable_time => 20
-            )
-            port map(
-                clk     => clk,
-                reset_n => '1',
-                button  => btn(i),
-                result  => btn_debounced(i)
-            );
-    end generate;
+    input_cleaner_inst : entity work.InputCleaner
+        generic map(
+            clk_freq           => clk_freq,
+            btn_stable_time    => 20,
+            sw_stable_time     => 50,
+            btn_count          => btn'length,
+            btn_debounce_start => 4,
+            sw_count           => sw'length
+        )
+        port map(
+            clk   => clk,
+            btn_i => btn,
+            sw_i  => sw,
+            btn_o => btn_pulse,
+            sw_o  => sw_debounced
+        );
 
-    g_sw_debounce : for i in 0 to 6 generate
-        debounce_inst : entity work.Debounce
-            generic map(
-                clk_freq    => system_frequency,
-                stable_time => 50
-            )
-            port map(
-                clk     => clk,
-                reset_n => '1',
-                button  => sw(i),
-                result  => sw_debounced(i)
-            );
-
-    end generate;
-
-    g_btn_pulse : for i in 1 to 6 generate
-        edge_detector_inst : entity work.EdgeDetector
-            port map(
-                i_clk   => clk,
-                i_rstb  => '1',
-                i_input => btn_debounced(i),
-                o_pulse => btn_pulse(i)
-            );
-
-    end generate;
-
-    -- การเชื่อมต่อโมดูล State_Manager
-    state_control_inst : entity work.StateControl
+    controller_inst : entity work.Controller
         port map(
             clk                 => clk,
             reset               => '0',
             btn                 => btn_pulse,
-            new_data_in         => '0', -- สามารถแก้ไขตามความต้องการได้
-            message_buffer      => message_buffer,
+            new_data_in         => '0',
+            message_buffer      => edit_buffer,
             current_state       => current_state,
-            next_state          => next_state,
             L0                  => led(0),
             alert_signal        => open, -- ไม่ได้ใช้ใน top-level
             send_finished       => send_finished,
             bluetooth_connected => bt_state
         );
 
-    -- การเชื่อมต่อโมดูล Print_Manager
-    printer_inst : entity work.Printer
+    editor_inst : entity work.Editor
         port map(
             clk            => clk,
             current_state  => current_state,
@@ -110,80 +78,45 @@ begin
             btn            => btn_pulse(5 downto 1),
             reset          => '0',
             last_char      => last_char,
-            message_buffer => message_buffer,
+            message_buffer => edit_buffer,
             char_index     => char_index
         );
 
-    -- การเชื่อมต่อโมดูล Send_Module
-    sender_inst : entity work.Sender
-        port map(
-            clk                => clk,
-            reset              => '0',
-            current_state      => current_state,
-            message_buffer     => message_buffer,
-            send_finished      => send_finished,
-            data_stream_in_ack => uart_send_ack,
-            tx_start           => uart_recieve_start,
-            data_out           => uart_send_data
-        );
-
-    receiver_inst : entity work.Receiver
-        port map(
-            clk               => clk,
-            data_in           => uart_recieve_data,
-            new_data_stb      => uart_recieve_start,
-            data_out          => recieve_buffer,
-            data_complete_stb => recieve_complete
-        );
-
-    uart_inst : entity work.Uart
+    communicator_inst : entity work.Communicator
         generic map(
-            baud            => bluetooth_baud,
-            clock_frequency => system_frequency
+            clk_freq     => clk_freq,
+            baud         => bluetooth_baud,
+            message_size => message_size
         )
         port map(
-            clock               => clk,
-            reset               => '0',
-            data_stream_in      => uart_send_data,
-            data_stream_in_stb  => uart_recieve_start,
-            data_stream_in_ack  => uart_send_ack,
-            data_stream_out     => uart_recieve_data,
-            data_stream_out_stb => uart_recieve_start,
-            tx                  => bt_tx,
-            rx                  => bt_rx
+            clk              => clk,
+            bt_rx            => bt_rx,
+            current_state    => current_state,
+            edit_buffer      => edit_buffer,
+            recieve_buffer   => recieve_buffer,
+            bt_tx            => bt_tx,
+            send_finished    => send_finished,
+            recieve_complete => recieve_complete
         );
 
-    -- การเชื่อมต่อโมดูลแสดงผล message_display
-    display_inst : entity work.MessageFormatter
+    displayer_inst : entity work.Displayer
+        generic map(
+            clk_freq     => clk_freq,
+            message_size => message_size,
+            display_size => display_size
+        )
         port map(
             clk           => clk,
-            reset         => '0',
-            message_in    => message_buffer,
+            current_state => current_state,
+            edit_buffer   => edit_buffer,
             last_char     => last_char,
             char_index    => char_index,
-            current_state => current_state,
-            message_out   => message_formatted
+            lcd_en        => lcd_en,
+            lcd_rs        => lcd_rs,
+            lcd_rw        => lcd_rw,
+            lcd_data      => lcd_data
         );
 
-    -- การเชื่อมต่อโมดูล LCD Controller
-    lcd_controller_inst : entity work.LcdController
-        generic map(
-            clk_freq => system_frequency
-        )
-        port map(
-            clk          => clk,
-            reset_n      => '1',
-            line1_buffer => message_formatted(255 downto 128),
-            line2_buffer => message_formatted(127 downto 0),
-            rw           => lcd_rw,
-            rs           => lcd_rs,
-            e            => lcd_en,
-            lcd_data     => lcd_data
-        );
-
-    led(7)          <= bt_state;
-    led(6)          <= send_finished;
-    led(5)          <= uart_recieve_start;
-    led(4 downto 1) <= (others => '0');
+    led(7 downto 1) <= (others => '0');
     mn              <= std_logic_vector(to_unsigned(char_index, mn'length));
 end Behavioral;

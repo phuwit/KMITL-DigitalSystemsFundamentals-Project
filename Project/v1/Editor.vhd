@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.all;
 use ieee.numeric_std.all;
 use work.globals.all;
 
-entity Printer is
+entity Editor is
     port(
         clk            : in    STD_LOGIC;
         current_state  : in    STATES;  -- สัญญาณบอกสถานะปัจจุบัน
@@ -14,9 +14,9 @@ entity Printer is
         message_buffer : out   STD_LOGIC_VECTOR(239 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
         char_index     : out   INTEGER range 0 to 29 -- ดัชนีของตัวอักษรใน buffer (เปลี่ยนเป็นพอร์ต out)
     );
-end Printer;
+end Editor;
 
-architecture Behavioral of Printer is
+architecture Behavioral of Editor is
     constant key_hold_time         : integer                          := 60_000_000;
     signal key_timer               : INTEGER range 0 to key_hold_time := 0; -- ตัวนับการกดปุ่ม
     signal internal_message_buffer : STD_LOGIC_VECTOR(239 downto 0)   := (others => '0'); -- บัฟเฟอร์ภายในสำหรับเก็บข้อความ

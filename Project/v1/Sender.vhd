@@ -3,11 +3,13 @@ use IEEE.STD_LOGIC_1164.all;
 use work.globals.all;
 
 entity Sender is
+    generic(
+        message_size : integer := 240);
     port(
         clk                : in  STD_LOGIC; -- สัญญาณนาฬิกา
         reset              : in  STD_LOGIC; -- เมื่อมีการกดปุ่มส่งใหม่ ต้องรีเซ็ตด้วย
         current_state      : in  STATES;
-        message_buffer     : in  STD_LOGIC_VECTOR(239 downto 0);
+        edit_buffer        : in  STD_LOGIC_VECTOR(message_size - 1 downto 0);
         data_stream_in_ack : in  STD_LOGIC; -- คือ 1 เมื่อยืนยันว่าโมดูลได้เริ่มส่งข้อมูลแล้ว
         tx_start           : out STD_LOGIC; -- ต่อกับ data_stream_in_stb
         send_finished      : out std_logic;
@@ -31,7 +33,7 @@ begin
             elsif current_state = SENDING then
                 if sending_flag = '0' then
                     -- เริ่มการส่งอักษรแรก
-                    data_out     <= message_buffer((byte_index * 8) + 7 downto byte_index * 8); -- ส่งข้อมูล 8 บิตต่อครั้ง
+                    data_out     <= edit_buffer((byte_index * 8) + 7 downto byte_index * 8); -- ส่งข้อมูล 8 บิตต่อครั้ง
                     tx_start     <= '1'; -- เริ่มส่ง
                     sending_flag <= '1'; -- ตั้งค่าสถานะการส่ง
                 elsif data_stream_in_ack = '1' then
@@ -48,8 +50,8 @@ begin
                     end if;
                 end if;
             else
-                tx_start     <= '0';    -- ไม่อยู่ในสถานะ SENDING
-                sending_flag <= '0';
+                tx_start      <= '0';   -- ไม่อยู่ในสถานะ SENDING
+                sending_flag  <= '0';
                 send_finished <= '0';
             end if;
         end if;

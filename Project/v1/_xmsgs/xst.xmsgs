@@ -5,64 +5,53 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%d" index="2">60</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">g_sw_debounce[1].debounce_inst</arg>&gt; of block &lt;<arg fmt="%s" index="4">Debounce</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Perger</arg>&gt;. Underlying logic will be removed.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">59</arg>: Output port &lt;<arg fmt="%s" index="3">alert_signal</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">controller_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%d" index="2">60</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">g_sw_debounce[2].debounce_inst</arg>&gt; of block &lt;<arg fmt="%s" index="4">Debounce</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Perger</arg>&gt;. Underlying logic will be removed.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">recieve_buffer</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">communicator_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%d" index="2">60</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">g_sw_debounce[3].debounce_inst</arg>&gt; of block &lt;<arg fmt="%s" index="4">Debounce</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Perger</arg>&gt;. Underlying logic will be removed.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">recieve_complete</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">communicator_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%d" index="2">60</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">g_sw_debounce[4].debounce_inst</arg>&gt; of block &lt;<arg fmt="%s" index="4">Debounce</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Perger</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">g_sw_debounce[1].debounce_inst</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">input_cleaner_inst</arg>&gt;.
+It will be removed from the design.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%d" index="2">60</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">g_sw_debounce[5].debounce_inst</arg>&gt; of block &lt;<arg fmt="%s" index="4">Debounce</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Perger</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">g_sw_debounce[2].debounce_inst</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">input_cleaner_inst</arg>&gt;.
+It will be removed from the design.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%d" index="2">60</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">g_sw_debounce[6].debounce_inst</arg>&gt; of block &lt;<arg fmt="%s" index="4">Debounce</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">Perger</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">g_sw_debounce[3].debounce_inst</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">input_cleaner_inst</arg>&gt;.
+It will be removed from the design.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">result</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">g_sw_debounce[1].debounce_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">g_sw_debounce[4].debounce_inst</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">input_cleaner_inst</arg>&gt;.
+It will be removed from the design.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">result</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">g_sw_debounce[2].debounce_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">g_sw_debounce[5].debounce_inst</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">input_cleaner_inst</arg>&gt;.
+It will be removed from the design.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">result</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">g_sw_debounce[3].debounce_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">g_sw_debounce[6].debounce_inst</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">input_cleaner_inst</arg>&gt;.
+It will be removed from the design.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">result</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">g_sw_debounce[4].debounce_inst</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">result</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">g_sw_debounce[5].debounce_inst</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">result</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">g_sw_debounce[6].debounce_inst</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">86</arg>: Output port &lt;<arg fmt="%s" index="3">next_state</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">state_control_inst</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">86</arg>: Output port &lt;<arg fmt="%s" index="3">alert_signal</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">state_control_inst</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">86</arg>: Output port &lt;<arg fmt="%s" index="3">sender_reset</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">state_control_inst</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">data_stream_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Uart_inst</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">data_stream_out_stb</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Uart_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">receiver_inst</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">communicator_inst</arg>&gt;.
+It will be removed from the design.
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sending_flag</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">sender_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tx_start&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_current_state[1]_X_14_o_wide_mux_1122_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_current_state[1]_X_18_o_wide_mux_1123_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sending_flag</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Sender</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tx_start&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">communicator_inst/receiver_inst</arg>&gt; of block &lt;<arg fmt="%s" index="2">Receiver</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">current_state_char_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MessageFormatter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -83,247 +72,658 @@
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">current_state_char_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MessageFormatter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Printer</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Editor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Printer</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Editor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Printer</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Editor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Printer</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Editor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Printer</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Editor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Printer</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Editor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Printer</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Editor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Printer</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">internal_message_buffer_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Editor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">state_control_inst/sender_reset</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_filter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_filter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_state_FSM_FFd1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_state_FSM_FFd2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_bit_spacing_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_bit_spacing_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_bit_spacing_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_bit_spacing_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/rx_baud_counter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/rx_baud_counter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/rx_baud_counter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/rx_baud_counter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_out_stb</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_vec_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_vec_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_vec_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_vec_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/result</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_vec_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/flipflops_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_vec_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[6].debounce_inst/flipflops_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_vec_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_vec_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_bit</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_sr_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_data_sr_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/uart_rx_bit_tick</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Uart_inst/rx_baud_tick</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_71</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_63</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_55</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_47</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_39</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">sender_inst/data_out_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Uart_inst/uart_tx_data_vec_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/result</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/flipflops_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[5].debounce_inst/flipflops_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">lcd_controller_inst/clk_count_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/last_char_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_239</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_231</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_223</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_215</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_207</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_199</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_191</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_183</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_175</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_167</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_159</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_151</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_143</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_135</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_127</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/result</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_119</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/flipflops_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_111</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[4].debounce_inst/flipflops_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_103</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_95</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_87</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">printer_inst/internal_message_buffer_79</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/result</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/flipflops_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[3].debounce_inst/flipflops_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/result</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/flipflops_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[2].debounce_inst/flipflops_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/result</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/flipflops_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/flipflops_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_filter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_filter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_state_FSM_FFd1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_state_FSM_FFd2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_bit_spacing_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_bit_spacing_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_bit_spacing_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_bit_spacing_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/rx_baud_counter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/rx_baud_counter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/rx_baud_counter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/rx_baud_counter_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_out_stb</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_vec_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_vec_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_vec_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_vec_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_vec_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_vec_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_vec_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_vec_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_bit</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_sr_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_data_sr_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_rx_bit_tick</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/rx_baud_tick</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_71</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_63</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_55</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_47</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_39</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">communicator_inst/sender_inst/data_out_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">communicator_inst/uart_inst/uart_tx_data_vec_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">displayer_inst/lcd_controller_inst/clk_count_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/last_char_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_239</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_231</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_223</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_215</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_207</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_199</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_191</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_183</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_175</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_167</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_159</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_151</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_143</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_135</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_127</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_119</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_111</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_103</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_95</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_87</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_79</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 </messages>
