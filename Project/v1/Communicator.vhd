@@ -20,7 +20,7 @@ entity Communicator is
 end Communicator;
 
 architecture Behavioral of Communicator is
-    constant reciever_reset_delay : integer := 2;
+    constant recieve_clear_delay_time : integer := 5;
 
     signal uart_send_start    : std_logic;
     signal uart_recieve_start : std_logic;
@@ -29,9 +29,9 @@ architecture Behavioral of Communicator is
     signal uart_recieve_data  : std_logic_vector(7 downto 0);
 
     signal recieve_complete_internal : std_logic;
-    signal reciever_reset            : std_logic;
-    signal reciever_reset_shr        : std_logic_vector(reciever_reset_delay - 1 downto 0);
-    signal recieve_buffer_dff_i      : std_logic_vector(message_size - 1 downto 0);
+    signal recieve_dff_i             : std_logic_vector(message_size - 1 downto 0);
+    signal recieve_clear             : std_logic;
+    signal recieve_clear_dff_mem     : std_logic_vector(recieve_clear_delay_time - 1 downto 0);
 begin
     sender_inst : entity work.Sender
         generic map(
@@ -47,7 +47,7 @@ begin
             data_out           => uart_send_data
         );
 
-    recieve_buffer_dff : entity work.fdc_wide
+    recieve_latch : entity work.fdc_wide
         generic map(
             data_width => message_size
         )
@@ -55,30 +55,30 @@ begin
             d_o => recieve_buffer,
             clk => recieve_complete_internal,
             clr => reset,
-            d_i => recieve_buffer_dff_i
+            d_i => recieve_dff_i
         );
 
-    reciever_reset_shr(0) <= recieve_complete_internal;
-    g_reciever_reset_shr : for i in 0 to reciever_reset_delay - 2 generate
-        debounce_inst : entity work.fdc
+    recieve_clear_dff_mem(0) <= recieve_complete_internal;
+    g_recieve_dffs : for i in 0 to recieve_clear_delay_time - 2 generate
+        recieve_dff : entity work.fdc
             port map(
-                d_o => reciever_reset_shr(i+1),
+                d_o => recieve_clear_dff_mem(i + 1),
                 clk => clk,
                 clr => reset,
-                d_i => reciever_reset_shr(i)
+                d_i => recieve_clear_dff_mem(i)
             );
     end generate;
 
-    reciever_reset <= reset or reciever_reset_shr(reciever_reset_delay - 1);
+    recieve_clear <= recieve_clear_dff_mem(recieve_clear_delay_time - 1) or reset;
     receiver_inst : entity work.Receiver
         generic map(
             message_size => message_size)
         port map(
             clk               => clk,
-            reset             => reciever_reset,
+            reset             => recieve_clear,
             data_in           => uart_recieve_data,
             new_data_stb      => uart_recieve_start,
-            data_out          => recieve_buffer_dff_i,
+            data_out          => recieve_dff_i,
             data_complete_stb => recieve_complete_internal
         );
 
@@ -98,6 +98,5 @@ begin
             tx                  => bt_tx,
             rx                  => bt_rx
         );
-
     recieve_complete <= recieve_complete_internal;
 end Behavioral;

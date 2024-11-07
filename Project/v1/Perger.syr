@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: Perger.prj
@@ -590,8 +590,8 @@ Macro Statistics
  6-bit adder                                           : 1
  8-bit adder                                           : 3
  9-bit adder                                           : 5
-# Registers                                            : 107
- 1-bit register                                        : 48
+# Registers                                            : 110
+ 1-bit register                                        : 51
  19-bit register                                       : 2
  2-bit register                                        : 18
  20-bit register                                       : 14
@@ -756,8 +756,8 @@ Macro Statistics
  5-bit down counter                                    : 1
  5-bit up counter                                      : 2
  8-bit up counter                                      : 1
-# Registers                                            : 1186
- Flip-Flops                                            : 1186
+# Registers                                            : 1189
+ Flip-Flops                                            : 1189
 # Comparators                                          : 56
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
@@ -883,6 +883,8 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_bu
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_5> has a constant value of 0 in block <Editor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_6> has a constant value of 0 in block <Editor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_7> has a constant value of 0 in block <Editor>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Communicator> ...
 
 Optimizing unit <Sender> ...
 
@@ -1229,12 +1231,16 @@ FlipFlop displayer_inst/lcd_controller_inst/ptr_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
+Processing Unit <Perger> :
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <communicator_inst/g_recieve_dffs[3].recieve_dff/d_o> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <Perger> processed.
+
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1266
- Flip-Flops                                            : 1266
+# Registers                                            : 1269
+ Flip-Flops                                            : 1269
 
 =========================================================================
 
@@ -1270,9 +1276,9 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 14
 #      VCC                         : 1
 #      XORCY                       : 205
-# FlipFlops/Latches                : 1267
+# FlipFlops/Latches                : 1270
 #      FD                          : 35
-#      FDC                         : 513
+#      FDC                         : 516
 #      FDCE                        : 534
 #      FDE                         : 108
 #      FDP                         : 2
@@ -1296,15 +1302,15 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1267  out of  11440    11%  
+ Number of Slice Registers:            1270  out of  11440    11%  
  Number of Slice LUTs:                 1928  out of   5720    33%  
     Number used as Logic:              1928  out of   5720    33%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2193
-   Number with an unused Flip Flop:     926  out of   2193    42%  
-   Number with an unused LUT:           265  out of   2193    12%  
-   Number of fully used LUT-FF pairs:  1002  out of   2193    45%  
+ Number of LUT Flip Flop pairs used:   2197
+   Number with an unused Flip Flop:     927  out of   2197    42%  
+   Number with an unused LUT:           269  out of   2197    12%  
+   Number of fully used LUT-FF pairs:  1001  out of   2197    45%  
    Number of unique control sets:        31
 
 IO Utilization: 
@@ -1335,7 +1341,7 @@ Clock Information:
 -------------------------------------------------+----------------------------------------+-------+
 Clock Signal                                     | Clock buffer(FF name)                  | Load  |
 -------------------------------------------------+----------------------------------------+-------+
-clk                                              | BUFGP                                  | 1026  |
+clk                                              | BUFGP                                  | 1029  |
 communicator_inst/receiver_inst/data_complete_stb| BUFG                                   | 240   |
 editor_reset(editor_reset1:O)                    | NONE(*)(editor_inst/added_to_buffer_LD)| 1     |
 -------------------------------------------------+----------------------------------------+-------+
@@ -1364,7 +1370,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.687ns (frequency: 115.118MHz)
-  Total number of paths / destination ports: 166249 / 2588
+  Total number of paths / destination ports: 166255 / 2594
 -------------------------------------------------------------------------
 Delay:               8.687ns (Levels of Logic = 19)
   Source:            displayer_inst/lcd_controller_inst/clk_count_7 (FF)
@@ -1460,21 +1466,21 @@ Clock to Setup on destination clock communicator_inst/receiver_inst/data_complet
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.476|         |         |         |
+clk            |    3.477|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.39 secs
+Total CPU time to Xst completion: 6.70 secs
  
 --> 
 
 
-Total memory usage is 408188 kilobytes
+Total memory usage is 408056 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  349 (   0 filtered)
-Number of infos    :    7 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 

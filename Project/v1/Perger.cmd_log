@@ -514,3 +514,21 @@ map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -reg
 par -w -intstyle ise -ol high -mt 4 Perger_map.ncd Perger.ncd Perger.pcf 
 trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml Perger.twx Perger.ncd -o Perger.twr Perger.pcf -ucf Perger.ucf 
 bitgen -intstyle ise -f Perger.ut Perger.ncd 
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Perger.ucf -p xc6slx9-tqg144-2 Perger.ngc Perger.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr off -lc off -power off -o Perger_map.ncd Perger.ngd Perger.pcf 
+par -w -intstyle ise -ol high -mt 4 Perger_map.ncd Perger.ncd Perger.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml Perger.twx Perger.ncd -o Perger.twr Perger.pcf -ucf Perger.ucf 
+bitgen -intstyle ise -f Perger.ut Perger.ncd 
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Perger.ucf -p xc6slx9-tqg144-2 Perger.ngc Perger.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr off -lc off -power off -o Perger_map.ncd Perger.ngd Perger.pcf 
+par -w -intstyle ise -ol high -mt 4 Perger_map.ncd Perger.ncd Perger.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml Perger.twx Perger.ncd -o Perger.twr Perger.pcf -ucf Perger.ucf 
+bitgen -intstyle ise -f Perger.ut Perger.ncd 
+xst -intstyle ise -ifn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.xst" -ofn "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Perger.ucf -p xc6slx9-tqg144-2 Perger.ngc Perger.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr off -lc off -power off -o Perger_map.ncd Perger.ngd Perger.pcf 
+par -w -intstyle ise -ol high -mt 4 Perger_map.ncd Perger.ncd Perger.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml Perger.twx Perger.ncd -o Perger.twr Perger.pcf -ucf Perger.ucf 
+bitgen -intstyle ise -f Perger.ut Perger.ncd 

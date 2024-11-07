@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Thu Nov  7 20:39:51 2024">
+  <application stringID="NgdBuild" timeStamp="Thu Nov  7 20:54:10 2024">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -49,7 +49,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="13th Gen Intel(R) Core(TM) i7-13700HX"/>
-          <item stringID="speed" value="2941.529 MHz"/>
+          <item stringID="speed" value="2243.478 MHz"/>
         </row>
       </table>
     </section>
@@ -73,7 +73,7 @@
         <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_BUFGP" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="35"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="513"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="516"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="534"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="108"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDP" value="2"/>
@@ -101,7 +101,7 @@
       <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="35"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="513"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="516"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="534"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="108"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDP" value="2"/>
