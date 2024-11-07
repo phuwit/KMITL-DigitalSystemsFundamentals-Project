@@ -29,14 +29,14 @@ begin
                 if char_count >= 0 then
                     -- ใส่อักขระใหม่เข้าไปในตำแหน่งที่เหมาะสมใน buffer
                     internal_buffer((char_count * 8) + 7 downto char_count * 8) <= data_in;
-                    char_count                                                  <= char_count - 1;
 
-                    -- ตรวจสอบว่ารับครบ 30 ตัวหรือไม่
+                    -- ตรวจสอบว่ารับครบ 30 ตัวหรือไม่หลังจากใส่ข้อมูล
                     if char_count = 0 then
                         data_complete_stb <= '1'; -- แจ้งว่าข้อมูลครบ 30 ตัวแล้ว
+                        char_count <= 29; -- รีเซ็ตการนับเมื่อรับครบ 30 ตัวอักษร
+                    else
+                        char_count <= char_count - 1; -- ลดค่า char_count ลง
                     end if;
-                else
-                    char_count <= 29;   -- รีเซ็ตการนับเมื่อรับครบ 30 ตัวอักษร
                 end if;
             end if;
         end if;
