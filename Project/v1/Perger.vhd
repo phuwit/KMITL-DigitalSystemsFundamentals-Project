@@ -40,7 +40,7 @@ architecture Behavioral of Perger is
     signal char_index       : integer range 0 to 29;
     signal last_char        : std_logic_vector(7 downto 0);
     signal send_finished    : std_logic;
-
+    signal editor_reset     : std_logic;
 begin
     input_cleaner_inst : entity work.InputCleaner
         generic map(
@@ -80,10 +80,11 @@ begin
             bluetooth_connected => bt_state
         );
 
+    editor_reset <= dipsw_debounced(1) or send_finished;
     editor_inst : entity work.Editor
         port map(
             clk            => clk,
-            reset          => dipsw_debounced(1) or send_finished,
+            reset          => editor_reset,
             current_state  => current_state,
             mode_select    => sw_debounced(0),
             btn            => btn_pulse(5 downto 1),

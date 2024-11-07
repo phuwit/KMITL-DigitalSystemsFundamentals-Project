@@ -99,4 +99,5 @@ begin
             rx                  => bt_rx
         );
 
+    recieve_complete <= recieve_complete_internal;
 end Behavioral;
