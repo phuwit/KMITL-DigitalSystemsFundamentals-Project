@@ -9,6 +9,7 @@ entity Displayer is
         display_size : integer := 256);
     port(
         clk           : in  STD_LOGIC;
+        reset         : in  std_logic;
         current_state : in  STATES;
         edit_buffer   : in  std_logic_vector(message_size - 1 downto 0);
         last_char     : in  std_logic_vector(7 downto 0);
@@ -29,7 +30,7 @@ begin
         )
         port map(
             clk           => clk,
-            reset         => '0',
+            reset         => reset,
             message_in    => edit_buffer,
             last_char     => last_char,
             char_index    => char_index,
@@ -43,7 +44,7 @@ begin
         )
         port map(
             clk          => clk,
-            reset_n      => '1',
+            reset_n      => not reset,
             line1_buffer => message_formatted(display_size - 1 downto display_size / 2),
             line2_buffer => message_formatted((display_size / 2) - 1 downto 0),
             rw           => lcd_rw,

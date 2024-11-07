@@ -8,7 +8,8 @@ entity Perger is
         clk      : in  STD_LOGIC;
         btn      : in  STD_LOGIC_VECTOR(6 downto 1);
         sw       : in  STD_LOGIC_VECTOR(6 downto 0);
-        bt_rx    : in  std_logic;-- fpga's rx <-> bluetooth's tx
+        dipsw    : in  STD_LOGIC_VECTOR(8 downto 1);
+        bt_rx    : in  std_logic;       -- fpga's rx <-> bluetooth's tx
         bt_state : in  std_logic;
         led      : out STD_LOGIC_VECTOR(7 downto 0);
         mn       : out STD_LOGIC_VECTOR(7 downto 0);
@@ -16,7 +17,7 @@ entity Perger is
         lcd_rs   : out STD_LOGIC;
         lcd_rw   : out STD_LOGIC;
         lcd_data : out STD_LOGIC_VECTOR(7 downto 0);
-        bt_tx    : out std_logic -- fpga's tx <-> bluetooth's rx
+        bt_tx    : out std_logic        -- fpga's tx <-> bluetooth's rx
     );
 end Perger;
 
@@ -27,8 +28,9 @@ architecture Behavioral of Perger is
     constant display_size   : integer := 256;
 
     -- สัญญาณภายในสำหรับการสื่อสารระหว่างโมดูล
-    signal btn_pulse    : std_logic_vector(btn'length downto 1);
-    signal sw_debounced : std_logic_vector(sw'length - 1 downto 0);
+    signal btn_pulse       : std_logic_vector(btn'length downto 1);
+    signal sw_debounced    : std_logic_vector(sw'length - 1 downto 0);
+    signal dipsw_debounced : std_logic_vector(dipsw'length downto 1);
 
     signal current_state    : STATES;
     signal edit_buffer      : STD_LOGIC_VECTOR(message_size - 1 downto 0);
@@ -46,23 +48,27 @@ begin
             sw_stable_time     => 50,
             btn_count          => btn'length,
             btn_debounce_start => 4,
-            sw_count           => sw'length
+            sw_count           => sw'length,
+            dipsw_count        => dipsw'length
         )
         port map(
-            clk   => clk,
-            btn_i => btn,
-            sw_i  => sw,
-            btn_o => btn_pulse,
-            sw_o  => sw_debounced
+            clk     => clk,
+            btn_i   => btn,
+            sw_i    => sw,
+            dipsw_i => dipsw,
+            btn_o   => btn_pulse,
+            sw_o    => sw_debounced,
+            dipsw_o => dipsw_debounced
         );
 
     controller_inst : entity work.Controller
         generic map(
-                clk_freq => clk_freq
-            )
+            clk_freq     => clk_freq,
+            message_size => message_size
+        )
         port map(
             clk                 => clk,
-            reset               => '0',
+            reset               => dipsw_debounced(1),
             btn                 => btn_pulse,
             new_data_in         => '0',
             message_buffer      => edit_buffer,
@@ -76,10 +82,10 @@ begin
     editor_inst : entity work.Editor
         port map(
             clk            => clk,
+            reset          => dipsw_debounced(1),
             current_state  => current_state,
             mode_select    => sw_debounced(0),
             btn            => btn_pulse(5 downto 1),
-            reset          => '0',
             last_char      => last_char,
             message_buffer => edit_buffer,
             char_index     => char_index
@@ -93,6 +99,7 @@ begin
         )
         port map(
             clk              => clk,
+            reset            => dipsw_debounced(1),
             bt_rx            => bt_rx,
             current_state    => current_state,
             edit_buffer      => edit_buffer,
@@ -110,6 +117,7 @@ begin
         )
         port map(
             clk           => clk,
+            reset         => dipsw_debounced(1),
             current_state => current_state,
             edit_buffer   => edit_buffer,
             last_char     => last_char,

@@ -37,14 +37,15 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-bt_state    |    2.830(R)|      SLOW  |   -1.079(R)|      FAST  |clk_BUFGP         |   0.000|
-btn<1>      |    1.501(R)|      SLOW  |   -0.079(R)|      SLOW  |clk_BUFGP         |   0.000|
-btn<2>      |    1.815(R)|      SLOW  |   -0.373(R)|      FAST  |clk_BUFGP         |   0.000|
-btn<3>      |    1.743(R)|      SLOW  |   -0.311(R)|      SLOW  |clk_BUFGP         |   0.000|
-btn<4>      |    1.781(R)|      SLOW  |   -0.442(R)|      FAST  |clk_BUFGP         |   0.000|
-btn<5>      |    0.828(R)|      SLOW  |    0.554(R)|      SLOW  |clk_BUFGP         |   0.000|
-btn<6>      |    0.632(R)|      SLOW  |    0.602(R)|      SLOW  |clk_BUFGP         |   0.000|
-sw<0>       |    1.687(R)|      SLOW  |   -0.402(R)|      SLOW  |clk_BUFGP         |   0.000|
+bt_state    |    3.214(R)|      SLOW  |   -1.338(R)|      FAST  |clk_BUFGP         |   0.000|
+btn<1>      |    1.191(R)|      SLOW  |    0.069(R)|      SLOW  |clk_BUFGP         |   0.000|
+btn<2>      |    1.852(R)|      SLOW  |   -0.446(R)|      FAST  |clk_BUFGP         |   0.000|
+btn<3>      |    1.909(R)|      SLOW  |   -0.528(R)|      FAST  |clk_BUFGP         |   0.000|
+btn<4>      |    1.749(R)|      SLOW  |   -0.464(R)|      SLOW  |clk_BUFGP         |   0.000|
+btn<5>      |    0.663(R)|      SLOW  |    0.571(R)|      SLOW  |clk_BUFGP         |   0.000|
+btn<6>      |    0.599(R)|      SLOW  |    0.633(R)|      SLOW  |clk_BUFGP         |   0.000|
+dipsw<1>    |    0.875(R)|      SLOW  |    0.380(R)|      SLOW  |clk_BUFGP         |   0.000|
+sw<0>       |    1.574(R)|      SLOW  |   -0.159(R)|      SLOW  |clk_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -52,23 +53,23 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-bt_tx       |        10.205(R)|      SLOW  |         4.314(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<0> |         9.658(R)|      SLOW  |         4.023(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<1> |         9.864(R)|      SLOW  |         4.197(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<2> |         9.609(R)|      SLOW  |         4.028(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<3> |         9.696(R)|      SLOW  |         4.084(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<4> |         9.539(R)|      SLOW  |         3.953(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<5> |         9.267(R)|      SLOW  |         3.783(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<6> |         9.086(R)|      SLOW  |         3.688(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_data<7> |         9.317(R)|      SLOW  |         3.854(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_en      |         8.909(R)|      SLOW  |         3.620(R)|      FAST  |clk_BUFGP         |   0.000|
-lcd_rs      |         9.574(R)|      SLOW  |         4.033(R)|      FAST  |clk_BUFGP         |   0.000|
-led<0>      |         9.409(R)|      SLOW  |         3.841(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<0>       |         9.393(R)|      SLOW  |         3.915(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<1>       |         9.497(R)|      SLOW  |         3.975(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<2>       |         9.629(R)|      SLOW  |         4.012(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<3>       |         9.523(R)|      SLOW  |         3.946(R)|      FAST  |clk_BUFGP         |   0.000|
-mn<4>       |         9.335(R)|      SLOW  |         3.870(R)|      FAST  |clk_BUFGP         |   0.000|
+bt_tx       |         9.710(R)|      SLOW  |         3.989(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<0> |         9.633(R)|      SLOW  |         4.062(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<1> |         9.054(R)|      SLOW  |         3.726(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<2> |         8.967(R)|      SLOW  |         3.629(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<3> |         9.112(R)|      SLOW  |         3.752(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<4> |         9.151(R)|      SLOW  |         3.705(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<5> |         9.023(R)|      SLOW  |         3.602(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<6> |         8.734(R)|      SLOW  |         3.482(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_data<7> |         8.544(R)|      SLOW  |         3.376(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_en      |         9.477(R)|      SLOW  |         4.004(R)|      FAST  |clk_BUFGP         |   0.000|
+lcd_rs      |        10.233(R)|      SLOW  |         4.495(R)|      FAST  |clk_BUFGP         |   0.000|
+led<0>      |         9.285(R)|      SLOW  |         3.773(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<0>       |         9.336(R)|      SLOW  |         3.812(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<1>       |         9.700(R)|      SLOW  |         4.059(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<2>       |         9.431(R)|      SLOW  |         3.900(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<3>       |         9.066(R)|      SLOW  |         3.697(R)|      FAST  |clk_BUFGP         |   0.000|
+mn<4>       |         9.179(R)|      SLOW  |         3.765(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -76,18 +77,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.343|         |         |         |
+clk            |    8.522|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Nov  7 16:00:30 2024 
+Analysis completed Thu Nov  7 16:18:51 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 388 MB
+Peak Memory Usage: 391 MB
 
 
 

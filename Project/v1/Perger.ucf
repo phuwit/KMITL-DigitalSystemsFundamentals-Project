@@ -19,6 +19,14 @@ NET "sw[2]" LOC = P61;
 NET "sw[1]" LOC = P62;
 NET "sw[0]" LOC = P66;
 
+NET "dipsw[1]" LOC = P112;
+NET "dipsw[2]" LOC = P111;
+NET "dipsw[3]" LOC = P105;
+NET "dipsw[4]" LOC = P104;
+NET "dipsw[5]" LOC = P102;
+NET "dipsw[6]" LOC = P101;
+NET "dipsw[7]" LOC = P100;
+NET "dipsw[8]" LOC = P99;
 
 # Outputs
 

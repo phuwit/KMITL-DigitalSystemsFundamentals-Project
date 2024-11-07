@@ -9,11 +9,12 @@ entity Communicator is
         message_size : integer := 240);
     port(
         clk              : in  STD_LOGIC;
-        bt_rx            : in std_logic;
+        reset            : in  std_logic;
+        bt_rx            : in  std_logic;
         current_state    : in  STATES;
         edit_buffer      : in  std_logic_vector(message_size - 1 downto 0);
         recieve_buffer   : out std_logic_vector(message_size - 1 downto 0);
-        bt_tx            : out  std_logic;
+        bt_tx            : out std_logic;
         send_finished    : out std_logic;
         recieve_complete : out std_logic);
 end Communicator;
@@ -30,7 +31,7 @@ begin
             message_size => message_size)
         port map(
             clk                => clk,
-            reset              => '0',
+            reset              => reset,
             current_state      => current_state,
             edit_buffer        => edit_buffer,
             send_finished      => send_finished,
@@ -57,7 +58,7 @@ begin
         )
         port map(
             clock               => clk,
-            reset               => '0',
+            reset               => reset,
             data_stream_in      => uart_send_data,
             data_stream_in_stb  => uart_send_start,
             data_stream_in_ack  => uart_send_ack,

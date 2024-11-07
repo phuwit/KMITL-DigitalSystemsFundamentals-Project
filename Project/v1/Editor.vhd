@@ -6,10 +6,10 @@ use work.globals.all;
 entity Editor is
     port(
         clk            : in    STD_LOGIC;
+        reset          : in    STD_LOGIC;
         current_state  : in    STATES;  -- สัญญาณบอกสถานะปัจจุบัน
         mode_select    : in    STD_LOGIC; -- สวิตช์เลือกโหมด (0 = โหมดตัวอักษร, 1 = โหมดตัวเลข)
         btn            : in    std_logic_vector(5 downto 1);
-        reset          : in    STD_LOGIC;
         last_char      : inout STD_LOGIC_VECTOR(7 downto 0); -- ตัวอักษรล่าสุดที่เลือก
         message_buffer : out   STD_LOGIC_VECTOR(239 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
         char_index     : out   INTEGER range 0 to 29 -- ดัชนีของตัวอักษรใน buffer (เปลี่ยนเป็นพอร์ต out)
