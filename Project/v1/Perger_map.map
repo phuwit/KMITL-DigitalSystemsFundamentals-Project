@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Wed Nov  6 19:47:43 2024
+Mapped Date    : Wed Nov  6 19:56:12 2024
 
 Mapping design into LUTs...
 Running directed packing...
@@ -59,16 +59,16 @@ Phase 10.5  Local Placement Optimization
 Phase 10.5  Local Placement Optimization (Checksum:618289c6) REAL time: 6 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:c84b0b66) REAL time: 11 secs 
+Phase 11.18  Placement Optimization (Checksum:c84b0b66) REAL time: 12 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:c84b0b66) REAL time: 11 secs 
+Phase 12.5  Local Placement Optimization (Checksum:c84b0b66) REAL time: 12 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:bc47838f) REAL time: 11 secs 
+Phase 13.34  Placement Validation (Checksum:bc47838f) REAL time: 12 secs 
 
-Total REAL time to Placer completion: 11 secs 
-Total CPU  time to Placer completion: 11 secs 
+Total REAL time to Placer completion: 12 secs 
+Total CPU  time to Placer completion: 12 secs 
 Running post-placement packing...
 Writing output files...
 
