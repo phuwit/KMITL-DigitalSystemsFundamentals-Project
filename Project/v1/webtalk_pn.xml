@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Thu Nov  7 20:29:12 2024">
+<application name="pn" timeStamp="Thu Nov  7 20:40:03 2024">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="4146D7DE7F34E301F3AD4C6C057DF9A5" type="project"/>
-<property name="ProjectIteration" value="80" type="project"/>
+<property name="ProjectIteration" value="82" type="project"/>
 <property name="ProjectFile" value="/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2024-11-05T17:01:52" type="project"/>
 </section>
@@ -24,7 +24,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2024-11-05T17:01:52" type="design"/>
 <property name="PROP_intWbtProjectID" value="4146D7DE7F34E301F3AD4C6C057DF9A5" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="80" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="82" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Parallel" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="Yes" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>

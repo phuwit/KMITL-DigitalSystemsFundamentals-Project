@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 07 20:29:12 2024
+// Written by: Map P.20131013 on Thu Nov 07 20:40:02 2024
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -57,8 +57,7 @@ COMP "lcd_rs" LOCATE = SITE "P124" LEVEL 1;
 COMP "lcd_rw" LOCATE = SITE "P127" LEVEL 1;
 COMP "buzzer" LOCATE = SITE "P83" LEVEL 1;
 TIMEGRP clk = BEL
-        "communicator_inst/g_reciever_reset_shr[2].debounce_inst/d_o" BEL
-        "communicator_inst/g_reciever_reset_shr[1].debounce_inst/d_o" BEL
+        "communicator_inst/g_reciever_reset_shr[0].debounce_inst/d_o" BEL
         "controller_inst/state_FSM_FFd2" BEL "controller_inst/state_FSM_FFd1"
         BEL "controller_inst/idle_timer_26" BEL
         "controller_inst/idle_timer_25" BEL "controller_inst/idle_timer_24"

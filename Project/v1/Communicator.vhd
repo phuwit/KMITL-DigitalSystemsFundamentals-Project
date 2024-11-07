@@ -20,7 +20,7 @@ entity Communicator is
 end Communicator;
 
 architecture Behavioral of Communicator is
-    constant reciever_reset_delay : integer := 3;
+    constant reciever_reset_delay : integer := 2;
 
     signal uart_send_start    : std_logic;
     signal uart_recieve_start : std_logic;
@@ -59,13 +59,13 @@ begin
         );
 
     reciever_reset_shr(0) <= recieve_complete_internal;
-    g_reciever_reset_shr : for i in 1 to reciever_reset_delay - 1 generate
+    g_reciever_reset_shr : for i in 0 to reciever_reset_delay - 2 generate
         debounce_inst : entity work.fdc
             port map(
-                d_o => reciever_reset_shr(i),
+                d_o => reciever_reset_shr(i+1),
                 clk => clk,
                 clr => reset,
-                d_i => reciever_reset_shr(i - 1)
+                d_i => reciever_reset_shr(i)
             );
     end generate;
 

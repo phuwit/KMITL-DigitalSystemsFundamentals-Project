@@ -74,10 +74,10 @@ It will be removed from the design.
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sending_flag</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">sender_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tx_start&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_current_bit[3]_X_22_o_Mux_0_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_current_bit[3]_X_22_o_Mux_0_o</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3217" delta="old" >HDL ADVISOR - Register &lt;<arg fmt="%s" index="1">current_state_char</arg>&gt; currently described with an asynchronous reset, could be combined with distributed RAM &lt;<arg fmt="%s" index="2">Mram_current_state[1]_X_20_o_wide_mux_1124_OUT</arg>&gt; for implementation on block RAM resources if you made this reset synchronous instead.
+<msg type="info" file="Xst" num="3217" delta="new" >HDL ADVISOR - Register &lt;<arg fmt="%s" index="1">current_state_char</arg>&gt; currently described with an asynchronous reset, could be combined with distributed RAM &lt;<arg fmt="%s" index="2">Mram_current_state[1]_X_20_o_wide_mux_1124_OUT</arg>&gt; for implementation on block RAM resources if you made this reset synchronous instead.
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sending_flag</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Sender</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;tx_start&gt; </arg>
@@ -965,7 +965,7 @@ Xilinx highly recommends one of the following:
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">input_cleaner_inst/g_sw_debounce[1].debounce_inst/flipflops_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Perger</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_71</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_71</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">editor_inst/internal_message_buffer_63</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Perger</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

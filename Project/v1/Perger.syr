@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: Perger.prj
@@ -590,8 +590,8 @@ Macro Statistics
  6-bit adder                                           : 1
  8-bit adder                                           : 3
  9-bit adder                                           : 5
-# Registers                                            : 108
- 1-bit register                                        : 49
+# Registers                                            : 107
+ 1-bit register                                        : 48
  19-bit register                                       : 2
  2-bit register                                        : 18
  20-bit register                                       : 14
@@ -756,8 +756,8 @@ Macro Statistics
  5-bit down counter                                    : 1
  5-bit up counter                                      : 2
  8-bit up counter                                      : 1
-# Registers                                            : 1187
- Flip-Flops                                            : 1187
+# Registers                                            : 1186
+ Flip-Flops                                            : 1186
 # Comparators                                          : 56
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
@@ -1233,8 +1233,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1267
- Flip-Flops                                            : 1267
+# Registers                                            : 1266
+ Flip-Flops                                            : 1266
 
 =========================================================================
 
@@ -1270,9 +1270,9 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 14
 #      VCC                         : 1
 #      XORCY                       : 205
-# FlipFlops/Latches                : 1268
+# FlipFlops/Latches                : 1267
 #      FD                          : 35
-#      FDC                         : 514
+#      FDC                         : 513
 #      FDCE                        : 534
 #      FDE                         : 108
 #      FDP                         : 2
@@ -1296,15 +1296,15 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1268  out of  11440    11%  
+ Number of Slice Registers:            1267  out of  11440    11%  
  Number of Slice LUTs:                 1928  out of   5720    33%  
     Number used as Logic:              1928  out of   5720    33%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2195
-   Number with an unused Flip Flop:     927  out of   2195    42%  
-   Number with an unused LUT:           267  out of   2195    12%  
-   Number of fully used LUT-FF pairs:  1001  out of   2195    45%  
+ Number of LUT Flip Flop pairs used:   2193
+   Number with an unused Flip Flop:     926  out of   2193    42%  
+   Number with an unused LUT:           265  out of   2193    12%  
+   Number of fully used LUT-FF pairs:  1002  out of   2193    45%  
    Number of unique control sets:        31
 
 IO Utilization: 
@@ -1335,7 +1335,7 @@ Clock Information:
 -------------------------------------------------+----------------------------------------+-------+
 Clock Signal                                     | Clock buffer(FF name)                  | Load  |
 -------------------------------------------------+----------------------------------------+-------+
-clk                                              | BUFGP                                  | 1027  |
+clk                                              | BUFGP                                  | 1026  |
 communicator_inst/receiver_inst/data_complete_stb| BUFG                                   | 240   |
 editor_reset(editor_reset1:O)                    | NONE(*)(editor_inst/added_to_buffer_LD)| 1     |
 -------------------------------------------------+----------------------------------------+-------+
@@ -1364,7 +1364,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.687ns (frequency: 115.118MHz)
-  Total number of paths / destination ports: 166251 / 2590
+  Total number of paths / destination ports: 166249 / 2588
 -------------------------------------------------------------------------
 Delay:               8.687ns (Levels of Logic = 19)
   Source:            displayer_inst/lcd_controller_inst/clk_count_7 (FF)
@@ -1467,12 +1467,12 @@ clk            |    3.476|         |         |         |
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.55 secs
+Total CPU time to Xst completion: 7.39 secs
  
 --> 
 
 
-Total memory usage is 408316 kilobytes
+Total memory usage is 408188 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  349 (   0 filtered)
