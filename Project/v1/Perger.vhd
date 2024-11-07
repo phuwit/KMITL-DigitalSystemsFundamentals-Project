@@ -8,7 +8,7 @@ entity Perger is
         clk      : in  STD_LOGIC;
         btn      : in  STD_LOGIC_VECTOR(6 downto 1);
         sw       : in  STD_LOGIC_VECTOR(6 downto 0);
-        bt_rx    : in  std_logic;
+        bt_rx    : in  std_logic;-- fpga's rx <-> bluetooth's tx
         bt_state : in  std_logic;
         led      : out STD_LOGIC_VECTOR(7 downto 0);
         mn       : out STD_LOGIC_VECTOR(7 downto 0);
@@ -16,7 +16,7 @@ entity Perger is
         lcd_rs   : out STD_LOGIC;
         lcd_rw   : out STD_LOGIC;
         lcd_data : out STD_LOGIC_VECTOR(7 downto 0);
-        bt_tx    : out std_logic
+        bt_tx    : out std_logic -- fpga's tx <-> bluetooth's rx
     );
 end Perger;
 

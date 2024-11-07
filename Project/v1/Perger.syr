@@ -111,18 +111,18 @@ Slice Utilization Ratio Delta      : 5
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Globals.vhd" into library work
 Parsing package <Globals>.
 Parsing package body <Globals>.
-Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Uart.vhd" into library work
-Parsing entity <Uart>.
-Parsing architecture <rtl> of entity <uart>.
-Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Sender.vhd" into library work
-Parsing entity <Sender>.
-Parsing architecture <Behavioral> of entity <sender>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Receiver.vhd" into library work
 Parsing entity <Receiver>.
 Parsing architecture <Behavioral> of entity <receiver>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/MessageFormatter.vhd" into library work
 Parsing entity <MessageFormatter>.
 Parsing architecture <Behavioral> of entity <messageformatter>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Uart.vhd" into library work
+Parsing entity <Uart>.
+Parsing architecture <rtl> of entity <uart>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Sender.vhd" into library work
+Parsing entity <Sender>.
+Parsing architecture <Behavioral> of entity <sender>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/LcdController.vhd" into library work
 Parsing entity <LcdController>.
 Parsing architecture <controller> of entity <lcdcontroller>.
@@ -132,9 +132,6 @@ Parsing architecture <rtl> of entity <edgedetector>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Debonce.vhd" into library work
 Parsing entity <Debounce>.
 Parsing architecture <logic> of entity <debounce>.
-Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/StateControl.vhd" into library work
-Parsing entity <Controller>.
-Parsing architecture <Behavioral> of entity <controller>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/InputCleaner.vhd" into library work
 Parsing entity <InputCleaner>.
 Parsing architecture <Behavioral> of entity <inputcleaner>.
@@ -147,6 +144,9 @@ Parsing architecture <Behavioral> of entity <displayer>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Communicator.vhd" into library work
 Parsing entity <Communicator>.
 Parsing architecture <Behavioral> of entity <communicator>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/StateControl.vhd" into library work
+Parsing entity <Controller>.
+Parsing architecture <Behavioral> of entity <controller>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" into library work
 Parsing entity <Perger>.
 Parsing architecture <Behavioral> of entity <perger>.
@@ -1193,13 +1193,13 @@ clk            |    8.687|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.29 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.28 secs
  
 --> 
 
 
-Total memory usage is 399040 kilobytes
+Total memory usage is 399100 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  232 (   0 filtered)

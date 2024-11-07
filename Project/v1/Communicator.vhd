@@ -9,11 +9,11 @@ entity Communicator is
         message_size : integer := 240);
     port(
         clk              : in  STD_LOGIC;
-        bt_rx            : in  std_logic;
+        bt_rx            : in std_logic;
         current_state    : in  STATES;
         edit_buffer      : in  std_logic_vector(message_size - 1 downto 0);
         recieve_buffer   : out std_logic_vector(message_size - 1 downto 0);
-        bt_tx            : out std_logic;
+        bt_tx            : out  std_logic;
         send_finished    : out std_logic;
         recieve_complete : out std_logic);
 end Communicator;

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 07 15:12:26 2024
+// Written by: Map P.20131013 on Thu Nov 07 15:50:09 2024
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -27,8 +27,8 @@ COMP "sw<3>" LOCATE = SITE "P59" LEVEL 1;
 COMP "sw<4>" LOCATE = SITE "P58" LEVEL 1;
 COMP "sw<5>" LOCATE = SITE "P57" LEVEL 1;
 COMP "sw<6>" LOCATE = SITE "P56" LEVEL 1;
-COMP "bt_rx" LOCATE = SITE "P126" LEVEL 1;
-COMP "bt_tx" LOCATE = SITE "P131" LEVEL 1;
+COMP "bt_rx" LOCATE = SITE "P131" LEVEL 1;
+COMP "bt_tx" LOCATE = SITE "P126" LEVEL 1;
 COMP "led<0>" LOCATE = SITE "P82" LEVEL 1;
 COMP "led<1>" LOCATE = SITE "P81" LEVEL 1;
 COMP "btn<1>" LOCATE = SITE "P45" LEVEL 1;
