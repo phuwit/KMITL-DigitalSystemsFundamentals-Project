@@ -111,18 +111,18 @@ Slice Utilization Ratio Delta      : 5
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Globals.vhd" into library work
 Parsing package <Globals>.
 Parsing package body <Globals>.
-Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Receiver.vhd" into library work
-Parsing entity <Receiver>.
-Parsing architecture <Behavioral> of entity <receiver>.
-Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/MessageFormatter.vhd" into library work
-Parsing entity <MessageFormatter>.
-Parsing architecture <Behavioral> of entity <messageformatter>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Uart.vhd" into library work
 Parsing entity <Uart>.
 Parsing architecture <rtl> of entity <uart>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Sender.vhd" into library work
 Parsing entity <Sender>.
 Parsing architecture <Behavioral> of entity <sender>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Receiver.vhd" into library work
+Parsing entity <Receiver>.
+Parsing architecture <Behavioral> of entity <receiver>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/MessageFormatter.vhd" into library work
+Parsing entity <MessageFormatter>.
+Parsing architecture <Behavioral> of entity <messageformatter>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/LcdController.vhd" into library work
 Parsing entity <LcdController>.
 Parsing architecture <controller> of entity <lcdcontroller>.
@@ -132,6 +132,9 @@ Parsing architecture <rtl> of entity <edgedetector>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Debonce.vhd" into library work
 Parsing entity <Debounce>.
 Parsing architecture <logic> of entity <debounce>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/StateControl.vhd" into library work
+Parsing entity <Controller>.
+Parsing architecture <Behavioral> of entity <controller>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/InputCleaner.vhd" into library work
 Parsing entity <InputCleaner>.
 Parsing architecture <Behavioral> of entity <inputcleaner>.
@@ -141,16 +144,14 @@ Parsing architecture <Behavioral> of entity <editor>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Displayer.vhd" into library work
 Parsing entity <Displayer>.
 Parsing architecture <Behavioral> of entity <displayer>.
-WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Displayer.vhd" Line 47: Actual for formal port reset_n is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Displayer.vhd" Line 59: Actual for formal port reset_n is neither a static name nor a globally static expression
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Communicator.vhd" into library work
 Parsing entity <Communicator>.
 Parsing architecture <Behavioral> of entity <communicator>.
-Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/StateControl.vhd" into library work
-Parsing entity <Controller>.
-Parsing architecture <Behavioral> of entity <controller>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" into library work
 Parsing entity <Perger>.
 Parsing architecture <Behavioral> of entity <perger>.
+WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 85: Actual for formal port reset is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -194,7 +195,6 @@ Elaborating entity <LcdController> (architecture <controller>) with generics fro
 Synthesizing Unit <Perger>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd".
 INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 64: Output port <alert_signal> of the instance <controller_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 94: Output port <recieve_buffer> of the instance <communicator_inst> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 94: Output port <recieve_complete> of the instance <communicator_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
@@ -295,7 +295,7 @@ Synthesizing Unit <Editor>.
     Found 5-bit register for signal <char_index_internal>.
     Found 1-bit register for signal <added_to_buffer>.
     Found 8-bit adder for signal <last_char[7]_GND_12_o_add_35_OUT> created at line 93.
-    Found 6-bit adder for signal <n0739[5:0]> created at line 108.
+    Found 6-bit adder for signal <n0738[5:0]> created at line 108.
     Found 9-bit adder for signal <BUS_0008_GND_12_o_add_50_OUT> created at line 108.
     Found 26-bit adder for signal <key_timer[25]_GND_12_o_add_337_OUT> created at line 124.
     Found 9-bit adder for signal <n0698> created at line 131.
@@ -354,15 +354,18 @@ Unit <Sender> synthesized.
 Synthesizing Unit <Receiver>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Receiver.vhd".
         message_size = 240
-    Found 240-bit register for signal <internal_buffer>.
     Found 5-bit register for signal <char_count>.
+    Found 240-bit register for signal <internal_buffer>.
     Found 1-bit register for signal <data_complete_stb>.
-    Found 9-bit adder for signal <n0291> created at line 31.
-    Found 5-bit subtractor for signal <GND_16_o_GND_16_o_sub_273_OUT<4:0>> created at line 38.
+    Found 9-bit adder for signal <n0299> created at line 37.
+    Found 5-bit adder for signal <char_count[4]_GND_16_o_add_273_OUT> created at line 44.
+    Found 5-bit comparator greater for signal <n0000> created at line 35
+    Found 5-bit comparator lessequal for signal <n0273> created at line 40
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred 246 D-type flip-flop(s).
-	inferred 240 Multiplexer(s).
+	inferred   2 Comparator(s).
+	inferred 243 Multiplexer(s).
 Unit <Receiver> synthesized.
 
 Synthesizing Unit <Uart>.
@@ -453,8 +456,8 @@ Synthesizing Unit <MessageFormatter>.
     Found 8-bit register for signal <current_state_char>.
     Found 1-bit register for signal <display_toggle>.
     Found 24-bit adder for signal <blink_counter[23]_GND_20_o_add_1_OUT> created at line 42.
-    Found 9-bit adder for signal <n1027> created at line 72.
-    Found 4x8-bit Read Only RAM for signal <current_state[1]_X_18_o_wide_mux_1123_OUT>
+    Found 9-bit adder for signal <n1028> created at line 73.
+    Found 4x8-bit Read Only RAM for signal <current_state[1]_X_18_o_wide_mux_1124_OUT>
     Found 24-bit comparator greater for signal <blink_counter[23]_PWR_42_o_LessThan_1_o> created at line 41
     Summary:
 	inferred   1 RAM(s).
@@ -529,8 +532,8 @@ Macro Statistics
  3-bit adder                                           : 2
  31-bit adder                                          : 1
  4-bit adder                                           : 2
- 5-bit adder                                           : 1
- 5-bit subtractor                                      : 3
+ 5-bit adder                                           : 2
+ 5-bit subtractor                                      : 2
  6-bit adder                                           : 1
  8-bit adder                                           : 3
  9-bit adder                                           : 5
@@ -548,7 +551,7 @@ Macro Statistics
  4-bit register                                        : 2
  5-bit register                                        : 4
  8-bit register                                        : 7
-# Comparators                                          : 53
+# Comparators                                          : 55
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
  20-bit comparator greater                             : 14
@@ -558,12 +561,12 @@ Macro Statistics
  3-bit comparator greater                              : 2
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
- 5-bit comparator greater                              : 2
- 5-bit comparator lessequal                            : 1
+ 5-bit comparator greater                              : 3
+ 5-bit comparator lessequal                            : 2
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 1762
- 1-bit 2-to-1 multiplexer                              : 1677
+# Multiplexers                                         : 1765
+ 1-bit 2-to-1 multiplexer                              : 1679
  1-bit 3-to-1 multiplexer                              : 1
  19-bit 2-to-1 multiplexer                             : 2
  20-bit 2-to-1 multiplexer                             : 14
@@ -573,7 +576,7 @@ Macro Statistics
  3-bit 2-to-1 multiplexer                              : 3
  31-bit 2-to-1 multiplexer                             : 14
  4-bit 2-to-1 multiplexer                              : 1
- 5-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 4
  8-bit 2-to-1 multiplexer                              : 38
 # FSMs                                                 : 4
 # Xors                                                 : 16
@@ -609,8 +612,6 @@ WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[5].debounce_inst> is unc
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[6].debounce_inst> is unconnected in block <input_cleaner_inst>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <receiver_inst> is unconnected in block <communicator_inst>.
-   It will be removed from the design.
 INFO:Xst:2261 - The FF/Latch <sending_flag> in Unit <sender_inst> is equivalent to the following FF/Latch, which will be removed : <tx_start> 
 
 Synthesizing (advanced) Unit <Debounce_1>.
@@ -627,7 +628,7 @@ Unit <LcdController> synthesized (advanced).
 
 Synthesizing (advanced) Unit <MessageFormatter>.
 The following registers are absorbed into counter <blink_counter>: 1 register on signal <blink_counter>.
-INFO:Xst:3217 - HDL ADVISOR - Register <current_state_char> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_current_state[1]_X_18_o_wide_mux_1123_OUT> for implementation on block RAM resources if you made this reset synchronous instead.
+INFO:Xst:3217 - HDL ADVISOR - Register <current_state_char> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_current_state[1]_X_18_o_wide_mux_1124_OUT> for implementation on block RAM resources if you made this reset synchronous instead.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -678,12 +679,12 @@ Macro Statistics
  24-bit up counter                                     : 1
  3-bit up counter                                      : 1
  4-bit up counter                                      : 2
- 5-bit down counter                                    : 2
- 5-bit up counter                                      : 1
+ 5-bit down counter                                    : 1
+ 5-bit up counter                                      : 2
  8-bit up counter                                      : 1
 # Registers                                            : 939
  Flip-Flops                                            : 939
-# Comparators                                          : 53
+# Comparators                                          : 55
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
  20-bit comparator greater                             : 14
@@ -693,12 +694,12 @@ Macro Statistics
  3-bit comparator greater                              : 2
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
- 5-bit comparator greater                              : 2
- 5-bit comparator lessequal                            : 1
+ 5-bit comparator greater                              : 3
+ 5-bit comparator lessequal                            : 2
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 1747
- 1-bit 2-to-1 multiplexer                              : 1684
+# Multiplexers                                         : 1749
+ 1-bit 2-to-1 multiplexer                              : 1686
  1-bit 3-to-1 multiplexer                              : 1
  26-bit 2-to-1 multiplexer                             : 6
  27-bit 2-to-1 multiplexer                             : 2
@@ -716,7 +717,6 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 INFO:Xst:2261 - The FF/Latch <sending_flag> in Unit <Sender> is equivalent to the following FF/Latch, which will be removed : <tx_start> 
-WARNING:Xst:2973 - All outputs of instance <communicator_inst/receiver_inst> of block <Receiver> are unconnected in block <Perger>. Underlying logic will be removed.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <controller_inst/FSM_0> on signal <state[1:2]> with user encoding.
 -----------------------
@@ -811,6 +811,8 @@ Optimizing unit <Sender> ...
 Optimizing unit <Receiver> ...
 
 Optimizing unit <Uart> ...
+
+Optimizing unit <Displayer> ...
 
 Optimizing unit <MessageFormatter> ...
 
@@ -1091,35 +1093,7 @@ WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count
 WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/result> of sequential type is unconnected in block <Perger>.
 WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
 WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_filter_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_filter_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_state_FSM_FFd1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_state_FSM_FFd2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_bit_spacing_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_bit_spacing_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_bit_spacing_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_bit_spacing_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/rx_baud_counter_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/rx_baud_counter_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/rx_baud_counter_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/rx_baud_counter_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_out_stb> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_vec_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_vec_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_vec_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_vec_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_vec_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_vec_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_vec_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_vec_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_bit> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_sr_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_data_sr_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/uart_rx_bit_tick> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/uart_inst/rx_baud_tick> of sequential type is unconnected in block <Perger>.
+WARNING:Xst:2677 - Node <communicator_inst/receiver_inst/data_complete_stb> of sequential type is unconnected in block <Perger>.
 WARNING:Xst:1293 - FF/Latch <editor_inst/internal_message_buffer_71> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <editor_inst/internal_message_buffer_63> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <editor_inst/internal_message_buffer_55> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
@@ -1167,7 +1141,7 @@ INFO:Xst:3203 - The FF/Latch <displayer_inst/display_inst/current_state_char_4> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 29.
+Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 40.
 WARNING:Xst:1426 - The value init of the FF/Latch editor_inst/added_to_buffer_LD hinder the constant cleaning in the block Perger.
    You should achieve better results by setting this init to 0.
 FlipFlop displayer_inst/lcd_controller_inst/ptr_1 has been replicated 1 time(s)
@@ -1180,8 +1154,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 723
- Flip-Flops                                            : 723
+# Registers                                            : 997
+ Flip-Flops                                            : 997
 
 =========================================================================
 
@@ -1204,34 +1178,35 @@ Top Level Output File Name         : Perger.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1846
+# BELS                             : 2384
 #      GND                         : 1
-#      INV                         : 6
+#      INV                         : 10
 #      LUT1                        : 70
-#      LUT2                        : 105
-#      LUT3                        : 180
-#      LUT4                        : 276
-#      LUT5                        : 157
-#      LUT6                        : 562
+#      LUT2                        : 79
+#      LUT3                        : 434
+#      LUT4                        : 252
+#      LUT5                        : 196
+#      LUT6                        : 853
 #      MUXCY                       : 290
 #      MUXF7                       : 14
 #      VCC                         : 1
 #      XORCY                       : 184
-# FlipFlops/Latches                : 724
+# FlipFlops/Latches                : 998
 #      FD                          : 35
-#      FDC                         : 271
-#      FDCE                        : 262
-#      FDE                         : 107
+#      FDC                         : 270
+#      FDCE                        : 510
+#      FDE                         : 108
 #      FDP                         : 2
-#      FDPE                        : 6
-#      FDR                         : 17
-#      FDRE                        : 22
-#      FDS                         : 1
+#      FDPE                        : 4
+#      FDR                         : 25
+#      FDRE                        : 37
+#      FDS                         : 2
+#      FDSE                        : 4
 #      LD                          : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 37
-#      IBUF                        : 9
+# IO Buffers                       : 38
+#      IBUF                        : 10
 #      OBUF                        : 28
 
 Device utilization summary:
@@ -1241,20 +1216,20 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             724  out of  11440     6%  
- Number of Slice LUTs:                 1356  out of   5720    23%  
-    Number used as Logic:              1356  out of   5720    23%  
+ Number of Slice Registers:             998  out of  11440     8%  
+ Number of Slice LUTs:                 1894  out of   5720    33%  
+    Number used as Logic:              1894  out of   5720    33%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1378
-   Number with an unused Flip Flop:     654  out of   1378    47%  
-   Number with an unused LUT:            22  out of   1378     1%  
-   Number of fully used LUT-FF pairs:   702  out of   1378    50%  
-   Number of unique control sets:        19
+ Number of LUT Flip Flop pairs used:   1921
+   Number with an unused Flip Flop:     923  out of   1921    48%  
+   Number with an unused LUT:            27  out of   1921     1%  
+   Number of fully used LUT-FF pairs:   971  out of   1921    50%  
+   Number of unique control sets:        27
 
 IO Utilization: 
  Number of IOs:                          52
- Number of bonded IOBs:                  38  out of    102    37%  
+ Number of bonded IOBs:                  39  out of    102    38%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -1277,12 +1252,15 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------------------------------+-------------------------------------+-------+
-Clock Signal                                               | Clock buffer(FF name)               | Load  |
------------------------------------------------------------+-------------------------------------+-------+
-clk                                                        | BUFGP                               | 723   |
-input_cleaner_inst/g_dipsw_debounce[0].debounce_inst/result| NONE(editor_inst/added_to_buffer_LD)| 1     |
------------------------------------------------------------+-------------------------------------+-------+
+---------------------------------------------------------------------------------------+----------------------------------------+-------+
+Clock Signal                                                                           | Clock buffer(FF name)                  | Load  |
+---------------------------------------------------------------------------------------+----------------------------------------+-------+
+clk                                                                                    | BUFGP                                  | 997   |
+dipsw_debounced[1]_send_finished_OR_524_o(dipsw_debounced[1]_send_finished_OR_524_o1:O)| NONE(*)(editor_inst/added_to_buffer_LD)| 1     |
+---------------------------------------------------------------------------------------+----------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1295,7 +1273,7 @@ Speed Grade: -2
 
    Minimum period: 8.687ns (Maximum Frequency: 115.118MHz)
    Minimum input arrival time before clock: 2.837ns
-   Maximum output required time after clock: 5.443ns
+   Maximum output required time after clock: 5.606ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1305,7 +1283,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.687ns (frequency: 115.118MHz)
-  Total number of paths / destination ports: 152211 / 1692
+  Total number of paths / destination ports: 166114 / 2504
 -------------------------------------------------------------------------
 Delay:               8.687ns (Levels of Logic = 19)
   Source:            displayer_inst/lcd_controller_inst/clk_count_7 (FF)
@@ -1344,7 +1322,7 @@ Delay:               8.687ns (Levels of Logic = 19)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 10 / 10
+  Total number of paths / destination ports: 11 / 11
 -------------------------------------------------------------------------
 Offset:              2.837ns (Levels of Logic = 2)
   Source:            bt_state (PAD)
@@ -1366,7 +1344,7 @@ Offset:              2.837ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 17 / 17
 -------------------------------------------------------------------------
-Offset:              5.443ns (Levels of Logic = 1)
+Offset:              5.606ns (Levels of Logic = 1)
   Source:            editor_inst/char_index_internal_2 (FF)
   Destination:       mn<2> (PAD)
   Source Clock:      clk rising
@@ -1375,11 +1353,11 @@ Offset:              5.443ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q            74   0.525   2.006  editor_inst/char_index_internal_2 (editor_inst/char_index_internal_2)
+     FDPE:C->Q            95   0.525   2.169  editor_inst/char_index_internal_2 (editor_inst/char_index_internal_2)
      OBUF:I->O                 2.912          mn_2_OBUF (mn<2>)
     ----------------------------------------
-    Total                      5.443ns (3.437ns logic, 2.006ns route)
-                                       (63.1% logic, 36.9% route)
+    Total                      5.606ns (3.437ns logic, 2.169ns route)
+                                       (61.3% logic, 38.7% route)
 
 =========================================================================
 
@@ -1387,26 +1365,26 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock clk
------------------------------------------------------------+---------+---------+---------+---------+
-                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------------------------------------+---------+---------+---------+---------+
-clk                                                        |    8.687|         |         |         |
-input_cleaner_inst/g_dipsw_debounce[0].debounce_inst/result|         |    5.244|         |         |
------------------------------------------------------------+---------+---------+---------+---------+
+-----------------------------------------+---------+---------+---------+---------+
+                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------+---------+---------+---------+---------+
+clk                                      |    8.687|         |         |         |
+dipsw_debounced[1]_send_finished_OR_524_o|         |    4.953|         |         |
+-----------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.49 secs
+Total CPU time to Xst completion: 7.82 secs
  
 --> 
 
 
-Total memory usage is 399064 kilobytes
+Total memory usage is 404464 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  379 (   0 filtered)
-Number of infos    :    8 (   0 filtered)
+Number of warnings :  350 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 

@@ -30,7 +30,7 @@ begin
             key_timer               <= 0;
             char_index_internal     <= 29;
             added_to_buffer         <= '0';
-            last_char               <= "01000001"; -- ค่าเริ่มต้นเป็น 'A'
+            last_char               <= "00000000"; -- ค่าเริ่มต้นเป็น 'A'
             internal_message_buffer <= (others => '0'); -- เคลียร์ค่าใน message_buffer
         elsif rising_edge(clk) then
             if current_state = EDITING then -- ตรวจสอบว่าสถานะเป็น PRINTING (รหัส "01")

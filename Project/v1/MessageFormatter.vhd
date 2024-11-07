@@ -10,7 +10,7 @@ entity MessageFormatter is
     port(
         clk           : in  std_logic;  -- สัญญาณนาฬิกา
         reset         : in  std_logic;  -- สัญญาณรีเซ็ต
-        message_in    : in  std_logic_vector(message_size - 1 downto 0); -- ข้อความที่รับเข้า
+        message_in    : in  std_logic_vector(message_size - 1 downto 0);
         last_char     : in  std_logic_vector(7 downto 0); -- ตัวอักษรล่าสุดที่เลือก
         char_index    : in  integer range 0 to 29;
         current_state : in  states;
@@ -58,18 +58,20 @@ begin
             end loop;
 
             -- format blinking character
-            if current_state = EDITING and message_in(7 downto 0) = x"00" then
-                if display_toggle = '0' then
-                    if last_char = x"00" then
-                        formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= x"20";
+            if current_state = EDITING then
+                if message_in(7 downto 0) = x"00" then
+                    if display_toggle = '0' then
+                        if last_char = x"00" then
+                            formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= x"20";
+                        else
+                            formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= last_char;
+                        end if;
                     else
-                        formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= last_char;
+                        formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= blinking_character;
                     end if;
                 else
-                    formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= blinking_character;
+                    formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= blank_message_replacement;
                 end if;
-            else
-                formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= blank_message_replacement;
             end if;
 
             -- add current state to last character

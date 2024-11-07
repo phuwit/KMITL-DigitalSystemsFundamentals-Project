@@ -71,7 +71,7 @@ begin
             reset               => dipsw_debounced(1),
             btn                 => btn_pulse,
             new_data_in         => '0',
-            message_buffer      => edit_buffer,
+            edit_buffer      => edit_buffer,
             current_state       => current_state,
             L0                  => led(0),
             alert_signal        => open, -- ไม่ได้ใช้ใน top-level
@@ -82,7 +82,7 @@ begin
     editor_inst : entity work.Editor
         port map(
             clk            => clk,
-            reset          => dipsw_debounced(1),
+            reset          => dipsw_debounced(1) or send_finished,
             current_state  => current_state,
             mode_select    => sw_debounced(0),
             btn            => btn_pulse(5 downto 1),
@@ -116,16 +116,17 @@ begin
             display_size => display_size
         )
         port map(
-            clk           => clk,
-            reset         => dipsw_debounced(1),
-            current_state => current_state,
-            edit_buffer   => edit_buffer,
-            last_char     => last_char,
-            char_index    => char_index,
-            lcd_en        => lcd_en,
-            lcd_rs        => lcd_rs,
-            lcd_rw        => lcd_rw,
-            lcd_data      => lcd_data
+            clk            => clk,
+            reset          => dipsw_debounced(1),
+            current_state  => current_state,
+            recieve_buffer => recieve_buffer,
+            edit_buffer    => edit_buffer,
+            last_char      => last_char,
+            char_index     => char_index,
+            lcd_en         => lcd_en,
+            lcd_rs         => lcd_rs,
+            lcd_rw         => lcd_rw,
+            lcd_data       => lcd_data
         );
 
     led(7 downto 1) <= (others => '0');

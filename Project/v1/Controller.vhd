@@ -12,7 +12,7 @@ entity Controller is
         btn                 : in  std_logic_vector(6 downto 1);
         new_data_in         : in  std_logic; -- สัญญาณที่บอกว่ามีข้อมูลใหม่เข้ามา *Uart_Receiver
         bluetooth_connected : in  std_logic; -- สัญญาณที่บอกว่าวงจรได้เชื่อมต่อกับบลูทูธแล้ว 1=เชื่อม 0=ไม่เชื่อม
-        message_buffer      : in  std_logic_vector(message_size - 1 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
+        edit_buffer         : in  std_logic_vector(message_size - 1 downto 0); -- บัฟเฟอร์สำหรับเก็บข้อความ
         send_finished       : in  std_logic; -- สถานะการส่งข้อมูล (กำลังส่งหรือไม่) *UART_Transmitter
         current_state       : out states; -- สถานะปัจจุบันของระบบ
         L0                  : out std_logic; -- ไฟแสดงสถานะการทำงานของระบบ
@@ -56,7 +56,7 @@ begin
 
                     -- ตรวจสอบว่า `message_buffer` ไม่มีข้อความ
                     if idle_timer >= idle_countto then -- 5 วินาที
-                        if message_buffer = (message_size - 1 downto 0 => '0') then
+                        if edit_buffer = (message_size - 1 downto 0 => '0') then
                             state        <= RECEIVING; -- กลับไปสถานะ RECEIVING
                             alert_signal <= '0'; -- ปิดการแจ้งเตือน
                         end if;
@@ -71,7 +71,7 @@ begin
 
                     -- ตรวจสอบว่า btn(6) ถูกกดและมีข้อความใน `message_buffer`
                     if btn(6) = '1' then
-                        if message_buffer /= (message_size - 1 downto 0 => '0') and bluetooth_connected = '1' then
+                        if edit_buffer /= (message_size - 1 downto 0 => '0') and bluetooth_connected = '1' then
                             state <= SENDING; -- เปลี่ยนไปสถานะ SENDING ถ้ามีข้อความ
                         end if;
                     elsif new_data_in = '1' then

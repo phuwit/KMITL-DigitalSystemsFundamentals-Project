@@ -45,6 +45,7 @@ begin
             message_size => message_size)
         port map(
             clk               => clk,
+            reset             => reset,
             data_in           => uart_recieve_data,
             new_data_stb      => uart_recieve_start,
             data_out          => recieve_buffer,
