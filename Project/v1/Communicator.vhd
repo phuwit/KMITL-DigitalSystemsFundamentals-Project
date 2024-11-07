@@ -20,11 +20,18 @@ entity Communicator is
 end Communicator;
 
 architecture Behavioral of Communicator is
+    constant reciever_reset_delay : integer := 3;
+
     signal uart_send_start    : std_logic;
     signal uart_recieve_start : std_logic;
     signal uart_send_ack      : std_logic;
     signal uart_send_data     : std_logic_vector(7 downto 0);
     signal uart_recieve_data  : std_logic_vector(7 downto 0);
+
+    signal recieve_complete_internal : std_logic;
+    signal reciever_reset            : std_logic;
+    signal reciever_reset_shr        : std_logic_vector(reciever_reset_delay - 1 downto 0);
+    signal recieve_dff_i             : std_logic_vector(message_size - 1 downto 0);
 begin
     sender_inst : entity work.Sender
         generic map(
@@ -40,6 +47,29 @@ begin
             data_out           => uart_send_data
         );
 
+    recieve_buffer_dff : entity work.fdc_wide
+        generic map(
+            data_width => message_size
+        )
+        port map(
+            d_o => recieve_buffer,
+            clk => recieve_complete_internal,
+            clr => reset,
+            d_i => recieve_dff_i
+        );
+
+    reciever_reset_shr(0) <= recieve_complete_internal;
+    g_reciever_reset_shr : for i in 1 to reciever_reset_delay - 1 generate
+        debounce_inst : entity work.fdc
+            port map(
+                d_o => reciever_reset_shr(i),
+                clk => clk,
+                clr => reset,
+                d_i => reciever_reset_shr(i - 1)
+            );
+    end generate;
+
+    reciever_reset <= reset or reciever_reset_shr(reciever_reset_delay - 1);
     receiver_inst : entity work.Receiver
         generic map(
             message_size => message_size)
@@ -49,7 +79,7 @@ begin
             data_in           => uart_recieve_data,
             new_data_stb      => uart_recieve_start,
             data_out          => recieve_buffer,
-            data_complete_stb => recieve_complete
+            data_complete_stb => recieve_complete_internal
         );
 
     uart_inst : entity work.Uart
