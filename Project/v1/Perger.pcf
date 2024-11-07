@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 07 17:48:24 2024
+// Written by: Map P.20131013 on Thu Nov 07 20:22:36 2024
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -56,24 +56,27 @@ COMP "lcd_en" LOCATE = SITE "P132" LEVEL 1;
 COMP "lcd_rs" LOCATE = SITE "P124" LEVEL 1;
 COMP "lcd_rw" LOCATE = SITE "P127" LEVEL 1;
 COMP "buzzer" LOCATE = SITE "P83" LEVEL 1;
-TIMEGRP clk = BEL "controller_inst/state_FSM_FFd2" BEL
-        "controller_inst/state_FSM_FFd1" BEL "controller_inst/idle_timer_26"
-        BEL "controller_inst/idle_timer_25" BEL
-        "controller_inst/idle_timer_24" BEL "controller_inst/idle_timer_23"
-        BEL "controller_inst/idle_timer_22" BEL
-        "controller_inst/idle_timer_21" BEL "controller_inst/idle_timer_20"
-        BEL "controller_inst/idle_timer_19" BEL
-        "controller_inst/idle_timer_18" BEL "controller_inst/idle_timer_17"
-        BEL "controller_inst/idle_timer_16" BEL
-        "controller_inst/idle_timer_15" BEL "controller_inst/idle_timer_14"
-        BEL "controller_inst/idle_timer_13" BEL
-        "controller_inst/idle_timer_12" BEL "controller_inst/idle_timer_11"
-        BEL "controller_inst/idle_timer_10" BEL "controller_inst/idle_timer_9"
-        BEL "controller_inst/idle_timer_8" BEL "controller_inst/idle_timer_7"
-        BEL "controller_inst/idle_timer_6" BEL "controller_inst/idle_timer_5"
-        BEL "controller_inst/idle_timer_4" BEL "controller_inst/idle_timer_3"
-        BEL "controller_inst/idle_timer_2" BEL "controller_inst/idle_timer_1"
-        BEL "controller_inst/idle_timer_0" BEL "editor_inst/last_char_6" BEL
+TIMEGRP clk = BEL
+        "communicator_inst/g_reciever_reset_shr[2].debounce_inst/d_o" BEL
+        "communicator_inst/g_reciever_reset_shr[1].debounce_inst/d_o" BEL
+        "controller_inst/state_FSM_FFd2" BEL "controller_inst/state_FSM_FFd1"
+        BEL "controller_inst/idle_timer_26" BEL
+        "controller_inst/idle_timer_25" BEL "controller_inst/idle_timer_24"
+        BEL "controller_inst/idle_timer_23" BEL
+        "controller_inst/idle_timer_22" BEL "controller_inst/idle_timer_21"
+        BEL "controller_inst/idle_timer_20" BEL
+        "controller_inst/idle_timer_19" BEL "controller_inst/idle_timer_18"
+        BEL "controller_inst/idle_timer_17" BEL
+        "controller_inst/idle_timer_16" BEL "controller_inst/idle_timer_15"
+        BEL "controller_inst/idle_timer_14" BEL
+        "controller_inst/idle_timer_13" BEL "controller_inst/idle_timer_12"
+        BEL "controller_inst/idle_timer_11" BEL
+        "controller_inst/idle_timer_10" BEL "controller_inst/idle_timer_9" BEL
+        "controller_inst/idle_timer_8" BEL "controller_inst/idle_timer_7" BEL
+        "controller_inst/idle_timer_6" BEL "controller_inst/idle_timer_5" BEL
+        "controller_inst/idle_timer_4" BEL "controller_inst/idle_timer_3" BEL
+        "controller_inst/idle_timer_2" BEL "controller_inst/idle_timer_1" BEL
+        "controller_inst/idle_timer_0" BEL "editor_inst/last_char_6" BEL
         "editor_inst/last_char_5" BEL "editor_inst/last_char_4" BEL
         "editor_inst/last_char_3" BEL "editor_inst/last_char_2" BEL
         "editor_inst/last_char_1" BEL "editor_inst/last_char_0" BEL
@@ -903,37 +906,10 @@ TIMEGRP clk = BEL "controller_inst/state_FSM_FFd2" BEL
         "displayer_inst/lcd_controller_inst/clk_count_2" BEL
         "displayer_inst/lcd_controller_inst/clk_count_1" BEL
         "displayer_inst/lcd_controller_inst/clk_count_0" BEL
-        "recieve_buzzer_controller/bit_timer_20" BEL
-        "recieve_buzzer_controller/bit_timer_19" BEL
-        "recieve_buzzer_controller/bit_timer_18" BEL
-        "recieve_buzzer_controller/bit_timer_17" BEL
-        "recieve_buzzer_controller/bit_timer_16" BEL
-        "recieve_buzzer_controller/bit_timer_15" BEL
-        "recieve_buzzer_controller/bit_timer_14" BEL
-        "recieve_buzzer_controller/bit_timer_13" BEL
-        "recieve_buzzer_controller/bit_timer_12" BEL
-        "recieve_buzzer_controller/bit_timer_11" BEL
-        "recieve_buzzer_controller/bit_timer_10" BEL
-        "recieve_buzzer_controller/bit_timer_9" BEL
-        "recieve_buzzer_controller/bit_timer_8" BEL
-        "recieve_buzzer_controller/bit_timer_7" BEL
-        "recieve_buzzer_controller/bit_timer_6" BEL
-        "recieve_buzzer_controller/bit_timer_5" BEL
-        "recieve_buzzer_controller/bit_timer_4" BEL
-        "recieve_buzzer_controller/bit_timer_3" BEL
-        "recieve_buzzer_controller/bit_timer_2" BEL
-        "recieve_buzzer_controller/bit_timer_1" BEL
-        "recieve_buzzer_controller/bit_timer_0" BEL
-        "recieve_buzzer_controller/internal_buzzer_status" BEL
-        "recieve_buzzer_controller/current_bit_3" BEL
-        "recieve_buzzer_controller/current_bit_2" BEL
-        "recieve_buzzer_controller/current_bit_1" BEL
-        "recieve_buzzer_controller/current_bit_0" BEL
         "communicator_inst/sender_inst/send_finished" BEL
         "communicator_inst/sender_inst/sending_flag" BEL "controller_inst/L0"
         BEL "communicator_inst/uart_inst/uart_rx_bit" BEL
         "displayer_inst/display_inst/display_toggle" BEL
-        "recieve_buzzer_controller/latched_enable" BEL
         "communicator_inst/uart_inst/uart_rx_bit_tick" BEL
         "displayer_inst/lcd_controller_inst/rs" BEL
         "displayer_inst/lcd_controller_inst/line" BEL

@@ -31,7 +31,7 @@ architecture Behavioral of Communicator is
     signal recieve_complete_internal : std_logic;
     signal reciever_reset            : std_logic;
     signal reciever_reset_shr        : std_logic_vector(reciever_reset_delay - 1 downto 0);
-    signal recieve_dff_i             : std_logic_vector(message_size - 1 downto 0);
+    signal recieve_buffer_dff_i      : std_logic_vector(message_size - 1 downto 0);
 begin
     sender_inst : entity work.Sender
         generic map(
@@ -55,7 +55,7 @@ begin
             d_o => recieve_buffer,
             clk => recieve_complete_internal,
             clr => reset,
-            d_i => recieve_dff_i
+            d_i => recieve_buffer_dff_i
         );
 
     reciever_reset_shr(0) <= recieve_complete_internal;
@@ -75,10 +75,10 @@ begin
             message_size => message_size)
         port map(
             clk               => clk,
-            reset             => reset,
+            reset             => reciever_reset,
             data_in           => uart_recieve_data,
             new_data_stb      => uart_recieve_start,
-            data_out          => recieve_buffer,
+            data_out          => recieve_buffer_dff_i,
             data_complete_stb => recieve_complete_internal
         );
 
