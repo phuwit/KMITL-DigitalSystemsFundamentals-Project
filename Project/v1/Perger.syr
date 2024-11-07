@@ -165,7 +165,7 @@ Elaborating entity <Debounce> (architecture <logic>) with generics from library 
 
 Elaborating entity <EdgeDetector> (architecture <rtl>) from library <work>.
 
-Elaborating entity <Controller> (architecture <Behavioral>) from library <work>.
+Elaborating entity <Controller> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <Editor> (architecture <Behavioral>) from library <work>.
 
@@ -192,8 +192,8 @@ Elaborating entity <LcdController> (architecture <controller>) with generics fro
 Synthesizing Unit <Perger>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd".
 INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 59: Output port <alert_signal> of the instance <controller_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 85: Output port <recieve_buffer> of the instance <communicator_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 85: Output port <recieve_complete> of the instance <communicator_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 88: Output port <recieve_buffer> of the instance <communicator_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 88: Output port <recieve_complete> of the instance <communicator_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Perger> synthesized.
@@ -252,9 +252,11 @@ Unit <EdgeDetector> synthesized.
 
 Synthesizing Unit <Controller>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/StateControl.vhd".
+        clk_freq = 20000000
+        message_size = 240
     Found 1-bit register for signal <L0>.
     Found 1-bit register for signal <alert_signal>.
-    Found 28-bit register for signal <idle_timer>.
+    Found 27-bit register for signal <idle_timer>.
     Found 2-bit register for signal <state>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
@@ -267,11 +269,11 @@ Synthesizing Unit <Controller>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 28-bit adder for signal <idle_timer[27]_GND_10_o_add_4_OUT> created at line 60.
-    Found 28-bit comparator greater for signal <n0006> created at line 52
+    Found 27-bit adder for signal <idle_timer[26]_GND_10_o_add_4_OUT> created at line 66.
+    Found 27-bit comparator greater for signal <n0006> created at line 58
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  29 D-type flip-flop(s).
+	inferred  28 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 	inferred   3 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
@@ -405,7 +407,7 @@ Synthesizing Unit <Uart>.
     Found 8-bit adder for signal <tx_baud_counter[7]_GND_21_o_add_47_OUT> created at line 1241.
     Found 3-bit adder for signal <uart_tx_count[2]_GND_21_o_add_55_OUT> created at line 1241.
     Found 2-bit subtractor for signal <GND_21_o_GND_21_o_sub_13_OUT<1:0>> created at line 1308.
-    Found 1-bit 3-to-1 multiplexer for signal <uart_tx_state[1]_PWR_32_o_MUX_1236_o> created at line 268.
+    Found 1-bit 3-to-1 multiplexer for signal <uart_tx_state[1]_PWR_32_o_MUX_1234_o> created at line 268.
     Found 2-bit comparator greater for signal <uart_rx_filter[1]_PWR_32_o_LessThan_10_o> created at line 152
     Found 2-bit comparator greater for signal <GND_21_o_uart_rx_filter[1]_LessThan_12_o> created at line 154
     Found 3-bit comparator greater for signal <uart_rx_count[2]_PWR_32_o_LessThan_29_o> created at line 209
@@ -505,7 +507,7 @@ Macro Statistics
  20-bit adder                                          : 7
  24-bit adder                                          : 1
  26-bit adder                                          : 1
- 28-bit adder                                          : 1
+ 27-bit adder                                          : 1
  3-bit adder                                           : 2
  31-bit adder                                          : 1
  4-bit adder                                           : 2
@@ -522,7 +524,7 @@ Macro Statistics
  24-bit register                                       : 1
  240-bit register                                      : 3
  26-bit register                                       : 1
- 28-bit register                                       : 1
+ 27-bit register                                       : 1
  3-bit register                                        : 2
  31-bit register                                       : 1
  4-bit register                                        : 2
@@ -534,7 +536,7 @@ Macro Statistics
  20-bit comparator greater                             : 7
  24-bit comparator greater                             : 1
  26-bit comparator greater                             : 1
- 28-bit comparator greater                             : 1
+ 27-bit comparator greater                             : 1
  3-bit comparator greater                              : 2
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
@@ -548,7 +550,7 @@ Macro Statistics
  19-bit 2-to-1 multiplexer                             : 2
  20-bit 2-to-1 multiplexer                             : 7
  26-bit 2-to-1 multiplexer                             : 6
- 28-bit 2-to-1 multiplexer                             : 2
+ 27-bit 2-to-1 multiplexer                             : 2
  3-bit 2-to-1 multiplexer                              : 3
  31-bit 2-to-1 multiplexer                             : 14
  4-bit 2-to-1 multiplexer                              : 1
@@ -631,7 +633,7 @@ Macro Statistics
  4x8-bit single-port distributed Read Only RAM         : 1
 # Adders/Subtractors                                   : 13
  26-bit adder                                          : 1
- 28-bit adder                                          : 1
+ 27-bit adder                                          : 1
  3-bit adder                                           : 1
  31-bit adder                                          : 1
  5-bit subtractor                                      : 1
@@ -648,15 +650,15 @@ Macro Statistics
  5-bit down counter                                    : 2
  5-bit up counter                                      : 1
  8-bit up counter                                      : 1
-# Registers                                            : 919
- Flip-Flops                                            : 919
+# Registers                                            : 918
+ Flip-Flops                                            : 918
 # Comparators                                          : 46
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
  20-bit comparator greater                             : 7
  24-bit comparator greater                             : 1
  26-bit comparator greater                             : 1
- 28-bit comparator greater                             : 1
+ 27-bit comparator greater                             : 1
  3-bit comparator greater                              : 2
  31-bit comparator greater                             : 12
  31-bit comparator lessequal                           : 1
@@ -668,7 +670,7 @@ Macro Statistics
  1-bit 2-to-1 multiplexer                              : 1680
  1-bit 3-to-1 multiplexer                              : 1
  26-bit 2-to-1 multiplexer                             : 6
- 28-bit 2-to-1 multiplexer                             : 2
+ 27-bit 2-to-1 multiplexer                             : 2
  3-bit 2-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 14
  5-bit 2-to-1 multiplexer                              : 2
@@ -690,7 +692,7 @@ Optimizing FSM <controller_inst/FSM_0> on signal <state[1:2]> with user encoding
  State     | Encoding
 -----------------------
  receiving | 00
- printing  | 01
+ editing   | 01
  sending   | 10
 -----------------------
 Analyzing FSM <MFsm> for best encoding.
@@ -984,8 +986,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 698
- Flip-Flops                                            : 698
+# Registers                                            : 697
+ Flip-Flops                                            : 697
 
 =========================================================================
 
@@ -1008,22 +1010,22 @@ Top Level Output File Name         : Perger.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1790
+# BELS                             : 1776
 #      GND                         : 1
 #      INV                         : 9
-#      LUT1                        : 102
-#      LUT2                        : 109
-#      LUT3                        : 128
-#      LUT4                        : 279
-#      LUT5                        : 161
-#      LUT6                        : 542
-#      MUXCY                       : 278
+#      LUT1                        : 100
+#      LUT2                        : 81
+#      LUT3                        : 152
+#      LUT4                        : 278
+#      LUT5                        : 159
+#      LUT6                        : 544
+#      MUXCY                       : 272
 #      MUXF7                       : 15
 #      VCC                         : 1
-#      XORCY                       : 165
-# FlipFlops/Latches                : 698
+#      XORCY                       : 164
+# FlipFlops/Latches                : 697
 #      FD                          : 286
-#      FDE                         : 366
+#      FDE                         : 365
 #      FDR                         : 34
 #      FDRE                        : 12
 # Clock Buffers                    : 1
@@ -1039,15 +1041,15 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             698  out of  11440     6%  
- Number of Slice LUTs:                 1330  out of   5720    23%  
-    Number used as Logic:              1330  out of   5720    23%  
+ Number of Slice Registers:             697  out of  11440     6%  
+ Number of Slice LUTs:                 1323  out of   5720    23%  
+    Number used as Logic:              1323  out of   5720    23%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1349
-   Number with an unused Flip Flop:     651  out of   1349    48%  
-   Number with an unused LUT:            19  out of   1349     1%  
-   Number of fully used LUT-FF pairs:   679  out of   1349    50%  
+ Number of LUT Flip Flop pairs used:   1342
+   Number with an unused Flip Flop:     645  out of   1342    48%  
+   Number with an unused LUT:            19  out of   1342     1%  
+   Number of fully used LUT-FF pairs:   678  out of   1342    50%  
    Number of unique control sets:        18
 
 IO Utilization: 
@@ -1078,7 +1080,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 698   |
+clk                                | BUFGP                  | 697   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1101,7 +1103,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.687ns (frequency: 115.118MHz)
-  Total number of paths / destination ports: 145056 / 1115
+  Total number of paths / destination ports: 144562 / 1113
 -------------------------------------------------------------------------
 Delay:               8.687ns (Levels of Logic = 19)
   Source:            displayer_inst/lcd_controller_inst/clk_count_7 (FF)
@@ -1194,12 +1196,12 @@ clk            |    8.687|         |         |         |
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.28 secs
+Total CPU time to Xst completion: 7.11 secs
  
 --> 
 
 
-Total memory usage is 399100 kilobytes
+Total memory usage is 398832 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  232 (   0 filtered)

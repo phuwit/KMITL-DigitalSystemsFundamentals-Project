@@ -57,6 +57,9 @@ begin
         );
 
     controller_inst : entity work.Controller
+        generic map(
+                clk_freq => clk_freq
+            )
         port map(
             clk                 => clk,
             reset               => '0',

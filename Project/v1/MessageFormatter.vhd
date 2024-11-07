@@ -58,7 +58,7 @@ begin
             end loop;
 
             -- format blinking character
-            if current_state = PRINTING and message_in(7 downto 0) = x"00" then
+            if current_state = EDITING and message_in(7 downto 0) = x"00" then
                 if display_toggle = '0' then
                     if last_char = x"00" then
                         formatted_message((char_index * 8) + 7 downto (char_index * 8)) <= x"20";
@@ -77,8 +77,8 @@ begin
                 when RECEIVING =>
                     current_state_char <= std_logic_vector(to_unsigned(character'pos('R'), 8));
 
-                when PRINTING =>
-                    current_state_char <= std_logic_vector(to_unsigned(character'pos('P'), 8));
+                when EDITING =>
+                    current_state_char <= std_logic_vector(to_unsigned(character'pos('E'), 8));
 
                 when SENDING =>
                     current_state_char <= std_logic_vector(to_unsigned(character'pos('S'), 8));
