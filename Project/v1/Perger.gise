@@ -103,7 +103,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1730965298" xil_pn:in_ck="-4388058376579022159" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2847232321781879794" xil_pn:start_ts="1730965287">
+    <transform xil_pn:end_ts="1730966972" xil_pn:in_ck="-4388058376579022159" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2847232321781879794" xil_pn:start_ts="1730966961">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -125,7 +125,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1730965303" xil_pn:in_ck="-671404050285069164" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3311867162655546464" xil_pn:start_ts="1730965298">
+    <transform xil_pn:end_ts="1730966976" xil_pn:in_ck="-671404050285069164" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3311867162655546464" xil_pn:start_ts="1730966972">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../v1/Perger.bld"/>
@@ -134,7 +134,7 @@
       <outfile xil_pn:name="../v1/_ngo"/>
       <outfile xil_pn:name="../v1/_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1730965322" xil_pn:in_ck="-669872471299804715" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1730965303">
+    <transform xil_pn:end_ts="1730966995" xil_pn:in_ck="-669872471299804715" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1730966976">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../v1/Perger.pcf"/>
@@ -147,7 +147,7 @@
       <outfile xil_pn:name="../v1/Perger_usage.xml"/>
       <outfile xil_pn:name="../v1/_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1730965334" xil_pn:in_ck="-1475803886853251666" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1730965322">
+    <transform xil_pn:end_ts="1730967007" xil_pn:in_ck="-1475803886853251666" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1730966995">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -162,7 +162,7 @@
       <outfile xil_pn:name="../v1/Perger_par.xrpt"/>
       <outfile xil_pn:name="../v1/_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1730965342" xil_pn:in_ck="3859961635944712" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1730965334">
+    <transform xil_pn:end_ts="1730967016" xil_pn:in_ck="3859961635944712" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1730967007">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../v1/Perger.bgn"/>
@@ -174,7 +174,7 @@
       <outfile xil_pn:name="../v1/webtalk.log"/>
       <outfile xil_pn:name="../v1/webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1730965334" xil_pn:in_ck="-872040897354711983" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1730965329">
+    <transform xil_pn:end_ts="1730967007" xil_pn:in_ck="-872040897354711983" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1730967002">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../v1/Perger.twr"/>

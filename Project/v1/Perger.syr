@@ -279,7 +279,7 @@ Unit <Controller> synthesized.
 
 Synthesizing Unit <Editor>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Editor.vhd".
-    Found 1-bit register for signal <trigger>.
+    Found 1-bit register for signal <added_to_buffer>.
     Found 8-bit register for signal <last_char>.
     Found 240-bit register for signal <internal_message_buffer>.
     Found 26-bit register for signal <key_timer>.
@@ -287,9 +287,9 @@ Synthesizing Unit <Editor>.
     Found 8-bit adder for signal <last_char[7]_GND_13_o_add_35_OUT> created at line 93.
     Found 6-bit adder for signal <n0740[5:0]> created at line 108.
     Found 9-bit adder for signal <BUS_0008_GND_13_o_add_50_OUT> created at line 108.
-    Found 26-bit adder for signal <key_timer[25]_GND_13_o_add_337_OUT> created at line 123.
-    Found 9-bit adder for signal <n0699> created at line 130.
-    Found 5-bit subtractor for signal <GND_13_o_GND_13_o_sub_614_OUT<4:0>> created at line 131.
+    Found 26-bit adder for signal <key_timer[25]_GND_13_o_add_337_OUT> created at line 124.
+    Found 9-bit adder for signal <n0699> created at line 131.
+    Found 5-bit subtractor for signal <GND_13_o_GND_13_o_sub_614_OUT<4:0>> created at line 132.
     Found 8-bit comparator lessequal for signal <n0002> created at line 41
     Found 8-bit comparator greater for signal <last_char[7]_GND_13_o_LessThan_3_o> created at line 41
     Found 8-bit comparator lessequal for signal <n0007> created at line 49
@@ -305,8 +305,8 @@ Synthesizing Unit <Editor>.
     Found 8-bit comparator lessequal for signal <n0036> created at line 92
     Found 8-bit comparator greater for signal <last_char[7]_GND_13_o_LessThan_35_o> created at line 92
     Found 5-bit comparator lessequal for signal <n0052> created at line 107
-    Found 26-bit comparator greater for signal <key_timer[25]_PWR_26_o_LessThan_337_o> created at line 122
-    Found 5-bit comparator greater for signal <GND_13_o_char_index_internal[4]_LessThan_342_o> created at line 129
+    Found 26-bit comparator greater for signal <key_timer[25]_PWR_26_o_LessThan_337_o> created at line 123
+    Found 5-bit comparator greater for signal <GND_13_o_char_index_internal[4]_LessThan_342_o> created at line 130
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred 280 D-type flip-flop(s).
@@ -346,12 +346,12 @@ Synthesizing Unit <Receiver>.
     Found 240-bit register for signal <internal_buffer>.
     Found 5-bit register for signal <char_count>.
     Found 1-bit register for signal <data_complete_stb>.
-    Found 9-bit adder for signal <n0289> created at line 31.
-    Found 5-bit subtractor for signal <GND_19_o_GND_19_o_sub_272_OUT<4:0>> created at line 32.
+    Found 9-bit adder for signal <n0291> created at line 31.
+    Found 5-bit subtractor for signal <GND_19_o_GND_19_o_sub_273_OUT<4:0>> created at line 38.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred 246 D-type flip-flop(s).
-	inferred 240 Multiplexer(s).
+	inferred 241 Multiplexer(s).
 Unit <Receiver> synthesized.
 
 Synthesizing Unit <Uart>.
@@ -405,7 +405,7 @@ Synthesizing Unit <Uart>.
     Found 8-bit adder for signal <tx_baud_counter[7]_GND_21_o_add_47_OUT> created at line 1241.
     Found 3-bit adder for signal <uart_tx_count[2]_GND_21_o_add_55_OUT> created at line 1241.
     Found 2-bit subtractor for signal <GND_21_o_GND_21_o_sub_13_OUT<1:0>> created at line 1308.
-    Found 1-bit 3-to-1 multiplexer for signal <uart_tx_state[1]_PWR_32_o_MUX_1235_o> created at line 268.
+    Found 1-bit 3-to-1 multiplexer for signal <uart_tx_state[1]_PWR_32_o_MUX_1236_o> created at line 268.
     Found 2-bit comparator greater for signal <uart_rx_filter[1]_PWR_32_o_LessThan_10_o> created at line 152
     Found 2-bit comparator greater for signal <GND_21_o_uart_rx_filter[1]_LessThan_12_o> created at line 154
     Found 3-bit comparator greater for signal <uart_rx_count[2]_PWR_32_o_LessThan_29_o> created at line 209
@@ -542,7 +542,7 @@ Macro Statistics
  5-bit comparator lessequal                            : 2
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 1747
+# Multiplexers                                         : 1748
  1-bit 2-to-1 multiplexer                              : 1672
  1-bit 3-to-1 multiplexer                              : 1
  19-bit 2-to-1 multiplexer                             : 2
@@ -552,7 +552,7 @@ Macro Statistics
  3-bit 2-to-1 multiplexer                              : 3
  31-bit 2-to-1 multiplexer                             : 14
  4-bit 2-to-1 multiplexer                              : 1
- 5-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 4
  8-bit 2-to-1 multiplexer                              : 36
 # FSMs                                                 : 4
 # Xors                                                 : 9
@@ -1008,17 +1008,17 @@ Top Level Output File Name         : Perger.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1789
+# BELS                             : 1787
 #      GND                         : 1
 #      INV                         : 9
 #      LUT1                        : 102
-#      LUT2                        : 110
+#      LUT2                        : 109
 #      LUT3                        : 128
-#      LUT4                        : 279
-#      LUT5                        : 171
-#      LUT6                        : 529
+#      LUT4                        : 277
+#      LUT5                        : 158
+#      LUT6                        : 544
 #      MUXCY                       : 278
-#      MUXF7                       : 16
+#      MUXF7                       : 15
 #      VCC                         : 1
 #      XORCY                       : 165
 # FlipFlops/Latches                : 698
@@ -1040,14 +1040,14 @@ Selected Device : 6slx9tqg144-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:             698  out of  11440     6%  
- Number of Slice LUTs:                 1328  out of   5720    23%  
-    Number used as Logic:              1328  out of   5720    23%  
+ Number of Slice LUTs:                 1327  out of   5720    23%  
+    Number used as Logic:              1327  out of   5720    23%  
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:   1346
    Number with an unused Flip Flop:     648  out of   1346    48%  
-   Number with an unused LUT:            18  out of   1346     1%  
-   Number of fully used LUT-FF pairs:   680  out of   1346    50%  
+   Number with an unused LUT:            19  out of   1346     1%  
+   Number of fully used LUT-FF pairs:   679  out of   1346    50%  
    Number of unique control sets:        18
 
 IO Utilization: 
@@ -1101,7 +1101,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.687ns (frequency: 115.118MHz)
-  Total number of paths / destination ports: 144150 / 1115
+  Total number of paths / destination ports: 144124 / 1115
 -------------------------------------------------------------------------
 Delay:               8.687ns (Levels of Logic = 19)
   Source:            displayer_inst/lcd_controller_inst/clk_count_7 (FF)
@@ -1194,12 +1194,12 @@ clk            |    8.687|         |         |         |
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.16 secs
+Total CPU time to Xst completion: 8.17 secs
  
 --> 
 
 
-Total memory usage is 399184 kilobytes
+Total memory usage is 398832 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  232 (   0 filtered)

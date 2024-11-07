@@ -21,7 +21,7 @@ architecture Behavioral of Editor is
     signal key_timer               : INTEGER range 0 to key_hold_time := 0; -- ตัวนับการกดปุ่ม
     signal internal_message_buffer : STD_LOGIC_VECTOR(239 downto 0)   := (others => '0'); -- บัฟเฟอร์ภายในสำหรับเก็บข้อความ
     signal char_index_internal     : INTEGER range 0 to 29            := 29; -- ตัวแปรภายในสำหรับจัดการ char_index
-    signal trigger                 : STD_LOGIC                        := '0'; -- ใช้เก็บสถานะ ('0' หรือ '1') เพื่อบอกว่ามีการเพิ่มตัวอักษรลงใน internal_message_buffer แล้วหรือยัง
+    signal added_to_buffer         : STD_LOGIC                        := '1'; -- ใช้เก็บสถานะ ('0' หรือ '1') เพื่อบอกว่ามีการเพิ่มตัวอักษรลงใน internal_message_buffer แล้วหรือยัง
 
 begin
     process(clk, reset)
@@ -29,7 +29,7 @@ begin
         if reset = '1' then
             key_timer               <= 0;
             char_index_internal     <= 29;
-            trigger                 <= '0';
+            added_to_buffer         <= '0';
             last_char               <= "01000001"; -- ค่าเริ่มต้นเป็น 'A'
             internal_message_buffer <= (others => '0'); -- เคลียร์ค่าใน message_buffer
         elsif rising_edge(clk) then
@@ -109,14 +109,15 @@ begin
                         char_index_internal                                                                                 <= char_index_internal + 1;
                     end if;
 
-                    last_char <= x"00";
-                    key_timer <= 0;     -- รีเซ็ตตัวนับเวลา
+                    last_char       <= x"00";
+                    key_timer       <= key_hold_time; -- รีเซ็ตตัวนับเวลา
+                    added_to_buffer <= '1'; -- รีเซ็ตตัวนับเวลา
                 end if;
 
                 -- ตรวจสอบการกดปุ่มเพื่อเริ่มนับเวลา
-                if btn(1) = '1' or btn(2) = '1' or btn(3) = '1' or btn(4) = '1' or btn(5) = '1' then
-                    key_timer <= 0;     -- รีเซ็ตตัวนับเวลาเพื่อเริ่มนับใหม่เมื่อมีการกดปุ่ม
-                    trigger   <= '0';   -- รีเซ็ต trigger เมื่อมีการกดปุ่ม
+                if btn(1) = '1' or btn(2) = '1' or btn(3) = '1' or btn(4) = '1' then
+                    key_timer       <= 0; -- รีเซ็ตตัวนับเวลาเพื่อเริ่มนับใหม่เมื่อมีการกดปุ่ม
+                    added_to_buffer <= '0'; -- รีเซ็ต trigger เมื่อมีการกดปุ่ม
                 else
                     -- นับเวลาเมื่อไม่มีการกดปุ่ม
                     if key_timer < key_hold_time then
@@ -125,12 +126,12 @@ begin
                 end if;
 
                 -- การตรวจสอบเวลาสำหรับการเพิ่มตัวอักษรลงใน `internal_message_buffer`
-                if key_timer >= key_hold_time and trigger = '0' then -- 3 วินาทีและยังไม่ได้ทริกเกอร์
+                if key_timer >= key_hold_time and added_to_buffer = '0' then -- 3 วินาทีและยังไม่ได้ทริกเกอร์
                     if char_index_internal > 0 then
                         internal_message_buffer((char_index_internal * 8) + 7 downto (char_index_internal * 8)) <= last_char;
                         char_index_internal                                                                     <= char_index_internal - 1;
                         key_timer                                                                               <= key_hold_time; -- หยุดการนับเวลา (ค้างไว้ที่ค่าเดิม)
-                        trigger                                                                                 <= '1'; -- ตั้ง trigger เพื่อบอกว่ามีการเพิ่มตัวอักษรแล้ว
+                        added_to_buffer                                                                         <= '1'; -- ตั้ง trigger เพื่อบอกว่ามีการเพิ่มตัวอักษรแล้ว
                         last_char                                                                               <= "00000000"; -- reset กลับไปที่ 'A'
                     end if;
                 end if;
