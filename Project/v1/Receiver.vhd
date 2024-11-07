@@ -6,7 +6,7 @@ entity Receiver is
     Port (
         clk                 : in  STD_LOGIC;
         data_in             : in  STD_LOGIC_VECTOR(7 downto 0);     -- ข้อมูลตัวอักษรที่รับมา
-        new_data_stb        : in  STD_LOGIC;                        -- สัญญาณว่ามีตัวอักษรใหม่มา
+        new_data_stb        : in  STD_LOGIC;                        -- สัญญาณว่ามีตัวอักษรใหม่มา จะเป็น '1' ชั่วขณะสั้น ๆ 
         data_out            : out STD_LOGIC_VECTOR(239 downto 0);   -- ผลรวมของอักษร 30 ตัว
         data_complete_stb   : out STD_LOGIC                         -- สัญญาณว่ารวมของอักษร 30 ตัวเสร็จแล้ว
         -- สัญญาณ data_complete_stb จะเป็น '1' ชั่วขณะเมื่อมีการรับข้อมูลครบ 30 ตัว
@@ -27,14 +27,14 @@ begin
                 if char_count >= 0 then
                     -- ใส่อักขระใหม่เข้าไปในตำแหน่งที่เหมาะสมใน buffer
                     internal_buffer((char_count * 8) + 7 downto char_count * 8) <= data_in;
-                    char_count <= char_count - 1;
                     
-                    -- ตรวจสอบว่ารับครบ 30 ตัวหรือไม่
+                    -- ตรวจสอบว่ารับครบ 30 ตัวหรือไม่หลังจากใส่ข้อมูล
                     if char_count = 0 then
                         data_complete_stb <= '1'; -- แจ้งว่าข้อมูลครบ 30 ตัวแล้ว
+                        char_count <= 29; -- รีเซ็ตการนับเมื่อรับครบ 30 ตัวอักษร
+                    else
+                        char_count <= char_count - 1; -- ลดค่า char_count ลง
                     end if;
-                else
-                    char_count <= 29; -- รีเซ็ตการนับเมื่อรับครบ 30 ตัวอักษร
                 end if;
             end if;
         end if;
