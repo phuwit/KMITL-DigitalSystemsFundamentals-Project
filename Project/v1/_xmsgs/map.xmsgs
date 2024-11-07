@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Map" num="284" delta="new" >Map is running with the multi-threading option on. Map currently supports the use of up to 2 processors. Based on the the user options and machine load, Map will use 2 processors during this run.
+<msg type="info" file="Map" num="284" delta="old" >Map is running with the multi-threading option on. Map currently supports the use of up to 2 processors. Based on the the user options and machine load, Map will use 2 processors during this run.
 </msg>
 
 <msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">sw&lt;6&gt;_IBUF</arg> has no load.

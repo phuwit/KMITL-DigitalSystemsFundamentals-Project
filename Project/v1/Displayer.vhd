@@ -24,8 +24,11 @@ end Displayer;
 architecture Behavioral of Displayer is
     signal message_formatted : std_logic_vector(display_size - 1 downto 0);
     signal display_message   : std_logic_vector(message_size - 1 downto 0);
+    signal reset_n           : std_logic;
 begin
-    process (current_state, edit_buffer, recieve_buffer) is
+    reset_n <= reset;
+
+    process(current_state, edit_buffer, recieve_buffer) is
     begin
         case current_state is
             when EDITING =>
@@ -56,7 +59,7 @@ begin
         )
         port map(
             clk          => clk,
-            reset_n      => not reset,
+            reset_n      => (not reset),
             line1_buffer => message_formatted(display_size - 1 downto display_size / 2),
             line2_buffer => message_formatted((display_size / 2) - 1 downto 0),
             rw           => lcd_rw,

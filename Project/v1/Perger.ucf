@@ -2,6 +2,8 @@
 
 
 NET "clk" LOC = P123;
+NET "clk" TNM_NET = "clk";
+TIMESPEC "ts_osc" = PERIOD "clk" 50 ns HIGH 50%;
 
 NET "btn[1]" LOC = P45;
 NET "btn[2]" LOC = P46;
@@ -83,3 +85,5 @@ NET "mn[3]" LOC = P92;
 NET "mn[2]" LOC = P93;
 NET "mn[1]" LOC = P94;
 NET "mn[0]" LOC = P95;
+
+NET "buzzer" LOC = P83;

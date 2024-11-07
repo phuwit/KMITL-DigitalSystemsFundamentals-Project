@@ -132,9 +132,6 @@ Parsing architecture <rtl> of entity <edgedetector>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Debonce.vhd" into library work
 Parsing entity <Debounce>.
 Parsing architecture <logic> of entity <debounce>.
-Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/StateControl.vhd" into library work
-Parsing entity <Controller>.
-Parsing architecture <Behavioral> of entity <controller>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/InputCleaner.vhd" into library work
 Parsing entity <InputCleaner>.
 Parsing architecture <Behavioral> of entity <inputcleaner>.
@@ -144,14 +141,20 @@ Parsing architecture <Behavioral> of entity <editor>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Displayer.vhd" into library work
 Parsing entity <Displayer>.
 Parsing architecture <Behavioral> of entity <displayer>.
-WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Displayer.vhd" Line 59: Actual for formal port reset_n is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Displayer.vhd" Line 62: Actual for formal port reset_n is neither a static name nor a globally static expression
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Controller.vhd" into library work
+Parsing entity <Controller>.
+Parsing architecture <Behavioral> of entity <controller>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Communicator.vhd" into library work
 Parsing entity <Communicator>.
 Parsing architecture <Behavioral> of entity <communicator>.
+Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/BuzzController.vhd" into library work
+Parsing entity <BuzzController>.
+Parsing architecture <Behavioral> of entity <buzzcontroller>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" into library work
 Parsing entity <Perger>.
 Parsing architecture <Behavioral> of entity <perger>.
-WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 85: Actual for formal port reset is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" Line 86: Actual for formal port reset is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -183,10 +186,13 @@ INFO:HDLCompiler:679 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamental
 INFO:HDLCompiler:679 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Uart.vhd" Line 293. Case statement is complete. others clause is never selected
 
 Elaborating entity <Displayer> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Displayer.vhd" Line 29: Assignment to reset_n ignored, since the identifier is never used
 
 Elaborating entity <MessageFormatter> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <LcdController> (architecture <controller>) with generics from library <work>.
+
+Elaborating entity <BuzzController> (architecture <Behavioral>) with generics from library <work>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -194,8 +200,7 @@ Elaborating entity <LcdController> (architecture <controller>) with generics fro
 
 Synthesizing Unit <Perger>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd".
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 64: Output port <alert_signal> of the instance <controller_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 94: Output port <recieve_complete> of the instance <communicator_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Perger.vhd" line 65: Output port <alert_signal> of the instance <controller_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Perger> synthesized.
@@ -256,7 +261,7 @@ Synthesizing Unit <EdgeDetector>.
 Unit <EdgeDetector> synthesized.
 
 Synthesizing Unit <Controller>.
-    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/StateControl.vhd".
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Controller.vhd".
         clk_freq = 20000000
         message_size = 240
     Found 27-bit register for signal <idle_timer>.
@@ -516,45 +521,71 @@ Synthesizing Unit <LcdController>.
 	inferred   1 Finite State Machine(s).
 Unit <LcdController> synthesized.
 
+Synthesizing Unit <BuzzController>.
+    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/BuzzController.vhd".
+        clk_freq = 20000000
+        pattern_bits = 10
+        pattern_sec = 1
+    Found 21-bit register for signal <bit_timer>.
+    Found 4-bit register for signal <current_bit>.
+    Found 1-bit register for signal <internal_buzzer_status>.
+    Found 1-bit register for signal <latched_enable>.
+    Found 21-bit adder for signal <bit_timer[20]_GND_23_o_add_5_OUT> created at line 51.
+    Found 4-bit subtractor for signal <GND_23_o_GND_23_o_sub_4_OUT<3:0>> created at line 48.
+    Found 16x1-bit Read Only RAM for signal <current_bit[3]_X_20_o_Mux_0_o>
+    Found 21-bit comparator greater for signal <n0002> created at line 40
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <BuzzController> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
+# RAMs                                                 : 2
+ 16x1-bit single-port Read Only RAM                    : 1
  4x8-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 38
+# Adders/Subtractors                                   : 40
  19-bit adder                                          : 2
  2-bit addsub                                          : 1
  20-bit adder                                          : 14
+ 21-bit adder                                          : 1
  24-bit adder                                          : 1
  26-bit adder                                          : 1
  27-bit adder                                          : 1
  3-bit adder                                           : 2
  31-bit adder                                          : 1
  4-bit adder                                           : 2
+ 4-bit subtractor                                      : 1
  5-bit adder                                           : 2
  5-bit subtractor                                      : 2
  6-bit adder                                           : 1
  8-bit adder                                           : 3
  9-bit adder                                           : 5
-# Registers                                            : 101
- 1-bit register                                        : 45
+# Registers                                            : 105
+ 1-bit register                                        : 47
  19-bit register                                       : 2
  2-bit register                                        : 18
  20-bit register                                       : 14
+ 21-bit register                                       : 1
  24-bit register                                       : 1
  240-bit register                                      : 3
  26-bit register                                       : 1
  27-bit register                                       : 1
  3-bit register                                        : 2
  31-bit register                                       : 1
- 4-bit register                                        : 2
+ 4-bit register                                        : 3
  5-bit register                                        : 4
  8-bit register                                        : 7
-# Comparators                                          : 55
+# Comparators                                          : 56
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
  20-bit comparator greater                             : 14
+ 21-bit comparator greater                             : 1
  24-bit comparator greater                             : 1
  26-bit comparator greater                             : 1
  27-bit comparator greater                             : 1
@@ -565,17 +596,18 @@ Macro Statistics
  5-bit comparator lessequal                            : 2
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 1765
- 1-bit 2-to-1 multiplexer                              : 1679
+# Multiplexers                                         : 1771
+ 1-bit 2-to-1 multiplexer                              : 1683
  1-bit 3-to-1 multiplexer                              : 1
  19-bit 2-to-1 multiplexer                             : 2
  20-bit 2-to-1 multiplexer                             : 14
+ 21-bit 2-to-1 multiplexer                             : 1
  24-bit 2-to-1 multiplexer                             : 1
  26-bit 2-to-1 multiplexer                             : 6
  27-bit 2-to-1 multiplexer                             : 2
  3-bit 2-to-1 multiplexer                              : 3
  31-bit 2-to-1 multiplexer                             : 14
- 4-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 2
  5-bit 2-to-1 multiplexer                              : 4
  8-bit 2-to-1 multiplexer                              : 38
 # FSMs                                                 : 4
@@ -613,6 +645,21 @@ WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[5].debounce_inst> is unc
 WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[6].debounce_inst> is unconnected in block <input_cleaner_inst>.
    It will be removed from the design.
 INFO:Xst:2261 - The FF/Latch <sending_flag> in Unit <sender_inst> is equivalent to the following FF/Latch, which will be removed : <tx_start> 
+
+Synthesizing (advanced) Unit <BuzzController>.
+The following registers are absorbed into counter <bit_timer>: 1 register on signal <bit_timer>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_current_bit[3]_X_20_o_Mux_0_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <current_bit>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <BuzzController> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Debounce_1>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
@@ -661,33 +708,37 @@ Unit <Uart> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
+# RAMs                                                 : 2
+ 16x1-bit single-port distributed Read Only RAM        : 1
  4x8-bit single-port distributed Read Only RAM         : 1
-# Adders/Subtractors                                   : 13
+# Adders/Subtractors                                   : 14
  26-bit adder                                          : 1
  27-bit adder                                          : 1
  3-bit adder                                           : 1
  31-bit adder                                          : 1
+ 4-bit subtractor                                      : 1
  5-bit subtractor                                      : 1
  6-bit adder                                           : 1
  8-bit adder                                           : 2
  9-bit adder                                           : 5
-# Counters                                             : 25
+# Counters                                             : 26
  19-bit up counter                                     : 2
  2-bit updown counter                                  : 1
  20-bit up counter                                     : 14
+ 21-bit up counter                                     : 1
  24-bit up counter                                     : 1
  3-bit up counter                                      : 1
  4-bit up counter                                      : 2
  5-bit down counter                                    : 1
  5-bit up counter                                      : 2
  8-bit up counter                                      : 1
-# Registers                                            : 939
- Flip-Flops                                            : 939
-# Comparators                                          : 55
+# Registers                                            : 945
+ Flip-Flops                                            : 945
+# Comparators                                          : 56
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
  20-bit comparator greater                             : 14
+ 21-bit comparator greater                             : 1
  24-bit comparator greater                             : 1
  26-bit comparator greater                             : 1
  27-bit comparator greater                             : 1
@@ -698,13 +749,14 @@ Macro Statistics
  5-bit comparator lessequal                            : 2
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 1749
- 1-bit 2-to-1 multiplexer                              : 1686
+# Multiplexers                                         : 1754
+ 1-bit 2-to-1 multiplexer                              : 1690
  1-bit 3-to-1 multiplexer                              : 1
  26-bit 2-to-1 multiplexer                             : 6
  27-bit 2-to-1 multiplexer                             : 2
  3-bit 2-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 14
+ 4-bit 2-to-1 multiplexer                              : 1
  5-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 36
 # FSMs                                                 : 4
@@ -817,6 +869,8 @@ Optimizing unit <Displayer> ...
 Optimizing unit <MessageFormatter> ...
 
 Optimizing unit <LcdController> ...
+
+Optimizing unit <BuzzController> ...
 WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
 WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
 WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
@@ -1093,7 +1147,6 @@ WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count
 WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/result> of sequential type is unconnected in block <Perger>.
 WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
 WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <communicator_inst/receiver_inst/data_complete_stb> of sequential type is unconnected in block <Perger>.
 WARNING:Xst:1293 - FF/Latch <editor_inst/internal_message_buffer_71> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <editor_inst/internal_message_buffer_63> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <editor_inst/internal_message_buffer_55> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
@@ -1141,7 +1194,7 @@ INFO:Xst:3203 - The FF/Latch <displayer_inst/display_inst/current_state_char_4> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 40.
+Found area constraint ratio of 100 (+ 5) on block Perger, actual ratio is 41.
 WARNING:Xst:1426 - The value init of the FF/Latch editor_inst/added_to_buffer_LD hinder the constant cleaning in the block Perger.
    You should achieve better results by setting this init to 0.
 FlipFlop displayer_inst/lcd_controller_inst/ptr_1 has been replicated 1 time(s)
@@ -1154,8 +1207,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 997
- Flip-Flops                                            : 997
+# Registers                                            : 1025
+ Flip-Flops                                            : 1025
 
 =========================================================================
 
@@ -1178,26 +1231,26 @@ Top Level Output File Name         : Perger.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2384
+# BELS                             : 2458
 #      GND                         : 1
-#      INV                         : 10
+#      INV                         : 11
 #      LUT1                        : 70
-#      LUT2                        : 79
-#      LUT3                        : 434
-#      LUT4                        : 252
+#      LUT2                        : 102
+#      LUT3                        : 435
+#      LUT4                        : 256
 #      LUT5                        : 196
-#      LUT6                        : 853
-#      MUXCY                       : 290
+#      LUT6                        : 857
+#      MUXCY                       : 310
 #      MUXF7                       : 14
 #      VCC                         : 1
-#      XORCY                       : 184
-# FlipFlops/Latches                : 998
+#      XORCY                       : 205
+# FlipFlops/Latches                : 1026
 #      FD                          : 35
-#      FDC                         : 270
-#      FDCE                        : 510
+#      FDC                         : 272
+#      FDCE                        : 534
 #      FDE                         : 108
 #      FDP                         : 2
-#      FDPE                        : 4
+#      FDPE                        : 6
 #      FDR                         : 25
 #      FDRE                        : 37
 #      FDS                         : 2
@@ -1205,9 +1258,9 @@ Primitive and Black Box Usage:
 #      LD                          : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 38
+# IO Buffers                       : 39
 #      IBUF                        : 10
-#      OBUF                        : 28
+#      OBUF                        : 29
 
 Device utilization summary:
 ---------------------------
@@ -1216,20 +1269,20 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             998  out of  11440     8%  
- Number of Slice LUTs:                 1894  out of   5720    33%  
-    Number used as Logic:              1894  out of   5720    33%  
+ Number of Slice Registers:            1026  out of  11440     8%  
+ Number of Slice LUTs:                 1927  out of   5720    33%  
+    Number used as Logic:              1927  out of   5720    33%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1921
-   Number with an unused Flip Flop:     923  out of   1921    48%  
-   Number with an unused LUT:            27  out of   1921     1%  
-   Number of fully used LUT-FF pairs:   971  out of   1921    50%  
-   Number of unique control sets:        27
+ Number of LUT Flip Flop pairs used:   1954
+   Number with an unused Flip Flop:     928  out of   1954    47%  
+   Number with an unused LUT:            27  out of   1954     1%  
+   Number of fully used LUT-FF pairs:   999  out of   1954    51%  
+   Number of unique control sets:        29
 
 IO Utilization: 
- Number of IOs:                          52
- Number of bonded IOBs:                  39  out of    102    38%  
+ Number of IOs:                          53
+ Number of bonded IOBs:                  40  out of    102    39%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -1255,7 +1308,7 @@ Clock Information:
 ---------------------------------------------------------------------------------------+----------------------------------------+-------+
 Clock Signal                                                                           | Clock buffer(FF name)                  | Load  |
 ---------------------------------------------------------------------------------------+----------------------------------------+-------+
-clk                                                                                    | BUFGP                                  | 997   |
+clk                                                                                    | BUFGP                                  | 1025  |
 dipsw_debounced[1]_send_finished_OR_524_o(dipsw_debounced[1]_send_finished_OR_524_o1:O)| NONE(*)(editor_inst/added_to_buffer_LD)| 1     |
 ---------------------------------------------------------------------------------------+----------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -1283,7 +1336,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.687ns (frequency: 115.118MHz)
-  Total number of paths / destination ports: 166114 / 2504
+  Total number of paths / destination ports: 170025 / 2586
 -------------------------------------------------------------------------
 Delay:               8.687ns (Levels of Logic = 19)
   Source:            displayer_inst/lcd_controller_inst/clk_count_7 (FF)
@@ -1342,7 +1395,7 @@ Offset:              2.837ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 17 / 17
+  Total number of paths / destination ports: 18 / 18
 -------------------------------------------------------------------------
 Offset:              5.606ns (Levels of Logic = 1)
   Source:            editor_inst/char_index_internal_2 (FF)
@@ -1376,13 +1429,13 @@ dipsw_debounced[1]_send_finished_OR_524_o|         |    4.953|         |        
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.82 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.28 secs
  
 --> 
 
 
-Total memory usage is 404464 kilobytes
+Total memory usage is 404904 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  350 (   0 filtered)

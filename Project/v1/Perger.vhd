@@ -17,7 +17,8 @@ entity Perger is
         lcd_rs   : out std_logic;
         lcd_rw   : out std_logic;
         lcd_data : out std_logic_vector(7 downto 0);
-        bt_tx    : out std_logic        -- fpga's tx <-> bluetooth's rx
+        bt_tx    : out std_logic;       -- fpga's tx <-> bluetooth's rx
+        buzzer   : out std_logic
     );
 end Perger;
 
@@ -71,7 +72,7 @@ begin
             reset               => dipsw_debounced(1),
             btn                 => btn_pulse,
             new_data_in         => '0',
-            edit_buffer      => edit_buffer,
+            edit_buffer         => edit_buffer,
             current_state       => current_state,
             L0                  => led(0),
             alert_signal        => open, -- ไม่ได้ใช้ใน top-level
@@ -127,6 +128,20 @@ begin
             lcd_rs         => lcd_rs,
             lcd_rw         => lcd_rw,
             lcd_data       => lcd_data
+        );
+
+    recieve_buzzer_controller : entity work.BuzzController
+        generic map(
+            clk_freq     => clk_freq,
+            pattern_bits => 10,
+            pattern_sec  => 1
+        )
+        port map(
+            clk     => clk,
+            reset   => dipsw_debounced(1),
+            enable  => recieve_complete,
+            pattern => "1100110000",
+            buzzer  => buzzer
         );
 
     led(7 downto 1) <= (others => '0');
