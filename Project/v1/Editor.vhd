@@ -29,7 +29,7 @@ begin
         if reset = '1' then
             key_timer               <= 0;
             char_index_internal     <= 29;
-            added_to_buffer         <= '0';
+            added_to_buffer         <= '1';
             last_char               <= "00000000"; -- ค่าเริ่มต้นเป็น 'A'
             internal_message_buffer <= (others => '0'); -- เคลียร์ค่าใน message_buffer
         elsif rising_edge(clk) then

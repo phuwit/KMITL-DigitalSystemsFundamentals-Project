@@ -29,18 +29,24 @@ architecture Behavioral of Perger is
     constant display_size   : integer := 256;
 
     -- สัญญาณภายในสำหรับการสื่อสารระหว่างโมดูล
-    signal btn_pulse       : std_logic_vector(btn'length downto 1);
-    signal sw_debounced    : std_logic_vector(sw'length - 1 downto 0);
-    signal dipsw_debounced : std_logic_vector(dipsw'length downto 1);
+    signal btn_pulse       : std_logic_vector(btn'length downto 1) := (others => '0');
+    signal sw_debounced    : std_logic_vector(sw'length - 1 downto 0) := (others => '0');
+    signal dipsw_debounced : std_logic_vector(dipsw'length downto 1) := (others => '0');
 
-    signal current_state    : states;
-    signal edit_buffer      : std_logic_vector(message_size - 1 downto 0);
-    signal recieve_buffer   : std_logic_vector(message_size - 1 downto 0);
-    signal recieve_complete : std_logic;
-    signal char_index       : integer range 0 to 29;
-    signal last_char        : std_logic_vector(7 downto 0);
-    signal send_finished    : std_logic;
-    signal editor_reset     : std_logic;
+    signal current_state : states := RECEIVING;
+
+    signal edit_buffer    : std_logic_vector(message_size - 1 downto 0) := (others => '0');
+    signal recieve_buffer : std_logic_vector(message_size - 1 downto 0) := (others => '0');
+    signal char_index     : integer range 0 to 29 := 29;
+    signal last_char      : std_logic_vector(7 downto 0) := (others => '0');
+
+    signal recieve_complete : std_logic := '0';
+    signal send_finished    : std_logic := '0';
+
+    signal editor_reset          : std_logic := '0';
+    signal global_reset_internal : std_logic := '0';
+    signal por1                  : std_logic := '0';
+    signal por2                  : std_logic := '0';
 begin
     input_cleaner_inst : entity work.InputCleaner
         generic map(
@@ -69,7 +75,7 @@ begin
         )
         port map(
             clk                 => clk,
-            reset               => dipsw_debounced(1),
+            reset               => global_reset_internal,
             btn                 => btn_pulse,
             new_data_in         => '0',
             edit_buffer         => edit_buffer,
@@ -80,7 +86,7 @@ begin
             bluetooth_connected => bt_state
         );
 
-    editor_reset <= dipsw_debounced(1) or send_finished;
+    editor_reset <= global_reset_internal or send_finished;
     editor_inst : entity work.Editor
         port map(
             clk            => clk,
@@ -101,7 +107,7 @@ begin
         )
         port map(
             clk              => clk,
-            reset            => dipsw_debounced(1),
+            reset            => global_reset_internal,
             bt_rx            => bt_rx,
             current_state    => current_state,
             edit_buffer      => edit_buffer,
@@ -119,7 +125,7 @@ begin
         )
         port map(
             clk            => clk,
-            reset          => dipsw_debounced(1),
+            reset          => global_reset_internal,
             current_state  => current_state,
             recieve_buffer => recieve_buffer,
             edit_buffer    => edit_buffer,
@@ -139,12 +145,36 @@ begin
         )
         port map(
             clk     => clk,
-            reset   => dipsw_debounced(1),
+            reset   => global_reset_internal,
             enable  => recieve_complete,
             pattern => "1100110000",
             buzzer  => buzzer
         );
 
-    led(7 downto 1) <= (others => '0');
+    por1_inst : entity work.Por
+        generic map(
+            stop_after => 10_000_000
+        )
+        port map(
+            reset => '0',
+            clk   => clk,
+            por_o => por1
+        );
+
+    por2_inst : entity work.Por
+        generic map(
+            stop_after => 20_000_000
+        )
+        port map(
+            reset => '0',
+            clk   => clk,
+            por_o => por2
+        );
+
+    global_reset_internal <= dipsw_debounced(1) or (por1 xor por2);
+
+    led(7) <= por1;
+    led(6) <= por2;
+    led(5 downto 1) <= (others => '0');
     mn              <= std_logic_vector(to_unsigned(char_index, mn'length));
 end Behavioral;

@@ -36,7 +36,7 @@ begin
                     data_out     <= edit_buffer((byte_index * 8) + 7 downto byte_index * 8); -- ส่งข้อมูล 8 บิตต่อครั้ง
                     tx_start     <= '1'; -- เริ่มส่ง
                     sending_flag <= '1'; -- ตั้งค่าสถานะการส่ง
-                elsif data_stream_in_ack = '1' then
+                elsif sending_flag = '1' and data_stream_in_ack = '1' then
                     -- เมื่อได้รับการยืนยันว่าเริ่มส่งแล้ว
                     tx_start     <= '0'; -- หยุดการส่ง
                     sending_flag <= '0'; -- รีเซ็ตสถานะการส่ง
@@ -50,9 +50,11 @@ begin
                     end if;
                 end if;
             else
-                tx_start      <= '0';   -- ไม่อยู่ในสถานะ SENDING
+                byte_index    <= 0;
+                tx_start      <= '0';
                 sending_flag  <= '0';
                 send_finished <= '0';
+                data_out      <= x"00";
             end if;
         end if;
     end process;

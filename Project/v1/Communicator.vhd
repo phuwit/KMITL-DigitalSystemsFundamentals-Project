@@ -22,12 +22,19 @@ end Communicator;
 architecture Behavioral of Communicator is
     constant recieve_clear_delay_time : integer := 5;
 
-    signal uart_send_start    : std_logic;
+    signal uart_send_start    : std_logic := '0';
+    -- signal uart_recieve_start : std_logic                    := '0';
     signal uart_recieve_start : std_logic;
-    signal uart_send_ack      : std_logic;
-    signal uart_send_data     : std_logic_vector(7 downto 0);
+    signal uart_send_ack      : std_logic := '0';
+    signal uart_send_data     : std_logic_vector(7 downto 0) := (others => '0');
+    -- signal uart_recieve_data  : std_logic_vector(7 downto 0) := (others => '0');
+    -- signal uart_send_data     : std_logic_vector(7 downto 0);
     signal uart_recieve_data  : std_logic_vector(7 downto 0);
 
+    -- signal recieve_complete_internal : std_logic := '0';
+    -- signal recieve_dff_i             : std_logic_vector(message_size - 1 downto 0) := (others => '0');
+    -- signal recieve_clear             : std_logic := '0';
+    -- signal recieve_clear_dff_mem     : std_logic_vector(recieve_clear_delay_time - 1 downto 0) := (others => '0');
     signal recieve_complete_internal : std_logic;
     signal recieve_dff_i             : std_logic_vector(message_size - 1 downto 0);
     signal recieve_clear             : std_logic;
