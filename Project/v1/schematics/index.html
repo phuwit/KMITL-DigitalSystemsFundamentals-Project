@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schematics</title>
+</head>
+<body>
+    <h1>Schematics</h1>
+    <h2>Links to SVGs</h2>
+    <ul id="svg-links"></ul>
+    <h2>Links to PDFs</h2>
+    <ul id="pdf-links"></ul>
+
+    <script>
+        const files = [
+            "sch_debounce",
+            "sch_displayer",
+            "sch-buzzcontroller",
+            "sch-buzzpatternparser",
+            "sch-communicator",
+            "sch-controller",
+            "sch-edge-detector",
+            "sch-editor",
+            "sch-formatter",
+            "sch-inputcleaner",
+            "sch-lcdcontroller",
+            "sch-perger",
+            "sch-reciever",
+            "sch-sender",
+            "sch-uart"
+        ];
+
+        const svgUl = document.getElementById('svg-links');
+
+        files.forEach(file => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = `${file}.svg`;
+            a.textContent = file;
+            li.appendChild(a);
+            svgUl.appendChild(li);
+        });
+
+        const pdfUl = document.getElementById('pdf-links');
+
+        files.forEach(file => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = `${file}.pdf`;
+            a.textContent = file;
+            li.appendChild(a);
+            pdfUl.appendChild(li);
+        });
+    </script>
+</body>
+</html>
