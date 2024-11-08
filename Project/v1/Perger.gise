@@ -137,6 +137,8 @@
     <transform xil_pn:end_ts="1731063122" xil_pn:in_ck="8185906065408192349" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="942201979012222678" xil_pn:start_ts="1731063111">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../v1/Perger.pcf"/>
       <outfile xil_pn:name="../v1/Perger_map.map"/>
       <outfile xil_pn:name="../v1/Perger_map.mrp"/>
