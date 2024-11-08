@@ -77,13 +77,13 @@ NET "led[2]" LOC = P80;
 NET "led[1]" LOC = P81;
 NET "led[0]" LOC = P82;
 
-NET "mn[7]" LOC = P84;
-NET "mn[6]" LOC = P85;
-NET "mn[5]" LOC = P87;
-NET "mn[4]" LOC = P88;
-NET "mn[3]" LOC = P92;
-NET "mn[2]" LOC = P93;
-NET "mn[1]" LOC = P94;
-NET "mn[0]" LOC = P95;
+# NET "mn[7]" LOC = P84;
+# NET "mn[6]" LOC = P85;
+# NET "mn[5]" LOC = P87;
+# NET "mn[4]" LOC = P88;
+# NET "mn[3]" LOC = P92;
+# NET "mn[2]" LOC = P93;
+# NET "mn[1]" LOC = P94;
+# NET "mn[0]" LOC = P95;
 
 NET "buzzer" LOC = P83;

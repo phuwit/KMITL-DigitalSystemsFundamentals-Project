@@ -12,7 +12,6 @@ entity Perger is
         bt_rx    : in  std_logic;       -- fpga's rx <-> bluetooth's tx
         bt_state : in  std_logic;
         led      : out std_logic_vector(7 downto 0);
-        mn       : out std_logic_vector(7 downto 0);
         lcd_en   : out std_logic;
         lcd_rs   : out std_logic;
         lcd_rw   : out std_logic;
@@ -45,8 +44,6 @@ architecture Behavioral of Perger is
 
     signal editor_reset          : std_logic := '0';
     signal global_reset_internal : std_logic := '0';
-    signal por1                  : std_logic := '0';
-    signal por2                  : std_logic := '0';
 begin
     input_cleaner_inst : entity work.InputCleaner
         generic map(
@@ -151,30 +148,6 @@ begin
             buzzer  => buzzer
         );
 
-    por1_inst : entity work.Por
-        generic map(
-            stop_after => 10_000_000
-        )
-        port map(
-            reset => '0',
-            clk   => clk,
-            por_o => por1
-        );
-
-    por2_inst : entity work.Por
-        generic map(
-            stop_after => 20_000_000
-        )
-        port map(
-            reset => '0',
-            clk   => clk,
-            por_o => por2
-        );
-
-    global_reset_internal <= dipsw_debounced(1) or (por1 xor por2);
-
-    led(7) <= por1;
-    led(6) <= por2;
-    led(5 downto 1) <= (others => '0');
-    mn              <= std_logic_vector(to_unsigned(char_index, mn'length));
+    global_reset_internal <= dipsw_debounced(1);
+    led(7 downto 1) <= (others => '0');
 end Behavioral;
