@@ -177,7 +177,6 @@ Elaborating entity <Debounce> (architecture <logic>) with generics from library 
 Elaborating entity <Debounce> (architecture <logic>) with generics from library <work>.
 
 Elaborating entity <EdgeDetector> (architecture <rtl>) from library <work>.
-WARNING:HDLCompiler:634 - "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/InputCleaner.vhd" Line 27: Net <dipsw_debounced[7]> does not have a driver.
 
 Elaborating entity <Controller> (architecture <Behavioral>) with generics from library <work>.
 
@@ -222,13 +221,9 @@ Synthesizing Unit <InputCleaner>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/InputCleaner.vhd".
         clk_freq = 20000000
         btn_stable_time = 20
-        sw_stable_time = 50
         btn_count = 6
         btn_debounce_start = 4
-        sw_count = 7
-        dipsw_count = 8
-WARNING:Xst:647 - Input <dipsw_i<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <dipsw_debounced<7>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+        sw_stable_time = 50
     Summary:
 	no macro.
 Unit <InputCleaner> synthesized.
@@ -333,8 +328,8 @@ Synthesizing Unit <Editor>.
     Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_31_o> created at line 84
     Found 8-bit comparator lessequal for signal <n0036> created at line 92
     Found 8-bit comparator greater for signal <last_char[7]_GND_11_o_LessThan_35_o> created at line 92
-    Found 5-bit comparator greater for signal <char_index_internal[4]_PWR_33_o_LessThan_49_o> created at line 107
-    Found 26-bit comparator greater for signal <key_timer[25]_PWR_33_o_LessThan_337_o> created at line 123
+    Found 5-bit comparator greater for signal <char_index_internal[4]_PWR_21_o_LessThan_49_o> created at line 107
+    Found 26-bit comparator greater for signal <key_timer[25]_PWR_21_o_LessThan_337_o> created at line 123
     Found 5-bit comparator greater for signal <GND_11_o_char_index_internal[4]_LessThan_342_o> created at line 130
     Summary:
 	inferred   6 Adder/Subtractor(s).
@@ -362,7 +357,7 @@ Synthesizing Unit <Sender>.
     Found 5-bit register for signal <byte_index>.
     Found 9-bit adder for signal <n0085> created at line 36.
     Found 5-bit adder for signal <byte_index[4]_GND_14_o_add_41_OUT> created at line 46.
-    Found 5-bit comparator greater for signal <byte_index[4]_PWR_36_o_LessThan_41_o> created at line 45
+    Found 5-bit comparator greater for signal <byte_index[4]_PWR_24_o_LessThan_41_o> created at line 45
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
@@ -460,10 +455,10 @@ Synthesizing Unit <Uart>.
     Found 3-bit adder for signal <uart_tx_count[2]_GND_19_o_add_55_OUT> created at line 1241.
     Found 2-bit subtractor for signal <GND_19_o_GND_19_o_sub_13_OUT<1:0>> created at line 1308.
     Found 1-bit 3-to-1 multiplexer for signal <uart_tx_state[1]_X_18_o_Mux_61_o> created at line 268.
-    Found 2-bit comparator greater for signal <uart_rx_filter[1]_PWR_41_o_LessThan_10_o> created at line 152
+    Found 2-bit comparator greater for signal <uart_rx_filter[1]_PWR_29_o_LessThan_10_o> created at line 152
     Found 2-bit comparator greater for signal <GND_19_o_uart_rx_filter[1]_LessThan_12_o> created at line 154
-    Found 3-bit comparator greater for signal <uart_rx_count[2]_PWR_41_o_LessThan_29_o> created at line 209
-    Found 3-bit comparator greater for signal <uart_tx_count[2]_PWR_41_o_LessThan_55_o> created at line 281
+    Found 3-bit comparator greater for signal <uart_rx_count[2]_PWR_29_o_LessThan_29_o> created at line 209
+    Found 3-bit comparator greater for signal <uart_tx_count[2]_PWR_29_o_LessThan_55_o> created at line 281
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  49 D-type flip-flop(s).
@@ -492,7 +487,7 @@ Synthesizing Unit <MessageFormatter>.
     Found 24-bit adder for signal <blink_counter[23]_GND_21_o_add_1_OUT> created at line 42.
     Found 9-bit adder for signal <n1028> created at line 73.
     Found 4x8-bit Read Only RAM for signal <current_state[1]_X_20_o_wide_mux_1124_OUT>
-    Found 24-bit comparator greater for signal <blink_counter[23]_PWR_44_o_LessThan_1_o> created at line 41
+    Found 24-bit comparator greater for signal <blink_counter[23]_PWR_32_o_LessThan_1_o> created at line 41
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -583,10 +578,10 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  4x8-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 44
+# Adders/Subtractors                                   : 32
  19-bit adder                                          : 2
  2-bit addsub                                          : 1
- 20-bit adder                                          : 14
+ 20-bit adder                                          : 2
  21-bit adder                                          : 3
  24-bit adder                                          : 1
  26-bit adder                                          : 1
@@ -600,11 +595,11 @@ Macro Statistics
  6-bit adder                                           : 1
  8-bit adder                                           : 3
  9-bit adder                                           : 5
-# Registers                                            : 119
- 1-bit register                                        : 56
+# Registers                                            : 83
+ 1-bit register                                        : 44
  19-bit register                                       : 2
- 2-bit register                                        : 18
- 20-bit register                                       : 14
+ 2-bit register                                        : 6
+ 20-bit register                                       : 2
  21-bit register                                       : 3
  24-bit register                                       : 1
  240-bit register                                      : 4
@@ -615,10 +610,10 @@ Macro Statistics
  4-bit register                                        : 5
  5-bit register                                        : 4
  8-bit register                                        : 7
-# Comparators                                          : 58
+# Comparators                                          : 46
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
- 20-bit comparator greater                             : 14
+ 20-bit comparator greater                             : 2
  21-bit comparator greater                             : 3
  24-bit comparator greater                             : 1
  26-bit comparator greater                             : 1
@@ -630,12 +625,12 @@ Macro Statistics
  5-bit comparator lessequal                            : 1
  8-bit comparator greater                              : 7
  8-bit comparator lessequal                            : 7
-# Multiplexers                                         : 1789
+# Multiplexers                                         : 1777
  1-bit 10-to-1 multiplexer                             : 3
  1-bit 2-to-1 multiplexer                              : 1693
  1-bit 3-to-1 multiplexer                              : 1
  19-bit 2-to-1 multiplexer                             : 2
- 20-bit 2-to-1 multiplexer                             : 14
+ 20-bit 2-to-1 multiplexer                             : 2
  21-bit 2-to-1 multiplexer                             : 3
  24-bit 2-to-1 multiplexer                             : 1
  26-bit 2-to-1 multiplexer                             : 6
@@ -646,8 +641,8 @@ Macro Statistics
  5-bit 2-to-1 multiplexer                              : 5
  8-bit 2-to-1 multiplexer                              : 38
 # FSMs                                                 : 4
-# Xors                                                 : 16
- 1-bit xor2                                            : 16
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
 
 =========================================================================
 
@@ -655,30 +650,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <g_sw_debounce[1].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_sw_debounce[2].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_sw_debounce[3].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_sw_debounce[4].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_sw_debounce[5].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_sw_debounce[6].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[1].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[2].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[3].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[4].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[5].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <g_dipsw_debounce[6].debounce_inst> is unconnected in block <input_cleaner_inst>.
-   It will be removed from the design.
 INFO:Xst:2261 - The FF/Latch <sending_flag> in Unit <sender_inst> is equivalent to the following FF/Latch, which will be removed : <tx_start> 
 
 Synthesizing (advanced) Unit <BuzzPatternParser>.
@@ -744,10 +715,10 @@ Macro Statistics
  6-bit adder                                           : 1
  8-bit adder                                           : 2
  9-bit adder                                           : 5
-# Counters                                             : 28
+# Counters                                             : 16
  19-bit up counter                                     : 2
  2-bit updown counter                                  : 1
- 20-bit up counter                                     : 14
+ 20-bit up counter                                     : 2
  21-bit up counter                                     : 3
  24-bit up counter                                     : 1
  3-bit up counter                                      : 1
@@ -755,12 +726,12 @@ Macro Statistics
  5-bit down counter                                    : 1
  5-bit up counter                                      : 2
  8-bit up counter                                      : 1
-# Registers                                            : 1202
- Flip-Flops                                            : 1202
-# Comparators                                          : 58
+# Registers                                            : 1166
+ Flip-Flops                                            : 1166
+# Comparators                                          : 46
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
- 20-bit comparator greater                             : 14
+ 20-bit comparator greater                             : 2
  21-bit comparator greater                             : 3
  24-bit comparator greater                             : 1
  26-bit comparator greater                             : 1
@@ -784,8 +755,8 @@ Macro Statistics
  5-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 36
 # FSMs                                                 : 4
-# Xors                                                 : 16
- 1-bit xor2                                            : 16
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
 
 =========================================================================
 
@@ -874,282 +845,6 @@ Optimizing unit <MessageFormatter> ...
 Optimizing unit <LcdController> ...
 
 Optimizing unit <BuzzPatternParser> ...
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[6].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[5].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[4].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[3].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[2].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_dipsw_debounce[1].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[6].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[5].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[4].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[3].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[2].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_19> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_18> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_17> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_16> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_15> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_14> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_13> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_12> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_11> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_10> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_9> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_8> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_7> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_6> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_5> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_4> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_3> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_2> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/count_0> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/result> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/flipflops_1> of sequential type is unconnected in block <Perger>.
-WARNING:Xst:2677 - Node <input_cleaner_inst/g_sw_debounce[1].debounce_inst/flipflops_0> of sequential type is unconnected in block <Perger>.
 WARNING:Xst:1293 - FF/Latch <buzz_controller_inst/send_failed_pattern_inst/bit_timer_12> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzz_controller_inst/send_failed_pattern_inst/bit_timer_13> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <buzz_controller_inst/send_failed_pattern_inst/bit_timer_14> has a constant value of 0 in block <Perger>. This FF/Latch will be trimmed during the optimization process.
@@ -1290,9 +985,9 @@ Primitive and Black Box Usage:
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 31
+# IO Buffers                       : 24
 #      IBUF                        : 10
-#      OBUF                        : 21
+#      OBUF                        : 14
 
 Device utilization summary:
 ---------------------------
@@ -1313,8 +1008,8 @@ Slice Logic Distribution:
    Number of unique control sets:        31
 
 IO Utilization: 
- Number of IOs:                          45
- Number of bonded IOBs:                  32  out of    102    31%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    102    24%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
@@ -1467,14 +1162,14 @@ clk            |    3.482|         |         |         |
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.45 secs
+Total CPU time to Xst completion: 6.80 secs
  
 --> 
 
 
-Total memory usage is 409416 kilobytes
+Total memory usage is 409328 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  375 (   0 filtered)
+Number of warnings :   84 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
 

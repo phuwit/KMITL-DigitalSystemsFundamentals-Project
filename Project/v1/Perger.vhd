@@ -7,11 +7,11 @@ entity Perger is
     port(
         clk      : in  std_logic;
         btn      : in  std_logic_vector(6 downto 1);
-        sw       : in  std_logic_vector(6 downto 0);
-        dipsw    : in  std_logic_vector(8 downto 1);
+        sw0      : in  std_logic;
+        dipsw1   : in  std_logic;
         bt_rx    : in  std_logic;       -- fpga's rx <-> bluetooth's tx
         bt_state : in  std_logic;
-        led      : out std_logic_vector(7 downto 0);
+        led0     : out std_logic;
         lcd_en   : out std_logic;
         lcd_rs   : out std_logic;
         lcd_rw   : out std_logic;
@@ -28,9 +28,9 @@ architecture Behavioral of Perger is
     constant display_size   : integer := 256;
 
     -- สัญญาณภายในสำหรับการสื่อสารระหว่างโมดูล
-    signal btn_pulse       : std_logic_vector(btn'length downto 1)    := (others => '0');
-    signal sw_debounced    : std_logic_vector(sw'length - 1 downto 0) := (others => '0');
-    signal dipsw_debounced : std_logic_vector(dipsw'length downto 1)  := (others => '0');
+    signal btn_pulse        : std_logic_vector(btn'length downto 1) := (others => '0');
+    signal sw0_debounced    : std_logic                             := '0';
+    signal dipsw1_debounced : std_logic                             := '0';
 
     signal state : states := RECEIVING;
 
@@ -53,18 +53,16 @@ begin
             btn_stable_time    => 20,
             sw_stable_time     => 50,
             btn_count          => btn'length,
-            btn_debounce_start => 4,
-            sw_count           => sw'length,
-            dipsw_count        => dipsw'length
+            btn_debounce_start => 4
         )
         port map(
             clk     => clk,
             btn_i   => btn,
-            sw_i    => sw,
-            dipsw_i => dipsw,
+            sw_i    => sw0,
+            dipsw_i => dipsw1,
             btn_o   => btn_pulse,
-            sw_o    => sw_debounced,
-            dipsw_o => dipsw_debounced
+            sw_o    => sw0_debounced,
+            dipsw_o => dipsw1_debounced
         );
 
     controller_inst : entity work.Controller
@@ -78,7 +76,7 @@ begin
             btn                    => btn_pulse,
             edit_buffer            => edit_buffer,
             state                  => state,
-            led0                   => led(0),
+            led0                   => led0,
             message_send_complete  => message_send_complete,
             bluetooth_connected    => bt_state,
             bluetooth_send_failed  => bluetooth_send_failed,
@@ -91,7 +89,7 @@ begin
             clk            => clk,
             reset          => editor_reset,
             current_state  => state,
-            mode_select    => sw_debounced(0),
+            mode_select    => sw0_debounced,
             btn            => btn_pulse(5 downto 1),
             last_char      => last_char,
             message_buffer => edit_buffer,
@@ -149,6 +147,5 @@ begin
             buzzer                  => buzzer
         );
 
-    global_reset_internal <= dipsw_debounced(1);
-    led(7 downto 1)       <= (others => '0');
+    global_reset_internal <= dipsw1_debounced;
 end Behavioral;

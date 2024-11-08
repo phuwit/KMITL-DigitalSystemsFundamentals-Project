@@ -13,22 +13,24 @@ NET "btn[5]" LOC = P51;
 NET "btn[6]" LOC = P55;
 
 # NET "sw[7]" LOC = P55;
-NET "sw[6]" LOC = P56;
-NET "sw[5]" LOC = P57;
-NET "sw[4]" LOC = P58;
-NET "sw[3]" LOC = P59;
-NET "sw[2]" LOC = P61;
-NET "sw[1]" LOC = P62;
-NET "sw[0]" LOC = P66;
+# NET "sw[6]" LOC = P56;
+# NET "sw[5]" LOC = P57;
+# NET "sw[4]" LOC = P58;
+# NET "sw[3]" LOC = P59;
+# NET "sw[2]" LOC = P61;
+# NET "sw[1]" LOC = P62;
+# NET "sw[0]" LOC = P66;
+NET "sw0" LOC = P66;
 
-NET "dipsw[1]" LOC = P112;
-NET "dipsw[2]" LOC = P111;
-NET "dipsw[3]" LOC = P105;
-NET "dipsw[4]" LOC = P104;
-NET "dipsw[5]" LOC = P102;
-NET "dipsw[6]" LOC = P101;
-NET "dipsw[7]" LOC = P100;
-NET "dipsw[8]" LOC = P99;
+NET "dipsw1" LOC = P112;
+# NET "dipsw[1]" LOC = P112;
+# NET "dipsw[2]" LOC = P111;
+# NET "dipsw[3]" LOC = P105;
+# NET "dipsw[4]" LOC = P104;
+# NET "dipsw[5]" LOC = P102;
+# NET "dipsw[6]" LOC = P101;
+# NET "dipsw[7]" LOC = P100;
+# NET "dipsw[8]" LOC = P99;
 
 # Outputs
 
@@ -68,14 +70,15 @@ NET "bt_tx" LOC = P126;
 NET "bt_rx" LOC = P131;
 NET "bt_state" LOC = P133;
 
-NET "led[7]" LOC = P67;
-NET "led[6]" LOC = P74;
-NET "led[5]" LOC = P75;
-NET "led[4]" LOC = P78;
-NET "led[3]" LOC = P79;
-NET "led[2]" LOC = P80;
-NET "led[1]" LOC = P81;
-NET "led[0]" LOC = P82;
+# NET "led[7]" LOC = P67;
+# NET "led[6]" LOC = P74;
+# NET "led[5]" LOC = P75;
+# NET "led[4]" LOC = P78;
+# NET "led[3]" LOC = P79;
+# NET "led[2]" LOC = P80;
+# NET "led[1]" LOC = P81;
+# NET "led[0]" LOC = P82;
+NET "led0" LOC = P82;
 
 # NET "mn[7]" LOC = P84;
 # NET "mn[6]" LOC = P85;
