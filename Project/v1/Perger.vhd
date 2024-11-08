@@ -28,19 +28,21 @@ architecture Behavioral of Perger is
     constant display_size   : integer := 256;
 
     -- สัญญาณภายในสำหรับการสื่อสารระหว่างโมดูล
-    signal btn_pulse       : std_logic_vector(btn'length downto 1) := (others => '0');
+    signal btn_pulse       : std_logic_vector(btn'length downto 1)    := (others => '0');
     signal sw_debounced    : std_logic_vector(sw'length - 1 downto 0) := (others => '0');
-    signal dipsw_debounced : std_logic_vector(dipsw'length downto 1) := (others => '0');
+    signal dipsw_debounced : std_logic_vector(dipsw'length downto 1)  := (others => '0');
 
-    signal current_state : states := RECEIVING;
+    signal state : states := RECEIVING;
 
     signal edit_buffer    : std_logic_vector(message_size - 1 downto 0) := (others => '0');
     signal recieve_buffer : std_logic_vector(message_size - 1 downto 0) := (others => '0');
-    signal char_index     : integer range 0 to 29 := 29;
-    signal last_char      : std_logic_vector(7 downto 0) := (others => '0');
+    signal char_index     : integer range 0 to 29                       := 29;
+    signal last_char      : std_logic_vector(7 downto 0)                := (others => '0');
 
-    signal recieve_complete : std_logic := '0';
-    signal send_finished    : std_logic := '0';
+    signal message_recieve_complete : std_logic := '0';
+    signal message_send_complete    : std_logic := '0';
+    signal bluetooth_send_failed    : std_logic := '0';
+    signal bluetooth_send_success   : std_logic := '0';
 
     signal editor_reset          : std_logic := '0';
     signal global_reset_internal : std_logic := '0';
@@ -71,24 +73,24 @@ begin
             message_size => message_size
         )
         port map(
-            clk                 => clk,
-            reset               => global_reset_internal,
-            btn                 => btn_pulse,
-            new_data_in         => '0',
-            edit_buffer         => edit_buffer,
-            current_state       => current_state,
-            L0                  => led(0),
-            alert_signal        => open, -- ไม่ได้ใช้ใน top-level
-            send_finished       => send_finished,
-            bluetooth_connected => bt_state
+            clk                    => clk,
+            reset                  => global_reset_internal,
+            btn                    => btn_pulse,
+            edit_buffer            => edit_buffer,
+            state                  => state,
+            led0                   => led(0),
+            message_send_complete  => message_send_complete,
+            bluetooth_connected    => bt_state,
+            bluetooth_send_failed  => bluetooth_send_failed,
+            bluetooth_send_success => bluetooth_send_success
         );
 
-    editor_reset <= global_reset_internal or send_finished;
+    editor_reset <= global_reset_internal or message_send_complete;
     editor_inst : entity work.Editor
         port map(
             clk            => clk,
             reset          => editor_reset,
-            current_state  => current_state,
+            current_state  => state,
             mode_select    => sw_debounced(0),
             btn            => btn_pulse(5 downto 1),
             last_char      => last_char,
@@ -106,12 +108,12 @@ begin
             clk              => clk,
             reset            => global_reset_internal,
             bt_rx            => bt_rx,
-            current_state    => current_state,
+            current_state    => state,
             edit_buffer      => edit_buffer,
             recieve_buffer   => recieve_buffer,
             bt_tx            => bt_tx,
-            send_finished    => send_finished,
-            recieve_complete => recieve_complete
+            send_finished    => message_send_complete,
+            recieve_complete => message_recieve_complete
         );
 
     displayer_inst : entity work.Displayer
@@ -123,7 +125,7 @@ begin
         port map(
             clk            => clk,
             reset          => global_reset_internal,
-            current_state  => current_state,
+            current_state  => state,
             recieve_buffer => recieve_buffer,
             edit_buffer    => edit_buffer,
             last_char      => last_char,
@@ -134,20 +136,19 @@ begin
             lcd_data       => lcd_data
         );
 
-    recieve_buzzer_controller : entity work.BuzzController
+    buzz_controller_inst : entity work.BuzzController
         generic map(
-            clk_freq     => clk_freq,
-            pattern_bits => 10,
-            pattern_sec  => 1
+            clk_freq => clk_freq
         )
         port map(
-            clk     => clk,
-            reset   => global_reset_internal,
-            enable  => recieve_complete,
-            pattern => "1100110000",
-            buzzer  => buzzer
+            clk                     => clk,
+            reset                   => global_reset_internal,
+            enable_message_recieved => message_recieve_complete,
+            enable_send_failed      => bluetooth_send_failed,
+            enable_send_success     => bluetooth_send_success,
+            buzzer                  => buzzer
         );
 
     global_reset_internal <= dipsw_debounced(1);
-    led(7 downto 1) <= (others => '0');
+    led(7 downto 1)       <= (others => '0');
 end Behavioral;
