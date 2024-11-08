@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Nov 08 17:22:57 2024
+// Written by: Map P.20131013 on Fri Nov 08 17:52:01 2024
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -271,10 +271,6 @@ TIMEGRP clk = BEL "controller_inst/state_internal_FSM_FFd1" BEL
         "editor_inst/internal_message_buffer_10" BEL
         "editor_inst/internal_message_buffer_9" BEL
         "editor_inst/internal_message_buffer_8" BEL
-        "communicator_inst/g_recieve_dffs[0].recieve_dff/d_o" BEL
-        "communicator_inst/g_recieve_dffs[1].recieve_dff/d_o" BEL
-        "communicator_inst/g_recieve_dffs[2].recieve_dff/d_o" BEL
-        "communicator_inst/g_recieve_dffs[3].recieve_dff/d_o" BEL
         "communicator_inst/sender_inst/byte_index_4" BEL
         "communicator_inst/sender_inst/byte_index_3" BEL
         "communicator_inst/sender_inst/byte_index_2" BEL

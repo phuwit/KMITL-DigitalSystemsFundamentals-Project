@@ -29,19 +29,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: ts_osc = PERIOD TIMEGRP "clk" 50 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 169828 paths analyzed, 6768 endpoints analyzed, 0 failing endpoints
+ 169574 paths analyzed, 6760 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  10.333ns.
+ Minimum period is  10.147ns.
 --------------------------------------------------------------------------------
 
-Paths for end point displayer_inst/lcd_controller_inst/clk_count_18 (SLICE_X12Y55.C3), 3425 paths
+Paths for end point displayer_inst/display_inst/formatted_message_40 (SLICE_X13Y51.B3), 30 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     39.667ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               displayer_inst/lcd_controller_inst/clk_count_11 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/clk_count_18 (FF)
+Slack (setup path):     39.853ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controller_inst/state_internal_FSM_FFd1 (FF)
+  Destination:          displayer_inst/display_inst/formatted_message_40 (FF)
   Requirement:          50.000ns
-  Data Path Delay:      10.281ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.017ns (0.283 - 0.300)
+  Data Path Delay:      10.142ns (Levels of Logic = 4)
+  Clock Path Skew:      0.030ns (0.660 - 0.630)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.035ns
@@ -52,50 +52,36 @@ Slack (setup path):     39.667ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: displayer_inst/lcd_controller_inst/clk_count_11 to displayer_inst/lcd_controller_inst/clk_count_18
+  Maximum Data Path at Slow Process Corner: controller_inst/state_internal_FSM_FFd1 to displayer_inst/display_inst/formatted_message_40
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y56.BQ      Tcko                  0.430   displayer_inst/lcd_controller_inst/clk_count<12>
-                                                       displayer_inst/lcd_controller_inst/clk_count_11
-    SLICE_X8Y55.D2       net (fanout=6)        1.361   displayer_inst/lcd_controller_inst/clk_count<11>
-    SLICE_X8Y55.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-                                                       displayer_inst/lcd_controller_inst/clk_count<11>_rt
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.CIN      net (fanout=1)        0.082   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.DMUX     Tcind                 0.320   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-    SLICE_X4Y46.D2       net (fanout=9)        2.207   displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<19>
-    SLICE_X4Y46.COUT     Topcyd                0.343   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_lutdi21
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.BMUX     Tcinb                 0.286   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A2      net (fanout=7)        2.372   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A       Tilo                  0.235   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y57.A5       net (fanout=2)        0.442   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y57.A        Tilo                  0.259   displayer_inst/lcd_controller_inst/clk_count<15>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023
-    SLICE_X12Y55.C3      net (fanout=11)       1.194   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT102
-    SLICE_X12Y55.CLK     Tas                   0.339   displayer_inst/lcd_controller_inst/clk_count<19>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT201
-                                                       displayer_inst/lcd_controller_inst/clk_count_18
+    SLICE_X21Y33.BQ      Tcko                  0.430   controller_inst/state_internal_FSM_FFd2
+                                                       controller_inst/state_internal_FSM_FFd1
+    SLICE_X7Y21.D3       net (fanout=477)      3.002   controller_inst/state_internal_FSM_FFd1
+    SLICE_X7Y21.D        Tilo                  0.259   editor_inst/key_timer<25>
+                                                       controller_inst/_n0069_inv1
+    SLICE_X17Y49.A6      net (fanout=98)       3.609   displayer_inst/display_inst/Mram_current_state[1]_X_19_o_wide_mux_1124_OUT2
+    SLICE_X17Y49.A       Tilo                  0.259   displayer_inst/display_message<59>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>11
+    SLICE_X12Y52.B1      net (fanout=1)        1.231   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>1
+    SLICE_X12Y52.B       Tilo                  0.254   displayer_inst/display_inst/formatted_message<48>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.B3      net (fanout=8)        0.725   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.CLK     Tas                   0.373   displayer_inst/display_inst/formatted_message<42>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>3
+                                                       displayer_inst/display_inst/formatted_message_40
     -------------------------------------------------  ---------------------------
-    Total                                     10.281ns (2.617ns logic, 7.664ns route)
-                                                       (25.5% logic, 74.5% route)
+    Total                                     10.142ns (1.575ns logic, 8.567ns route)
+                                                       (15.5% logic, 84.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     39.698ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               displayer_inst/lcd_controller_inst/clk_count_11 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/clk_count_18 (FF)
+Slack (setup path):     39.882ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controller_inst/state_internal_FSM_FFd2 (FF)
+  Destination:          displayer_inst/display_inst/formatted_message_40 (FF)
   Requirement:          50.000ns
-  Data Path Delay:      10.250ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.017ns (0.283 - 0.300)
+  Data Path Delay:      10.113ns (Levels of Logic = 4)
+  Clock Path Skew:      0.030ns (0.660 - 0.630)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.035ns
@@ -106,50 +92,36 @@ Slack (setup path):     39.698ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: displayer_inst/lcd_controller_inst/clk_count_11 to displayer_inst/lcd_controller_inst/clk_count_18
+  Maximum Data Path at Slow Process Corner: controller_inst/state_internal_FSM_FFd2 to displayer_inst/display_inst/formatted_message_40
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y56.BQ      Tcko                  0.430   displayer_inst/lcd_controller_inst/clk_count<12>
-                                                       displayer_inst/lcd_controller_inst/clk_count_11
-    SLICE_X8Y55.D2       net (fanout=6)        1.361   displayer_inst/lcd_controller_inst/clk_count<11>
-    SLICE_X8Y55.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-                                                       displayer_inst/lcd_controller_inst/clk_count<11>_rt
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.CIN      net (fanout=1)        0.082   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.DMUX     Tcind                 0.320   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-    SLICE_X4Y46.D2       net (fanout=9)        2.207   displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<19>
-    SLICE_X4Y46.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_lut<3>1
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.BMUX     Tcinb                 0.286   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A2      net (fanout=7)        2.372   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A       Tilo                  0.235   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y57.A5       net (fanout=2)        0.442   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y57.A        Tilo                  0.259   displayer_inst/lcd_controller_inst/clk_count<15>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023
-    SLICE_X12Y55.C3      net (fanout=11)       1.194   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT102
-    SLICE_X12Y55.CLK     Tas                   0.339   displayer_inst/lcd_controller_inst/clk_count<19>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT201
-                                                       displayer_inst/lcd_controller_inst/clk_count_18
+    SLICE_X21Y33.DQ      Tcko                  0.430   controller_inst/state_internal_FSM_FFd2
+                                                       controller_inst/state_internal_FSM_FFd2
+    SLICE_X7Y21.D6       net (fanout=478)      2.973   controller_inst/state_internal_FSM_FFd2
+    SLICE_X7Y21.D        Tilo                  0.259   editor_inst/key_timer<25>
+                                                       controller_inst/_n0069_inv1
+    SLICE_X17Y49.A6      net (fanout=98)       3.609   displayer_inst/display_inst/Mram_current_state[1]_X_19_o_wide_mux_1124_OUT2
+    SLICE_X17Y49.A       Tilo                  0.259   displayer_inst/display_message<59>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>11
+    SLICE_X12Y52.B1      net (fanout=1)        1.231   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>1
+    SLICE_X12Y52.B       Tilo                  0.254   displayer_inst/display_inst/formatted_message<48>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.B3      net (fanout=8)        0.725   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.CLK     Tas                   0.373   displayer_inst/display_inst/formatted_message<42>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>3
+                                                       displayer_inst/display_inst/formatted_message_40
     -------------------------------------------------  ---------------------------
-    Total                                     10.250ns (2.586ns logic, 7.664ns route)
-                                                       (25.2% logic, 74.8% route)
+    Total                                     10.113ns (1.575ns logic, 8.538ns route)
+                                                       (15.6% logic, 84.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     39.786ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               displayer_inst/lcd_controller_inst/clk_count_3 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/clk_count_18 (FF)
+Slack (setup path):     43.297ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               editor_inst/char_index_internal_4 (FF)
+  Destination:          displayer_inst/display_inst/formatted_message_40 (FF)
   Requirement:          50.000ns
-  Data Path Delay:      10.126ns (Levels of Logic = 10)
-  Clock Path Skew:      -0.053ns (0.650 - 0.703)
+  Data Path Delay:      6.697ns (Levels of Logic = 3)
+  Clock Path Skew:      0.029ns (0.748 - 0.719)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.035ns
@@ -160,59 +132,36 @@ Slack (setup path):     39.786ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: displayer_inst/lcd_controller_inst/clk_count_3 to displayer_inst/lcd_controller_inst/clk_count_18
+  Maximum Data Path at Slow Process Corner: editor_inst/char_index_internal_4 to displayer_inst/display_inst/formatted_message_40
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X9Y56.BQ       Tcko                  0.430   displayer_inst/lcd_controller_inst/clk_count<5>
-                                                       displayer_inst/lcd_controller_inst/clk_count_3
-    SLICE_X8Y53.D2       net (fanout=5)        1.014   displayer_inst/lcd_controller_inst/clk_count<3>
-    SLICE_X8Y53.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<3>
-                                                       displayer_inst/lcd_controller_inst/clk_count<3>_rt
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<3>
-    SLICE_X8Y54.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<3>
-    SLICE_X8Y54.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>
-    SLICE_X8Y55.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>
-    SLICE_X8Y55.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.CIN      net (fanout=1)        0.082   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.DMUX     Tcind                 0.320   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-    SLICE_X4Y46.D2       net (fanout=9)        2.207   displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<19>
-    SLICE_X4Y46.COUT     Topcyd                0.343   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_lutdi21
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.BMUX     Tcinb                 0.286   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A2      net (fanout=7)        2.372   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A       Tilo                  0.235   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y57.A5       net (fanout=2)        0.442   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y57.A        Tilo                  0.259   displayer_inst/lcd_controller_inst/clk_count<15>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023
-    SLICE_X12Y55.C3      net (fanout=11)       1.194   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT102
-    SLICE_X12Y55.CLK     Tas                   0.339   displayer_inst/lcd_controller_inst/clk_count<19>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT201
-                                                       displayer_inst/lcd_controller_inst/clk_count_18
+    SLICE_X13Y31.AQ      Tcko                  0.430   editor_inst/char_index_internal<4>
+                                                       editor_inst/char_index_internal_4
+    SLICE_X17Y49.A2      net (fanout=73)       3.425   editor_inst/char_index_internal<4>
+    SLICE_X17Y49.A       Tilo                  0.259   displayer_inst/display_message<59>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>11
+    SLICE_X12Y52.B1      net (fanout=1)        1.231   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>1
+    SLICE_X12Y52.B       Tilo                  0.254   displayer_inst/display_inst/formatted_message<48>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.B3      net (fanout=8)        0.725   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.CLK     Tas                   0.373   displayer_inst/display_inst/formatted_message<42>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>3
+                                                       displayer_inst/display_inst/formatted_message_40
     -------------------------------------------------  ---------------------------
-    Total                                     10.126ns (2.803ns logic, 7.323ns route)
-                                                       (27.7% logic, 72.3% route)
+    Total                                      6.697ns (1.316ns logic, 5.381ns route)
+                                                       (19.7% logic, 80.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point displayer_inst/lcd_controller_inst/clk_count_9 (SLICE_X13Y55.D3), 3425 paths
+Paths for end point displayer_inst/display_inst/formatted_message_42 (SLICE_X13Y51.D2), 30 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     39.680ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               displayer_inst/lcd_controller_inst/clk_count_11 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/clk_count_9 (FF)
+Slack (setup path):     39.860ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controller_inst/state_internal_FSM_FFd1 (FF)
+  Destination:          displayer_inst/display_inst/formatted_message_42 (FF)
   Requirement:          50.000ns
-  Data Path Delay:      10.268ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.017ns (0.283 - 0.300)
+  Data Path Delay:      10.135ns (Levels of Logic = 4)
+  Clock Path Skew:      0.030ns (0.660 - 0.630)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.035ns
@@ -223,50 +172,36 @@ Slack (setup path):     39.680ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: displayer_inst/lcd_controller_inst/clk_count_11 to displayer_inst/lcd_controller_inst/clk_count_9
+  Maximum Data Path at Slow Process Corner: controller_inst/state_internal_FSM_FFd1 to displayer_inst/display_inst/formatted_message_42
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y56.BQ      Tcko                  0.430   displayer_inst/lcd_controller_inst/clk_count<12>
-                                                       displayer_inst/lcd_controller_inst/clk_count_11
-    SLICE_X8Y55.D2       net (fanout=6)        1.361   displayer_inst/lcd_controller_inst/clk_count<11>
-    SLICE_X8Y55.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-                                                       displayer_inst/lcd_controller_inst/clk_count<11>_rt
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.CIN      net (fanout=1)        0.082   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.DMUX     Tcind                 0.320   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-    SLICE_X4Y46.D2       net (fanout=9)        2.207   displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<19>
-    SLICE_X4Y46.COUT     Topcyd                0.343   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_lutdi21
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.BMUX     Tcinb                 0.286   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A2      net (fanout=7)        2.372   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A       Tilo                  0.235   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A6       net (fanout=2)        0.385   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A        Tilo                  0.259   displayer_inst/lcd_controller_inst/clk_count<5>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023_1
-    SLICE_X13Y55.D3      net (fanout=9)        1.204   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023
-    SLICE_X13Y55.CLK     Tas                   0.373   displayer_inst/lcd_controller_inst/clk_count<9>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT621
-                                                       displayer_inst/lcd_controller_inst/clk_count_9
+    SLICE_X21Y33.BQ      Tcko                  0.430   controller_inst/state_internal_FSM_FFd2
+                                                       controller_inst/state_internal_FSM_FFd1
+    SLICE_X7Y21.D3       net (fanout=477)      3.002   controller_inst/state_internal_FSM_FFd1
+    SLICE_X7Y21.D        Tilo                  0.259   editor_inst/key_timer<25>
+                                                       controller_inst/_n0069_inv1
+    SLICE_X17Y49.A6      net (fanout=98)       3.609   displayer_inst/display_inst/Mram_current_state[1]_X_19_o_wide_mux_1124_OUT2
+    SLICE_X17Y49.A       Tilo                  0.259   displayer_inst/display_message<59>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>11
+    SLICE_X12Y52.B1      net (fanout=1)        1.231   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>1
+    SLICE_X12Y52.B       Tilo                  0.254   displayer_inst/display_inst/formatted_message<48>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.D2      net (fanout=8)        0.718   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.CLK     Tas                   0.373   displayer_inst/display_inst/formatted_message<42>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<42>1
+                                                       displayer_inst/display_inst/formatted_message_42
     -------------------------------------------------  ---------------------------
-    Total                                     10.268ns (2.651ns logic, 7.617ns route)
-                                                       (25.8% logic, 74.2% route)
+    Total                                     10.135ns (1.575ns logic, 8.560ns route)
+                                                       (15.5% logic, 84.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     39.711ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               displayer_inst/lcd_controller_inst/clk_count_11 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/clk_count_9 (FF)
+Slack (setup path):     39.889ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controller_inst/state_internal_FSM_FFd2 (FF)
+  Destination:          displayer_inst/display_inst/formatted_message_42 (FF)
   Requirement:          50.000ns
-  Data Path Delay:      10.237ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.017ns (0.283 - 0.300)
+  Data Path Delay:      10.106ns (Levels of Logic = 4)
+  Clock Path Skew:      0.030ns (0.660 - 0.630)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.035ns
@@ -277,50 +212,36 @@ Slack (setup path):     39.711ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: displayer_inst/lcd_controller_inst/clk_count_11 to displayer_inst/lcd_controller_inst/clk_count_9
+  Maximum Data Path at Slow Process Corner: controller_inst/state_internal_FSM_FFd2 to displayer_inst/display_inst/formatted_message_42
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y56.BQ      Tcko                  0.430   displayer_inst/lcd_controller_inst/clk_count<12>
-                                                       displayer_inst/lcd_controller_inst/clk_count_11
-    SLICE_X8Y55.D2       net (fanout=6)        1.361   displayer_inst/lcd_controller_inst/clk_count<11>
-    SLICE_X8Y55.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-                                                       displayer_inst/lcd_controller_inst/clk_count<11>_rt
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.CIN      net (fanout=1)        0.082   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.DMUX     Tcind                 0.320   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-    SLICE_X4Y46.D2       net (fanout=9)        2.207   displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<19>
-    SLICE_X4Y46.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_lut<3>1
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.BMUX     Tcinb                 0.286   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A2      net (fanout=7)        2.372   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A       Tilo                  0.235   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A6       net (fanout=2)        0.385   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A        Tilo                  0.259   displayer_inst/lcd_controller_inst/clk_count<5>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023_1
-    SLICE_X13Y55.D3      net (fanout=9)        1.204   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023
-    SLICE_X13Y55.CLK     Tas                   0.373   displayer_inst/lcd_controller_inst/clk_count<9>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT621
-                                                       displayer_inst/lcd_controller_inst/clk_count_9
+    SLICE_X21Y33.DQ      Tcko                  0.430   controller_inst/state_internal_FSM_FFd2
+                                                       controller_inst/state_internal_FSM_FFd2
+    SLICE_X7Y21.D6       net (fanout=478)      2.973   controller_inst/state_internal_FSM_FFd2
+    SLICE_X7Y21.D        Tilo                  0.259   editor_inst/key_timer<25>
+                                                       controller_inst/_n0069_inv1
+    SLICE_X17Y49.A6      net (fanout=98)       3.609   displayer_inst/display_inst/Mram_current_state[1]_X_19_o_wide_mux_1124_OUT2
+    SLICE_X17Y49.A       Tilo                  0.259   displayer_inst/display_message<59>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>11
+    SLICE_X12Y52.B1      net (fanout=1)        1.231   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>1
+    SLICE_X12Y52.B       Tilo                  0.254   displayer_inst/display_inst/formatted_message<48>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.D2      net (fanout=8)        0.718   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.CLK     Tas                   0.373   displayer_inst/display_inst/formatted_message<42>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<42>1
+                                                       displayer_inst/display_inst/formatted_message_42
     -------------------------------------------------  ---------------------------
-    Total                                     10.237ns (2.620ns logic, 7.617ns route)
-                                                       (25.6% logic, 74.4% route)
+    Total                                     10.106ns (1.575ns logic, 8.531ns route)
+                                                       (15.6% logic, 84.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     39.799ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               displayer_inst/lcd_controller_inst/clk_count_3 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/clk_count_9 (FF)
+Slack (setup path):     43.304ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               editor_inst/char_index_internal_4 (FF)
+  Destination:          displayer_inst/display_inst/formatted_message_42 (FF)
   Requirement:          50.000ns
-  Data Path Delay:      10.113ns (Levels of Logic = 10)
-  Clock Path Skew:      -0.053ns (0.650 - 0.703)
+  Data Path Delay:      6.690ns (Levels of Logic = 3)
+  Clock Path Skew:      0.029ns (0.748 - 0.719)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.035ns
@@ -331,59 +252,36 @@ Slack (setup path):     39.799ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: displayer_inst/lcd_controller_inst/clk_count_3 to displayer_inst/lcd_controller_inst/clk_count_9
+  Maximum Data Path at Slow Process Corner: editor_inst/char_index_internal_4 to displayer_inst/display_inst/formatted_message_42
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X9Y56.BQ       Tcko                  0.430   displayer_inst/lcd_controller_inst/clk_count<5>
-                                                       displayer_inst/lcd_controller_inst/clk_count_3
-    SLICE_X8Y53.D2       net (fanout=5)        1.014   displayer_inst/lcd_controller_inst/clk_count<3>
-    SLICE_X8Y53.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<3>
-                                                       displayer_inst/lcd_controller_inst/clk_count<3>_rt
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<3>
-    SLICE_X8Y54.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<3>
-    SLICE_X8Y54.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>
-    SLICE_X8Y55.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>
-    SLICE_X8Y55.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.CIN      net (fanout=1)        0.082   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.DMUX     Tcind                 0.320   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-    SLICE_X4Y46.D2       net (fanout=9)        2.207   displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<19>
-    SLICE_X4Y46.COUT     Topcyd                0.343   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_lutdi21
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.BMUX     Tcinb                 0.286   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A2      net (fanout=7)        2.372   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A       Tilo                  0.235   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A6       net (fanout=2)        0.385   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A        Tilo                  0.259   displayer_inst/lcd_controller_inst/clk_count<5>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023_1
-    SLICE_X13Y55.D3      net (fanout=9)        1.204   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023
-    SLICE_X13Y55.CLK     Tas                   0.373   displayer_inst/lcd_controller_inst/clk_count<9>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT621
-                                                       displayer_inst/lcd_controller_inst/clk_count_9
+    SLICE_X13Y31.AQ      Tcko                  0.430   editor_inst/char_index_internal<4>
+                                                       editor_inst/char_index_internal_4
+    SLICE_X17Y49.A2      net (fanout=73)       3.425   editor_inst/char_index_internal<4>
+    SLICE_X17Y49.A       Tilo                  0.259   displayer_inst/display_message<59>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>11
+    SLICE_X12Y52.B1      net (fanout=1)        1.231   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>1
+    SLICE_X12Y52.B       Tilo                  0.254   displayer_inst/display_inst/formatted_message<48>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.D2      net (fanout=8)        0.718   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X13Y51.CLK     Tas                   0.373   displayer_inst/display_inst/formatted_message<42>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<42>1
+                                                       displayer_inst/display_inst/formatted_message_42
     -------------------------------------------------  ---------------------------
-    Total                                     10.113ns (2.837ns logic, 7.276ns route)
-                                                       (28.1% logic, 71.9% route)
+    Total                                      6.690ns (1.316ns logic, 5.374ns route)
+                                                       (19.7% logic, 80.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point displayer_inst/lcd_controller_inst/clk_count_8 (SLICE_X13Y55.C3), 3425 paths
+Paths for end point displayer_inst/display_inst/formatted_message_45 (SLICE_X15Y52.C4), 30 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     39.713ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               displayer_inst/lcd_controller_inst/clk_count_11 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/clk_count_8 (FF)
+Slack (setup path):     39.887ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controller_inst/state_internal_FSM_FFd1 (FF)
+  Destination:          displayer_inst/display_inst/formatted_message_45 (FF)
   Requirement:          50.000ns
-  Data Path Delay:      10.235ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.017ns (0.283 - 0.300)
+  Data Path Delay:      10.106ns (Levels of Logic = 4)
+  Clock Path Skew:      0.028ns (0.658 - 0.630)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.035ns
@@ -394,50 +292,36 @@ Slack (setup path):     39.713ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: displayer_inst/lcd_controller_inst/clk_count_11 to displayer_inst/lcd_controller_inst/clk_count_8
+  Maximum Data Path at Slow Process Corner: controller_inst/state_internal_FSM_FFd1 to displayer_inst/display_inst/formatted_message_45
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y56.BQ      Tcko                  0.430   displayer_inst/lcd_controller_inst/clk_count<12>
-                                                       displayer_inst/lcd_controller_inst/clk_count_11
-    SLICE_X8Y55.D2       net (fanout=6)        1.361   displayer_inst/lcd_controller_inst/clk_count<11>
-    SLICE_X8Y55.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-                                                       displayer_inst/lcd_controller_inst/clk_count<11>_rt
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.CIN      net (fanout=1)        0.082   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.DMUX     Tcind                 0.320   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-    SLICE_X4Y46.D2       net (fanout=9)        2.207   displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<19>
-    SLICE_X4Y46.COUT     Topcyd                0.343   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_lutdi21
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.BMUX     Tcinb                 0.286   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A2      net (fanout=7)        2.372   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A       Tilo                  0.235   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A6       net (fanout=2)        0.385   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A        Tilo                  0.259   displayer_inst/lcd_controller_inst/clk_count<5>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023_1
-    SLICE_X13Y55.C3      net (fanout=9)        1.171   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023
-    SLICE_X13Y55.CLK     Tas                   0.373   displayer_inst/lcd_controller_inst/clk_count<9>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT601
-                                                       displayer_inst/lcd_controller_inst/clk_count_8
+    SLICE_X21Y33.BQ      Tcko                  0.430   controller_inst/state_internal_FSM_FFd2
+                                                       controller_inst/state_internal_FSM_FFd1
+    SLICE_X7Y21.D3       net (fanout=477)      3.002   controller_inst/state_internal_FSM_FFd1
+    SLICE_X7Y21.D        Tilo                  0.259   editor_inst/key_timer<25>
+                                                       controller_inst/_n0069_inv1
+    SLICE_X17Y49.A6      net (fanout=98)       3.609   displayer_inst/display_inst/Mram_current_state[1]_X_19_o_wide_mux_1124_OUT2
+    SLICE_X17Y49.A       Tilo                  0.259   displayer_inst/display_message<59>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>11
+    SLICE_X12Y52.B1      net (fanout=1)        1.231   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>1
+    SLICE_X12Y52.B       Tilo                  0.254   displayer_inst/display_inst/formatted_message<48>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X15Y52.C4      net (fanout=8)        0.689   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X15Y52.CLK     Tas                   0.373   displayer_inst/display_inst/formatted_message<45>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<45>1
+                                                       displayer_inst/display_inst/formatted_message_45
     -------------------------------------------------  ---------------------------
-    Total                                     10.235ns (2.651ns logic, 7.584ns route)
-                                                       (25.9% logic, 74.1% route)
+    Total                                     10.106ns (1.575ns logic, 8.531ns route)
+                                                       (15.6% logic, 84.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     39.744ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               displayer_inst/lcd_controller_inst/clk_count_11 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/clk_count_8 (FF)
+Slack (setup path):     39.916ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               controller_inst/state_internal_FSM_FFd2 (FF)
+  Destination:          displayer_inst/display_inst/formatted_message_45 (FF)
   Requirement:          50.000ns
-  Data Path Delay:      10.204ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.017ns (0.283 - 0.300)
+  Data Path Delay:      10.077ns (Levels of Logic = 4)
+  Clock Path Skew:      0.028ns (0.658 - 0.630)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.035ns
@@ -448,50 +332,36 @@ Slack (setup path):     39.744ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: displayer_inst/lcd_controller_inst/clk_count_11 to displayer_inst/lcd_controller_inst/clk_count_8
+  Maximum Data Path at Slow Process Corner: controller_inst/state_internal_FSM_FFd2 to displayer_inst/display_inst/formatted_message_45
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y56.BQ      Tcko                  0.430   displayer_inst/lcd_controller_inst/clk_count<12>
-                                                       displayer_inst/lcd_controller_inst/clk_count_11
-    SLICE_X8Y55.D2       net (fanout=6)        1.361   displayer_inst/lcd_controller_inst/clk_count<11>
-    SLICE_X8Y55.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-                                                       displayer_inst/lcd_controller_inst/clk_count<11>_rt
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.CIN      net (fanout=1)        0.082   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.DMUX     Tcind                 0.320   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-    SLICE_X4Y46.D2       net (fanout=9)        2.207   displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<19>
-    SLICE_X4Y46.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_lut<3>1
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.BMUX     Tcinb                 0.286   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A2      net (fanout=7)        2.372   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A       Tilo                  0.235   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A6       net (fanout=2)        0.385   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A        Tilo                  0.259   displayer_inst/lcd_controller_inst/clk_count<5>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023_1
-    SLICE_X13Y55.C3      net (fanout=9)        1.171   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023
-    SLICE_X13Y55.CLK     Tas                   0.373   displayer_inst/lcd_controller_inst/clk_count<9>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT601
-                                                       displayer_inst/lcd_controller_inst/clk_count_8
+    SLICE_X21Y33.DQ      Tcko                  0.430   controller_inst/state_internal_FSM_FFd2
+                                                       controller_inst/state_internal_FSM_FFd2
+    SLICE_X7Y21.D6       net (fanout=478)      2.973   controller_inst/state_internal_FSM_FFd2
+    SLICE_X7Y21.D        Tilo                  0.259   editor_inst/key_timer<25>
+                                                       controller_inst/_n0069_inv1
+    SLICE_X17Y49.A6      net (fanout=98)       3.609   displayer_inst/display_inst/Mram_current_state[1]_X_19_o_wide_mux_1124_OUT2
+    SLICE_X17Y49.A       Tilo                  0.259   displayer_inst/display_message<59>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>11
+    SLICE_X12Y52.B1      net (fanout=1)        1.231   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>1
+    SLICE_X12Y52.B       Tilo                  0.254   displayer_inst/display_inst/formatted_message<48>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X15Y52.C4      net (fanout=8)        0.689   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X15Y52.CLK     Tas                   0.373   displayer_inst/display_inst/formatted_message<45>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<45>1
+                                                       displayer_inst/display_inst/formatted_message_45
     -------------------------------------------------  ---------------------------
-    Total                                     10.204ns (2.620ns logic, 7.584ns route)
-                                                       (25.7% logic, 74.3% route)
+    Total                                     10.077ns (1.575ns logic, 8.502ns route)
+                                                       (15.6% logic, 84.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     39.832ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               displayer_inst/lcd_controller_inst/clk_count_3 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/clk_count_8 (FF)
+Slack (setup path):     43.331ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               editor_inst/char_index_internal_4 (FF)
+  Destination:          displayer_inst/display_inst/formatted_message_45 (FF)
   Requirement:          50.000ns
-  Data Path Delay:      10.080ns (Levels of Logic = 10)
-  Clock Path Skew:      -0.053ns (0.650 - 0.703)
+  Data Path Delay:      6.661ns (Levels of Logic = 3)
+  Clock Path Skew:      0.027ns (0.746 - 0.719)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.035ns
@@ -502,135 +372,109 @@ Slack (setup path):     39.832ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: displayer_inst/lcd_controller_inst/clk_count_3 to displayer_inst/lcd_controller_inst/clk_count_8
+  Maximum Data Path at Slow Process Corner: editor_inst/char_index_internal_4 to displayer_inst/display_inst/formatted_message_45
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X9Y56.BQ       Tcko                  0.430   displayer_inst/lcd_controller_inst/clk_count<5>
-                                                       displayer_inst/lcd_controller_inst/clk_count_3
-    SLICE_X8Y53.D2       net (fanout=5)        1.014   displayer_inst/lcd_controller_inst/clk_count<3>
-    SLICE_X8Y53.COUT     Topcyd                0.312   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<3>
-                                                       displayer_inst/lcd_controller_inst/clk_count<3>_rt
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<3>
-    SLICE_X8Y54.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<3>
-    SLICE_X8Y54.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>
-    SLICE_X8Y55.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>
-    SLICE_X8Y55.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.CIN      net (fanout=1)        0.082   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>
-    SLICE_X8Y56.COUT     Tbyp                  0.093   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>
-    SLICE_X8Y57.DMUX     Tcind                 0.320   displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-                                                       displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<19>
-    SLICE_X4Y46.D2       net (fanout=9)        2.207   displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<19>
-    SLICE_X4Y46.COUT     Topcyd                0.343   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_lutdi21
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.CIN      net (fanout=1)        0.003   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<3>
-    SLICE_X4Y47.BMUX     Tcinb                 0.286   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-                                                       displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A2      net (fanout=7)        2.372   displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_9_o_cy<5>
-    SLICE_X10Y57.A       Tilo                  0.235   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A6       net (fanout=2)        0.385   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022
-    SLICE_X9Y56.A        Tilo                  0.259   displayer_inst/lcd_controller_inst/clk_count<5>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023_1
-    SLICE_X13Y55.C3      net (fanout=9)        1.171   displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023
-    SLICE_X13Y55.CLK     Tas                   0.373   displayer_inst/lcd_controller_inst/clk_count<9>
-                                                       displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT601
-                                                       displayer_inst/lcd_controller_inst/clk_count_8
+    SLICE_X13Y31.AQ      Tcko                  0.430   editor_inst/char_index_internal<4>
+                                                       editor_inst/char_index_internal_4
+    SLICE_X17Y49.A2      net (fanout=73)       3.425   editor_inst/char_index_internal<4>
+    SLICE_X17Y49.A       Tilo                  0.259   displayer_inst/display_message<59>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>11
+    SLICE_X12Y52.B1      net (fanout=1)        1.231   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>1
+    SLICE_X12Y52.B       Tilo                  0.254   displayer_inst/display_inst/formatted_message<48>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X15Y52.C4      net (fanout=8)        0.689   displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<40>2
+    SLICE_X15Y52.CLK     Tas                   0.373   displayer_inst/display_inst/formatted_message<45>
+                                                       displayer_inst/display_inst/message_in[239]_message_in[239]_mux_1123_OUT<45>1
+                                                       displayer_inst/display_inst/formatted_message_45
     -------------------------------------------------  ---------------------------
-    Total                                     10.080ns (2.837ns logic, 7.243ns route)
-                                                       (28.1% logic, 71.9% route)
+    Total                                      6.661ns (1.316ns logic, 5.345ns route)
+                                                       (19.8% logic, 80.2% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: ts_osc = PERIOD TIMEGRP "clk" 50 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point communicator_inst/uart_inst/uart_tx_count_2 (SLICE_X22Y30.B5), 1 path
+Paths for end point buzz_controller_inst/message_recieved_pattern_inst/bit_timer_15 (SLICE_X20Y17.CE), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.405ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               communicator_inst/uart_inst/uart_tx_count_1 (FF)
-  Destination:          communicator_inst/uart_inst/uart_tx_count_2 (FF)
+Slack (hold path):      0.376ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               buzz_controller_inst/message_recieved_pattern_inst/latched_enable (FF)
+  Destination:          buzz_controller_inst/message_recieved_pattern_inst/bit_timer_15 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.405ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.383ns (Levels of Logic = 0)
+  Clock Path Skew:      0.007ns (0.044 - 0.037)
   Source Clock:         clk_BUFGP rising at 50.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: communicator_inst/uart_inst/uart_tx_count_1 to communicator_inst/uart_inst/uart_tx_count_2
+  Minimum Data Path at Fast Process Corner: buzz_controller_inst/message_recieved_pattern_inst/latched_enable to buzz_controller_inst/message_recieved_pattern_inst/bit_timer_15
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X22Y30.BQ      Tcko                  0.200   communicator_inst/uart_inst/uart_tx_count<1>
-                                                       communicator_inst/uart_inst/uart_tx_count_1
-    SLICE_X22Y30.B5      net (fanout=3)        0.084   communicator_inst/uart_inst/uart_tx_count<1>
-    SLICE_X22Y30.CLK     Tah         (-Th)    -0.121   communicator_inst/uart_inst/uart_tx_count<1>
-                                                       communicator_inst/uart_inst/Mmux__n022431
-                                                       communicator_inst/uart_inst/uart_tx_count_2
+    SLICE_X20Y20.AQ      Tcko                  0.234   buzz_controller_inst/message_recieved_pattern_inst/latched_enable
+                                                       buzz_controller_inst/message_recieved_pattern_inst/latched_enable
+    SLICE_X20Y17.CE      net (fanout=9)        0.257   buzz_controller_inst/message_recieved_pattern_inst/latched_enable
+    SLICE_X20Y17.CLK     Tckce       (-Th)     0.108   buzz_controller_inst/message_recieved_pattern_inst/bit_timer<15>
+                                                       buzz_controller_inst/message_recieved_pattern_inst/bit_timer_15
     -------------------------------------------------  ---------------------------
-    Total                                      0.405ns (0.321ns logic, 0.084ns route)
-                                                       (79.3% logic, 20.7% route)
+    Total                                      0.383ns (0.126ns logic, 0.257ns route)
+                                                       (32.9% logic, 67.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point communicator_inst/uart_inst/uart_tx_data_vec_3 (SLICE_X22Y27.D6), 1 path
+Paths for end point buzz_controller_inst/message_recieved_pattern_inst/bit_timer_14 (SLICE_X20Y17.CE), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.415ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               communicator_inst/uart_inst/uart_tx_data_vec_3 (FF)
-  Destination:          communicator_inst/uart_inst/uart_tx_data_vec_3 (FF)
+Slack (hold path):      0.380ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               buzz_controller_inst/message_recieved_pattern_inst/latched_enable (FF)
+  Destination:          buzz_controller_inst/message_recieved_pattern_inst/bit_timer_14 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.415ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.387ns (Levels of Logic = 0)
+  Clock Path Skew:      0.007ns (0.044 - 0.037)
   Source Clock:         clk_BUFGP rising at 50.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: communicator_inst/uart_inst/uart_tx_data_vec_3 to communicator_inst/uart_inst/uart_tx_data_vec_3
+  Minimum Data Path at Fast Process Corner: buzz_controller_inst/message_recieved_pattern_inst/latched_enable to buzz_controller_inst/message_recieved_pattern_inst/bit_timer_14
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X22Y27.DQ      Tcko                  0.200   communicator_inst/uart_inst/uart_tx_data_vec<3>
-                                                       communicator_inst/uart_inst/uart_tx_data_vec_3
-    SLICE_X22Y27.D6      net (fanout=2)        0.025   communicator_inst/uart_inst/uart_tx_data_vec<3>
-    SLICE_X22Y27.CLK     Tah         (-Th)    -0.190   communicator_inst/uart_inst/uart_tx_data_vec<3>
-                                                       communicator_inst/uart_inst/mux311
-                                                       communicator_inst/uart_inst/uart_tx_data_vec_3
+    SLICE_X20Y20.AQ      Tcko                  0.234   buzz_controller_inst/message_recieved_pattern_inst/latched_enable
+                                                       buzz_controller_inst/message_recieved_pattern_inst/latched_enable
+    SLICE_X20Y17.CE      net (fanout=9)        0.257   buzz_controller_inst/message_recieved_pattern_inst/latched_enable
+    SLICE_X20Y17.CLK     Tckce       (-Th)     0.104   buzz_controller_inst/message_recieved_pattern_inst/bit_timer<15>
+                                                       buzz_controller_inst/message_recieved_pattern_inst/bit_timer_14
     -------------------------------------------------  ---------------------------
-    Total                                      0.415ns (0.390ns logic, 0.025ns route)
-                                                       (94.0% logic, 6.0% route)
+    Total                                      0.387ns (0.130ns logic, 0.257ns route)
+                                                       (33.6% logic, 66.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point displayer_inst/lcd_controller_inst/ptr_4 (SLICE_X6Y38.D6), 1 path
+Paths for end point buzz_controller_inst/message_recieved_pattern_inst/bit_timer_13 (SLICE_X20Y17.CE), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.417ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               displayer_inst/lcd_controller_inst/ptr_4 (FF)
-  Destination:          displayer_inst/lcd_controller_inst/ptr_4 (FF)
+Slack (hold path):      0.382ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               buzz_controller_inst/message_recieved_pattern_inst/latched_enable (FF)
+  Destination:          buzz_controller_inst/message_recieved_pattern_inst/bit_timer_13 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.417ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.389ns (Levels of Logic = 0)
+  Clock Path Skew:      0.007ns (0.044 - 0.037)
   Source Clock:         clk_BUFGP rising at 50.000ns
   Destination Clock:    clk_BUFGP rising at 50.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: displayer_inst/lcd_controller_inst/ptr_4 to displayer_inst/lcd_controller_inst/ptr_4
+  Minimum Data Path at Fast Process Corner: buzz_controller_inst/message_recieved_pattern_inst/latched_enable to buzz_controller_inst/message_recieved_pattern_inst/bit_timer_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X6Y38.DQ       Tcko                  0.200   displayer_inst/lcd_controller_inst/ptr<4>
-                                                       displayer_inst/lcd_controller_inst/ptr_4
-    SLICE_X6Y38.D6       net (fanout=14)       0.027   displayer_inst/lcd_controller_inst/ptr<4>
-    SLICE_X6Y38.CLK      Tah         (-Th)    -0.190   displayer_inst/lcd_controller_inst/ptr<4>
-                                                       displayer_inst/lcd_controller_inst/Mcount_ptr41
-                                                       displayer_inst/lcd_controller_inst/ptr_4
+    SLICE_X20Y20.AQ      Tcko                  0.234   buzz_controller_inst/message_recieved_pattern_inst/latched_enable
+                                                       buzz_controller_inst/message_recieved_pattern_inst/latched_enable
+    SLICE_X20Y17.CE      net (fanout=9)        0.257   buzz_controller_inst/message_recieved_pattern_inst/latched_enable
+    SLICE_X20Y17.CLK     Tckce       (-Th)     0.102   buzz_controller_inst/message_recieved_pattern_inst/bit_timer<15>
+                                                       buzz_controller_inst/message_recieved_pattern_inst/bit_timer_13
     -------------------------------------------------  ---------------------------
-    Total                                      0.417ns (0.390ns logic, 0.027ns route)
-                                                       (93.5% logic, 6.5% route)
+    Total                                      0.389ns (0.132ns logic, 0.257ns route)
+                                                       (33.9% logic, 66.1% route)
 
 --------------------------------------------------------------------------------
 
@@ -647,17 +491,17 @@ Slack: 47.334ns (period - min period limit)
 Slack: 49.520ns (period - min period limit)
   Period: 50.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: input_cleaner_inst/g_btn_debounce[4].debounce_inst/count<3>/CLK
-  Logical resource: input_cleaner_inst/g_btn_debounce[4].debounce_inst/count_0/CK
-  Location pin: SLICE_X8Y3.CLK
+  Physical resource: input_cleaner_inst/debounce_inst/count<3>/CLK
+  Logical resource: input_cleaner_inst/debounce_inst/count_0/CK
+  Location pin: SLICE_X20Y57.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 49.520ns (period - min period limit)
   Period: 50.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: input_cleaner_inst/g_btn_debounce[4].debounce_inst/count<3>/CLK
-  Logical resource: input_cleaner_inst/g_btn_debounce[4].debounce_inst/count_1/CK
-  Location pin: SLICE_X8Y3.CLK
+  Physical resource: input_cleaner_inst/debounce_inst/count<3>/CLK
+  Logical resource: input_cleaner_inst/debounce_inst/count_1/CK
+  Location pin: SLICE_X20Y57.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -674,7 +518,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   10.333|         |         |         |
+clk            |   10.147|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -683,16 +527,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 169828 paths, 0 nets, and 8641 connections
+Constraints cover 169574 paths, 0 nets, and 8624 connections
 
 Design statistics:
-   Minimum period:  10.333ns{1}   (Maximum frequency:  96.777MHz)
+   Minimum period:  10.147ns{1}   (Maximum frequency:  98.551MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Fri Nov  8 17:23:09 2024 
+Analysis completed Fri Nov  8 17:52:14 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:

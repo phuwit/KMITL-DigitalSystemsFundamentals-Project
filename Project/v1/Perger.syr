@@ -129,9 +129,6 @@ Parsing architecture <controller> of entity <lcdcontroller>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/fdc_wide.vhd" into library work
 Parsing entity <fdc_wide>.
 Parsing architecture <Behavioral> of entity <fdc_wide>.
-Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/fdc.vhd" into library work
-Parsing entity <fdc>.
-Parsing architecture <Behavioral> of entity <fdc>.
 Parsing VHDL file "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/EdgeDetector.vhd" into library work
 Parsing entity <EdgeDetector>.
 Parsing architecture <rtl> of entity <edgedetector>.
@@ -187,8 +184,6 @@ Elaborating entity <Communicator> (architecture <Behavioral>) with generics from
 Elaborating entity <Sender> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <fdc_wide> (architecture <Behavioral>) with generics from library <work>.
-
-Elaborating entity <fdc> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Receiver> (architecture <Behavioral>) with generics from library <work>.
 
@@ -373,13 +368,6 @@ Synthesizing Unit <fdc_wide>.
 	inferred 240 D-type flip-flop(s).
 Unit <fdc_wide> synthesized.
 
-Synthesizing Unit <fdc>.
-    Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/fdc.vhd".
-    Found 1-bit register for signal <d_o>.
-    Summary:
-	inferred   1 D-type flip-flop(s).
-Unit <fdc> synthesized.
-
 Synthesizing Unit <Receiver>.
     Related source file is "/home/phuwit/Programming/KMITL-DigitalSystemsFundamentals-Project/Project/v1/Receiver.vhd".
         message_size = 240
@@ -387,7 +375,7 @@ Synthesizing Unit <Receiver>.
     Found 240-bit register for signal <internal_buffer>.
     Found 1-bit register for signal <data_complete_stb>.
     Found 9-bit adder for signal <n0299> created at line 37.
-    Found 5-bit adder for signal <char_count[4]_GND_17_o_add_273_OUT> created at line 44.
+    Found 5-bit adder for signal <char_count[4]_GND_16_o_add_273_OUT> created at line 44.
     Found 5-bit comparator greater for signal <n0000> created at line 35
     Found 5-bit comparator lessequal for signal <n0273> created at line 40
     Summary:
@@ -447,18 +435,18 @@ Synthesizing Unit <Uart>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <rx_baud_counter[3]_GND_19_o_add_2_OUT> created at line 1241.
-    Found 2-bit adder for signal <uart_rx_filter[1]_GND_19_o_add_10_OUT> created at line 1241.
-    Found 4-bit adder for signal <uart_rx_bit_spacing[3]_GND_19_o_add_21_OUT> created at line 1241.
-    Found 3-bit adder for signal <uart_rx_count[2]_GND_19_o_add_29_OUT> created at line 1241.
-    Found 8-bit adder for signal <tx_baud_counter[7]_GND_19_o_add_47_OUT> created at line 1241.
-    Found 3-bit adder for signal <uart_tx_count[2]_GND_19_o_add_55_OUT> created at line 1241.
-    Found 2-bit subtractor for signal <GND_19_o_GND_19_o_sub_13_OUT<1:0>> created at line 1308.
-    Found 1-bit 3-to-1 multiplexer for signal <uart_tx_state[1]_X_18_o_Mux_61_o> created at line 268.
-    Found 2-bit comparator greater for signal <uart_rx_filter[1]_PWR_29_o_LessThan_10_o> created at line 152
-    Found 2-bit comparator greater for signal <GND_19_o_uart_rx_filter[1]_LessThan_12_o> created at line 154
-    Found 3-bit comparator greater for signal <uart_rx_count[2]_PWR_29_o_LessThan_29_o> created at line 209
-    Found 3-bit comparator greater for signal <uart_tx_count[2]_PWR_29_o_LessThan_55_o> created at line 281
+    Found 4-bit adder for signal <rx_baud_counter[3]_GND_18_o_add_2_OUT> created at line 1241.
+    Found 2-bit adder for signal <uart_rx_filter[1]_GND_18_o_add_10_OUT> created at line 1241.
+    Found 4-bit adder for signal <uart_rx_bit_spacing[3]_GND_18_o_add_21_OUT> created at line 1241.
+    Found 3-bit adder for signal <uart_rx_count[2]_GND_18_o_add_29_OUT> created at line 1241.
+    Found 8-bit adder for signal <tx_baud_counter[7]_GND_18_o_add_47_OUT> created at line 1241.
+    Found 3-bit adder for signal <uart_tx_count[2]_GND_18_o_add_55_OUT> created at line 1241.
+    Found 2-bit subtractor for signal <GND_18_o_GND_18_o_sub_13_OUT<1:0>> created at line 1308.
+    Found 1-bit 3-to-1 multiplexer for signal <uart_tx_state[1]_X_17_o_Mux_61_o> created at line 268.
+    Found 2-bit comparator greater for signal <uart_rx_filter[1]_PWR_28_o_LessThan_10_o> created at line 152
+    Found 2-bit comparator greater for signal <GND_18_o_uart_rx_filter[1]_LessThan_12_o> created at line 154
+    Found 3-bit comparator greater for signal <uart_rx_count[2]_PWR_28_o_LessThan_29_o> created at line 209
+    Found 3-bit comparator greater for signal <uart_tx_count[2]_PWR_28_o_LessThan_55_o> created at line 281
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  49 D-type flip-flop(s).
@@ -484,10 +472,10 @@ Synthesizing Unit <MessageFormatter>.
     Found 24-bit register for signal <blink_counter>.
     Found 8-bit register for signal <current_state_char>.
     Found 1-bit register for signal <display_toggle>.
-    Found 24-bit adder for signal <blink_counter[23]_GND_21_o_add_1_OUT> created at line 42.
+    Found 24-bit adder for signal <blink_counter[23]_GND_20_o_add_1_OUT> created at line 42.
     Found 9-bit adder for signal <n1028> created at line 73.
-    Found 4x8-bit Read Only RAM for signal <current_state[1]_X_20_o_wide_mux_1124_OUT>
-    Found 24-bit comparator greater for signal <blink_counter[23]_PWR_32_o_LessThan_1_o> created at line 41
+    Found 4x8-bit Read Only RAM for signal <current_state[1]_X_19_o_wide_mux_1124_OUT>
+    Found 24-bit comparator greater for signal <blink_counter[23]_PWR_31_o_LessThan_1_o> created at line 41
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -514,29 +502,29 @@ Synthesizing Unit <LcdController>.
     | Inputs             | 12                                             |
     | Outputs            | 4                                              |
     | Clock              | clk (rising_edge)                              |
-    | Reset              | reset_n_INV_65_o (positive)                    |
+    | Reset              | reset_n_INV_63_o (positive)                    |
     | Reset type         | synchronous                                    |
     | Reset State        | power_up                                       |
     | Power Up State     | power_up                                       |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 31-bit adder for signal <clk_count[30]_GND_23_o_add_5_OUT> created at line 88.
-    Found 8-bit adder for signal <ptr[4]_GND_23_o_add_64_OUT> created at line 165.
-    Found 5-bit subtractor for signal <GND_23_o_GND_23_o_sub_100_OUT<4:0>> created at line 220.
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_1_o> created at line 75
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_7_o> created at line 89
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_8_o> created at line 96
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_9_o> created at line 100
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_10_o> created at line 111
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_11_o> created at line 115
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_12_o> created at line 119
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_13_o> created at line 123
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_14_o> created at line 130
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_90_o> created at line 195
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_91_o> created at line 196
-    Found 31-bit comparator greater for signal <clk_count[30]_GND_23_o_LessThan_92_o> created at line 198
-    Found 31-bit comparator lessequal for signal <clk_count[30]_GND_23_o_LessThan_93_o> created at line 200
+    Found 31-bit adder for signal <clk_count[30]_GND_22_o_add_5_OUT> created at line 88.
+    Found 8-bit adder for signal <ptr[4]_GND_22_o_add_64_OUT> created at line 165.
+    Found 5-bit subtractor for signal <GND_22_o_GND_22_o_sub_100_OUT<4:0>> created at line 220.
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_1_o> created at line 75
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_7_o> created at line 89
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_8_o> created at line 96
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_9_o> created at line 100
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_10_o> created at line 111
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_11_o> created at line 115
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_12_o> created at line 119
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_13_o> created at line 123
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_14_o> created at line 130
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_90_o> created at line 195
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_91_o> created at line 196
+    Found 31-bit comparator greater for signal <clk_count[30]_GND_22_o_LessThan_92_o> created at line 198
+    Found 31-bit comparator lessequal for signal <clk_count[30]_GND_22_o_LessThan_93_o> created at line 200
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred  47 D-type flip-flop(s).
@@ -561,9 +549,9 @@ Synthesizing Unit <BuzzPatternParser>.
     Found 4-bit register for signal <current_bit>.
     Found 1-bit register for signal <internal_buzzer_status>.
     Found 1-bit register for signal <latched_enable>.
-    Found 21-bit adder for signal <bit_timer[20]_GND_25_o_add_5_OUT> created at line 51.
-    Found 4-bit subtractor for signal <GND_25_o_GND_25_o_sub_4_OUT<3:0>> created at line 48.
-    Found 1-bit 10-to-1 multiplexer for signal <current_bit[3]_X_23_o_Mux_0_o> created at line 39.
+    Found 21-bit adder for signal <bit_timer[20]_GND_24_o_add_5_OUT> created at line 51.
+    Found 4-bit subtractor for signal <GND_24_o_GND_24_o_sub_4_OUT<3:0>> created at line 48.
+    Found 1-bit 10-to-1 multiplexer for signal <current_bit[3]_X_22_o_Mux_0_o> created at line 39.
     Found 21-bit comparator greater for signal <n0002> created at line 40
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -595,8 +583,8 @@ Macro Statistics
  6-bit adder                                           : 1
  8-bit adder                                           : 3
  9-bit adder                                           : 5
-# Registers                                            : 83
- 1-bit register                                        : 44
+# Registers                                            : 79
+ 1-bit register                                        : 40
  19-bit register                                       : 2
  2-bit register                                        : 6
  20-bit register                                       : 2
@@ -670,7 +658,7 @@ Unit <LcdController> synthesized (advanced).
 
 Synthesizing (advanced) Unit <MessageFormatter>.
 The following registers are absorbed into counter <blink_counter>: 1 register on signal <blink_counter>.
-INFO:Xst:3217 - HDL ADVISOR - Register <current_state_char> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_current_state[1]_X_20_o_wide_mux_1124_OUT> for implementation on block RAM resources if you made this reset synchronous instead.
+INFO:Xst:3217 - HDL ADVISOR - Register <current_state_char> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_current_state[1]_X_19_o_wide_mux_1124_OUT> for implementation on block RAM resources if you made this reset synchronous instead.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -726,8 +714,8 @@ Macro Statistics
  5-bit down counter                                    : 1
  5-bit up counter                                      : 2
  8-bit up counter                                      : 1
-# Registers                                            : 1166
- Flip-Flops                                            : 1166
+# Registers                                            : 1162
+ Flip-Flops                                            : 1162
 # Comparators                                          : 46
  19-bit comparator greater                             : 2
  2-bit comparator greater                              : 2
@@ -830,8 +818,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_bu
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_6> has a constant value of 0 in block <Editor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <internal_message_buffer_7> has a constant value of 0 in block <Editor>. This FF/Latch will be trimmed during the optimization process.
 
-Optimizing unit <Communicator> ...
-
 Optimizing unit <Sender> ...
 
 Optimizing unit <Receiver> ...
@@ -926,16 +912,12 @@ FlipFlop displayer_inst/lcd_controller_inst/ptr_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
-Processing Unit <Perger> :
-INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <communicator_inst/g_recieve_dffs[3].recieve_dff/d_o> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
-Unit <Perger> processed.
-
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1296
- Flip-Flops                                            : 1296
+# Registers                                            : 1292
+ Flip-Flops                                            : 1292
 
 =========================================================================
 
@@ -958,11 +940,11 @@ Top Level Output File Name         : Perger.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2529
+# BELS                             : 2528
 #      GND                         : 1
 #      INV                         : 12
 #      LUT1                        : 70
-#      LUT2                        : 155
+#      LUT2                        : 154
 #      LUT3                        : 408
 #      LUT4                        : 263
 #      LUT5                        : 201
@@ -971,9 +953,9 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 15
 #      VCC                         : 1
 #      XORCY                       : 226
-# FlipFlops/Latches                : 1296
+# FlipFlops/Latches                : 1292
 #      FD                          : 35
-#      FDC                         : 518
+#      FDC                         : 514
 #      FDCE                        : 557
 #      FDE                         : 107
 #      FDP                         : 2
@@ -996,16 +978,16 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1296  out of  11440    11%  
- Number of Slice LUTs:                 1956  out of   5720    34%  
-    Number used as Logic:              1956  out of   5720    34%  
+ Number of Slice Registers:            1292  out of  11440    11%  
+ Number of Slice LUTs:                 1955  out of   5720    34%  
+    Number used as Logic:              1955  out of   5720    34%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2224
-   Number with an unused Flip Flop:     928  out of   2224    41%  
-   Number with an unused LUT:           268  out of   2224    12%  
-   Number of fully used LUT-FF pairs:  1028  out of   2224    46%  
-   Number of unique control sets:        31
+ Number of LUT Flip Flop pairs used:   2219
+   Number with an unused Flip Flop:     927  out of   2219    41%  
+   Number with an unused LUT:           264  out of   2219    11%  
+   Number of fully used LUT-FF pairs:  1028  out of   2219    46%  
+   Number of unique control sets:        30
 
 IO Utilization: 
  Number of IOs:                          25
@@ -1035,7 +1017,7 @@ Clock Information:
 -------------------------------------------------+------------------------+-------+
 Clock Signal                                     | Clock buffer(FF name)  | Load  |
 -------------------------------------------------+------------------------+-------+
-clk                                              | BUFGP                  | 1056  |
+clk                                              | BUFGP                  | 1052  |
 communicator_inst/receiver_inst/data_complete_stb| BUFG                   | 240   |
 -------------------------------------------------+------------------------+-------+
 
@@ -1059,7 +1041,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.687ns (frequency: 115.118MHz)
-  Total number of paths / destination ports: 169828 / 2674
+  Total number of paths / destination ports: 169574 / 2666
 -------------------------------------------------------------------------
 Delay:               8.687ns (Levels of Logic = 19)
   Source:            displayer_inst/lcd_controller_inst/clk_count_7 (FF)
@@ -1072,25 +1054,25 @@ Delay:               8.687ns (Levels of Logic = 19)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q             11   0.525   1.039  displayer_inst/lcd_controller_inst/clk_count_7 (displayer_inst/lcd_controller_inst/clk_count_7)
-     LUT1:I0->O            1   0.254   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>_rt (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>_rt)
-     MUXCY:S->O            1   0.215   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<8> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<9> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<10> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<12> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<13> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<13>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<14> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<14>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_cy<15>)
-     XORCY:CI->O          17   0.206   1.639  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_23_o_add_5_OUT_xor<16> (displayer_inst/lcd_controller_inst/clk_count[30]_GND_23_o_add_5_OUT<16>)
-     LUT5:I0->O            1   0.254   0.000  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_lut<2> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_lut<2>)
-     MUXCY:S->O            1   0.215   0.000  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_cy<2> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_cy<3> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_cy<4> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_cy<4>)
-     MUXCY:CI->O           5   0.235   1.271  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_cy<5> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_23_o_LessThan_14_o_cy<5>)
-     LUT6:I1->O            2   0.254   0.726  displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022 (displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1022)
-     LUT6:I5->O           11   0.254   1.039  displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT1023 (displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT102)
-     LUT2:I1->O            1   0.254   0.000  displayer_inst/lcd_controller_inst/Mmux_state[2]_X_21_o_wide_mux_107_OUT101 (displayer_inst/lcd_controller_inst/state[2]_X_21_o_wide_mux_107_OUT<13>)
+     LUT1:I0->O            1   0.254   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<7>_rt (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<7>_rt)
+     MUXCY:S->O            1   0.215   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<7> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<8> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<9> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<10> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<11> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<12> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<13> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<14> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<15> (displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_cy<15>)
+     XORCY:CI->O          17   0.206   1.639  displayer_inst/lcd_controller_inst/Madd_clk_count[30]_GND_22_o_add_5_OUT_xor<16> (displayer_inst/lcd_controller_inst/clk_count[30]_GND_22_o_add_5_OUT<16>)
+     LUT5:I0->O            1   0.254   0.000  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_lut<2> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<2> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<3> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<4> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<4>)
+     MUXCY:CI->O           5   0.235   1.271  displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<5> (displayer_inst/lcd_controller_inst/Mcompar_clk_count[30]_GND_22_o_LessThan_14_o_cy<5>)
+     LUT6:I1->O            2   0.254   0.726  displayer_inst/lcd_controller_inst/Mmux_state[2]_X_20_o_wide_mux_107_OUT1022 (displayer_inst/lcd_controller_inst/Mmux_state[2]_X_20_o_wide_mux_107_OUT1022)
+     LUT6:I5->O           11   0.254   1.039  displayer_inst/lcd_controller_inst/Mmux_state[2]_X_20_o_wide_mux_107_OUT1023 (displayer_inst/lcd_controller_inst/Mmux_state[2]_X_20_o_wide_mux_107_OUT102)
+     LUT2:I1->O            1   0.254   0.000  displayer_inst/lcd_controller_inst/Mmux_state[2]_X_20_o_wide_mux_107_OUT101 (displayer_inst/lcd_controller_inst/state[2]_X_20_o_wide_mux_107_OUT<13>)
      FDE:D                     0.074          displayer_inst/lcd_controller_inst/clk_count_13
     ----------------------------------------
     Total                      8.687ns (2.973ns logic, 5.714ns route)
@@ -1155,21 +1137,21 @@ Clock to Setup on destination clock communicator_inst/receiver_inst/data_complet
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.482|         |         |         |
+clk            |    3.550|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.80 secs
+Total CPU time to Xst completion: 6.62 secs
  
 --> 
 
 
-Total memory usage is 409328 kilobytes
+Total memory usage is 409268 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   84 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

@@ -20,7 +20,7 @@ entity Communicator is
 end Communicator;
 
 architecture Behavioral of Communicator is
-    constant recieve_clear_delay_time : integer := 5;
+    -- constant recieve_clear_delay_time : integer := 5;
 
     signal uart_send_start    : std_logic := '0';
     -- signal uart_recieve_start : std_logic                    := '0';
@@ -37,8 +37,8 @@ architecture Behavioral of Communicator is
     -- signal recieve_clear_dff_mem     : std_logic_vector(recieve_clear_delay_time - 1 downto 0) := (others => '0');
     signal recieve_complete_internal : std_logic;
     signal recieve_dff_i             : std_logic_vector(message_size - 1 downto 0);
-    signal recieve_clear             : std_logic;
-    signal recieve_clear_dff_mem     : std_logic_vector(recieve_clear_delay_time - 1 downto 0);
+    -- signal recieve_clear             : std_logic;
+    -- signal recieve_clear_dff_mem     : std_logic_vector(recieve_clear_delay_time - 1 downto 0);
 begin
     sender_inst : entity work.Sender
         generic map(
@@ -65,24 +65,24 @@ begin
             d_i => recieve_dff_i
         );
 
-    recieve_clear_dff_mem(0) <= recieve_complete_internal;
-    g_recieve_dffs : for i in 0 to recieve_clear_delay_time - 2 generate
-        recieve_dff : entity work.fdc
-            port map(
-                d_o => recieve_clear_dff_mem(i + 1),
-                clk => clk,
-                clr => reset,
-                d_i => recieve_clear_dff_mem(i)
-            );
-    end generate;
+    -- recieve_clear_dff_mem(0) <= recieve_complete_internal;
+    -- g_recieve_dffs : for i in 0 to recieve_clear_delay_time - 2 generate
+    --     recieve_dff : entity work.fdc
+    --         port map(
+    --             d_o => recieve_clear_dff_mem(i + 1),
+    --             clk => clk,
+    --             clr => reset,
+    --             d_i => recieve_clear_dff_mem(i)
+    --         );
+    -- end generate;
 
-    recieve_clear <= recieve_clear_dff_mem(recieve_clear_delay_time - 1) or reset;
+    -- recieve_clear <= r or reset;
     receiver_inst : entity work.Receiver
         generic map(
             message_size => message_size)
         port map(
             clk               => clk,
-            reset             => recieve_clear,
+            reset             => reset,
             data_in           => uart_recieve_data,
             new_data_stb      => uart_recieve_start,
             data_out          => recieve_dff_i,
